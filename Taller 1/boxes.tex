@@ -35,6 +35,16 @@
         linewidth=0pt,
         rightline=false, topline=false, bottomline=false,
         linecolor=black, backgroundcolor=black!1.5!white,
+    }
+]{solbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{black!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=0pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=black, backgroundcolor=black!1.5!white,
     },
     qed=\sqed
 ]{sancoya}
@@ -47,6 +57,8 @@
 \declaretheorem[style=thmbox, name=Teorema, numbered=no]{theorem}
 \declaretheorem[style=thmbox, name=Lema]{lemma}
 \declaretheorem[style=thmbox, numbered=no, name=Corolario]{corollary}
+\declaretheorem[style=solbox, numbered=no,name=Solución]{sol}
+\declaretheorem[style=sancoya, numbered=no, name=Solución]{sols}
 
 
 \declaretheorem[style=thmproofbox, name=Demostración]{replacementproof}
