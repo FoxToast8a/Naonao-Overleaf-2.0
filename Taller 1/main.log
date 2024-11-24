@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  24 NOV 2024 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  24 NOV 2024 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1230,14 +1230,29 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 46.
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 (Font)              scaled to size 10.29301pt on input line 48.
-[1
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 54.
+(Punto1.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 3.
+LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 3.
+<sancoya.png, id=5, 562.1pt x 289.08pt>
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 5.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+) [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
 i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
 santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
 /Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
 :/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
-c} <./logo-eps-converted-to.pdf>] (main.aux
+c} <./logo-eps-converted-to.pdf> <./sancoya.png>] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1247,19 +1262,21 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 19858 strings out of 474370
- 390029 string characters out of 5740535
- 1928754 words of memory out of 5000000
- 41843 multiletter control sequences out of 15000+600000
- 586852 words of font info for 47 fonts, out of 8000000 for 9000
+ 20016 strings out of 474370
+ 394278 string characters out of 5740535
+ 1930754 words of memory out of 5000000
+ 41996 multiletter control sequences out of 15000+600000
+ 595641 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,552b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,10n,93p,552b,958s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhv
-r.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/zt
-mr.pfb>
-Output written on main.pdf (1 page, 70537 bytes).
+b.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre
+/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newt
+x/ztmb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/new
+tx/ztmr.pfb>
+Output written on main.pdf (1 page, 229409 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
