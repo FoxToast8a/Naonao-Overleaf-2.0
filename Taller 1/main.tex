@@ -27,7 +27,13 @@
  left=25mm,
  top=30mm,
  }
-
+\tikzstyle{hollow}=[circle,draw,inner sep=1.5]
+            \tikzstyle{solid}=[circle,draw,inner sep=1.5,fill=black]
+            \tikzset{
+                red node/.style={circle,draw=red,fill=red,inner sep=1.2},
+                green node/.style={circle,draw=green,fill=green,inner sep=1.2},
+                box node/.style={rectangle,draw=black,inner sep=3}
+                }
 \begin{document}
 
 \setlength{\parindent}{0cm}

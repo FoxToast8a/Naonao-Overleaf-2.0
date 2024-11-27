@@ -1,6 +1,106 @@
 %!TEX root = main.tex
 
 Determine justificando, si los códigos $C_1 = \{1, 10, 100, 1000\}$ y $C_2 = \{1, 01, 001, 0001\}$ son univocamente decodificables.
-\begin{sols}
-    Hola :p
-\end{sols}
+    \begin{sols}
+     Procederemos con cada código por separado   
+    
+    \begin{itemize}
+        \item Sea $C=\{1,10,100,1000\}.$, Donde nuestro alfabeto para codificar es $D=\{0,1\}$ Procedamos por medio se Sardinas-Patterson. Primero definimos $C_0=C,$ por el algoritmo tenemos que 
+        $$C_1=\{w\in D^+|\,uw=v, \text{ con } u\in C_0 \text{ y } v\in C \text{ o } u\in C \text{ y } v\in C_0 \}.$$
+        Note que como $C_0=C$ Basta con resolver ecuaciones de concatenación de palabras donde solo revisamos los elementos de $C.$ Procedemos por casos.\\
+
+        \textbf{Caso 1:} Si $u=1000,$ tenemos las siguientes cuatro ecuaciones
+        \begin{align*}
+            1000w=\begin{cases}
+                1\\
+                10\\
+                100\\
+                1000\\
+            \end{cases}
+        \end{align*}
+        Note que $|1000w|\geq 5$ ya que $|w|\geq1.$ Pero las longitudes de las palabras al otro lado de la igualdad son a lo mas 4, por lo que estas ecuaciones no tienen solución.\\
+        
+        \textbf{Caso 2:}
+        Si $u=100,$
+        tenemos las siguientes cuatro ecuaciones
+        \begin{align*}
+            100w=\begin{cases}
+                1\\
+                10\\
+                100\\
+                1000\\
+            \end{cases}
+        \end{align*}
+        Note que para las primeras tres al igual que en el caso anterior no hay solución simplemente viendo las longitudes, pero para la ultima tomando $w=0,$ tenemos nuestra primera solución.\\
+
+        \textbf{Caso 3:} Si $u=10,$ tenemos las siguientes cuatro ecuaciones
+        \begin{align*}
+            10w=\begin{cases}
+                1\\
+                10\\
+                100\\
+                1000\\
+            \end{cases}
+        \end{align*}
+        Siguiendo la lógica de los anteriores casos nos damos cuenta que $w=00$ es solución de la cuarta ecuación, mientras que $w=0$ de la tercera y las otras dos no tienen.\\
+
+    \textbf{Caso 4:} Si $u=1,$ tenemos las siguientes cuatro ecuaciones
+        \begin{align*}
+            1w=\begin{cases}
+                1\\
+                10\\
+                100\\
+                1000\\
+            \end{cases}
+        \end{align*}
+        Siguiendo la lógica de los anteriores casos nos damos cuenta que $w=000$ es solución de la cuarta ecuación, mientras que $w=00$ de la tercera y $w=0$ de la segunda, mientras que la primera no tiene solución.\\
+
+        Así tenemos que $C_1=\{0,00,000\}.$ Siguiendo el algoritmo tenemos que 
+        $$C_2=\{w\in D^+|\,uw=v, \text{ con } u\in C_1 \text{ y } v\in C \text{ o } u\in C \text{ y } v\in C_1 \}.$$
+        Veamos los posibles casos.\\
+
+        \textbf{Caso 1:} Si $u\in C_1$ y $v\in C$, note que la palabra $uw$ siempre empieza en $0$, ya que $u$ es igual a $0,00$ o $000$, mientras que todas las palabras $v$ en $C$ empiezan en 1, así ninguna ecuación tiene solución.\\
+
+        \textbf{Caso 2:} Si $u\in C$ y $v\in C_1,$ pasa igual que en el caso anterior. Todas la posibles palabras $uw$ empiezan por 1, ya que cualquier palabra en $C$ empieza por uno, mientras que todas las palabras en $C_1$ empiezan por 0, así ninguna ecuación tiene solución. Así $C_2=\varnothing.$\\
+
+         Por la construcción podemos concluir que $C_3=C_4=\dots=\varnothing.$ Por lo tanto
+         $$C_\infty=\bigcup_{i=1}^\infty C_i=C_1.$$
+         Así podemos notar que
+         $$C\cap C_\infty =\{1,10,100,1000\}\cap\{0,00,000\}=\varnothing.$$
+         Concluyendo por el teorema de Sardinas-Patterson que C es unívocamente decodificable.
+
+         \item Sea $C=\{1,01,001,0001\},$ donde nuestro alfabeto para codificar es $D=\{0,1\}.$ Siguiendo el algoritmo, tomamos $C_0=C$, siguiendo el algoritmo tenemos que
+         $$C_1=\{w\in D^+|\,uw=v, \text{ con } u\in C_0 \text{ y } v\in C \text{ o } u\in C \text{ y } v\in C_0 \}.$$
+         Veamos los casos.\\
+
+         \textbf{Caso 1:} Sea $u=0001,$ Note que $|uw|\geq 5$, y las posibles longitudes para $v\in C$ son menores o iguales a 4, luego para este $u$, las ecuaciones no tienen solución.\\
+
+         \textbf{Caso 2:} Sea $u=001$, note que por el argumento de las longitudes la única ecuación que se podría considerar es
+         $$001w=0001.$$
+         Pero note que el tercer símbolo de izquierda a derecha de la palabra de la izquierda es 1, mientras que el de la derecha es 0, por lo que ninguna ecuación tiene solución.\\
+
+         \textbf{Caso 3:} Sea $u=01$, nuevamente por el argumento de las longitudes las ecuaciones que valen la pena considerar son
+         $$01w=\begin{cases}
+             001\\
+         0001
+         \end{cases}$$
+         Pero nuevamente el segundo símbolo de izquierda a derecha de la palabra de la izquierda es 1, mientras que en ambas palabras de la derecha el símbolo es 0, así para estas ecuaciones nuevamente no tenemos soluciones.\\
+
+         \textbf{Caso 4:} Para este ultimo caso, siguiendo la misma idea de las longitudes, cuando $u=1$ basta con considerar las siguientes ecuaciones
+         $$1w=\begin{cases}
+             01\\
+             001\\
+             0001
+         \end{cases}$$
+         Pero la palabra de la izquierda empieza en 1, mientras que las de la derecha en 0, por lo que nuevamente no ha soluciones.\\
+
+         Como en ningún caso existe $w$ que cumpla las ecuaciones, tenemos que $C_1=\varnothing.$ Luego tenemos que $C_2=C_3=\dots=\varnothing.$ De esta manera tenemos que
+         $$C_\infty=\bigcup_{i=1}^\infty C_i=\varnothing.$$
+         Luego es claro que
+         $$C\cap C_\infty=\varnothing.$$
+         Así por el teorema de Sardinas-Patterson podemos concluir que C es unívocamente decodificable.
+       \end{itemize}
+
+       De esta manera concluimos por medio de Sardinas-Patterson que los $C_1$ y $C_2$, presentados en el enunciado, son unívocamente decodificables.
+
+       \end{sols}

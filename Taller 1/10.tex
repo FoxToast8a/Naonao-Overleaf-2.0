@@ -2,6 +2,27 @@
 
 Resuelva el ejercicio 1.5.2 de la notas de clase, calcule la eficiencia.
 Construya, en caso de que exista, un código binario instantáneo constituido por 5 palabras de longitudes: 2, 2, 2, 3 y 4.
-\begin{sol}
-    Hola :p
-\end{sol}
+\begin{sols}
+    Primero verifiquemos que tal codigo exista. Tenemos que $D=2,$ por que es binario y tenemos longitudes de palabra $\ell_1=2,\ell_2=2, \ell_3=2, \ell_4=3$ y $\ell_5=4.$ Asi
+    \begin{align*}
+        \sum_{i=1}^5 D^{-\ell_i}&=2^{-2}+2^{-2}+2^{-2}+2^{-3}+2^{-4}\\
+        &=2^{-4}(2^2+2^2+2^2+2+1)\\
+        &=\frac{4+4+4+2+1}{16}\\
+        &=\frac{15}{16}\leq 1.
+    \end{align*}
+    Como cumple la desigualdad de Kraft, sabemos que existe un codigo instantaneo (no completo ya que no se tiene la igualdad), con las longitudes de palabra indicadas. Siguiendo el algoritmo de construccion, tenemos para el paso uno el siguiente arbol de altura 2.
+    \begin{center}
+       \begin{tikzpicture}[level 2/.style={sibling distance=10mm}]
+
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[red node]{}}}
+;
+\end{tikzpicture}
+    \end{center}
+
+\end{sols}
