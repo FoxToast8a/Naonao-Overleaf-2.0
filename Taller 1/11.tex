@@ -17,6 +17,426 @@ A & B & C & D & E & F & G & H \\
 Suponga que se ha usado un código de Huffman para codificar los mensajes sobre un alfabeto binario. Si en el árbol de codificación se le asigna 1 a las ramas sobre la izquierda y 0 a las ramas sobre la derecha, ¿qué palabra representa la secuencia 111011111101110? Determine la longitud promedio de palabra para este código. ¿Cuál sería la codificación de los símbolos sobre un código triario?
 
 
-\begin{sol}
-    Hola :p
-\end{sol}
+\begin{sols}
+    Primero procederemos para el caso binario por medio del algoritmo de Huffman. Pintemos los respectivos 8 nodos en orden de menor a mayot segun la distribucion de probabilidad.
+    \begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$A$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$B$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Donde el nodo rojo significa que esta disponible. Como estamos en el caso binario no tenemos que agregar nodos nuevos al inicio y podemos proceder a crear un nodo padre para los dos de menos probabilidad, que en este caso son $A$ y $B.$ Quedando como nodos activos
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_1$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$A$}]{}}
+                    child{node[solid, label=below:{$B$}]{}}}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Ahora $v_1$ queda con las porbabilidades sumadas de $A$ y $B$, es decir $0,02+0,03=0,05.$ Por el algoritmo tenemos que reorganizar los nodos tal que queden nuevamente en orden de probabilidades, tal que
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$v_1$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$A$}]{}}
+                    child{node[solid, label=below:{$B$}]{}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Ahora creamos un nodo padre para los dos de menor probabilidad, es decir $C$ y $D$, a este lo llamaremos $v_2$ y tendra las probabilidad sumada, es decir $0,04+0,04=0,08.$
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_2$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$C$}]{}}
+                    child{node[solid, label=below:{$D$}]{}}}
+                child{node[red node, label=above:{$v_1$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$A$}]{}}
+                    child{node[solid, label=below:{$B$}]{}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Note que nuevamente hay que reorganizar los nodos ya que la probabilidad de $v_1$ es menor a la de $v_2$.
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_1$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$A$}]{}}
+                    child{node[solid, label=below:{$B$}]{}}}
+                child{node[red node, label=above:{$v_2$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$C$}]{}}
+                    child{node[solid, label=below:{$D$}]{}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Y siguiendo el algoritmo ponemos un padre a $v_1$ y $v_2$, con probabilidad $0,05+0,08=0,13.$
+    \begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_3$}]{} edge from parent[draw=none]
+                    child{node[solid]{} 
+                        child{node[solid, label=below:{$A$}]{}}
+                        child{node[solid, label=below:{$B$}]{}}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$C$}]{}}
+                        child{node[solid, label=below:{$D$}]{}}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora como la probabilidad de $v_3$ es mayor a la de $E$ hay que cambiar el orden.
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$v_3$}]{} edge from parent[draw=none]
+                    child{node[solid]{} 
+                        child{node[solid, label=below:{$A$}]{}}
+                        child{node[solid, label=below:{$B$}]{}}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$C$}]{}}
+                        child{node[solid, label=below:{$D$}]{}}}}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora juntamos los nodos $E$ y $v_3$ y les damos un padre con probabilidad de $0,12+0,13=0,25.$
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=25mm}, , level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_4$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$C$}]{}}
+                            child{node[solid, label=below:{$D$}]{}}}}}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Luego la probabilidad de $F$ y $G$ es menor a la de $v_4,$ asi reorganizando
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=25mm}, , level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$v_4$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$C$}]{}}
+                            child{node[solid, label=below:{$D$}]{}}}}}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+De esta manera tenemos que juntar los nodos $F$ y $G$ con nun nuevo nodo padre, de probabilidad $0,20+0,20=0,40.$
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_5$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$F$}]{}}
+                    child{node[solid, label=below:{$G$}]{}}}
+                child{node[red node, label=above:{$v_4$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$C$}]{}}
+                            child{node[solid, label=below:{$D$}]{}}}}}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a la de $v_4$, asi
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_4$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$C$}]{}}
+                            child{node[solid, label=below:{$D$}]{}}}}}
+                child{node[red node, label=above:{$v_5$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$F$}]{}}
+                    child{node[solid, label=below:{$G$}]{}}}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Asi para los nodos $v_4$ y $v_5$, asignamos un padre con probabilidad de $0,25+0,40=0,65.$
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_6$}]{} edge from parent[draw=none]
+                    child{node[solid]{} 
+                        child{node[solid, label=below:{$E$}]{}}
+                        child{node[solid]{}
+                            child{node[solid]{} 
+                                child{node[solid, label=below:{$A$}]{}}
+                                child{node[solid, label=below:{$B$}]{}}}
+                            child{node[solid]{}
+                                child{node[solid, label=below:{$C$}]{}}
+                                child{node[solid, label=below:{$D$}]{}}}}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$F$}]{}}
+                        child{node[solid, label=below:{$G$}]{}}}}
+                 child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora solo hay dos nodos, reorganizando y creando un ultimo nodo activo llegamos a que el arbol de codificacion es
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
+
+            \node[hollow](0){}
+                child{node[solid, label=below:{$H$}]{}}
+                child{node[solid]{}
+                    child{node[solid]{} 
+                        child{node[solid, label=below:{$E$}]{}}
+                        child{node[solid]{}
+                            child{node[solid]{} 
+                                child{node[solid, label=below:{$A$}]{}}
+                                child{node[solid, label=below:{$B$}]{}}}
+                            child{node[solid]{}
+                                child{node[solid, label=below:{$C$}]{}}
+                                child{node[solid, label=below:{$D$}]{}}}}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$F$}]{}}
+                        child{node[solid, label=below:{$G$}]{}}}}
+                 
+;
+\end{tikzpicture}
+    \end{center}
+Ya con la codificacion hecha podemos determinar la longitud promedio de palabra ya que 
+\begin{align*}
+    |C(H)|&=1,\\
+    |C(E)|&=|C(F)|=|C(G)|=3,\\
+    |C(A)|&=|C(B)|=|C(C)|=|C(D)|=5.
+\end{align*}
+Luego por la formula tenemos que 
+\begin{align*}
+    L(C)&=\sum_{i=1}^8p_i|C(s_i)|\\
+    &=5\cdot0,02+5\cdot0,03+5\cdot0,04+5\cdot0,04+3\cdot0,12+3\cdot0,20+3\cdot0,20+1\cdot0,35\\
+    &=5(0,02+0,03+0,04+0,04)+3(0,12+0,20+0,20)+0,35\\
+    &=5\cdot0,13+3\cdot0,52+0,35\\
+    &=2.56\quad bits/simbolo
+\end{align*}
+De esta manera $L(C)= 2.56\quad bits/simbolo.$\\
+
+Procedamos ahora con el algoritmo de Huffman pero para el caso triario. En este caso tenemos que $n-1=8-1=7$ y que $D-1=3-1=2$, luego el residuo de dividir $7$ entre $2$ es $1,$ por lo que en el proceso inicial hay que agregar un nodo nuevo.
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$A$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$B$}]{}  edge from parent[draw=none]}
+                child{node[solid]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Procedemos igual que en el caso de binario, pero ahora hacemos un nuevo nodo padre $v_1,$ para los nodos de menor probabilidad y el nodo nuevo que añadimos, tal que:
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+            child{node[red node, label=above:{$v_1$}]{}  edge from parent[draw=none]
+                child{node[solid, label=below:{$A$}]{}}
+                child{node[solid, label=below:{$B$}]{}}
+                child{node[box node]{}}}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Donde la probabilidad de $v_1$ es la suma de la de los nodos hijos, es decir $0,05.$ Luego toca reorganizar de acuerdo a las nuevas probabilidades
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$C$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$D$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$v_1$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$A$}]{}}
+                    child{node[solid, label=below:{$B$}]{}}
+                    child{node[box node]{}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora colocamos un nuevo nodo padre para los nodos $C,D$ y $v_1.$
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_2$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$C$}]{}}
+                    child{node[solid, label=below:{$D$}]{}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$A$}]{}}
+                        child{node[solid, label=below:{$B$}]{}}
+                        child{node[box node]{}}}}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+La probabilidad de este nuevo nodo es $0,04+0,04+0,05=0,13.$ Por lo que nuevamente tenemos que reorganizar los nodos
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$E$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$v_2$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$C$}]{}}
+                    child{node[solid, label=below:{$D$}]{}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$A$}]{}}
+                        child{node[solid, label=below:{$B$}]{}}
+                        child{node[box node]{}}}}
+                child{node[red node, label=below:{$F$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora le damos un padre a los nodos $E,v_2$ y $F$, que va a tener la probabilidad $0,12+0,013+0,20=0,45.$
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=above:{$v_3$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$C$}]{}}
+                        child{node[solid, label=below:{$D$}]{}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}
+                            child{node[box node]{}}}}
+                    child{node[solid, label=below:{$F$}]{}}}
+                child{node[red node, label=below:{$G$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+;
+\end{tikzpicture}
+    \end{center}
+Ahora como solo quedan tres nodos basta con ponerlos en orden de menor a mayor y juntarlos con el padre que sera la raiz, asi el arbol de codificacion es
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[hollow](0){}
+                child{node[solid, label=below:{$G$}]{}}
+                child{node[solid, label=below:{$H$}]{}}
+                child{node[solid]{}
+                    child{node[solid, label=below:{$E$}]{}}
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$C$}]{}}
+                        child{node[solid, label=below:{$D$}]{}}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$A$}]{}}
+                            child{node[solid, label=below:{$B$}]{}}
+                            child{node[box node]{}}}}
+                    child{node[solid, label=below:{$F$}]{}}}
+;
+\end{tikzpicture}
+    \end{center}
+De esta manera si a cada rama de a izquierda a derecha le asignamos 0,1 y 2, respectivamente, tenemos que la codificacion de los simbolos es
+\begin{align*}
+    C(G)&=0,\\
+    C(H)&=1,\\
+    C(E)&=20,\\
+    C(F)&=22,\\
+    C(C)&=210,\\
+    C(D)&=211,\\
+    C(A)&=2120,\\
+    C(B)&=2121.
+\end{align*}
+De manera abreviada en orden seria $C=\{2120,2121,210,211,20,22,0,1\}.$ Por hacer la comparativa hallemos la longitud promedio de palabra en este caso
+\begin{align*}
+    L(C)&=4\cdot0,02+4\cdot0,03+3\cdot0,04+3\cdot0,04+2\cdot0,12+2\cdot0,20+1\cdot0,20+1\cdot0,35\\
+    &=4\cdot0,05+3\cdot0,08+2\cdot0,32+0,55\\
+    &=1.63\quad tribits/simbolo.
+\end{align*}
+
+
+\end{sols}
