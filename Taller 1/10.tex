@@ -12,7 +12,7 @@ Construya, en caso de que exista, un código binario instantáneo constituido po
     \end{align*}
     Como cumple la desigualdad de Kraft, sabemos que existe un codigo instantaneo (no completo ya que no se tiene la igualdad), con las longitudes de palabra indicadas. Siguiendo el algoritmo de construccion, tenemos para el paso uno el siguiente arbol de altura 2.
     \begin{center}
-       \begin{tikzpicture}[level 2/.style={sibling distance=10mm}]
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
 
             \node[hollow](0){}
             child{node[solid]{}
@@ -24,5 +24,43 @@ Construya, en caso de que exista, un código binario instantáneo constituido po
 ;
 \end{tikzpicture}
     \end{center}
+Donde los nodos verdes serán hojas, y el rojo es un nodo terminal. Para el segundo paso aumentamos a un árbol de altura 3 como se muestra a continuación
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm} ]
 
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[solid]{}
+                    child{node[green node]{}}
+                    child{node[red node]{}}}}
+;
+\end{tikzpicture}
+    \end{center}
+Para finalizar aumentamos el árbol a una altura 4 como se muestra a continuación
+
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm} ]
+
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[solid]{}
+                    child{node[green node]{}}
+                    child{node[solid]{}
+                        child{node[green node]{}}
+                        child{node[box node]{}}}}}
+;
+\end{tikzpicture}
+    \end{center}
+De esta forma si a las ramas que abren hacia la izquierda les asignamos el 0 y a las otras el 1, obtenemos el siguiente código instantáneo con las longitudes de palabra deseadas.
+
+$$C=\{00,01,10,110,1110\}.$$
+    
 \end{sols}
