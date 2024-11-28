@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1434,7 +1434,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 File: diagrama.png Graphic file (type png)
 <use diagrama.png>
 Package pdftex.def Info: diagrama.png  used on input line 20.
-(pdftex.def)             Requested size: 393.42285pt x 291.79237pt.
+(pdftex.def)             Requested size: 262.27522pt x 194.5233pt.
 ) (9.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1532,7 +1532,7 @@ X/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/M
 iKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/
 ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (23 pages, 537019 bytes).
+Output written on main.pdf (23 pages, 537023 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
