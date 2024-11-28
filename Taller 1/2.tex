@@ -365,5 +365,98 @@ x_5=0&-&-&-&1&1&0\\
 \end{array}
 $$
 Al igual que en el el (Paso 11) entro en un \textbf{bucle} puesto que el algoritmo me da como resultado volver a cambiar el valor de $x_4$.
-Por lo cual debo devolverme en pasos hasta donde hice una escogencia de la cual no he probado posibilidades y eso me lleva a la tabla inicial (Paso 0) y ahi eligiriamos cambiar el valor de $x_4$ en lugar a $x_3$ sin embargo, esto presenta el mismo caso evidenciado en el (Paso 8) por lo cual entriamos en \textbf{bucle} y por lo cual tenemos que para este caso el método de Galager me da la indicación de que existe un error pero, este no se puede corregir.
+Por lo cual debo devolverme en pasos hasta donde hice una escogencia de la cual no he probado posibilidades y eso me lleva a la tabla inicial (Paso 0) y ahi eligiriamos cambiar el valor de $x_4$ en lugar a $x_3$ sin embargo, esto presenta el mismo caso evidenciado en el (Paso 8) por lo cual entriamos en \textbf{bucle} y por lo cual, bajo el criterio de puntución teniendo en cuenta el que más falla no podriamos resolverlo y solo seria un algoritmo que notifica el error, ahora, mirarmos ahora el caso con los que presentan solo un error y un acierto, probemos con $x_2$
+
+
+\textbf{Paso 13:} Probamos cambiando a $x_2$
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+x & E_1=1 & E_2=0 & E_3=1 & E_4=0 & E_5=1 & \text{Ceros totales}\\
+\hline
+x_1= 1& 0 & 1 & - & 1 & - & 1\\
+\hline
+\textcolor{cyan}{x_2}=0& 0&-& 1& - &-&1\\
+\hline
+x_3=0& -& 1& 1 & 1 & 0 &1\\
+\hline
+x_4=1& 0&1&1&-&0&\textcolor{gray}{2}\\
+\hline
+x_5=1&-&-&-&1&0&1\\
+\hline
+\end{array}
+\]
+Como tenemos que el $x_4$ es el que tiene mayor cantidad de errores vamos a cambiarlo.
+
+\textbf{Paso 14:} Probamos cambiando a $x_4$
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+x & E_1=1 & E_2=0 & E_3=1 & E_4=0 & E_5=1 & \text{Ceros totales}\\
+\hline
+x_1= 1& 1 & 0 & - & 1 & - & 1\\
+\hline
+x_2=0& 1&-& 0& - &-&1\\
+\hline
+x_3=0& -& 0& 0 & 1 & 1 &\textcolor{gray}{2}\\
+\hline
+\textcolor{cyan}{x_4}=0& 1&0&0&-&1&\textcolor{gray}{2}\\
+\hline
+x_5=1&-&-&-&1&1&0\\
+\hline
+\end{array}
+\]
+Por razones análogas ya explicadas anteriormente solo podemos elegir para cambiar a $x_3$
+
+\textbf{Paso 15:} Probamos cambiando a $x_3$
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+x & E_1=1 & E_2=0 & E_3=1 & E_4=0 & E_5=1 & \text{Ceros totales}\\
+\hline
+x_1= 1& 1 & 1 & - & 0 & - & 0\\
+\hline
+x_2=0& 1&-& 1& - &-&0\\
+\hline
+\textcolor{cyan}{x_3}=1& -& 1& 1 & 0 & 0 &\textcolor{gray}{2}\\
+\hline
+x_4=0& 1&1&1&-&0&1\\
+\hline
+x_5=1&-&-&-&0&0&\textcolor{gray}{2}\\
+\hline
+\end{array}
+\]
+Como $x_5$ es el que tiene más errores y no se cambió en el paso inmediatamente anterior entonces el criterio nos dice que lo cambiemos
+
+\textbf{Paso 16:} Probamos cambiando a $x_5$
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+x & E_1=1 & E_2=0 & E_3=1 & E_4=0 & E_5=1 & \text{Ceros totales}\\
+\hline
+x_1= 1& 1 & 1 & - & 1 & - & 0\\
+\hline
+x_2=0& 1&-& 1& - &-&0\\
+\hline
+x_3=1& -& 1& 1 & 1 & 1 &0\\
+\hline
+x_4=0& 1&1&1&-&1&0\\
+\hline
+\textcolor{cyan}{x_5}=0&-&-&-&1&1&0\\
+\hline
+\end{array}
+\]
+Con lo que tenemos que el codigo original antes de cambiar por el canal era $10100$ y por lo cual habia errores en $x_2$, $x_3$, $x_4$ y $x_5$. Y el mensaje corregido es $1010010101$
+
+
+
+
+
+
+
+
+
+
+
+
 \end{sol}

@@ -2,5 +2,13 @@
 
 Pruebe, diseñando un algoritmo (sin usar el algoritmo de SardinasPaterson), que el código triario $\{aa, b, ba, abc\}$ es univocamente decodificable
 \begin{sol}
-    Hola :p
+El algoritmo para mostrar que el código es univocamente decodificable consiste en los siguientes pasos
+\begin{enumerate}
+\item Puesto que el código dado no es un código prefijo, intentaremos mirar si el código al "voltearlo''  lo es por lo cuall es primer paso es voltear la palabras de la siguiente manera 
+$$C_1=\{aa,b,ab,cba\}$$
+\item Verificamos que $C_1$ es un código prefijo, por lo cual es univocamente decodificable.
+\item Luego tenemos que  $\{aa, b, ba, abc\}$ es univocamente decodificable.
+\end{enumerate}
+Nuestro último paso se justifica en que si consideramos un código $ C = x_1, \dots, x_n $, al cual al voltarlo queda como $C_1 := x_1^v, \dots, x_n^v $ es decodificable de manera única. Tenemos que $C$  también es decodificable de manera única. Esto se debe a que $ w = x_{i_1} \dots x_{i_n} $ si y sólo si $ w^v = x_{i_n}^Rv\dots x_{i_1}^v }$. 
+    
 \end{sol}
