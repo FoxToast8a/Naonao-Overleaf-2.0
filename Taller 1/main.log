@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  27 NOV 2024 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  27 NOV 2024 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1243,51 +1243,81 @@ LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 60.
 (1.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
-(Font)              scaled to size 8.0pt on input line 10.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
-(Font)              scaled to size 6.0pt on input line 10.
-LaTeX Font Info:    Trying to load font information for U+eur on input line 10.
+Underfull \hbox (badness 10000) in paragraph at lines 3--8
 
- (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueur.fd
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 8.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
+(Font)              scaled to size 8.0pt on input line 9.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
+(Font)              scaled to size 6.0pt on input line 9.
+LaTeX Font Info:    Trying to load font information for U+eur on input line 9.
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 
- (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+euf on input line 10.
-
+LaTeX Font Info:    Trying to load font information for U+euf on input line 9.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Trying to load font information for U+eus on input line 10.
-
+LaTeX Font Info:    Trying to load font information for U+eus on input line 9.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-LaTeX Font Info:    Trying to load font information for U+euex on input line 10
-.
+LaTeX Font Info:    Trying to load font information for U+euex on input line 9.
+
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 13.
-LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 13.
-)
-(2.tex
+(mdframed)              on input line 27.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 35.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 35.
+
+LaTeX Warning: Command \' invalid in math mode on input line 45.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 45.
+
+[1
+
+{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
+santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
+/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
+:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
+c} <./logo-eps-converted-to.pdf>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 50.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 73.
+ [2]) (2.tex
 Overfull \hbox (3.60617pt too wide) detected at line 4
 \U/eur/m/n/12 Cod\U/euf/m/n/12 (\U/eur/m/n/12 x[]; x[]; x[]; x[]; x[]\U/euf/m/n
 /12 ) = (\U/eur/m/n/12 x[]; x[]; x[]; x[]; x[]; x[] \U/euf/m/n/12 + \U/eur/m/n/
@@ -1305,23 +1335,10 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 13.
- [1
-
-{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
-santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
-/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
-:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
-c} <./logo-eps-converted-to.pdf>]
-Package mdframed Info: Not enough space on this page on input line 14.
 ) (4.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 9.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
@@ -1387,20 +1404,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--96
 
  []
 
-<sancoya.png, id=21, 562.1pt x 289.08pt>
+<sancoya.png, id=26, 562.1pt x 289.08pt>
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 106.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+[3]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 106.
-[2] [3]) (5.tex
+ [4] [5]) (5.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
- [4 <./sancoya.png>]
-Package mdframed Info: Not enough space on this page on input line 6.
 ) (6.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1414,7 +1430,11 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 46.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-[5]) (7.tex
+[6 <./sancoya.png>]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 46.
+ [7]) (7.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 7.
@@ -1422,9 +1442,6 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
-Package mdframed Info: Not enough space on this page on input line 6.
- [6]
-Package mdframed Info: Not enough space on this page on input line 6.
 ) (9.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1433,7 +1450,7 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 15.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-) (10.tex
+ [8]) (10.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 6.
@@ -1441,7 +1458,7 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 66.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
- [7]) (11.tex [8]
+ [9]) (11.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 21.
@@ -1454,19 +1471,23 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 442.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-[9] [10]
+[10] [11]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 442.
- [11] [12] [13]
+ [12]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 442.
- [14] [15]) (12.tex
+ [13] [14] [15]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 442.
+ [16] [17]) (12.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 7.
-) [16] (main.aux
+) [18] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1476,10 +1497,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20841 strings out of 474370
- 410116 string characters out of 5740535
- 2171754 words of memory out of 5000000
- 42750 multiletter control sequences out of 15000+600000
+ 20858 strings out of 474370
+ 410479 string characters out of 5740535
+ 2203754 words of memory out of 5000000
+ 42767 multiletter control sequences out of 15000+600000
  604824 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,93p,624b,1944s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1498,9 +1519,9 @@ pe1/public/tex-gyre/qhvb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/font
 s/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (16 pages, 349116 bytes).
+Output written on main.pdf (18 pages, 356183 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
+ 145 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
