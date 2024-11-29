@@ -3,7 +3,7 @@
 Resuelva el ejercicio 1.5.1 de las notas de clase.
 Construya un código que no sea instantáneo cuyas longitudes  de palabra cumplen la desigualdad de Kraft.
 \begin{sols}
-Sea $C=\{1,10,100,1000\}$. Este codigo claramente no es instantaneo, ya que no es prefijo, por que la palabra 1 es segmento inicial de todas la demas palabras del codigo. Note que para este codigo tenemos que $D=2$ ya que es un codigo binario, y tenemos longitudes de palabra $\ell_1=1,\ell_2=2,\ell_3=3$ y $\ell_4=4.$ Asi
+Sea $C=\{1,10,100,1000\}$. Este código claramente no es instantáneo, ya que no es prefijo, por que la palabra 1 es segmento inicial de todas la demas palabras del código. Para este código tenemos que $D=2$ ya que es un código binario, y tenemos longitudes de palabra $\ell_1=1,\ell_2=2,\ell_3=3$ y $\ell_4=4.$ Así
 \begin{align*}
        \sum_{i=1}^4 D^{-\ell_i}&=2^{-1}+2^{-2}+2^{-3}+2^{-4}\\
        &=2^{-4}(2^3+2^2+2+1)\\
@@ -11,5 +11,5 @@ Sea $C=\{1,10,100,1000\}$. Este codigo claramente no es instantaneo, ya que no e
        &=\frac{15}{16}\leq 1.
    \end{align*} 
 
-   De esta forma $C$ es un codigo no instantaneo que cumple la desigualdad de Kraft como queriamos.  
+   De esta forma $C$ es un código no instantáneo que cumple la desigualdad de Kraft como queriamos.  
 \end{sols}

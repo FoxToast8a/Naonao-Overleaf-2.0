@@ -10,5 +10,19 @@ Clasifique los siguientes códigos de tal manera que puedan codificar la misma f
 \item $C_6=\{001,010,012,021,100,221\}$
 \end{itemize}
 \begin{sol}
-    
+    Vamos a realizar la clasificación teniendo en cuenta la cantidad de símbolos del alfabeto, por lo cual realizaremos la comparación $C_1$ y $C_3$, $C_2$ y $C_5$ y $C_4$ y $C_6$.
+
+\begin{itemize}
+\item $C_1$ y $C_3$:
+Tenemos que ambos códigos son binarios y univocamente decodificables, la longitud del primero es menor que el del segundo, sin embargo, teniendo en cuenta que el canal puede tener ruido, el código $C_1$ no puede hacer la detección de errores a diferencia del $C_3$ y tomando como ejemplo el punto $1$, vemos que la reducción del error en la codificación si bien depende de la probabilidad en el canal se evidencia para ese caso en $55\%$. Por lo cual el mejor código para codificar esa fuente es $C_3$.
+\item $C_2$ y $C_5$:
+Ambos códigos son libres de prefijos y por ende univocamente decodificables, sin embargo, de manera análoga al item anterior tenemos que $C_2$ es un código que no detecta ni corrige errores, pero, $C_5$ es capaz de detectar códigos hasta con 4 errores y corregir códigos que tienen a lo más 2 errores. Por lo cual $C_5$ es un código más robusto y en este caso es mejor.
+\item $C_4$ y $C_6$:
+Tenemos que ninguno de los códigos funciona para detectar o corregir errores, pero el código $C_4$ al ser más completo y por la manera en la que está dado siempre va a tener una respuesta ya sea que el código este bien o mal codificado, sin embargo, al ser $C_6$ un código triario que es menor completo y la manera en la que está construido, existe la posibilidad de que al pasar por el canal no exista un elemento en el alfabeto con el cual emparejarlo, lo que permitiria que por lo menos en algunos se evidencie el error aunque no sea corregible, hace que sea mejor para pasar por un canal con ruido.
+
+
+\end{itemize}
+
+
+
 \end{sol}
