@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 18:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1500,9 +1500,50 @@ Package mdframed Info: Box was splittet wrong
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 7.
-)
 
-[23] (main.aux
+Overfull \hbox (15.28384pt too wide) detected at line 78
+[]
+ []
+
+
+Overfull \hbox (4.57967pt too wide) detected at line 83
+[]
+ []
+
+
+Overfull \hbox (34.6145pt too wide) detected at line 104
+\U/eur/m/n/12 S[] \U/euf/m/n/12 = \U/eus/m/n/12 f\U/eur/m/n/12 1111; 1110; 1101
+; 1011; 0111; 1001; 1010; 1100; 0110; 0011; 0101; 1000; 0100; 0010; 0001; 0000\
+U/eus/m/n/12 g
+ []
+
+
+Overfull \hbox (25.18471pt too wide) detected at line 108
+[]
+ []
+
+
+Overfull \hbox (216.1797pt too wide) detected at line 162
+[]
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 174.
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 174.
+
+
+[23]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 174.
+
+
+[24])
+
+[25] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1510,16 +1551,12 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 20918 strings out of 473898
- 398666 string characters out of 5742893
- 1261784 words of memory out of 5000000
- 43292 multiletter control sequences out of 15000+600000
+ 20922 strings out of 473898
+ 398752 string characters out of 5742893
+ 1261880 words of memory out of 5000000
+ 43296 multiletter control sequences out of 15000+600000
  617827 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,17n,93p,686b,1934s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1532,9 +1569,9 @@ X/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/M
 iKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/
 ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (23 pages, 537023 bytes).
+Output written on main.pdf (25 pages, 545557 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
+ 170 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
