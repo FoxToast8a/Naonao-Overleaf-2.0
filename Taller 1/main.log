@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 22:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  28 NOV 2024 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,23 +1522,18 @@ Overfull \hbox (25.18471pt too wide) detected at line 108
 []
  []
 
-
-Overfull \hbox (216.1797pt too wide) detected at line 162
-[]
- []
-
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 174.
+(mdframed)              on input line 175.
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 174.
+(mdframed)              on input line 175.
 
 
 [23]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 174.
+(mdframed)              on input line 175.
 
 
 [24])
@@ -1551,6 +1546,10 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  20922 strings out of 473898
@@ -1569,7 +1568,7 @@ X/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/M
 iKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/
 ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (25 pages, 545557 bytes).
+Output written on main.pdf (25 pages, 545575 bytes).
 PDF statistics:
  170 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
