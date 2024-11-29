@@ -206,7 +206,7 @@ De esta manera tenemos que juntar los nodos $F$ y $G$ con nun nuevo nodo padre, 
 ;
 \end{tikzpicture}
     \end{center}
-Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a la de $v_4$, asi
+Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a la de $v_4$ y de $H$, asi
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
 
@@ -220,20 +220,21 @@ Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a l
                         child{node[solid]{}
                             child{node[solid, label=below:{$C$}]{}}
                             child{node[solid, label=below:{$D$}]{}}}}}
+                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
                 child{node[red node, label=above:{$v_5$}]{} edge from parent[draw=none]
                     child{node[solid, label=below:{$F$}]{}}
                     child{node[solid, label=below:{$G$}]{}}}
-                child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
+                
 ;
 \end{tikzpicture}
     \end{center}
-Asi para los nodos $v_4$ y $v_5$, asignamos un padre con probabilidad de $0,25+0,40=0,65.$
+Asi para los nodos $v_4$ y $H$, asignamos un padre con probabilidad de $0,25+0,35=0,65.$
 \begin{center}
-       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
 
-            \node[](0){}
+       \node[](0){}
                 child{node[red node, label=above:{$v_6$}]{} edge from parent[draw=none]
-                    child{node[solid]{} 
+                    child{node[solid]{}
                         child{node[solid, label=below:{$E$}]{}}
                         child{node[solid]{}
                             child{node[solid]{} 
@@ -242,21 +243,22 @@ Asi para los nodos $v_4$ y $v_5$, asignamos un padre con probabilidad de $0,25+0
                             child{node[solid]{}
                                 child{node[solid, label=below:{$C$}]{}}
                                 child{node[solid, label=below:{$D$}]{}}}}}
-                    child{node[solid]{}
-                        child{node[solid, label=below:{$F$}]{}}
-                        child{node[solid, label=below:{$G$}]{}}}}
-                 child{node[red node, label=below:{$H$}]{}  edge from parent[draw=none]}
-;
+                    child{node[solid, label=below:{$H$}]{}}}
+                child{node[red node, label=above:{$v_5$}]{} edge from parent[draw=none]
+                    child{node[solid, label=below:{$F$}]{}}
+                    child{node[solid, label=below:{$G$}]{}}};          
 \end{tikzpicture}
     \end{center}
 Ahora solo hay dos nodos, reorganizando y creando un ultimo nodo activo llegamos a que el arbol de codificacion es
 \begin{center}
-       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
+       \begin{tikzpicture}[level 1/.style={sibling distance=35mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
 
-            \node[hollow](0){}
-                child{node[solid, label=below:{$H$}]{}}
+       \node[hollow](0){}
                 child{node[solid]{}
-                    child{node[solid]{} 
+                    child{node[solid, label=below:{$F$}]{}}
+                    child{node[solid, label=below:{$G$}]{}}}
+                child{node[solid]{}
+                    child{node[solid]{}
                         child{node[solid, label=below:{$E$}]{}}
                         child{node[solid]{}
                             child{node[solid]{} 
@@ -265,29 +267,42 @@ Ahora solo hay dos nodos, reorganizando y creando un ultimo nodo activo llegamos
                             child{node[solid]{}
                                 child{node[solid, label=below:{$C$}]{}}
                                 child{node[solid, label=below:{$D$}]{}}}}}
-                    child{node[solid]{}
-                        child{node[solid, label=below:{$F$}]{}}
-                        child{node[solid, label=below:{$G$}]{}}}}
+                    child{node[solid, label=below:{$H$}]{}}}
+
+            
                  
 ;
 \end{tikzpicture}
     \end{center}
-Ya con la codificacion hecha podemos determinar la longitud promedio de palabra ya que 
+Luego si hacia las ramas de la izquierda las enumeramos con 1 y las de la derecha con 0 obtenemos
 \begin{align*}
-    |C(H)|&=1,\\
-    |C(E)|&=|C(F)|=|C(G)|=3,\\
-    |C(A)|&=|C(B)|=|C(C)|=|C(D)|=5.
+    C_2(F)&=11\\
+    C_2(G)&=10\\
+    C_2(H)&=00\\
+    C_2(E)&=011\\
+    C_2(A)&=01011\\
+    C_2(B)&=01010\\
+    C_2(C)&=01001\\
+    C_2(D)&=01000\\
 \end{align*}
-Luego por la formula tenemos que 
-\begin{align*}
-    L(C)&=\sum_{i=1}^8p_i|C(s_i)|\\
-    &=5\cdot0,02+5\cdot0,03+5\cdot0,04+5\cdot0,04+3\cdot0,12+3\cdot0,20+3\cdot0,20+1\cdot0,35\\
-    &=5(0,02+0,03+0,04+0,04)+3(0,12+0,20+0,20)+0,35\\
-    &=5\cdot0,13+3\cdot0,52+0,35\\
-    &=2.56\quad bits/simbolo
-\end{align*}
-De esta manera $L(C)= 2.56\quad bits/simbolo.$\\
+LO llamamos así debido a que es binario. Primero ya con la codificación, podemos determinar que palabra representa la secuencia dada en el enunciado. Si la separamos según la lectura sobre el árbol con comas nos damos cuenta que
+$$11,10,11,11,11,011,10=C_2(F)C_2(G)C_2(F)C_2(F)C_2(F)C_2(E)C_2(G).$$
+Así esa secuencia representa la palabra $FGFFFEG.$\\
 
+ Luego tenemos longitudes de palabra $2,2,2,3,5,5,5,5.$ Por lo tanto la longitud promedio de palabra es
+\begin{align*}
+    L(C_2)&=(0,20+0,20+0,35)2+0,12\cdot3+(0,02+0,03+0,04+0,04)5\\
+    &=2,51\quad bits/simbolo.
+\end{align*}
+Luego tomando la entropía de la fuente tenemos que
+\begin{align*}
+    H(F_2)&=-\sum_{i=1}^8p_i\log_2(p_i)\\
+    &=-(0,02\log_2(0,02)+0,03\log_2(0,03)+2\cdot0,04\log_2(0,04)\\
+    &\phantom{++++}+0,12\log_2(0,12)+2\cdot0,20\log_2(0,20)+0,35\log_2(0,35))\\
+    &\approx 2,46.
+\end{align*}
+Luego la eficiencia viene dada por
+$$\eta_2=\dfrac{H(F)}{L(C_2)}\approx\frac{2,46}{2,51}=98\%.$$
 Procedamos ahora con el algoritmo de Huffman pero para el caso triario. En este caso tenemos que $n-1=8-1=7$ y que $D-1=3-1=2$, luego el residuo de dividir $7$ entre $2$ es $1,$ por lo que en el proceso inicial hay que agregar un nodo nuevo.
 \begin{center}
        \begin{tikzpicture}
@@ -422,21 +437,26 @@ Ahora como solo quedan tres nodos basta con ponerlos en orden de menor a mayor y
     \end{center}
 De esta manera si a cada rama de a izquierda a derecha le asignamos 0,1 y 2, respectivamente, tenemos que la codificacion de los simbolos es
 \begin{align*}
-    C(G)&=0,\\
-    C(H)&=1,\\
-    C(E)&=20,\\
-    C(F)&=22,\\
-    C(C)&=210,\\
-    C(D)&=211,\\
-    C(A)&=2120,\\
-    C(B)&=2121.
+    C_3(G)&=0,\\
+    C_3(H)&=1,\\
+    C_3(E)&=20,\\
+    C_3(F)&=22,\\
+    C_3(C)&=210,\\
+    C_3(D)&=211,\\
+    C_3(A)&=2120,\\
+    C_3(B)&=2121.
 \end{align*}
 De manera abreviada en orden seria $C=\{2120,2121,210,211,20,22,0,1\}.$ Por hacer la comparativa hallemos la longitud promedio de palabra en este caso
 \begin{align*}
-    L(C)&=4\cdot0,02+4\cdot0,03+3\cdot0,04+3\cdot0,04+2\cdot0,12+2\cdot0,20+1\cdot0,20+1\cdot0,35\\
+    L(C_3)&=4\cdot0,02+4\cdot0,03+3\cdot0,04+3\cdot0,04+2\cdot0,12+2\cdot0,20+1\cdot0,20+1\cdot0,35\\
     &=4\cdot0,05+3\cdot0,08+2\cdot0,32+0,55\\
-    &=1.63\quad tribits/simbolo.
+    &=1,63\quad tribits/simbolo.
 \end{align*}
+Ahora para la entropía de la fuente en $tribits,$ basta con dividir por $\log_2(3)$ a $H(F_2)$, ya que esto hace un cambio de base, así
+$$H(F_3)\approx\frac{2,46}{\log_2(3)}\approx 1,55.$$
+Luego tenemos que la eficiencia viene dada por
+$$\eta_3=\frac{H(F_3)}{L(C_3)}\approx\frac{1,55}{1,63}=95\%.$$
+
 
 
 \end{sols}

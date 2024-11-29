@@ -3,6 +3,248 @@
 Una fuente genera símbolos con una distribución de probabilidad 
 $$\{0.729, 0.081, 0.081, 0.081, 0.009, 0.009, 0.009, 0.001\}.$$
 Determine un código binario que permita calcular la codificación de los símbolos de la fuente con menor longitud promedio. Cálcule la eficiencia del código.
-\begin{sol}
-    Hola :p
-\end{sol}
+\begin{sols}
+    Como se nos pide hacerlo con la menor longitud promedio de palabra, podemos ir a lo seguro y aplicar el algoritmo de Huffman. Dado que $D=2,$ es decir, estamos trabajando en binario. Nuestro $r=0,$ por lo que no hay que añadir nodos nuevos y tenemos que el planteamiento inicial es
+    \begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$p_1$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Donde $p_1=0,001,p_2=0,009,p_3=0,081$ y $p_4=0,729$, esto lo hacemos netamente por simpleza del árbol. Procedemos juntando los nodos de menor probabilidad por medio de un padre y sumamos sus probabilidades
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,010$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_1$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Luego reorganizamos nuevamente de orden menor a mayor
+\begin{center}
+       \begin{tikzpicture}
+
+            \node[](0){}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_2$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$0,010$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_1$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+    Volvemos a juntar los dos de menor probabilidad, es decir
+    \begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,018$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_2$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=above:{$0,010$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_1$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Nuevamente los reorganizamos
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,010$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_1$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=above:{$0,018$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_2$}]{}}
+                    child{node[solid, label=below:{$p_2$}]{}}}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Ahora procedemos aunir los dos nodos de menor probabilidad
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,028$}]{}  edge from parent[draw=none]
+                    child{node[solid]{}
+                        child{node[solid, label=below:{$p_1$}]{}}
+                        child{node[solid, label=below:{$p_2$}]{}}}
+                    child{node[solid]{} 
+                        child{node[solid, label=below:{$p_2$}]{}}
+                        child{node[solid, label=below:{$p_2$}]{}}}}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Note que ya esta organizado, asi que juntamos los dos nodos de menor probabilidad
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,109$}]{}  edge from parent[draw=none]
+                    child{node[solid]{}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$p_1$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$p_2$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Note que ahora si tenemos que reorganizar, luego
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=below:{$p_3$}]{}  edge from parent[draw=none]}
+                child{node[red node, label=above:{$0,109$}]{}  edge from parent[draw=none]
+                    child{node[solid]{}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$p_1$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$p_2$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Procedemos a juntar los de menor probabilidad
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=33mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,162$}]{}  edge from parent[draw=none]
+                    child{node[solid, label=below:{$p_3$}]{}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[red node, label=above:{$0,109$}]{}  edge from parent[draw=none]
+                    child{node[solid]{}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$p_1$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$p_2$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Como no estan en orden, los vamos a organizar y de paso juntamos los de menor probabilidad, tal que
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=35mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=25mm}, level 4/.style={sibling distance=20mm}, level 5/.style={sibling distance=15mm}]
+
+            \node[](0){}
+                child{node[red node, label=above:{$0,271$}]{}  edge from parent[draw=none]
+                child{node[solid]{}
+                    child{node[solid]{}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$p_1$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$p_2$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[solid]{}
+                    child{node[solid, label=below:{$p_3$}]{}}
+                    child{node[solid, label=below:{$p_3$}]{}}}}
+                child{node[red node, label=below:{$p_4$}]{}  edge from parent[draw=none]}
+
+;
+\end{tikzpicture}
+    \end{center}
+Luego como ya están en orden, simplemente creamos un nodo mas como raíz ya que solo quedan 2. Así el árbol de codificación es
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=35mm}, level 2/.style={sibling distance=30mm}, level 3/.style={sibling distance=25mm}, level 4/.style={sibling distance=20mm}, level 5/.style={sibling distance=15mm}]
+
+            \node[hollow](0){}
+                child{node[solid]{}
+                child{node[solid]{}
+                    child{node[solid]{}
+                        child{node[solid]{}
+                            child{node[solid, label=below:{$p_1$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}
+                        child{node[solid]{} 
+                            child{node[solid, label=below:{$p_2$}]{}}
+                            child{node[solid, label=below:{$p_2$}]{}}}}
+                    child{node[solid, label=below:{$p_3$}]{}}}
+                child{node[solid]{}
+                    child{node[solid, label=below:{$p_3$}]{}}
+                    child{node[solid, label=below:{$p_3$}]{}}}}
+                child{node[solid, label=below:{$p_4$}]{}}
+
+;
+\end{tikzpicture}
+    \end{center}
+Luego si asignamos a las ramas de la izquierda 0, y a las de la derecha 1 obtenemos el código $C$ asociado a cada valor de la distribución de probabilidad tal que
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+       \hline
+        0,729& 0,081& 0,081& 0,081& 0,009& 0,009& 0,009& 0,001\\
+        \hline
+        1& 001& 010& 011 & 00001 &00010&00011&00000\\
+        \hline
+    \end{tabular}
+\end{center}
+Luego la longitud promedio de palabra viene dada por 
+\begin{align*}
+    L(C)&=\sum_{i=1}^8p_i|C(s_i)|\\
+    &=(0,001+0,009+0,009+0,009)5+(0,081+0,081+0,081)3+0,729\\
+    &=0,14+0,729+0,729\\
+    &=1,598\quad bits/simbolo.
+\end{align*}
+Mientras que la entropía de la fuente es
+\begin{align*}
+    H(F)&=-\sum_{i=1}^8p_i\log_2(p_i)\\
+    &=-(0,001\log_2(0,001)+3\cdot0,009\log_2(0,009)+3\cdot0,081\log_2(0,081)+0,729\log_2(0,729))
+\end{align*}
+\end{sols}

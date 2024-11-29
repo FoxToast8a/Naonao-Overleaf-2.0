@@ -41,6 +41,60 @@ Determine si el código triario $C = \{ab, cb, abbc, cbc, abb\}$ es unívocament
         &\frac{4+4+2+2+1}{16}\\
         &=\frac{13}{16}\leq 1
     \end{align*}
-    Luego tal código si existe, por lo tanto podemos construirlo.
-    \textcolor{blue}{Mañana hago este grafo ya tengo sueñito}
+    Luego tal código si existe, por lo tanto podemos construirlo.\\
+
+    Primero realizamos un árbol de altura 2. Donde los nodos verdes serán hojas usadas mientras los rojos serán nodos terminales que usaremos de padres o se convertirán al final en hojas no usadas.
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
+
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[red node]{}}
+                child{node[red node]{}}}
+;
+\end{tikzpicture}
+    \end{center}
+Luego extendemos a altura 3 por medio de los nodos terminales
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=15mm}]
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[solid]{}
+                    child{node[green node]{}}
+                    child{node[green node]{}}}
+                child{node[solid]{}
+                    child{node[red node]{}}
+                    child{node[red node]{}}}}
+;
+            
+\end{tikzpicture}
+    \end{center}
+Por ultimo como solo queremos una palabra de longitud 4, el árbol queda de la siguiente manera
+\begin{center}
+       \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=15mm}]
+            \node[hollow](0){}
+            child{node[solid]{}
+                child{node[green node]{}}
+                child{node[green node]{}}}  
+            child{node[solid]{}
+                child{node[solid]{}
+                    child{node[green node]{}}
+                    child{node[green node]{}}}
+                child{node[solid]{}
+                    child{node[solid]{}
+                        child{node[green node]{}}
+                        child{node[box node]{}}}
+                    child{node[box node]{}}}}
+;
+            
+\end{tikzpicture}
+    \end{center}
+De esta manera el código instantáneo con las longitudes de palabra indicadas lo podemos dar, asignando a las aristas de la izquierda 0 y las de la derecha 1, tal que 
+$$C=\{00,01,100,101,1100\}.$$
 \end{sols}
