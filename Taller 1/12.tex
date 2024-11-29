@@ -4,5 +4,172 @@ Resuelva el ejercicio 3.5.1 de la página 61 de las notas de clase, calcule la e
 la eficiencia.
 
 \begin{sol}
-    Hola :p
-\end{sol}
+Teniendo en cuenta que $S =\{0, 1\}$ tiene probabilidades $p(0) = 0\text{.}9$ y $p(1) = 0\text{.}1$, podemos decir que $S^{2} =\{11 ,10 ,01 ,00\}$ tiene probabilidades de $p^{2}=\{0\text{.}01 , 0\text{.}09 , 0\text{.}09 , 0\text{.}81\}$ respectivamente. Aplicando el algoritmo de Shannon-Fano obtenemos lo siguiente 
+\[
+\begin{array}{|c|c|c|c|c|c|}
+\hline
+00 & 0\text{.}81 & 0 & & & 0\\
+\hline
+01 & 0\text{.}09 & 1 &0 & & 10\\
+\hline
+10 & 0\text{.}09 & 1 &1 &0 & 110\\
+\hline
+11 & 0\text{.}01 & 1 &1 &1 & 111\\
+\hline
+\end{array}
+\]
+Así, tenemos que $C=\{0, 10, 110, 111\}$ 
+Luego tenemos que la longitud promedio de palabra es 
+\begin{align*}
+    L(C)&=(0,81)\cdot 1+(0,09)\cdot 2+ (0,09)\cdot 3 +(0,01)\cdot 3\\
+    &= 1.29 \text{ bits/símbolo}
+.\end{align*}
+Y la entropía para este caso es
+\begin{align*}
+    H(F^{2})&=-(0,81)log_2 0.81-(0,09) log_2 0.09 - (0,09)log_2 0.09 -(0,01)log_2 0.01\\
+    &= 0.93799
+.\end{align*}
+Por lo tanto la eficiencia es 
+\begin{align*}
+    \eta= \dfrac{H(F^{2})}{L(C)}=\dfrac{0.93799}{1.29}=0.7271
+.\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{-} Para el siguiente caso, tenemos que $S^{3} =\{111 ,110 ,101,011, 001, 010, 100 ,000\}$ tenemos que las probabilidades de $p^{3}=\{0\text{.}001 , 0\text{.}009 , 0\text{.}009 , 0\text{.}009, 0\text{.}009 , 0\text{.}081 , 0\text{.}081, , 0\text{.}081,  0\text{.}729\}$ respectivamente. Aplicando el algoritmo de Shannon-Fano obtenemos  
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|}
+\hline
+000 & 0\text{.}729 & 0 & & & & &0\\
+\hline
+100 & 0\text{.}081 & 1 &0 &0 & & &100\\
+\hline
+010 & 0\text{.}081 & 1 &0 &1 & & &101\\
+\hline
+001 & 0\text{.}081 & 1 &1 &0 & & &110\\
+\hline
+011 & 0\text{.}009 & 1 &1 &1 &0 &0 &11100\\
+\hline
+101 & 0\text{.}009 & 1 &1 &1 &0 &1 &11101\\
+\hline
+110 & 0\text{.}009 & 1 &1 &1 &1 &0 &11110\\
+\hline
+000 & 0\text{.}001 & 1 &1 &1 &1 &1 &11111\\
+\hline
+\end{array}
+\]
+Así, tenemos que $C=\{0, 100, 101, 110, 11100, 11101, 11110, 11111\}$, por lo cual la longitud promedio de palabra es 
+\begin{align*}
+L(C)=&  5(0.001) + 5(0.009) +5(0.009) +5(0.009) + 3(0.081)+3(0.081)+3(0.081) + 1(0.729) \\
+=& 1.598 \text{ bits símbolo.}
+.\end{align*}
+Y la entropía para este caso es
+\begin{align*}
+    H(F^{3})&=-(0.001)log_2 0.001-3[(0.009)log_2 0.009]-3[(0.081)log_2 0.081 ]-(0.729)log_2 0.729\\
+    &= 1.40698
+.\end{align*}
+Por lo tanto la eficiencia es 
+\begin{align*}
+    \eta= \dfrac{H(F^{3})}{L(C)}=\dfrac{1.40698}{1.598}=0.88046
+.\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{-} Por último, tenemos que $$S^{4} =\{1111 ,1110 ,1101,1011, 0111, 1001, 1010, 1100, 0110, 0011, 0101, 1000, 0100, 0010, 0001 ,0000\}$$ y así, las probabilidades de 
+\begin{align*}
+   p^{4}&=\{0\text{.}0001 , 0\text{.}0009 , 0\text{.}0009 , 0\text{.}0009, 0\text{.}0009 , 0\text{.}0081 , 0\text{.}0081, 0\text{.}0081, 0\text{.}0081, 0\text{.}0081, 0\text{.}0081, 0\text{.}0729,\\
+& 0\text{.}0729, 0\text{.}0729, 0\text{.}0729, 0.6561\}  
+.\end{align*}
+
+
+
+respectivamente. Aplicando el algoritmo de Shannon-Fano obtenemos  
+\[
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+0000& 0.6561 & 0& &&&&&&&&&0\\
+\hline
+0001& 0.0729 &1 &0 &0 & & & & & & & &100 \\
+\hline
+0010& 0.0729 & 1& 0& 1& & & & & & & & 101\\
+\hline
+0100& 0.0729 & 1& 1&0 & & & & & & & & 110\\
+\hline
+1000& 0.0729 & 1& 1& 1&0 & & & & & & & 1110\\
+\hline
+0101& 0.0081 & 1& 1& 1& 1& 0&0 & & & & & 111100\\
+\hline
+0011& 0.0081 &1 & 1& 1& 1& 0& 1&0 & & & & 1111010\\
+\hline
+0110& 0.0081 & 1& 1& 1& 1& 0& 1& 1& & & & 1111011\\
+\hline
+1100& 0.0081 & 1& 1& 1& 1& 1& 0&0 & & & & 1111100\\
+\hline
+1010& 0.0081 & 1& 1& 1& 1& 1& 0& 1& & & & 1111101\\
+\hline
+1001& 0.0081 & 1& 1& 1& 1& 1& 1& 0& & & & 1111110\\
+\hline
+0111& 0.0009 & 1& 1& 1& 1& 1& 1& 1& 0&0 & &111111100 \\
+\hline
+1011& 0.0009  & 1&1 & 1& 1& 1& 1& 1& 0&1 & & 111111101\\
+\hline
+1101& 0.0009  & 1& 1& 1& 1& 1& 1& 1& 1& 0& & 111111110\\
+\hline
+1110& 0.0009  & 1& 1& 1& 1& 1& 1& 1& 1& 1&0 & 1111111110\\
+\hline
+1111& 0.0001  & 1& 1& 1& 1& 1& 1& 1& 1& 1& 1&  1111111111\\
+\hline
+\end{array}
+\]
+Así, tenemos que $C=\{ 0, 100, 101, 110, 1110, 111100, 1111010, 1111011, 1111100, 1111101,\\ 
+1111110,  111111100, 111111101, 111111110, 1111111110, 1111111111\}$, por lo cual la longitud promedio de palabra es 
+\begin{align*}
+L(C)=& 1(0.6561) + 3(3(0.0729)) + 4(0.0729) +6( 0.0081) +5(7( 0.0081)) +3(9( 0.0009))\\
+ &+10( 0.0009) + 10( 0.0001)\\
+ \\
+=& 1.9702 \text{ bits/ símbolo.}
+\end{align*}
+Y la entropía para este caso es
+\begin{align*}
+    H(F^{4})&=-0.6561 \cdot \log_2(0.6561) -4(0.0729 \cdot \log_2(0.0729)) - 6(0.0081 \cdot \log_2(0.0081)) \\
+    &-4(0.0009 \cdot \log_2(0.0009))-0.0001 \cdot \log_2(0.0001)\\
+    &= 1.87598
+.\end{align*}
+Por lo tanto la eficiencia es 
+\begin{align*}
+    \eta= \dfrac{H(F^{3})}{L(C)}=\dfrac{1.87598}{1.9702}=0.952177
+.\end{align*}
+
+
+
+
+
+
+ 
+ \end{sol}
