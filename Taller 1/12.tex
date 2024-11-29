@@ -73,7 +73,7 @@ Ahora organizando en orden de menor a mayor y uniendo de paso los nodos de menor
 ;
 \end{tikzpicture}
     \end{center}
-Como ya estan organizados, procedemos a crear el ultimo nodo padre que sera la raiz, asi obtenemos
+Como ya estan ordenados, procedemos a crear el último nodo padre que sera la raíz, así obtenemos
 \begin{center}
        \begin{tikzpicture}
 
@@ -256,7 +256,7 @@ Ahora procedamos por medio de el algoritmo de Huffman. Tenemos primero 16 nodos 
 \end{tikzpicture}
     \end{center}
 
-Donde $p_1=0,0001,p_2=0,0009,p_3=0,0081,p_4=0,0729$ y $p_5=0,6561.$ Donde cada nodo marcado con alguna $p_i$, hace referencia a una palabra de $S^4,$ esto es meramente por practicad, pero a fin de cuentas la codificación sera equivalente. Ahora procedemos a unir los nodos de menor probabilidad
+Donde $p_1=0,0001,p_2=0,0009,p_3=0,0081,p_4=0,0729$ y $p_5=0,6561.$ Además, cada nodo marcado con alguna $p_i$, hace referencia a una palabra de $S^4,$ esto es meramente por facilidad, pero a fin de cuentas la codificación sera equivalente. Ahora procedemos a unir los nodos de menor probabilidad
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=10mm},]
 
@@ -337,7 +337,7 @@ Juntamos nuevamente los de menor probabilidad
 \end{tikzpicture}
     \end{center}
 
-Luego lo reorganizamos
+Luego lo ordenamos nuevamente
 
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=10mm},level 2/.style={sibling distance=6mm}]
@@ -452,7 +452,7 @@ Como ya esta organizado, podemos juntar los nodos tal que
 ;
 \end{tikzpicture}
     \end{center}
-Reorganizando y juntando los de menor probabilidad tenemos
+Organizando y juntando los de menor probabilidad tenemos
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=14mm},level 2/.style={sibling distance=14mm},level 3/.style={sibling distance=10mm},level 4/.style={sibling distance=6mm}]
 
@@ -484,7 +484,7 @@ Reorganizando y juntando los de menor probabilidad tenemos
 \end{tikzpicture}
     \end{center} 
 
-Nuevamente reorganizando y juntado los de menor probabilidad
+Nuevamente organizando y juntado los de menor probabilidad
 
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=18mm},level 2/.style={sibling distance=13mm},level 3/.style={sibling distance=10mm},level 4/.style={sibling distance=6mm}]
@@ -517,7 +517,7 @@ Nuevamente reorganizando y juntado los de menor probabilidad
 ;
 \end{tikzpicture}
     \end{center} 
-Reorganizando
+Reordenando
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=18mm},level 2/.style={sibling distance=13mm},level 3/.style={sibling distance=10mm},level 4/.style={sibling distance=6mm}]
 
@@ -582,7 +582,7 @@ Uniendo los nodos de menor probabilidad obtenemos
 ;
 \end{tikzpicture}
     \end{center}
-Nuevamente reorganizamos
+Nuevamente organizamos
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=21mm},level 2/.style={sibling distance=17mm},level 3/.style={sibling distance=14mm},level 4/.style={sibling distance=10mm},level 5/.style={sibling distance=6mm}]
 
@@ -878,7 +878,7 @@ De esta manera si asignamos 0 a las ramas de la izquierda y 1 a las de la derech
     C&=\{1,000,001,010,0111,011010,0110000,0110001,0110010,0110011,0110111\\
     &,011011000,011011001,011011010,0110110110,0110110111\}.
 \end{align*}
-Note que las longitudes de palabra de este código, coinciden con las de el código realizado por Shannos-Fano, de esta manera tienen la misma eficiencia.
+Note que las longitudes de palabra de este código, coinciden con las de el código realizado por Shannon-Fano, de esta manera tienen la misma eficiencia.
 
 
 

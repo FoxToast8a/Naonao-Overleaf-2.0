@@ -18,7 +18,7 @@ Suponga que se ha usado un código de Huffman para codificar los mensajes sobre 
 
 
 \begin{sols}
-    Primero procederemos para el caso binario por medio del algoritmo de Huffman. Pintemos los respectivos 8 nodos en orden de menor a mayot segun la distribucion de probabilidad.
+    Primero procederemos para el caso binario por medio del algoritmo de Huffman. Pintemos los respectivos 8 nodos en orden de menor a mayor según la distribución de probabilidad.
     \begin{center}
        \begin{tikzpicture}
 
@@ -35,7 +35,7 @@ Suponga que se ha usado un código de Huffman para codificar los mensajes sobre 
 ;
 \end{tikzpicture}
     \end{center}
-Donde el nodo rojo significa que esta disponible. Como estamos en el caso binario no tenemos que agregar nodos nuevos al inicio y podemos proceder a crear un nodo padre para los dos de menos probabilidad, que en este caso son $A$ y $B.$ Quedando como nodos activos
+Donde el nodo rojo significa que está disponible. Como estamos en el caso binario no tenemos que agregar nodos nuevos al inicio y podemos proceder a crear un nodo padre para los dos de menos probabilidad, que en este caso son $A$ y $B.$ Quedando como nodos activos
 \begin{center}
        \begin{tikzpicture}
 
@@ -53,7 +53,7 @@ Donde el nodo rojo significa que esta disponible. Como estamos en el caso binari
 ;
 \end{tikzpicture}
     \end{center}
-Ahora $v_1$ queda con las porbabilidades sumadas de $A$ y $B$, es decir $0,02+0,03=0,05.$ Por el algoritmo tenemos que reorganizar los nodos tal que queden nuevamente en orden de probabilidades, tal que
+Ahora $v_1$ queda con las probabilidades sumadas de $A$ y $B$, es decir $0,02+0,03=0,05.$ Por el algoritmo tenemos que reorganizar los nodos tal que queden nuevamente en orden de probabilidades, tal que
 \begin{center}
        \begin{tikzpicture}
 
@@ -89,7 +89,7 @@ Ahora creamos un nodo padre para los dos de menor probabilidad, es decir $C$ y $
 ;
 \end{tikzpicture}
     \end{center}
-Note que nuevamente hay que reorganizar los nodos ya que la probabilidad de $v_1$ es menor a la de $v_2$.
+Nuevamente hay que reorganizar los nodos ya que la probabilidad de $v_1$ es menor a la de $v_2$.
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=15mm}]
 
@@ -165,7 +165,7 @@ Ahora juntamos los nodos $E$ y $v_3$ y les damos un padre con probabilidad de $0
 ;
 \end{tikzpicture}
     \end{center}
-Luego la probabilidad de $F$ y $G$ es menor a la de $v_4,$ asi reorganizando
+Luego la probabilidad de $F$ y $G$ es menor a la de $v_4,$ asi reordenando
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=25mm}, , level 4/.style={sibling distance=15mm}]
 
@@ -185,7 +185,7 @@ Luego la probabilidad de $F$ y $G$ es menor a la de $v_4,$ asi reorganizando
 ;
 \end{tikzpicture}
     \end{center}
-De esta manera tenemos que juntar los nodos $F$ y $G$ con nun nuevo nodo padre, de probabilidad $0,20+0,20=0,40.$
+De esta manera tenemos que juntar los nodos $F$ y $G$ con un nuevo nodo padre, de probabilidad $0,20+0,20=0,40.$
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
 
@@ -206,7 +206,7 @@ De esta manera tenemos que juntar los nodos $F$ y $G$ con nun nuevo nodo padre, 
 ;
 \end{tikzpicture}
     \end{center}
-Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a la de $v_4$ y de $H$, asi
+Nuevamente tenemos que ordenar, ya que la probabilidad de $v_5$ es mayor a la de $v_4$ y de $H$, asi
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=15mm}]
 
@@ -228,7 +228,7 @@ Nuevamente tenemos que reorganizar, ya que la probabilidad de $v_5$ es mayor a l
 ;
 \end{tikzpicture}
     \end{center}
-Asi para los nodos $v_4$ y $H$, asignamos un padre con probabilidad de $0,25+0,35=0,65.$
+Para los nodos $v_4$ y $H$, asignamos un padre con probabilidad de $0,25+0,35=0,65.$
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=30mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
 
@@ -249,7 +249,7 @@ Asi para los nodos $v_4$ y $H$, asignamos un padre con probabilidad de $0,25+0,3
                     child{node[solid, label=below:{$G$}]{}}};          
 \end{tikzpicture}
     \end{center}
-Ahora solo hay dos nodos, reorganizando y creando un ultimo nodo activo llegamos a que el arbol de codificacion es
+Ahora solo hay dos nodos, reorganizando y creando un último nodo activo llegamos a que el árbol de codificación es
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=35mm}, level 2/.style={sibling distance=25mm}, level 3/.style={sibling distance=20mm}, level 4/.style={sibling distance=20mm},  level 5/.style={sibling distance=15mm}]
 
@@ -274,7 +274,7 @@ Ahora solo hay dos nodos, reorganizando y creando un ultimo nodo activo llegamos
 ;
 \end{tikzpicture}
     \end{center}
-Luego si hacia las ramas de la izquierda las enumeramos con 1 y las de la derecha con 0 obtenemos
+Luego, las ramas de la izquierda las enumeramos con 1 y las de la derecha con 0 obtenemos
 \begin{align*}
     C_2(F)&=11\\
     C_2(G)&=10\\
@@ -285,11 +285,11 @@ Luego si hacia las ramas de la izquierda las enumeramos con 1 y las de la derech
     C_2(C)&=01001\\
     C_2(D)&=01000\\
 \end{align*}
-LO llamamos así debido a que es binario. Primero ya con la codificación, podemos determinar que palabra representa la secuencia dada en el enunciado. Si la separamos según la lectura sobre el árbol con comas nos damos cuenta que
+Lo llamamos así debido a que es binario. Primero ya con la codificación, podemos determinar que palabra representa la secuencia dada en el enunciado. Si la separamos según la lectura sobre el árbol con comas nos damos cuenta que
 $$11,10,11,11,11,011,10=C_2(F)C_2(G)C_2(F)C_2(F)C_2(F)C_2(E)C_2(G).$$
 Así esa secuencia representa la palabra $FGFFFEG.$\\
 
- Luego tenemos longitudes de palabra $2,2,2,3,5,5,5,5.$ Por lo tanto la longitud promedio de palabra es
+ Luego, tenemos longitudes de palabra $2,2,2,3,5,5,5,5.$ Por lo tanto la longitud promedio de palabra es
 \begin{align*}
     L(C_2)&=(0,20+0,20+0,35)2+0,12\cdot3+(0,02+0,03+0,04+0,04)5\\
     &=2,51\quad bits/simbolo.
@@ -376,7 +376,7 @@ Ahora colocamos un nuevo nodo padre para los nodos $C,D$ y $v_1.$
 ;
 \end{tikzpicture}
     \end{center}
-La probabilidad de este nuevo nodo es $0,04+0,04+0,05=0,13.$ Por lo que nuevamente tenemos que reorganizar los nodos
+La probabilidad de este nuevo nodo es $0,04+0,04+0,05=0,13.$ Por lo que nuevamente tenemos que organizar los nodos
 \begin{center}
        \begin{tikzpicture}
 
@@ -415,7 +415,7 @@ Ahora le damos un padre a los nodos $E,v_2$ y $F$, que va a tener la probabilida
 ;
 \end{tikzpicture}
     \end{center}
-Ahora como solo quedan tres nodos basta con ponerlos en orden de menor a mayor y juntarlos con el padre que sera la raiz, asi el arbol de codificacion es
+Ahora como solo quedan tres nodos basta con ponerlos en orden de menor a mayor y juntarlos con el padre que sera la raíz, asi el árbol de codificación es
 \begin{center}
        \begin{tikzpicture}
 
@@ -435,7 +435,7 @@ Ahora como solo quedan tres nodos basta con ponerlos en orden de menor a mayor y
 ;
 \end{tikzpicture}
     \end{center}
-De esta manera si a cada rama de a izquierda a derecha le asignamos 0,1 y 2, respectivamente, tenemos que la codificacion de los simbolos es
+De esta manera si a cada rama de a izquierda a derecha le asignamos 0,1 y 2, respectivamente, tenemos que la codificación de los símbolos es
 \begin{align*}
     C_3(G)&=0,\\
     C_3(H)&=1,\\
