@@ -13,28 +13,28 @@ Determine si el código triario $C = \{ab, cb, abbc, cbc, abb\}$ es unívocament
             cbc\\
             abb
         \end{cases}$$ 
-        Luego posibles soluciones para $w$ son $bc$ en la primera y $b$ en la ultima, la segunda ecuación note que la palabra de la izquierda empieza por $a$ mientras que la derecha por $c$, así no hay solución.
+        Luego, las posibles soluciones para $w$ son $bc$ en la primera y $b$ en la última, en la segunda ecuación, la palabra de la izquierda empieza por $a$ mientras que la derecha por $c$, así concluimos que no hay solución.
         \item Si $u=cb$, por las longitudes de palabra consideramos solamente
         $$cbw=\begin{cases}
             abbc\\
             cbc\\
             abb
         \end{cases}$$
-        Note que la primera ecuación y la ultima no tienen solución ya que la palabra de la izquierda empieza por $c$ mientras la de la derecha por $a.$ Pero note que para la segunda si tomamos $w=c$, cumplimos la ecuación
+        Note que la primera ecuación y la última no tienen solución ya que la palabra de la izquierda empieza por $c$ mientras la de la derecha por $a.$ Pero, para la segunda si tomamos $w=c$, cumplimos la ecuación
         \item Si $u=cbc,$ la única ecuación por longitudes es $cbcw=abbc,$ pero esta no tiene solución por que la palabra de la izquierda empieza por $c$, mientras la de la derecha empieza por $a$. En cambio si $u=abb,$ la ecuación $abbw=abbc$ tiene como solución $w=c.$
     \end{itemize}
     Así con todos los casos inspeccionados tenemos que $C_1=\{b,c,bc\}.$ Ahora tenemos que 
     $$C_2=\{w\in D^+|\,uw=v, \text{ con } u\in C_1 \text{ y } v\in C \text{ o } u\in C \text{ y } v\in C_1 \}.$$
     Note que por las longitudes de palabra las ecuaciones de la forma $uw=v$, donde $u\in C$ y $v\in C_1$, ya que $|uw|\geq 3$ mientras que $|v|\leq 2.$ Así que solo observaremos cuando $u\in C_1$ y $c\in C$.
     \begin{itemize}
-        \item Note que para los casos donde $u=b$ y $u=bc,$ la palabra $uw$ empieza por $b,$ mientras que todas las palabras del código $C$ empiezan por $a$ o $c,$ así ninguna ecuación tiene solución en este caso.
+        \item Para los casos donde $u=b$ y $u=bc,$ la palabra $uw$ empieza por $b,$ mientras que todas las palabras del código $C$ empiezan por $a$ o $c,$ así ninguna ecuación tiene solución en este caso.
         \item Si $u=c$, basta considerar las ecuaciones que empiezan por ese símbolo, es decir, $cw=cb$ y $cw=cbc.$ Luego $w=b$ o $w=bc.$
     \end{itemize}
-    De esta manera concluimos que $C_2=\{b,bc\}.$ Note ahora que para $C_3$ podemos argumentar de manera muy similar a $C_2.$ Para el caso donde $u\in C_2$ y $v\in C$ note que $u=b$ o $u=bc,$ luego $uw$ empieza por $b$, pero ninguna palabra en $C$ empieza por $b,$ así no hay soluciones. En caso de que $u\in C$ y $v\in C_2,$ tenemos que $|uw|\geq 3,$ mientras que $|v|\leq 2.$ Así concluimos que $C_3=C_4=\cdots=\varnothing.$ Luego
+    De esta manera concluimos que $C_2=\{b,bc\}.$ Note ahora que para $C_3$ podemos argumentar de manera muy similar a $C_2.$ Para el caso donde $u\in C_2$ y $v\in C$, $u=b$ o $u=bc,$ luego $uw$ empieza por $b$, pero ninguna palabra en $C$ empieza por $b,$ así no hay soluciones. En caso de que $u\in C$ y $v\in C_2,$ tenemos que $|uw|\geq 3,$ mientras que $|v|\leq 2.$ Así concluimos que $C_3=C_4=\cdots=\varnothing.$ Luego
     $$C_\infty=\bigcup_{i=1}^\infty C_i=C_1\cup C_2=\{b,c,bc\}.$$
     De esta manera $C\cap C_\infty=\varnothing,$ y por el teorema de Sardinas-Patterson tenemos que $C$ es unívocamente decodificable.\\
 
-    Ahora queremos ver si existe un código binario, es decir, $D=2,$ con longitudes de palabras $\ell_1=2,\ell_2=2,\ell_3=3,\ell_4=3$ y $\ell_5=4.$ Que sea instantáneo, esto lo podemos ver por medio de la desigualdad de Kraft
+    Ahora queremos ver si existe un código binario, es decir, $D=2,$ con longitudes de palabras $\ell_1=2,\ell_2=2,\ell_3=3,\ell_4=3$ y $\ell_5=4,$ que sea instantáneo, esto lo podemos ver por medio de la desigualdad de Kraft
     \begin{align*}
         \sum_{i=1}^5D^{-\ell_i}&=2^{-2}+2^{-2}+2^{-3}++2^{-3}++2^{-4}\\
         &=2^{-4}(2^2+2^2+2+2+1)\\
@@ -75,7 +75,7 @@ Luego extendemos a altura 3 por medio de los nodos terminales
             
 \end{tikzpicture}
     \end{center}
-Por ultimo como solo queremos una palabra de longitud 4, el árbol queda de la siguiente manera
+Por último como solo queremos una palabra de longitud 4, el árbol queda de la siguiente manera
 \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=15mm}]
             \node[hollow](0){}
