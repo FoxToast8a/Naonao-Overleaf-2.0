@@ -4,12 +4,127 @@
     \[
     H(X, Y) + H(X, Z) + H(Y, Z) \geq 2H(X, Y, Z).
     \]
+    \begin{proof}
+    Para poder probar esa propiedad, primero probaremos lo siguiente, puesto que es importante para nuestra prueba
+    \begin{align}
+        H(X,Y,Z)=H(X)+H(Y|X)+H(Z|X,Y)
+    .\end{align}
+La demostración se sigue de lo siguiente
+
+\begin{align*}
+    H(X,Y,Z) &= - \sum_{x,y,z} p(x,y,z) \log p(x,y,z),\\
+&= - \sum_{x,y,z} p(x,y,z) \log \left( \frac{p(x,y,z)}{p(x) p(x,y) p(y) p(x)} \right),\\
+&= - \sum_{x,y,z} p(x,y,z) \log p(x)  - \sum_{x,y,z} p(x,y,z) \log p(y|x)- \sum_{x,y,z} p(x,y,z) \log p(z|x,y),\\
+&= - \sum_{x} p(x) \log p(x) - \sum_{x,y} p(x,y) \log p(y|x) - \sum_{x,y,z} p(x,y,z) \log p(z|x,y),\\
+&= H(X)+ H(Y|X)+ H(Z|X,Y).
+\end{align*}
+De manera análoga tenemos que 
+ \begin{align}
+        H(X,Y,Z)=H(Y)+H(Y|Z)+H(X|Y,Z)
+    .\end{align}
+Adicionalmente, tenemos que probar que,
+\begin{align}
+    H(X,Y)=H(X)+H(Y|X)
+\end{align}
+Esta prueba se tiene a partir de la siguiente cuenta,
+\begin{align*}
+    H(X,Y) &= - \sum_{x,y} p(x,y) \log p(x,y) \\
+&= - \sum_{x,y} p(x,y) \log \left( p(x) p(y|x) \right)\\ 
+&= - \sum_{x,y} p(x,y) \log p(x) - \sum_{x,y} p(x,y) \log p(y|x) \\
+&= - \sum_{x} p(x) \log p(x) - \sum_{x,y} p(x,y) \log p(y|x)\\ 
+&= H(X) + H(Y|X)
+.\end{align*}
+de manera similar, se puede demostrar que 
+\begin{align}
+    H(X,Y)=H(Y)+H(X|Y)
+.\end{align}
+por último, debemos probar estas dos propiedades
+\begin{align}
+    H(X|Y)&\leq H(X),\\
+ H(X|Y,Z)&\leq H(X|Z)
+.\end{align}
+Para probar esas propiedades tenemos que usar la convexidad de la función logaritmo cuando tiene base mayor que 1, es decir, que 
+\begin{align*}
+ \log\left(\sum_{i=1}^{n} \alpha_i x_i\right) \geq \sum_{i=1}^{n} \alpha_i \log(x_i),   
+.\end{align*}
+donde $\alpha_i > 0$ y $\sum_{i=1}^{n} \alpha_i = 1$; así, $(5)$ se sigue de 
+\begin{align*}
+H(X) - H(X|Y) &= -\sum_{x,y} p(x,y) \log p(x) + \sum_{x,y} p(x,y) \log p(x|y) \\
+&= -\sum_{x,y} p(x,y) \log \frac{p(x)}{p(x|y)} \\
+&\geq -\log \sum_{x,y} p(x,y) \frac{p(x)}{p(x|y)} \\
+&\geq -\log \sum_{x,y} p(x)p(y) \\
+&= -\log(1)\\
+&= 0.
+\end{align*}
+Por lo cual $(5)$ queda probado.\\
+Ahora bien, para probar $(6)$ seguimos lo siguiente 
+\begin{align*}
+H(X|Z) - H(X|Y,Z) 
+&= H(X,Z) - H(Z) - H(X|Y,Z) \quad \text{por (3)} \\
+&= -\sum_{x,y,z} p(x,y,z) \log p(x,z) + \sum_{x,y,z} p(x,y,z) \log p(z) \\
+&\quad + \sum_{x,y,z} p(x,y,z) \log p(x|y,z) \\
+&= -\sum_{x,y,z} p(x,y,z) \log \frac{p(x,z)}{p(z)p(x|y,z)} \\
+&= -\sum_{x,y,z} p(x,y,z) \log \frac{p(x,z)p(y,z)}{p(z)p(x,y,z)} \\
+&\geq -\log \sum_{x,y,z} \frac{p(x,y,z) p(x,z)p(y,z)}{p(z)p(x,y,z)} \\
+&= -\log \sum_{x,z} \frac{p(x,z)}{p(z)} \sum_{y} p(y,z) \\
+&= -\log \sum_{x,z} \frac{p(x,z)}{p(z)} p(z) \\
+&= -\log(1)\\ 
+&= 0
+.\end{align*}
+Así, $(6)$ queda probado, por lo que utilizando las propiedades demostradas anteriormente, podemos decir que 
+\begin{align*}
+    2H(X,Y,Z)&=H(X,Y,Z)+H(X,Y,Z)\\
+    &=H(X)+H(Y|X)+H(Z|X,Y)+H(Y)+H(Y|Z)+H(X|Y,Z) \quad \text{por (1) y (2)}\\
+    &=H(X,Y)+H(Y,Z)+H(Z|X,Y)+H(X|Y,Z) \quad \text{por (3)}\\
+    &\leq H(X,Y)+H(Y,Z)+H(Z|Y)+H(X|Z) \quad \text{por (6)}\\
+    &\leq H(X,Y)+H(Y,Z)+H(Z)+H(X|Z) \quad \text{por (5)}\\
+    &= H(X,Y)+H(Y,Z)+H(X,Z) \quad \text{por (4)}
+.\end{align*}
+Concluyendo lo que queriamos demostrar.
+
+\end{proof}
+
     \item[B]. Demuestre que para cualquier tripla de variables aleatorias se cumple que 
     \[
     I(X; Y | Z) = H(X | Z) + H(Y | Z) - H(X, Y | Z).
     \]
+    \begin{proof}
+    Para poder demostrar esa propiedad, es necesario realizar dos demostraciones preliminares, la primera es probar que para 3 variables aleatorias arbitrarias se cumple que
+    \begin{align}
+        H(X,Y,Z)=H(X)+H(Y,Z|X)
+    ,\end{align}
+    esta afirmación se tiene gracias a lo siguiente 
+    \begin{align*}
+        H(X,Y,Z) &= - \sum_{x,y,z} p(x,y,z) \log p(x,y,z)\\
+&= - \sum_{x,y,z} p(x,y,z) \log \left( p(x) p(y,z|x) \right)\\
+&= - \sum_{x,y,z} p(x,y,z) \log p(x) - \sum_{x,y,z} p(x,y,z) \log p(y,z|x)\\
+&= H(X) + H(Y,Z|X)
+    .\end{align*}
+La segunda propiedad que tenemos que probar es 
+\begin{align}
+    I(X;Y |Z) = H(X|Z)−H(X|Y,Z)
+,\end{align}
+la prueba de esto se sigue de
+\begin{align*}
+    I(X;Y | Z) &= - \sum_{x,y,z} p(x,y,z) \log p(x,y|z)\\
+&= H(X|Z) + \sum_{x,y,z} p(x|z) p(y|z) p(x,y,z) \log p(x|z) + \sum_{x,y,z} p(x,y,z) \log \left( \frac{p(x,y,z)}{p(x,y|z)} \right)\\
+&= H(X|Z) - H(X|Y,Z)
+.\end{align*}
+por lo anterior, podemos decir que 
+    \begin{align*}
+        I(X;Y | Z) &= H(X | Z) - H(X | Y, Z)\quad \text{por (8)}\\
+&= H(X | Z) - \left( H(X, Y, Z) - H(Y, Z) \right) \quad \text{por el numeral anterior y el (3)}\\
+&= H(X | Z) - \left( H(X, Y | Z) + H(Z) \right) + H(Y, Z) \quad \text{por (7)}\\
+&= H(X | Z) + H(Y | Z) - H(X, Y | Z) \quad \text{por (4)}
+    .\end{align*}
+\end{proof}
+
     \item[C]. Proponga una definición para la información común de tres variables $I(X; Y; Z)$ y demuestre que 
     \[
     I(X; Y; Z) = I(X; Y) - I(X; Y | Z).
     \]
+    \begin{proof}
+
+\end{proof}
+
 \end{enumerate}
