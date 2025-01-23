@@ -1,3 +1,29 @@
 %!TEX root = main.tex
+Considere que una fuente sin memoria emite los símbolos del alfabeto $S = \{a, b, c\}$. Se sabe que la distribución de probabilidad de los símbolos en la salida del canal es 
+\[
+P_Y = \{0\text{.}6, 0\text{.}3, 0\text{.}1\}.
+\]
+Los símbolos entran a un canal ruidoso que puede cambiar unos símbolos en otros de acuerdo a la distribución de probabilidad que muestra la siguiente tabla de probabilidades condicionales $p(x|y)$:
+
+\[
+\begin{array}{c|ccc}
+\text{entra} \backslash \text{sale} & a & b & c \\
+\hline
+a & 0\text{.}95 & 0\text{.}03 & 0\text{.}02 \\
+b & 0\text{.}03 & 0\text{.}95 & 0\text{.}02 \\
+c & 0\text{.}02 & 0\text{.}02 & 0\text{.}96 \\
+\end{array}
+\]
+
+Denote por $X$ y $Y$ las variables aleatorias que modelan los símbolos que salen de la fuente y del canal respectivamente. Resuelva las siguientes preguntas:
+
+\begin{enumerate}
+    \item[A]. Determine las entropías de la fuente y el canal.
+    \item[B]. Determine la entropía del sistema.
+    \item[C]. Determine e interprete las entropías condicionales $H(X|Y)$ y $H(Y|X)$.
+    \item[D]. Calcule la información común entre la entrada y la salida del sistema.
+    \item[E]. Determine cuánta información se perdió dentro del canal.
+    \item[F]. Determine la pérdida de información por símbolo.
+\end{enumerate}
 
 

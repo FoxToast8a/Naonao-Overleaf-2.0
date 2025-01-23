@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  22 JAN 2025 22:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  22 JAN 2025 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,6 +1044,28 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10 <<
+       <<<<< HEAD
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Label `pgfid5' multiply defined.
+
+
+LaTeX Warning: Label `pgfid7' multiply defined.
+
+
+LaTeX Warning: Label `pgfid8' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1245,42 +1267,46 @@ LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 (Font)              scaled to size 10.29301pt on input line 54.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 60.
-(1.tex) (2.tex
+(1.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
-(Font)              scaled to size 8.0pt on input line 3.
+(Font)              scaled to size 8.0pt on input line 2.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
-(Font)              scaled to size 6.0pt on input line 3.
-LaTeX Font Info:    Trying to load font information for U+eur on input line 3.
-
-(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueur.fd
+(Font)              scaled to size 6.0pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+eur on input line 2.
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueur.fd
 File: ueur.fd 2013/01/14 v3.01 Euler Roman
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
-
-(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+euf on input line 3.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 2.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-LaTeX Font Info:    Trying to load font information for U+eus on input line 3.
+LaTeX Font Info:    Trying to load font information for U+eus on input line 2.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
-LaTeX Font Info:    Trying to load font information for U+euex on input line 3.
+LaTeX Font Info:    Trying to load font information for U+euex on input line 2.
 
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 4.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 4.
+)
+(2.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 6.
@@ -1301,18 +1327,71 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 130.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 130.
 [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
-santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
-/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
-:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Users/
+santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Us
+ers/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
+}{C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.en
 c} <./logo-eps-converted-to.pdf>] [2]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 130.
- [3]) (3.tex) (4.tex) (5.tex
+ [3]) (3.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+
+Overfull \hbox (28.66048pt too wide) detected at line 20
+[]
+ []
+
+
+Overfull \hbox (5.67859pt too wide) detected at line 82
+[]
+ []
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 85.
+[4 <./sancoya.png>] [5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 92.
+
+Overfull \hbox (21.50381pt too wide) detected at line 112
+[]
+ []
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 120.
+[6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 127.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
+5.
+ (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (17.79178pt too wide) detected at line 212
+[]
+ []
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 214.
+[7]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 214.
+ [8{C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}])
+ (4.tex) (5.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
@@ -1335,14 +1414,7 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 113.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 113.
-[4 <./sancoya.png>]
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 113.
- [5]) [6] (main.aux
+[9] [10]) [11] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1350,28 +1422,35 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 20412 strings out of 474370
- 402017 string characters out of 5740535
- 1999754 words of memory out of 5000000
- 42340 multiletter control sequences out of 15000+600000
- 604824 words of font info for 78 fonts, out of 8000000 for 9000
+ 20512 strings out of 474370
+ 404100 string characters out of 5740535
+ 1991754 words of memory out of 5000000
+ 42432 multiletter control sequences out of 15000+600000
+ 605767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,93p,628b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,93p,986b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/euler/eufm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/santi/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/santi/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/santi/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (6 pages, 290974 bytes).
+ublic/amsfonts/euler/euex10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/santi/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/Users/santi/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/s
+anti/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Use
+rs/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:
+/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><
+C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb>
+<C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb
+>
+Output written on main.pdf (11 pages, 323604 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
