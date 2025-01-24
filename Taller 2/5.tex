@@ -57,6 +57,21 @@ $000$ & $001$ & $010$ & $011$ & $100$\\
  \end{tabular}
  \end{center}
 
+Ahora para calcular la eficiencia sabemos que $\overline{L}_z=3$, ya que el código tiene esa longitud constante. La entropía de nuestra fuente esta dada por
+\begin{align*}
+    H_2(F)&=-\dfrac{13}{55}\log_2\dfrac{13}{55}-\dfrac{8}{55}\log_2\dfrac{8}{55}-\dfrac{12}{55}\log_2\dfrac{12}{55}-\dfrac{11}{55}\log_2\dfrac{11}{55}-\dfrac{11}{55}\log_2\dfrac{11}{55}\\
+    &\approx2.3044.
+\end{align*}
+Por ultimo hallamos la longitud promedio de mensaje emitido
+\begin{align*}
+   \overline{L}_u&=\dfrac{13}{55}\cdot1+\dfrac{8}{55}\cdot1+\dfrac{12}{55}\cdot1+\dfrac{11}{55}\cdot1+\dfrac{11}{55}\cdot1\\
+   &=1. 
+\end{align*}
+Note que esto tiene sentido ya que los mensajes son todos de longitud 1. Luego tenemos que la eficiencia para este código es
+$$\eta_2=\dfrac{H_2(F)\overline{L}_u}{\overline{L}_z}\approx\dfrac{2.3044}{3}\approx0.76813\approx 76\%.$$
+
+
+
 \textbf{Sobre un alfabeto Triario:}\\
 
 Consideramos $D_z=3$ y $D_u=5.$ Nuevamente seguiremos el algoritmos:
@@ -109,5 +124,16 @@ $00$ & $01$ & $02$ & $10$ & $11$ & $12$ & $20$ & $21$ & $22$\\
 \hline
  \end{tabular}
  \end{center}
+Para la eficiencia en este caso tenemos que $\overline{L}_z=2$, mientras que la entropía para este caso como estamos en un código triario es de la forma
+$$H_3(F)=\dfrac{H_2(F)}{log_2(3)}\approx1.45391.$$
+Luego falta con calcular la longitud promedio de mensaje, que esta dada por
+\begin{align*}
+    \overline{L}_u&=2\cdot\left(\dfrac{169}{3025}+\dfrac{104}{3025}+\dfrac{156}{3025}+\dfrac{143}{3025}+\dfrac{143}{3025}\right)+\dfrac{8}{55}\cdot1+\dfrac{12}{55}\cdot1+\dfrac{11}{55}\cdot1+\dfrac{11}{55}\cdot1\\
+    &=\dfrac{26}{55}\cdot1+\dfrac{8}{55}\cdot1+\dfrac{12}{55}\cdot1+\dfrac{11}{55}\cdot1+\dfrac{11}{55}\cdot1\\
+   &=\dfrac{68}{55}. 
+\end{align*}
+Luego tenemos que la eficiencia en el caso triario esta dado por
+$$\eta_3=\dfrac{H_3(F)\overline{L}_u}{\overline{L}_z}\approx\dfrac{(1.45391)\left(\dfrac{68}{55}\right)}{2}\approx 0.89778\approx 89\%$$
 
+De esta manera como $\eta_2<\eta_3,$ concluimos que es mas eficiente el código triario. esto era esperable ya que en el caso binario estábamos codificando símbolo a símbolo de la fuente.
 \end{sols}

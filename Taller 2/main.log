@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  22 JAN 2025 22:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  23 JAN 2025 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1044,28 +1044,6 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 <<
-       <<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Label `pgfid5' multiply defined.
-
-
-LaTeX Warning: Label `pgfid7' multiply defined.
-
-
-LaTeX Warning: Label `pgfid8' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1327,17 +1305,18 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 130.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 130.
 [1
 
 {C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{C:/Users/
-santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Us
-ers/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
-}{C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.en
-c} <./logo-eps-converted-to.pdf>] [2]
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
+santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
+/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
+:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
+c} <./logo-eps-converted-to.pdf>]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 130.
+ [2]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 130.
@@ -1406,15 +1385,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 113.
+Package pdftex.def Info: sancoya.png  used on input line 139.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-[9] [10]) [11] (main.aux
+[9]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 139.
+ [10]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 139.
+ [11]) [12] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1422,16 +1409,12 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 20512 strings out of 474370
- 404100 string characters out of 5740535
- 1991754 words of memory out of 5000000
- 42432 multiletter control sequences out of 15000+600000
+ 20500 strings out of 474370
+ 403845 string characters out of 5740535
+ 2013754 words of memory out of 5000000
+ 42420 multiletter control sequences out of 15000+600000
  605767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,986b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1448,9 +1431,9 @@ rs/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:
 C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb>
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb
 >
-Output written on main.pdf (11 pages, 323604 bytes).
+Output written on main.pdf (12 pages, 325514 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
