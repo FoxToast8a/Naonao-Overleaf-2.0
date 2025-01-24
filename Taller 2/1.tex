@@ -19,11 +19,123 @@ Denote por $X$ y $Y$ las variables aleatorias que modelan los símbolos que sale
 
 \begin{enumerate}
     \item[A]. Determine las entropías de la fuente y el canal.
-    \item[B]. Determine la entropía del sistema.
-    \item[C]. Determine e interprete las entropías condicionales $H(X|Y)$ y $H(Y|X)$.
-    \item[D]. Calcule la información común entre la entrada y la salida del sistema.
+    \begin{sol}
+    Para determinar las entropías que salen del canal y de la fuente necesitamos $P_X$ y $P_Y$ respectivamente, como el ejercicio nos da explicitamente $P_Y$ vamos a comenzar calculando la entropía de los símbolos que salen del canal, entonces
+    \begin{align*}
+        H(Y)=-0.6 log_2 0.6-0.3 log_2 0.3-0.1 log_2 0.1\approx 1.29546\text{bits} 
+    .\end{align*}
+    La entropía de los símbolos que salen la fuente no la obtenemos directamente puesto que no contamos con la distribución de manera explícita , por lo cual debemos calcular $P_X$
+    \begin{align*}
+        \begin{array}{ccc}
+p(a, a) = p(a|a) P_Y(a)  & p(a, b) = p(a|b) P_Y(b)  & p(a, c) = p(a|c) P_Y(c)\\
+\hspace{0.8cm}= 0.95 \cdot 0.6 & \hspace{0.8cm}= 0.03 \cdot 0.3 &\hspace{0.8cm}= 0.02 \cdot 0.1\\
+ = 0.57   &\hspace{0.2cm}= 0.009   &\hspace{0.2cm}= 0.002 \\
+ & & &
+p(b, a) = p(b|a) P_Y(a)   & p(b, b) = p(b|b) P_Y(b) & p(b, c) = p(b|c) P_Y(c)
+& \hspace{0.8cm}= 0.03 \cdot 0.6 &\hspace{0.8cm}= 0.95 \cdot 0.3  &\hspace{0.8cm}= 0.02 \cdot 0.1
+&\hspace{0.2cm}= 0.018   &\hspace{0.2cm}= 0.285  &\hspace{0.2cm}= 0.002 \\
+& & &
+p(c, a) = p(c|a) P_Y(a) & p(c, b) = p(c|b) P_Y(b)  & p(c, c) = p(c|c) P_Y(c)\\
+ \hspace{0.8cm}= 0.02 \cdot 0.6 &\hspace{0.8cm} = 0.02 \cdot 0.3 &\hspace{0.8cm}= 0.96 \cdot 0.1 \\
+\hspace{0.2cm} = 0.012  &\hspace{0.2cm}= 0.006 &\hspace{0.2cm}= 0.096
+\end{array}
+    .\end{align*}
+
+Por lo cual tenemos que 
+\begin{align*}
+    P_X=\{0.581, 0.305, 0.0114\},
+\end{align*}
+para a,b y c respectivamente.
+Por lo cual la entropía de la fuente es 
+\begin{align*}
+    H(X) =-(0.581)log(0.581) - (0.305)log(0.305) - (0.114)log(0.114) = 1.3348\text{ bits}
+.\end{align*}
+\textbf{Nota: }Como $H(Y|X)$ se puede tomar como entropía del canal, específicamente del ruido, también se podría calcular en este numeral sin embargo la calcularemos en el item $C$ puesto que es ahí donde se pide de manera explícita.
+    \end{sol}
+    \item[B]. Determine la entropía del sistema.\\
+\begin{sol}
+Utilizando las probabilidades que calculamos en el numeral anterior, podemos calcular la entropía del sistema por definición 
+    \begin{align*}
+        H(X, Y) &= - \sum_{x,y} p(x, y) \log_2 p(x, y)\\
+        &=-0.570 \log_2 (0.570)- 0.009 \log_2 (0.009)-2(0.002 \log_2 (0.002))-0.018 \log_2 (0.018) \\
+        &\hspace{0.5cm}- 0.285 \log_2 (0.285)- 0.012 \log_2 (0.012)- 0.006 \log_2 (0.006) + 0.096 \log_2 (0.096) \\
+        &=1.62517 \text{ bits}
+ .\end{align*}
+\end{sol}
+\item[C]. Determine e interprete las entropías condicionales $H(X|Y)$ y $H(Y|X)$.\\
+\begin{sol}
+Para resolver este numeral vamos a utilizar dos propiedades "análogas" que se tienen para cualesquiera dos variables aleatorias $X,Y$, esta dice que 
+\begin{align*}
+    H(X,Y)&=H(X)+H(Y|X)\\
+     H(X,Y)&=H(Y)+H(X|Y)
+.\end{align*}
+Por lo cual $H(Y|X)$ es igual a 
+\begin{align*}
+    H(Y|X)&=1.62517-1.3348\\
+    &=0.29037\text{ bits}
+.\end{align*}
+de manera similar tenemos que $H(X|Y)$ por esa propiedad se tiene que
+\begin{align*}
+    H(X|Y)&=1.62517- 1.29546\\
+    &= 0.32971\text{ bits}
+.\end{align*}
+Podemos decir que la probabilidad condicional $H(Y|X)$ calcula el ruido que se puede encontrar en el canal de información puesto que calcula las probabilidades de entrada dado que ya se tiene una salida. Mientras que la probabilidad condicional $H(X|Y)$ se refiere a la información que se pierde en el canal, esta va orientada a dado que un símbolo entra al canal como podemos suponer que va a salir del mismo.
+
+\end{sol}
+
+    \item[D]. Calcule la información común entre la entrada y la salida del sistema.\\
+    \begin{sol}
+
+    Por definición tenemos que la información común entre la entrada y la salida del sistema, está dada por
+
+    \begin{align*}
+        I(X;Y) = \sum_{x,y} p(x, y) \log_2 \left( \frac{p(x, y)}{p(x) p(y)}\right)
+    .\end{align*}
+    Sin embargo, podemos utilizar el numeral $A$ y $C$ y la siguiente propiedad para dos variables aleatorias 
+    \begin{align*}
+        I(X;Y) =H(X)-H(X|Y)
+    .\end{align*}
+    Luego reemplazando valores tenemos que 
+    \begin{align*}
+        I(X;Y) &=1.3348-0.32971\\
+        &=1.00509 \text{ bits}
+    .\end{align*}
+    \end{sol}
+
+
     \item[E]. Determine cuánta información se perdió dentro del canal.
+
+\begin{sol}
+La información que se perdió en el canal de información está dada por la probabilidad condicional $H(X|Y)$, la cual en el numeral $C$ nos dió $0,32971 \text{ bits}$
+
+\end{sol}
+
     \item[F]. Determine la pérdida de información por símbolo.
+  \begin{sol}
+Para este punto vamos a utilizar $H(X|Y)$, sin embargo, como nos piden que la calculemos por símbolo lo haremos para cuando $Y$ toma los valores $a,b$ y $c$, de la siguiente manera.\\
+ Para el caso en el que $Y=a$, entonces, calcularemos $H(X|a)$
+    \begin{align*}
+    H(X| a) &= - \sum_{x} p(x|a) \log_2 p(x|a) \\
+    &= -(0.95) \log_2 (0.95) - (0.03) \log_2 (0.03) - (0.02) \log_2 (0.02) \\
+    &= 0.33494 \, \text{bits}
+    \end{align*}
+
+En el caso donde $Y=b$ tenemos que calcular $H(X| b)$ la cual nos da
+    \begin{align*}
+    H(X| b) &= - \sum_{x} p(x|b) \log_2 p(x|b) \\
+    &= -(0.03) \log_2 (0.03) - (0.95) \log_2 (0.95) - (0.02) \log_2 (0.02) \\
+    &=0.33494 \, \text{bits}
+    \end{align*}
+
+Por último tenemos que cuando $Y=c$, se tiene que calcular $H(X| c)$, por lo tanto
+    \begin{align*}
+    H(X|c) &= - \sum_{x} p(x|c) \log_2 p(x|c) \\
+    &= -(0.02) \log_2 (0.02) - (0.02) \log_2 (0.02) - (0.96) \log_2 (0.96) \\
+    &= 0.28229\, \text{bits}
+    \end{align*}
+
+
+\end{sol}  
 \end{enumerate}
 
 

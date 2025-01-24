@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  23 JAN 2025 22:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.21)  23 JAN 2025 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1283,13 +1283,135 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 4.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 4.
-)
-(2.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 23.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 23.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.42     .\end{align*}
+                      
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+[1
+
+{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
+santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
+/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
+:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
+c} <./logo-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 57.
+
+Overfull \hbox (31.58047pt too wide) detected at line 63
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 67.
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
+[2]
+Package mdframed Info: Not enough space on this page on input line 103.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 109.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 115.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 138.
+ [3]) (2.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 6.
-LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
@@ -1300,27 +1422,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-<sancoya.png, id=5, 562.1pt x 289.08pt>
+<sancoya.png, id=30, 562.1pt x 289.08pt>
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 130.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-[1
-
-{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
-santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
-/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
-:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
-c} <./logo-eps-converted-to.pdf>]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 130.
- [2]
+[4] [5]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 130.
- [3]) (3.tex
+ [6]) (3.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 8.
@@ -1334,10 +1448,13 @@ Overfull \hbox (5.67859pt too wide) detected at line 82
 []
  []
 
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 85.
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 85.
-[4 <./sancoya.png>] [5]
+[7 <./sancoya.png>] [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 92.
@@ -1349,7 +1466,7 @@ Overfull \hbox (21.50381pt too wide) detected at line 112
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 120.
-[6]
+[9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 127.
@@ -1365,12 +1482,12 @@ Overfull \hbox (17.79178pt too wide) detected at line 212
 Package mdframed Info: You first box width is to small
  mdframed fixed it
 (mdframed)              on input line 214.
-[7]
+[10]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 214.
- [8{C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}])
- (4.tex) (5.tex
+ [11{C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+) (4.tex) (5.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
@@ -1393,15 +1510,15 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 139.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-[9]
+[12]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 139.
- [10]
+ [13]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 139.
- [11]) [12] (main.aux
+ [14]) [15] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1411,13 +1528,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20500 strings out of 474370
- 403845 string characters out of 5740535
+ 20524 strings out of 474370
+ 404311 string characters out of 5740535
  2013754 words of memory out of 5000000
- 42420 multiletter control sequences out of 15000+600000
+ 42444 multiletter control sequences out of 15000+600000
  605767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,93p,986b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,93p,986b,1701s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -1431,9 +1548,9 @@ rs/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:
 C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb>
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb
 >
-Output written on main.pdf (12 pages, 325514 bytes).
+Output written on main.pdf (15 pages, 334333 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
