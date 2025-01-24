@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  23 JAN 2025 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  23 JAN 2025 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1307,27 +1307,34 @@ Overfull \hbox (31.58047pt too wide) detected at line 63
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--87
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 87.
-Package mdframed Info: Not enough space on this page on input line 102.
+(mdframed)              on input line 67.
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 88.
 
 
 [2]
-Package mdframed Info: Not enough space on this page on input line 102.
+Package mdframed Info: Not enough space on this page on input line 103.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 108.
+(mdframed)              on input line 109.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 114.
+(mdframed)              on input line 115.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 137.
+(mdframed)              on input line 138.
 
 
 [3]) (2.tex
@@ -1461,12 +1468,16 @@ LaTeX Info: Redefining \% on input line 9.
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 20503 strings out of 473898
- 390644 string characters out of 5742893
+ 20512 strings out of 473898
+ 390833 string characters out of 5742893
  936351 words of memory out of 5000000
- 42895 multiletter control sequences out of 15000+600000
+ 42904 multiletter control sequences out of 15000+600000
  605767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,93p,970b,1693s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1478,7 +1489,7 @@ uler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/font
 s/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb>
 <C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fonts/type1/public/newt
 x/ztmr.pfb>
-Output written on main.pdf (14 pages, 329700 bytes).
+Output written on main.pdf (14 pages, 329763 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
