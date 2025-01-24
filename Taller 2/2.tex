@@ -1,6 +1,6 @@
 %!TEX root = main.tex
 
-Considere una fuente $\mathcal{F}$ con una distribución  de probabilidad $\mathcal{P}=\{0.20,0.15,0.15,0.10,0.10,0.30\}$ construya un código con longitud promedio de palabra $L$, tal que
+Considere una fuente $\mathcal{F}$ con una distribución  de probabilidad $\mathcal{P}=\{0\text{.}20,0\text{.}15,0\text{.}15,0\text{.}10,0\text{.}10,0\text{.}30\}$ construya un código con longitud promedio de palabra $L$, tal que
 $$H(\mathcal{F})\leq L \leq H(\mathcal{F})+1.$$
 \begin{sols}
  Primero la entropía que calcularemos es en base $2,$ por lo que codificaremos en un alfabeto binario. Por la distribución de probabilidad sabemos que la entropía viene dada por  
@@ -61,7 +61,7 @@ $$H(\mathcal{F})\leq L \leq H(\mathcal{F})+1.$$
             
 \end{tikzpicture}
     \end{center}
-    Por ultimo el de altura 4
+    Por último el de altura 4
     \begin{center}
        \begin{tikzpicture}[level 1/.style={sibling distance=25mm}, level 2/.style={sibling distance=20mm}, level 3/.style={sibling distance=15mm}]
             \node[hollow](0){}
@@ -93,13 +93,13 @@ $100$ & $101$ & $110$ & $1110$ & $1111$ & $00$\\
  \end{center}
  Donde a cada probabilidad de la d.p. le asignamos un respectivo código de la longitud establecida.\\
 
- La otra posibilidad para un código que cumpla la desigualdad, es encontrar un código de longitud promedio de palabra constante. Ya que note que si hacemos $L=3$, también cumplimos la desigualdad, sigamos el algoritmo de Tunstall. Consideramos $D_z=2$ y $D_u=6.$ Seguiremos por pasos el algoritmo:
+ La otra posibilidad para un código que cumpla la desigualdad, es encontrar un código de longitud promedio de palabra constante. Ya que note que si hacemos $L=3$, también cumplimos la desigualdad, para eso, sigamos el algoritmo de Tunstall. Consideramos $D_z=2$ y $D_u=6.$ Seguiremos por pasos el algoritmo:
 
 \textbf{Paso 1:}
 \begin{itemize}
-    \item[a)] Queremos un $n$, tal que $2^n\geq 6$, por lo que escogeremos $n=3$, ya que es el primer natural que lo cumple, esta sera nuestra longitud de palabra.
-    \item[b)] Tenemos que $k=\left\lfloor\dfrac{2^3-1}{6-1}\right\rfloor=\left\lfloor\dfrac{7}{5}\right\rfloor=1.$ Dado que este es el numero de nodos internos, podemos inferir en este paso que solo tendremos a la raíz como nodo interno.
-    \item[c)] Por lo anterior tenemos que $M=1+1(6-1)=6.$ Es decir que el numero de mensajes a codificar es el mismo que el de símbolos de la fuente.
+    \item[a)] Queremos un $n$, tal que $2^n\geq 6$, por lo que escogeremos $n=3$, ya que es el primer natural que cumple la desigualdad, esta será nuestra longitud de palabra.
+    \item[b)] Tenemos que $k=\left\lfloor\dfrac{2^3-1}{6-1}\right\rfloor=\left\lfloor\dfrac{7}{5}\right\rfloor=1.$ Dado que este es el número de nodos internos, podemos inferir en este paso que sólo tendremos a la raíz como nodo interno.
+    \item[c)] Por lo anterior, tenemos que $M=1+1(6-1)=6.$ Es decir que el número de mensajes a codificar es el mismo que el de símbolos de la fuente.
 \end{itemize}
 \textbf{Paso 2:}
  Note que en este paso del algoritmo como resaltamos antes solo asignamos hijos a la raíz, cuando hacemos $j=1$, ya que $k=1.$ Por  lo que el árbol construido es el siguiente:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  23 JAN 2025 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.19)  23 JAN 2025 23:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,6 +1286,9 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 54.
 
 
 [1
@@ -1314,7 +1317,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 67.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 84.
 
+
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
@@ -1322,10 +1330,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--88
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 88.
-
-
-[2]
-Package mdframed Info: Not enough space on this page on input line 103.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 109.
@@ -1356,9 +1360,6 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 130.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 130.
 
 
 [4]
@@ -1374,21 +1375,21 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 8.
 
-Overfull \hbox (28.66048pt too wide) detected at line 20
+Overfull \hbox (28.66048pt too wide) detected at line 21
 []
  []
 
 
-Overfull \hbox (5.67859pt too wide) detected at line 82
+Overfull \hbox (5.67859pt too wide) detected at line 83
 []
  []
 
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 85.
+(mdframed)              on input line 86.
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 85.
+(mdframed)              on input line 86.
 
 
 [7 <./sancoya.png>]
@@ -1396,42 +1397,47 @@ Package mdframed Info: You first box width is to small
 [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 92.
+(mdframed)              on input line 93.
 
-Overfull \hbox (21.50381pt too wide) detected at line 112
+Overfull \hbox (21.50381pt too wide) detected at line 113
 []
  []
 
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 120.
+(mdframed)              on input line 121.
 
 
 [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 127.
+(mdframed)              on input line 128.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14
-5.
+9.
  (C:\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (17.79178pt too wide) detected at line 212
+Overfull \hbox (17.79178pt too wide) detected at line 216
 []
  []
 
 Package mdframed Info: You first box width is to small
  mdframed fixed it
-(mdframed)              on input line 214.
+(mdframed)              on input line 218.
 
 
 [10]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 214.
+(mdframed)              on input line 218.
 
 
-[11{C:/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (4.tex) (5.tex
+[11{C:/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+) (5.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
@@ -1446,21 +1452,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 113.
+Package pdftex.def Info: sancoya.png  used on input line 140.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 
 
 [12]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 140.
 
-[13])
 
-[14] (main.aux
+[13]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 140.
+
+
+[14])
+
+[15] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1470,13 +1486,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20505 strings out of 473898
- 390685 string characters out of 5742893
- 936398 words of memory out of 5000000
- 42897 multiletter control sequences out of 15000+600000
+ 20507 strings out of 473898
+ 390745 string characters out of 5742893
+ 958668 words of memory out of 5000000
+ 42899 multiletter control sequences out of 15000+600000
  605767 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,15n,93p,970b,1693s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,93p,973b,1693s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/euex1
 0.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/MiKTeX/fonts/
@@ -1485,9 +1501,9 @@ uler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/font
 s/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb>
 <C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fonts/type1/public/newt
 x/ztmr.pfb>
-Output written on main.pdf (14 pages, 329763 bytes).
+Output written on main.pdf (15 pages, 340162 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

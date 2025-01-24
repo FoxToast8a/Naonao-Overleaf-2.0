@@ -5,11 +5,12 @@
     H(X, Y) + H(X, Z) + H(Y, Z) \geq 2H(X, Y, Z).
     \]
     \begin{proof}
-    Para poder probar esa propiedad, primero probaremos lo siguiente, puesto que es importante para nuestra prueba
+    \textbf{Nota:} Es importante recalcar que todas las variables aleatorias para las cuales se realizan las siguientes pruebas toman valores sobre conjuntos finitos\\
+    Para poder probar esa propiedad, primero probaremos lo siguiente, 
     \begin{align}
         H(X,Y,Z)=H(X)+H(Y|X)+H(Z|X,Y)
     .\end{align}
-La demostración se sigue de lo siguiente
+La demostración se tiene a partir de lo siguiente
 
 \begin{align*}
     H(X,Y,Z) &= - \sum_{x,y,z} p(x,y,z) \log p(x,y,z),\\
@@ -57,7 +58,7 @@ H(X) - H(X|Y) &= -\sum_{x,y} p(x,y) \log p(x) + \sum_{x,y} p(x,y) \log p(x|y) \\
 &= 0.
 \end{align*}
 Por lo cual $(5)$ queda probado.\\
-Ahora bien, para probar $(6)$ seguimos lo siguiente 
+Ahora bien, para probar $(6)$ realizamos las siguientes cuentas 
 \begin{align*}
 H(X|Z) - H(X|Y,Z) 
 &= H(X,Z) - H(Z) - H(X|Y,Z) \quad \text{por (3)} \\
@@ -71,7 +72,7 @@ H(X|Z) - H(X|Y,Z)
 &= -\log(1)\\ 
 &= 0
 .\end{align*}
-Así, $(6)$ queda probado, por lo que utilizando las propiedades demostradas anteriormente, podemos decir que 
+Así, $(6)$ queda probado. Por lo que, utilizando las propiedades demostradas anteriormente, podemos decir que 
 \begin{align*}
     2H(X,Y,Z)&=H(X,Y,Z)+H(X,Y,Z)\\
     &=H(X)+H(Y|X)+H(Z|X,Y)+H(Y)+H(Y|Z)+H(X|Y,Z) \quad \text{por (1) y (2)}\\
@@ -80,7 +81,7 @@ Así, $(6)$ queda probado, por lo que utilizando las propiedades demostradas ant
     &\leq H(X,Y)+H(Y,Z)+H(Z)+H(X|Z) \quad \text{por (5)}\\
     &= H(X,Y)+H(Y,Z)+H(X,Z) \quad \text{por (4)}
 .\end{align*}
-Concluyendo lo que queriamos demostrar.
+Concluyendo así, lo que queriamos demostrar.
 
 \end{proof}
 
@@ -124,7 +125,10 @@ por lo anterior, podemos decir que
     I(X; Y; Z) = I(X; Y) - I(X; Y | Z).
     \]
     \begin{proof}
-    Teniendo en cuenta que $I(X;Y;Z)$ se refiere a la información que hay en común entre las $3$ variables aleatorias, podemos aterrizar esto a una noción un poco más conjuntista para dar nuestra definición, de acuerdo con lo visto en clase sabemos que $H(X;Y;Z)$ se refiere a la entropía total del sistema, y $H(X),H(Y),H(Z)$ se refiere a las entropías de cada uno de los símbolos en un momento específico, además $I(X;Y),I(X;Z)$ y $I(Y;Z)$ se refieren a la información común entre variables aleatorias, graficando esto en un diagrama de Venn, podemos definir de manera más intuitiva $I(X;Y;Z)$
+    Teniendo en cuenta que $I(X;Y;Z)$ representa la cantidad de información que tienen en común las tres variables aleatorias \( X \), \( Y \) y \( Z \), podemos entender este concepto de manera más intuitiva a través de una perspectiva más conjuntista. Según lo aprendido en clase, sabemos que \( H(X;Y;Z) \) se refiere a la entropía total del sistema, mientras que \( H(X) \), \( H(Y) \) y \( H(Z) \) representan las entropías individuales de cada una de las variables. Por otro lado, \( I(X;Y) \), \( I(X;Z) \) y \( I(Y;Z) \) denotan la cantidad de información común entre dos variables aleatorias.
+
+Si representamos estas relaciones en un diagrama de Venn, podemos ver de manera gráfica cómo se superponen las distintas informaciones y cómo se relacionan entre sí. 
+
 
         \begin{center}
             
@@ -169,12 +173,12 @@ Para probar que
 \begin{align*}
     I(X;Y;Z) = I(X;Y)-I(X;Y|Z),
 \end{align*} 
-primero debemos probar algunas propiedades adicionales a las que ya hemos mostrado anteriormente,
+primero, debemos probar algunas propiedades adicionales a las que ya hemos mostrado anteriormente,
 la primera de ellas es que 
 \begin{align}
     I(X; Y |Z) = H(X|Z)-H(X|Y,Z)
 \end{align}
-Para esto seguimos los siguientes cálculos
+Para demostrar esto seguimos los siguientes cálculos
 \begin{align*}
 I(X; Y | Z) &= - \sum_{x,y,z} p(x, y, z) \log \frac{p(x, y | z)}{p(x | z) p(y | z)} \\
 &= - \sum_{x,y,z} p(x, y, z) \log p(x | z) + \sum_{x,y,z} p(x, y, z) \log \frac{p(x, y | z)}{p(y |z)} \\
@@ -192,7 +196,7 @@ I(X; Y | Z) &= H(X | Z) - H(X | Y, Z)  \\
 &= (H(X, Z) - H(Z)) - (H(X, Y, Z) - H(Y, Z)) \\
 &= H(X, Z) + H(Y, Z) - H(Z) - H(X, Y, Z).
 \end{align*}
-Otra propiedad que tenemos que probar es,
+Por último demostremos que,
 \begin{align}
     I(X; Y ) = H(X) + H(Y ) -H(X, Y ).
 \end{align}
