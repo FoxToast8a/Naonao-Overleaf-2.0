@@ -4,9 +4,63 @@ Determine las palabras código de $C^\perp$, si $C$ es un código lineal binario
 \begin{equation*}
     G = \begin{bmatrix} 1 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 & 1 \end{bmatrix}
 \end{equation*}
+\begin{sols}
+    Primero notemos que $G$ es de tamaño $3\times 5$, Asi $C$ es un codigo lineal $[5,3]$, es decir es un subespacio de $GF(2)^5.$ Por el punto probado anteriormente sabemos que la matriz de verificacion $H$ de el codigo $C$, es la matriz generadora de $C^\perp$, pero recordemos que solo podemos construir $H$ si $G$ esta en forma sistematica, y podemos darnos cuenta facilmente que no lo esta, por lo que debemos llevarla a esta forma. Esto se puede hacer por medio de operaciones elementales entre filas
+    \begin{align*}
+        \begin{bmatrix} 1 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 0 & 1 \end{bmatrix}\underrightarrow{F_3+F_1}\begin{bmatrix} 1 & 1 & 1 & 0 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 1 \end{bmatrix}\underrightarrow{F_1+F_2}\begin{bmatrix} 1 & 0 & 1 & 1 & 0 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 1 \end{bmatrix}\underrightarrow{F_1+F_3}\begin{bmatrix} 1 & 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 1 & 0 \\ 0 & 0 & 1 & 0 & 1 \end{bmatrix}.
+    \end{align*}
+    Notemos entonces que $G=[\begin{array}{c|c}
+        I_3&P
+    \end{array}],$ donde $P=\begin{bmatrix}
+        1 & 1\\
+        1 & 0\\
+        0 & 1
+    \end{bmatrix}.$ Como esta forma es la sistematica, podemos construir la matriz $H$, note que como las entradas pertenecen a $GF(2)$, tenemos que $-P^T=P^T$, luego
+    $$H=[\begin{array}{c|c}
+        -P^T&I_{5-3}
+    \end{array}]=\begin{bmatrix}
+        1 & 1 & 0 & 1 & 0\\
+        1 & 0 & 1 & 0 & 1
+    \end{bmatrix}$$
+    Como $H$ es la matriz generadora, quiere decir que sus filas generan a el codigo $C^\perp$, es decir 
+    $$C^\perp=\langle11010,10101\rangle=\{00000,11010,10101,01111\},$$ note que esto quiere decir que $C^\perp$ es un codigo $[5,2]$, esto coincide con lo hallado en el anterior punto.
+
+\end{sols}
 
 \begin{itemize}
     \item[A)] ¿Cuántos errores puede detectar y corregir el código $C^\perp$?
+    \begin{sols}
+        Primero debemos determinar la distancia minima del codigo, recordemos que 
+        $$d_{min}(C^\perp)=w_{min}(C):=\min_{z\in C, z\neq 0}\{w(z)\}$$
+        Ahora note que el peso de las palabras no nulas es
+        \begin{align*}
+            w(11010)&=3,\\
+            w(10101)&=3,\\
+            w(01111)&=4.
+        \end{align*}
+        Asi como el peso minimo es $3$, tenemos que $C^\perp$ es un codigo $[5,2,3]$. Recordemos entonces que un codigo puede detectar y corregir patrones con $\left\lfloor\dfrac{d_{min}(C^\perp)-1}{2}\right\rfloor$, si reemplazamos en la expresion obtenemos que
+        $$\left\lfloor\dfrac{d_{min}(C^\perp)-1}{2}\right\rfloor=\left\lfloor\dfrac{3-1}{2}\right\rfloor=1.$$
+        Es decir que $C^\perp$ puede detectar y corregir hasta 1 error.
+    \end{sols}
     \item[B)] ¿Es el código $C^\perp$ mejor que el código $C$ para detectar y corregir errores?
+    \begin{sols}
+        Para responder esta pregunta debemos determinar la distancia minima de $C$ y ver cuantos errores puede detectar y corregir. Primero como las filas de $G$ son una base para $C$, tenemos que
+        $$C=\langle 11100,01010,11001\rangle=\{00000,11100,01010,11001,10110,00101,10011,01111\}.$$
+        Luego el peso de cada palabra no nula en el codigo es
+        \begin{align*}
+            w(11100)&=3,\\w(01010)&=2,\\w(11001)&=3,\\w(10110)&=3,\\w(00101)&=2,\\w(10011)&=3,\\w(01111)&=4.
+        \end{align*}
+        Como hay palabras con peso dos tenemos que $d_{min}(C)=2$, asi la cantidad de errores que puede detectar y corregir es
+         $$\left\lfloor\dfrac{d_{min}(C)-1}{2}\right\rfloor=\left\lfloor\dfrac{2-1}{2}\right\rfloor=0.$$
+         Esto quiere decir que $C$ no puede corregir errores, por lo que $C^\perp$ es mejor ya que este puede detectar y corregir patrones con un error, mientras que $C$ no puede.
+
+    \end{sols}
     \item[C)]¿Es $C$ un código perfecto?
+    \begin{sols}
+        Por lo hallado en la anterior parte sabemos que $C$ es un codigo $[5,3,2].$ En este caso nuestros datos son $D=2,n=5$ y $d=2.$ Para esto el radio de las esferas esta dado por $t=\lfloor\frac{2-1}{2}\rfloor=0$, luego tenemos que
+        $$Vol_2(0,5)=\sum_{i=0}^0\binom{5}{i}(2-1)^i=1,$$ Ahora recordemos que $M=|C|=8$, luego note que
+        $$8=M<\frac{D^n}{Vol_D(t,n)}=\frac{2^5}{Vol_2(0,5)}=32.$$
+        Como no se tiene la igualdad, concluimos que el codigo $C$ no es perfecto.
+        
+    \end{sols}
 \end{itemize}
