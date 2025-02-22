@@ -7,6 +7,49 @@ Sea $C \preceq GF(3)^6$ un código lineal con matriz generadora
 
 \begin{itemize}
     \item[A)] Calcule una matriz sistemática para $C$.
+    \begin{sols}
+        Note que como estamos en $GF(3)$ y el numero es primo, sabemos que las operaciones son modulo 3. Luego para hallar la matriz sitematica basta hacer operaciones elementales entre filas.
+        $$\begin{bmatrix} 1 & 0 & 2 & 1 & 0 & 1 \\ 0 & 1 & 2 & 0 & 0 & 2 \\ 0 & 0 & 1 & 1 & 1 & 0 \end{bmatrix}\underrightarrow{F_1+F_3}\begin{bmatrix} 1 & 0 & 0 & 2 & 1 & 1 \\ 0 & 1 & 2 & 0 & 0 & 2 \\ 0 & 0 & 1 & 1 & 1 & 0 \end{bmatrix}\underrightarrow{F_2+F_3}\begin{bmatrix} 1 & 0 & 0 & 2 & 1 & 1 \\ 0 & 1 & 0 & 1 & 1 & 2 \\ 0 & 0 & 1 & 1 & 1 & 0 \end{bmatrix}.$$
+        Luego la matriz sistematica para el codigo $C$ es 
+        $$\begin{bmatrix} 1 & 0 & 0 & 2 & 1 & 1 \\ 0 & 1 & 0 & 1 & 1 & 2 \\ 0 & 0 & 1 & 1 & 1 & 0 \end{bmatrix}=[\begin{array}{c|c}
+            I_3&P
+        \end{array}].$$
+        Donde 
+        $$P=\begin{bmatrix} 2 & 1 & 1 \\ 1 & 1 & 2 \\ 1 & 1 & 0 \end{bmatrix}$$
+
+    \end{sols}
     \item[B)] Calcule la correspondiente matriz de verificación.
+    \begin{sols}
+        Dada la matriz en su forma sistematica primero notemos que el Codigo $C$ es $[6,3]$, ya que tiene tres filas y esta sobre $GF(3)^6$. Luego
+        $$H=[\begin{array}{c|c}
+            -P^T&I_{6-3}
+        \end{array}]$$
+        Note que entonces tenemos la matriz $I_3$ nuevamente y como en modulo 3 se tiene que $-1=2$ y $-2=1$, tenemos que
+        $$-P^T=-\begin{bmatrix} 2 & 1 & 1 \\ 1 & 1 & 2 \\ 1 & 1 & 0 \end{bmatrix}^T=-\begin{bmatrix} 2 & 1 & 1 \\ 1 & 1 & 1 \\ 1 & 2 & 0 \end{bmatrix}=\begin{bmatrix} 1 & 2 & 2 \\ 2 & 2 & 2 \\ 2 & 1 & 0 \end{bmatrix}.$$
+        Asi tenemos que la matriz de verificacion es
+        $$H=\begin{bmatrix}
+            1 & 2 & 2 & 1 & 0 & 0\\ 2 & 2 & 2 & 0 & 1 & 0\\ 2 & 1 & 0 & 0 & 0 & 1
+        \end{bmatrix}.$$
+    \end{sols}
     \item[C)] Decodifique el mensaje $z = 001021$. Indique en su hoja de respuesta la coclase correspondiente.
+    \begin{sols}
+        Primero veamos si el mensaje pertenece al código por medio de la matriz de verificación hallada
+        $$Hz^T=\begin{bmatrix}
+            1 & 2 & 2 & 1 & 0 & 0\\ 2 & 2 & 2 & 0 & 1 & 0\\ 2 & 1 & 0 & 0 & 0 & 1
+        \end{bmatrix}\begin{bmatrix}
+            0\\
+            0\\
+            1\\
+            0\\
+            2\\
+            1\\
+        \end{bmatrix}=\begin{bmatrix}
+            2\\
+            1\\
+            1
+        \end{bmatrix}$$
+        Como el resultado no fue el vector nulo, sabemos que hubo un error en la transmisión, por lo que tenemos que determinar la coclase del vector, para esto primero calculemos las palabras que pertenecen al código, nuevamente las filas de la matriz sistemática generan el código, así
+
+        $$C=\langle100211,010112,001110\rangle$$ 
+    \end{sols}
 \end{itemize}
