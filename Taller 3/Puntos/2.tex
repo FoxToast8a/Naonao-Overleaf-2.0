@@ -24,10 +24,120 @@ $z$ & $zG$ \\
 15 & 1111111 \\
 \end{tabular}
 \end{center}
+\begin{sols}
+    Primero notemos que los mensaje de la columna izquierda en binario consumen 4 digitos, es decir
+    $$\begin{array}{c|c}
+    Decimal & Binario\\
+    0 & 0000 \\
+1 & 0001 \\
+2 & 0010 \\
+3 & 0011 \\
+4 & 0100 \\
+5 & 0101 \\
+6 & 0110 \\
+7 & 0111 \\
+8 & 1000 \\
+9 & 1001 \\
+10 & 1010 \\
+11 & 1011 \\
+12 & 1100 \\
+13 & 1101 \\
+14 & 1110 \\
+15 & 1111 \\     
+    \end{array}$$
+    Luego note que para que las dimensiones de la matriz cuadren, necesitamos cuatro vectores linealmente independientes de la segunda columna, es decir de $zG$, luego resulta natural escoger los que correspoden a $z\in{0001,0010,0100,1000}$, ya que como esta es la primera parte de cada $zG$ resultan linealmente independientes de manera inmediata, por lo que la matriz generadora $G$ es
+    $$G=\begin{bmatrix}
+        1&0&0&0&1&1&1\\
+        0&1&0&0&0&1&1\\
+        0&0&1&0&1&0&1\\
+        0&0&0&1&1&1&0\\
+
+    \end{bmatrix}$$ 
+    Note que esta eleccion de vectores automaticamente nos da la forma sistematica de la matriz.
+
+\end{sols}
 
 \begin{itemize}
     \item[A)] Clasifique el código de acuerdo a la notación $[n,m,d]$.
+    \begin{sols}
+        Note que nuestra matriz generadora tiene $4$ filas y $7$ columnas, esto quiere decir que el codigo es $[7,4,d]$, faltaria determinar la distancia minima, pero esto lo podemos hacer simplemente viendo el peso de cada palabra y escogiendo el peso minimo entre ellas.
+        \begin{align*}         
+ w(0001110)&=3 \\
+w(0010101)&=3 \\
+ w(0011011)&=4 \\
+w(0100011)&=3 \\
+w(0101101)&=4 \\
+ w(0110110)&=4 \\
+w(0111000)&=3 \\
+ w(1000111)&=4 \\
+w(1001001)&=3 \\
+w(1010010)&=3 \\
+w(1011100)&=4 \\
+w(1100100)&=3 \\
+ w(1101010)&=4 \\
+w(1110001)&=4 \\
+ w(1111111)&=7 \\
+        \end{align*}
+        De esta manera la distancia minima del codigo es $d=3$, por lo que la clasificacion del codigo es $[7,4,3].$
+
+    \end{sols}
+
     \item[B)] Determine si el mensaje $z= 1011111$ trae errores, en tal caso calcule el síndrome, la coclase y corrija siempre y cuando sea posible.
+    \begin{sols}
+        Por simple inspeccion nos damos cuenta que la palabra $z$ tiene errores ya que $w(z)=6$ y ninguna palabra tiene ese peso en nuestro codigo. Recordemos que al inicio ya dimos la matriz $G$ en su forma sistematica por lo que tenemos que $G=[\begin{array}{c|c}
+            I_4&P
+        \end{array}]$, donde
+        $$P=\begin{bmatrix}
+            1 & 1 & 1 \\
+            0 & 1 & 1 \\
+            1 & 0 & 1 \\
+            1 & 1 & 0
+        \end{bmatrix}$$
+        Asi como en $GF(2)$ tenemos que $-1=1$, tenemos que la matriz de verificacion para el codigo es
+    $$H=[\begin{array}{c|c}
+        -P^T&I_{7-4}
+    \end{array}]=[\begin{array}{c|c}
+        P^T&I_{3}
+    \end{array}]=\begin{bmatrix}
+        1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+        1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+        1 & 1 & 1 & 0 & 0 & 0 & 1
+    \end{bmatrix}$$
+    Ahora determinemos el sindrome, que sabemos que sera no nulo ya que la palabra no pertenece al codigo
+    $$Hz^T=\begin{bmatrix}
+        1 & 0 & 1 & 1 & 1 & 0 & 0 \\
+        1 & 1 & 0 & 1 & 0 & 1 & 0 \\
+        1 & 1 & 1 & 0 & 0 & 0 & 1
+    \end{bmatrix}\begin{bmatrix}
+        1\\
+        0\\
+        1\\
+        1\\
+        1\\
+        1\\
+        1\\
+    \end{bmatrix}=\begin{bmatrix}
+        0\\
+        1\\
+        1\\
+    \end{bmatrix}$$
+    Esto nos confirma que efectivamente la palabra tiene errores, la coclase respectiva es
+    \begin{align*}
+        (C+z)_H=\{&1011111,1010001,1001010,1000100,1111100,1110010,1101001,1100111,\\&0011000,0010110,0001101,0000011,0111011,0110101,0101110,0100000\}
+    \end{align*}
+    Note que el lider de la coclase es la palabra $0100000,$ ya que es la unica que tiene peso 1, por lo que el mensaje corregido seria 
+    $$1011111-0100000=1111111.$$
+    \end{sols}
+    
     \item[C)]¿Cuántos errores puede detectar el código? Justifique.
+    \begin{sols}
+      Dado que $d=3$, y esa es la distancia minima de nuestro codigo, por lo visto en clase nuestro codigo puede detectar hasta $d-1=3-1=2$ errores.  
+
+    \end{sols}
     \item[D)]¿Cuántos errores puede corregir el código? Justifique.
+    \begin{sols}
+        De manera similar al anterior punto el codigo puede corregir hasta
+        $$\left\lfloor\frac{d-1}{2}\right\rfloor=\left\lfloor\frac{3-1}{2}\right\rfloor=1,$$
+        es decir que nuestro codigo puede corregir hasta 1 error.
+    \end{sols}
 \end{itemize}
