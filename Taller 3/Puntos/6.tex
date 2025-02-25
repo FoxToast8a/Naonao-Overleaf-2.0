@@ -7,6 +7,71 @@ Una fuente $F$ genera símbolos de un alfabeto $\{a, b, c\}$ y se modela como un
 
 \begin{itemize}
     \item[A)] Determine la distribución de probabilidad para las variables aleatorias $X_i$.
+    \begin{proof}
+    Para encontar la distribución de probabilidad, como este es un proceso markoviano podemos plantear la siguiente igualdad.\\
+
+$$
+\begin{pmatrix}
+p(a)
+p(b) 
+p(c)
+\end{pmatrix}
+=
+\begin{pmatrix}
+p(a) 
+p(b) 
+p(c)
+\end{pmatrix}
+\begin{pmatrix}
+0.6 & 0.3 & 0.1 \\
+0.2 & 0.5 & 0.3 \\
+0.1 & 0.4 & 0.5
+\end{pmatrix}
+$$
+
+Luego podemos plantear el siguiente sistema de ecuaciones de la siguiente forma, incluyendo que las probabilidades de los símbolos del alfabeto suman $1$.
+
+$$
+\begin{cases}
+0.6p(a) + 0.2p(b) + 0.1p(c) = p(a) \\
+0.3p(a) + 0.5p(b) + 0.4p(c) = p(b) \\
+0.1p(a) + 0.3p(b) + 0.5p(c) = p(c) \\
+p(a) + p(b) + p(c) = 1
+\end{cases}
+$$
+
+Con lo que obtenemos las siguientes ecuaciones
+
+\begin{align*}
+   -0.4p(a) + 0.2p(b) + 0.1p(c) &= 0 \\
+0.3p(a) - 0.5p(b) + 0.4p(c) &= 0 \\
+0.1p(a) + 0.3p(b) - 0.5p(c) &= 0 \\
+p(a) + p(b) + p(c) &= 1 
+.\end{align*}
+Resolvemos el siguiente sistema de ecuaciones, para eso multiplicamos la tercera ecuación por $4$ y la restamos por la primera 
+\begin{align*}
+    -0.4p(a) + 0.2p(b) + 0.1p(c)+0.4p(a)+1.2(b)-2c&=0\\
+    1.4p(b)-1.9p(c)&=0
+.\end{align*}
+Por lo cual concluimos que $c=\dfrac{1.4b}{1.9}$.\\
+Ahora tomamos la segunda ecuacion y la multiplicamos por $-4$ y la restamos con la primera ecuación
+\begin{align*}
+    0.3p(a)-0.5p(b)+0.4p(c)+1.6p(a)-0.8(b)-0.4p(c)&=0\\
+    1.9p(a)-1.3p(b)&=0
+.\end{align*}
+Así, $a=\dfrac{1.3b}{1.9}$. Luego, con la restricción de que la suma de la probabilidad de los símbolos es $1$, entonces, realizando truncamiento y aproximación de la última cifra tenemos que 
+\begin{align*}
+    a&=0.283\\
+    b&=0.412\\
+    c&=0.304
+.\end{align*}
+    \end{proof}
     \item[B)] ¿Cuál es la probabilidad de que la fuente emita la palabra \texttt{aabc} (considerando que las letras salen de derecha a izquierda, es decir, primero \texttt{c})?
+
+Sabemos que la palabras que se emiten en un proceso markoviano tiene probabilidad $ P(X_{n+1} = x_{n+1} \mid X_n = x_n)$. Por lo tanto, para calcular la probabilidad de aabc donde c se emite primero luego b y las 2 as, utilizamos las probabilidades de la matriz de transición y por lo tanto
+
+\[
+P(b \mid c) \cdot P(a \mid b) \cdot P(a \mid a) = (0.4) \cdot (0.2) \cdot (0.6) = 0.048
+\]
     \item[C)]  Dibuje el grafo de estados que modela el proceso markoviano.
 \end{itemize}
