@@ -74,4 +74,22 @@ Sabemos que la palabras que se emiten en un proceso markoviano tiene probabilida
 P(b \mid c) \cdot P(a \mid b) \cdot P(a \mid a) = (0.4) \cdot (0.2) \cdot (0.6) = 0.048
 \]
     \item[C)]  Dibuje el grafo de estados que modela el proceso markoviano.
+    \begin{center}
+         \begin{tikzpicture}[node distance = 6cm, on grid, auto]
+            \node (a) [state] {$a$};
+            \node (c) [state, below right of=a] {$c$};
+            \node (b) [state, above right of=c] {$b$};
+            
+            \path[thick]
+            (a) edge [loop above] node [above] {$0.6$} ()
+            (a) edge [bend  left=15] node [above] {$0.3$} (b)
+            (a) edge [bend right=15] node [left] {$0.1$} (c)
+            (b) edge [loop above] node [above] {$0.5$} ()
+            (b) edge [bend  left=15] node [below] {$0.2$} (a)
+            (b) edge [bend left=15] node [right] {$0.3$} (c)
+            (c) edge [loop below] node [below] {$0.5$} ()
+            (c) edge [bend  right=15] node [right] {$0.1$} (a)
+            (c) edge [bend left=15] node [left] {$0.9$} (b);
+            \end{tikzpicture}
+            \end{center} 
 \end{itemize}

@@ -6,7 +6,12 @@
 \usepackage{amsmath,amssymb}%Insertar unos símbolos matemáticos especiales%
 
 \usepackage{tikz}
-\usetikzlibrary{automata, positioning}
+\usetikzlibrary{automata, positioning, arrows.meta}
+\tikzset{
+->,
+>=stealth,
+initial text = $ $
+}
 
 \usepackage{silence}
 \WarningFilter{latexfont}{Font shape `T1/ntxtlf/m/up' undefined}
