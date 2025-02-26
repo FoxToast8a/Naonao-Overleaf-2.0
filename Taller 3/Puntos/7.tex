@@ -6,3 +6,124 @@ Considere una fuente binaria con una distribución de probabilidades $\{p(0) = 0
     \begin{bmatrix} 0\text{.}1 & 0\text{.}9 \\ 0\text{.}8 & 0\text{.}2 \end{bmatrix}
 \end{equation*}
 Si los símbolos de la fuente son codificados mediante las asignaciones $0 \to 000$, $1 \to 111$, determine una función decodificadora $\delta: \{0,1\}^3 \to \{0,1\}$ con máxima probabilidad de corrección.
+\begin{sol}
+
+Por los datos dados por el enunciado sabemos que el dominio de la función $\delta$ está dado por combinaciones de $0$ y $1$ de longitud $3$. Luego, como tenemos la probabilidad de cada uno de los símbolos y la matriz de transición, podemos tomar a $\delta$ como una función de decodificación para una fuente que se codifica por repetición, y así tendríamos la máxima probabilidad de corrección.
+
+$$
+\delta(y_1 y_2 \dots y_n) =
+\begin{cases}
+0, & \text{si} \quad p(0) \prod_{i=1}^n p(y_i | 0) \geq p(1) \prod_{i=1}^n p(y_i | 1), \\
+1, & \text{en otro caso}.
+\end{cases}
+$$
+Por lo cual evaluamos en cada una de las cadenas y así encontramos la función decodificadora.
+\begin{itemize}
+    \item Cadena $000$
+\end{itemize}
+Calculamos las probabilidades ,
+\begin{align*}
+    p(0) p(0 | 0) p(0 | 0) p(0 | 0) &= (0.3)(0.1)(0.1)(0.1) = 0.0003\\
+    p(1) p(0 | 1) p(0 | 1) p(0 | 1) &= (0.7)(0.8)(0.8)(0.8) = 0.3584
+.\end{align*}
+Como $0.003<0.5120$ entonces $\delta(000)=1$
+
+\begin{itemize}
+    \item Cadena $100$
+\end{itemize}
+Hallamos las probabilidades, 
+\begin{align*}
+    p(0) p(1 | 0) p(0 | 0) p(0 | 0) &= (0.3)(0.9)(0.1)(0.1) = 0.0027\\
+    p(1) p(1 | 1) p(0 | 1) p(0 | 1) &= (0.7)(0.2)(0.8)(0.8) = 0.0896
+.\end{align*}
+Puesto que $0.0027<0.0896$, $\delta(001)=1$
+
+\begin{itemize}
+    \item Cadena $010$
+\end{itemize}
+Realizando los cálculos de las probabilidades
+\begin{align*}
+p(0) p(0 | 0) p(1 | 0) p(0 | 0) &= (0.3)(0.1)(0.9)(0.1) = 0.0027\\
+    p(1) p(0 | 1) p(1 | 1) p(0 | 1) &= (0.7)(0.8)(0.2)(0.8) = 0.0896\\
+.\end{align*}
+Así, como $0.0027<0.0896$, $\delta(001)=1$
+
+\begin{itemize}
+    \item Cadena $001$
+\end{itemize}
+Las probabilidades para este caso nos dan 
+\begin{align*}
+    p(0) p(0 | 0) p(0 | 0) p(1 | 0) &= (0.3)(0.1)(0.1)(0.9) = 0.0027\\
+    p(1) p(0 | 1) p(0 | 1) p(1 | 1) &= (0.7)(0.8)(0.8)(0.2) = 0.0896
+.\end{align*}
+Puesto que $0.0027<0.0896$, $\delta(001)=1$
+
+\begin{itemize}
+    \item Cadena $110$
+\end{itemize}
+Calculando las probabilidades,
+\begin{align*}
+    p(0) p(1 | 0) p(1 | 0) p(0 | 0) &= (0.3)(0.9)(0.9)(0.1) = 0.0243\\
+    p(1) p(1 | 1) p(1 | 1) p(0 | 1) &= (0.7)(0.2)(0.2)(0.8) = 0.0224
+.\end{align*}
+Luego, como $0.0243> 0.224$ entonces $\delta(110)=0$
+
+
+\begin{itemize}
+    \item Cadena $101$
+\end{itemize}
+La probabilidad para obtener esta cadena dado cada uno de los símbolos es,
+\begin{align*}
+    p(0) p(1 | 0) p(0 | 0) p(1 | 0) &= (0.3)(0.9)(0.1)(0.9) = 0.0243\\
+    p(1) p(1 | 1) p(0 | 1) p(1 | 1) &= (0.7)(0.2)(0.8)(0.2) = 0.0224
+.\end{align*}
+Como se tiene que $0.0243> 0.224$ entonces $\delta(101)=0$
+
+
+\begin{itemize}
+    \item Cadena $011$
+\end{itemize}
+
+Calculando la probabilidad,
+\begin{align*}
+p(0) p(0 | 0) p(1 | 0) p(1 | 0) &= (0.3)(0.1)(0.9)(0.9) = 0.0243\\
+    p(1) p(0 | 1) p(1 | 1) p(1 | 1) &= (0.7)(0.8)(0.2)(0.2) = 0.0224
+.\end{align*}
+Se tiene que $\delta(011)=0$, puesto que $0.0243> 0.224$.
+
+\begin{itemize}
+    \item Cadena $111$
+\end{itemize}
+Por último calculamos la probabilidad de
+\begin{align*}
+p(0) p(1 | 0) p(1 | 0) p(1 | 0) &= (0.3)(0.9)(0.9)(0.9) = 0.2187\\
+    p(1) p(1 | 1) p(1 | 1) p(1 | 1) &= (0.7)(0.2)(0.2)(0.2)=0.0056
+.\end{align*}
+Con lo que decimos que $\delta=0$, porque $0.2187>0.0056$
+
+Por lo que concluimos que 
+\[
+\delta(y_1 y_2 y_3) =
+\begin{cases}
+1, & \text{si } y_1 y_2 y_3 = 000, \\
+1, & \text{si } y_1 y_2 y_3 = 100, \\
+1, & \text{si } y_1 y_2 y_3 = 001, \\
+1, & \text{si } y_1 y_2 y_3 = 010, \\
+0, & \text{si } y_1 y_2 y_3 = 110, \\
+0, & \text{si } y_1 y_2 y_3 = 101, \\
+0, & \text{si } y_1 y_2 y_3 = 011, \\
+0, & \text{si } y_1 y_2 y_3 = 111.
+\end{cases}
+\]
+
+
+
+
+
+
+
+
+
+
+    
+\end{sol}

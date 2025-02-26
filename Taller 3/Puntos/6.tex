@@ -7,7 +7,7 @@ Una fuente $F$ genera símbolos de un alfabeto $\{a, b, c\}$ y se modela como un
 
 \begin{itemize}
     \item[A)] Determine la distribución de probabilidad para las variables aleatorias $X_i$.
-    \begin{proof}
+    \begin{sol}
     Para encontar la distribución de probabilidad, como este es un proceso markoviano podemos plantear la siguiente igualdad.\\
 
 $$
@@ -65,14 +65,16 @@ Así, $a=\dfrac{1.3b}{1.9}$. Luego, con la restricción de que la suma de la pro
     b&=0.412\\
     c&=0.304
 .\end{align*}
-    \end{proof}
+    \end{sol}
     \item[B)] ¿Cuál es la probabilidad de que la fuente emita la palabra \texttt{aabc} (considerando que las letras salen de derecha a izquierda, es decir, primero \texttt{c})?
-
+\begin{sol}
 Sabemos que la palabras que se emiten en un proceso markoviano tiene probabilidad $ P(X_{n+1} = x_{n+1} \mid X_n = x_n)$. Por lo tanto, para calcular la probabilidad de aabc donde c se emite primero luego b y las 2 as, utilizamos las probabilidades de la matriz de transición y por lo tanto
 
 \[
 P(b \mid c) \cdot P(a \mid b) \cdot P(a \mid a) = (0.4) \cdot (0.2) \cdot (0.6) = 0.048
 \]
+\end{sol}
+
     \item[C)]  Dibuje el grafo de estados que modela el proceso markoviano.
     \begin{center}
          \begin{tikzpicture}[node distance = 6cm, on grid, auto]
