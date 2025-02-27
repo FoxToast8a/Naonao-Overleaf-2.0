@@ -9,3 +9,73 @@ Ayuda: Pruebe primero que
     I(X;Y) \leq \log(n) - H(X|Y)
 \end{equation*}
 y observe bajo qué condiciones se da la igualdad.
+
+\begin{proof}
+Teniendo en cuenta que la información común en un canal está dada por
+\begin{align*}
+    I(X;Y) = H(X) - H(X|Y),
+\end{align*}
+ahora sabemos que, por la desigualdad de Jensen,
+\begin{align*}
+    H(X) \leq \log(n),
+\end{align*}
+y tenemos que, si el canal tiene distribución uniforme, entonces
+\begin{align*}
+    H(X) = p(x) \sum_{j=1}^{n} \log(x_j).
+\end{align*}
+Por lo que, cuando la distribución es uniforme, se cumple que
+\begin{align*}
+    H(X) = \log(n).
+\end{align*}
+Con lo que podemos decir que, como la capacidad del canal está dada por el valor máximo dado entre $H(X) - H(X|Y)$, entonces este valor se alcanza cuando la distribución es uniforme:
+\begin{align*}
+    C = \max_{p_X} I(X;Y) = \log(n) - H(X|Y).
+\end{align*}
+Solo nos falta ver que $H(X|Y) = H(q_1, \dots, q_n)$, sabemos que
+\begin{align*}
+    H(X|Y)&= \sum_{x,y}^{n}p(x,y)log(p(x|y))\\
+    &=\sum_{x,y}^{n}p(x|y)p_x(X)log(p(x|y))
+\end{align*}
+luego como estamos tomando una distribución uniforme
+\begin{align*}
+    H(X|Y)=-\dfrac{1}{n}\sum_{x,y}^{n}p(x|y)log(p(x|y))
+.\end{align*}
+Ahora, veamos a que es igual $H(q_1, \dots, q_n)$
+$$
+\begin{pmatrix}
+p(x_1)
+p(x_2) 
+\text{.}
+\text{.}
+\text{.}
+p(x_n)
+\end{pmatrix}
+=
+\begin{pmatrix}
+p(x_1)
+p(x_2) 
+\text{.}
+\text{.}
+\text{.}
+p(x_n)
+\end{pmatrix}
+\begin{pmatrix}
+p(x_1|y_1) & p(x_2|y_1) & \text{.} & \text{.} &\text{.} & p(x_n|y_1)\\
+p(x_1|y_2) & p(x_2|y_2) & \text{.} & \text{.} &\text{.} & p(x_n|y_2)\\
+\text{.} & \text{.}  & \text{.} & \text{.} &\text{.} & \text{.} \\
+\text{.} & \text{.}  & \text{.} & \text{.} &\text{.} & \text{.} \\
+\text{.} & \text{.}  & \text{.} & \text{.} &\text{.} & \text{.} \\
+p(x_1|y_n) & p(x_2|y_n) & \text{.} & \text{.} &\text{.} & p(x_n|y_n)
+\end{pmatrix}
+$$
+Como la distribución es uniforme tenemos que
+\begin{align*}
+     H(q_1, \dots, q_n)=-\dfrac{1}{n}\sum_{xy}^{n} p(x|y)log(x|y)
+ .\end{align*} 
+ por lo que $H(q_1, \dots, q_n)=H(X|Y)$ y asi
+ \begin{align*}
+    C = \log(n) -H(q_1, \dots, q_n) .
+\end{align*}
+
+
+\end{proof}

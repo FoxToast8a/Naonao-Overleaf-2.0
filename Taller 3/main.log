@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.9)  26 FEB 2025 13:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.2.9)  27 FEB 2025 09:34
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1246,17 +1246,19 @@ LaTeX Font Info:    Trying to load font information for U+euex on input line 3.
 
 (C:\MiKTeX\tex/latex/amsfonts\ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)) (Puntos/2.tex
+)
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 28.
+(mdframed)              on input line 14.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 28.
-<sancoya.png, id=5, 562.1pt x 289.08pt>
-File: sancoya.png Graphic file (type png)
-<use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 58.
-(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+(Font)              scaled to size 11.28003pt on input line 14.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 48.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 48.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 81.
 
 
 [1
@@ -1264,7 +1266,20 @@ Package pdftex.def Info: sancoya.png  used on input line 58.
 {C:/Users/Aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/MiKTeX/fon
 ts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
 c.enc}{C:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/MiKTeX/fonts/enc/dvips/n
-ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]
+ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]) (Puntos/2.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 28.
+<sancoya.png, id=24, 562.1pt x 289.08pt>
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 58.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: Not enough space on this page on input line 58.
+
+
+[2]
+Package mdframed Info: Not enough space on this page on input line 58.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 63.
@@ -1274,7 +1289,7 @@ Package pdftex.def Info: sancoya.png  used on input line 83.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 
 
-[2 <./sancoya.png>]
+[3 <./sancoya.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 87.
@@ -1292,7 +1307,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 130.
 
 
-[3]
+[4]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 134.
@@ -1311,23 +1326,19 @@ Package pdftex.def Info: sancoya.png  used on input line 142.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 7.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 46.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 46.
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 72.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 
 
-[4]
+[5]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 72.
 
 
-[5]) (Puntos/4.tex
+[6]) (Puntos/4.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 8.
@@ -1345,7 +1356,7 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 28.
 
 
-[6]
+[7]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 33.
@@ -1369,7 +1380,7 @@ Package pdftex.def Info: sancoya.png  used on input line 57.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 
 
-[7]
+[8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 60.
@@ -1379,7 +1390,7 @@ Package pdftex.def Info: sancoya.png  used on input line 65.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 ) (Puntos/5.tex
 
-[8]
+[9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 11.
@@ -1404,7 +1415,7 @@ Package pdftex.def Info: sancoya.png  used on input line 64.
 Package mdframed Info: Not enough space on this page on input line 64.
 
 
-[9]
+[10]
 Package mdframed Info: Not enough space on this page on input line 64.
 ) (Puntos/6.tex
 Package mdframed Info: mdframed detected package amsthm 
@@ -1417,7 +1428,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
 
 
-[10]
+[11]
 Package mdframed Info: Not enough space on this page on input line 68.
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
 69.
@@ -1428,7 +1439,7 @@ LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
 (Font)              scaled to size 12.0pt on input line 69.
 
 
-[11]
+[12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 71.
@@ -1441,11 +1452,11 @@ Package mdframed Info: Box was splittet wrong
 (mdframed)              on input line 129.
 
 
-[12]
+[13]
 
-[13])
+[14])
 
-[14] (main.aux
+[15] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1455,10 +1466,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21376 strings out of 473529
- 419689 string characters out of 5731609
- 944645 words of memory out of 5000000
- 44102 multiletter control sequences out of 15000+600000
+ 21382 strings out of 473529
+ 419862 string characters out of 5731609
+ 944690 words of memory out of 5000000
+ 44108 multiletter control sequences out of 15000+600000
  605914 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,23n,93p,816b,1063s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1466,14 +1477,15 @@ Here is how much of TeX's memory you used:
 ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b><C:/MiKTeX/fonts/type1/public/amsfonts/euler/euex10.pfb><C:/MiKTeX/fonts/type
 1/public/amsfonts/euler/eufm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler
-/eurm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/
-fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/te
-x-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/font
-s/type1/public/txfonts/t1xtt.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><
-C:/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (14 pages, 340548 bytes).
+/eurm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/MiKTeX/f
+onts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKT
+eX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/txfonts/t
+1xtt.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fonts/type1/pu
+blic/newtx/ztmr.pfb>
+Output written on main.pdf (15 pages, 347147 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
+ 141 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
