@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.4.13)  13 APR 2025 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  13 APR 2025 21:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -23,7 +23,7 @@ File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
 ) (C:\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/02/02 v25.3 The multilingual framework for pdfLaTeX, LuaLaT
+Package: babel 2025/03/27 v25.6 The multilingual framework for pdfLaTeX, LuaLaT
 eX and XeLaTeX
 \babel@savecnt=\count270
 \U@D=\dimen142
@@ -524,7 +524,7 @@ Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
 Package: xparse 2024-08-16 L3 Experimental document command parser
 )
 (C:\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count320
 ))
 (C:\MiKTeX\tex/generic/iftex\iftex.sty
@@ -841,7 +841,7 @@ Package zref Info: New property: page on input line 769.
 Package zref Info: New property: abspage on input line 67.
 )
 (C:\MiKTeX\tex/latex/needspace\needspace.sty
-Package: needspace 2010/09/12 v1.3d reserve vertical space
+Package: needspace 2025/03/13 v1.3e reserve vertical space
 )
 \mdf@templength=\skip57
 \c@mdf@globalstyle@cnt=\count339
@@ -1017,6 +1017,8 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
  (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported  on input line 9.
 )
 \openout1 = `main.aux'.
 
@@ -1259,18 +1261,9 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 {C:/Users/Aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/MiKTeX/fon
 ts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
 c.enc}{C:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/MiKTeX/fonts/enc/dvips/n
-ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
-e 26.
+ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>])
 
-(C:\MiKTeX\tex/latex/newtx\ts1ntxtlf.fd
-File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
-)
-LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 26.
-)
-
-[2{C:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] (main.aux
+[2] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1280,11 +1273,11 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21062 strings out of 473529
- 412487 string characters out of 5731608
- 914482 words of memory out of 5000000
- 43791 multiletter control sequences out of 15000+600000
- 603043 words of font info for 78 fonts, out of 8000000 for 9000
+ 21028 strings out of 473522
+ 411869 string characters out of 5731444
+ 915702 words of memory out of 5000000
+ 43764 multiletter control sequences out of 15000+600000
+ 602667 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,552b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/p
@@ -1296,11 +1289,11 @@ ts/type1/public/amsfonts/euler/eufm7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts
 /euler/eurm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/Mi
 KTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C
-:/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/MiKTeX/fonts/type1/public/new
-tx/ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (2 pages, 182755 bytes).
+:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/
+ztmr.pfb>
+Output written on main.pdf (2 pages, 178255 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 101 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
