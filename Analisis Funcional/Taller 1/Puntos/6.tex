@@ -1,2 +1,28 @@
 %!TEX root = ../main.tex
 
+Considere $E = c_0$, donde
+\[
+c_0 = \left\{ u = \{u_n\}_{n \geq 1} :\text{tales que } u_n \in \mathbb{R}, \ \lim_{n \to \infty} u_n = 0 \right\}.
+\]
+Es decir, $c_0$ es el conjunto de las secuencias reales que tienden a cero. Dotamos a este espacio con la norma
+$
+\|u\|_{\ell^\infty} = \sup_{n \in \mathbb{Z}^+} |u_n|.
+$
+Considere el funcional $f : E \to \mathbb{R}$ dado por
+\[
+f(u) = \sum_{n=1}^{\infty} \frac{1}{2^n} u_n.
+\]
+
+\begin{enumerate}
+    \item[(i)] Muestre que $f \in E^*$ y calcule $\|f\|_{E^*}$.
+    \item[(ii)] ¿Es posible encontrar $u \in E$ tal que $\|u\| = 1$ y $f(u) = \|f\|_{E^*}$?
+\end{enumerate}
+
+
+
+Sean $(E, \| \cdot \|_E)$ y $(F, \| \cdot \|_F)$ espacios vectoriales normados. Suponga que $F$ es un espacio de Banach.
+
+\begin{itemize}
+    \item[•] Muestre que $\mathcal{L}(E, F)$ es un espacio de Banach con la norma usual de $\mathcal{L}(E, F)$.
+    \item[•] En particular, concluya que $E^* = \mathcal{L}(E, \mathbb{R})$ y $E^{**} = \mathcal{L}(E^*, \mathbb{R})$ son espacios de Banach.
+\end{itemize}
