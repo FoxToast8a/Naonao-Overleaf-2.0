@@ -1,2 +1,12 @@
 %!TEX root = ../main.tex
-
+Sean $(E, \| \cdot \|_E)$ y $(F, \| \cdot \|_F)$ espacios vectoriales normados. Considere  
+$T : E \to F$ una transformación lineal. Muestre que las siguientes afirmaciones son equivalentes:
+\begin{enumerate}
+    \item[(i)] $T$ es continua.
+    \item[(ii)] $T$ es continua en cero.
+    \item[(iii)] $T$ es acotada. Es decir, existe $M > 0$ tal que para todo $x \in E$,  
+    \[
+    \|T x\|_F \leq M \|x\|_E.
+    \]
+    \item[(iv)] Si $\overline{B(0,1)} = \{x \in E : \|x\|_E \leq 1\}$, entonces la imagen directa $T(B(0,1))$ es un conjunto acotado de $F$.
+\end{enumerate}
