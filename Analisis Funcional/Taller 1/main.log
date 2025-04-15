@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  13 APR 2025 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  14 APR 2025 18:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1248,12 +1248,16 @@ LaTeX Font Info:    Trying to load font information for U+euex on input line 2.
 
 (C:\MiKTeX\tex/latex/amsfonts\ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-)) (Puntos/2.tex) (Puntos/3.tex)
-(Puntos/4.tex) (Puntos/5.tex) (Puntos/6.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 5.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 5.
+)) (Puntos/2.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 14.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 14.
+) (Puntos/3.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 23.
 
 
 [1
@@ -1261,9 +1265,31 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 {C:/Users/Aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/MiKTeX/fon
 ts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
 c.enc}{C:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/MiKTeX/fonts/enc/dvips/n
-ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>])
+ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]
 
-[2] (main.aux
+[2]) (Puntos/4.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 7.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 80.
+
+
+[3]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 80.
+
+
+[4]) (Puntos/5.tex) (Puntos/6.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 5.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 5.
+)
+
+[5] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1273,27 +1299,28 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21028 strings out of 473522
- 411869 string characters out of 5731444
- 915702 words of memory out of 5000000
- 43764 multiletter control sequences out of 15000+600000
- 602667 words of font info for 77 fonts, out of 8000000 for 9000
+ 21182 strings out of 473522
+ 416051 string characters out of 5731444
+ 931025 words of memory out of 5000000
+ 43917 multiletter control sequences out of 15000+600000
+ 605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,7n,93p,552b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-><C:/MiKTeX/fonts/type1/public/amsfonts/euler/euex10.pfb><C:/MiKTeX/fonts/type1
-/public/amsfonts/euler/euex7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/e
-uex8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/MiKTeX/fon
-ts/type1/public/amsfonts/euler/eufm7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts
-/euler/eurm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/Mi
-KTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C
-:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fonts/type1/public/newtx/
-ztmr.pfb>
-Output written on main.pdf (2 pages, 178255 bytes).
+ 84i,14n,93p,552b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/pu
+blic/amsfonts/euler/euex10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eue
+x7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/euex8.pfb><C:/MiKTeX/fonts/
+type1/public/amsfonts/euler/eufm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/e
+uler/eufm7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/MiKT
+eX/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/MiKTeX/fonts/type1/public/am
+sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
+c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
+ts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (5 pages, 224285 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
