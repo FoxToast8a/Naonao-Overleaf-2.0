@@ -57,7 +57,7 @@ z_{n_k} \to T(x),
 \end{align*}
 lo cual implica que $T(x) = 0$. Pero $T$ es una aplicación 1-1 y $\|x\|_1 = 1$, por consiguiente $x \neq 0$, lo cual prueba que $T(x) \neq 0$.Esto nos lleva a una contradicción. Por ende, $T^{-1}$ debe ser continua.
 
-Por lo cual, para cualquier norma en $E$, la aplicación $T$ es siempre un isomorfismo entre $\ell_1^N$ y $E$, lo cual implica que la aplicación de $(E, \|\cdot\|_{E_1})$ y $(E, \|\cdot\|_{E_2})$ también lo será, así concluyendo que las dos normas son equivalentes.
+Por lo cual, para cualquier norma en $E$, la aplicación $T$ es siempre un isomorfismo entre $\ell_1^N$ y $E$, lo cual implica que la aplicación de $(E, \|\cdot\|_{E_1})$ y $(E, \|\cdot\|_{E_2})$ también lo será, concluyendo así que las dos normas son equivalentes.
         
     \end{proof}
     
@@ -88,8 +88,32 @@ Por lo cual, para cualquier norma en $E$, la aplicación $T$ es siempre un isomo
     \end{proof}
     \item[(iii)] Dé un ejemplo donde se verifique que (ii) puede ser falsa si $E$ es de dimensión infinita.
     \begin{sol}
+    Sea $
+T: (C^1([0,1]), \|\cdot\|_{\infty}) \longrightarrow (\mathbb{R}, |\cdot|)
+$
+donde por $f \mapsto f'(0)$. Note que $T$ es una tranformación lineal.
 
+Como queremos mostrar que la tranformación no es continua, demostremos que $T$ no es acotada.
+\begin{proof}
 
+Supongamos que $T \in \mathcal{L}(E, \mathbb{R})$ con $\|\cdot\|_{\mathcal{L}^\infty}$, por lo cual,  existe $M > 0$ tal que 
+$$
+|T(x)| = |f'(0)| \leq M \|f\|_{\mathcal{L}^\infty }\quad \text{para todo } f \in C^1([0,1]).
+$$
+
+Sea $n \geq 2$ y $f(x) = (1 - x)^n$, entonces,
+$$
+\|f\|_{\mathcal{L}^\infty} = 1, \quad f'(x) = -n(1 - x)^{n - 1}, \quad f'(0) = -n.
+$$
+
+Reemplazando
+\begin{align*}
+n &= |f'(0)| \leq M \|f\|_\infty = M.
+\end{align*}
+
+Por tanto, cuando $n \to \infty$, se tendría $n \leq M$ para todo $n \geq 2$, lo cual es una contradicción. Entonces $T$ no es acotada.
+
+\end{proof}
         
     \end{sol}
 \end{enumerate}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  18 APR 2025 18:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  18 APR 2025 18:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1322,14 +1322,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--67
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 91.
-) (Puntos/6.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 98.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 5.
+(Font)              scaled to size 8.0pt on input line 101.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 5.
+(Font)              scaled to size 6.0pt on input line 101.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 116.
 
 
-[8])
+[8]) (Puntos/6.tex)
 
 [9] (main.aux
 LaTeX Info: Redefining \. on input line 9.
@@ -1341,13 +1345,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21201 strings out of 473522
- 416462 string characters out of 5731444
- 937299 words of memory out of 5000000
- 43936 multiletter control sequences out of 15000+600000
+ 21205 strings out of 473522
+ 416548 string characters out of 5731444
+ 937393 words of memory out of 5000000
+ 43940 multiletter control sequences out of 15000+600000
  605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,93p,619b,1099s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,14n,93p,619b,1292s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/pu
@@ -1360,7 +1364,7 @@ sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
 c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
 ts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (9 pages, 241974 bytes).
+Output written on main.pdf (9 pages, 244398 bytes).
 PDF statistics:
  134 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
