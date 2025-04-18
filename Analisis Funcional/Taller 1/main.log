@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  14 APR 2025 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  18 APR 2025 15:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1251,13 +1251,12 @@ File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )) (Puntos/2.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 14.
+(mdframed)              on input line 17.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 11.28003pt on input line 14.
-) (Puntos/3.tex
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 23.
+(Font)              scaled to size 11.28003pt on input line 17.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 72.
 
 
 [1
@@ -1265,31 +1264,38 @@ Package mdframed Info: mdframed detected package amsthm
 {C:/Users/Aleja/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/MiKTeX/fon
 ts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-p
 c.enc}{C:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C:/MiKTeX/fonts/enc/dvips/n
-ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]
+ewtx/ntx-ec-tlf.enc} <./logo-eps-converted-to.pdf>]) (Puntos/3.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 23.
 
-[2]) (Puntos/4.tex
+
+[2]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 102.
+
+
+[3]) (Puntos/4.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 7.
+
+
+[4]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
 (mdframed)              on input line 80.
 
 
-[3]
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 80.
-
-
-[4]) (Puntos/5.tex) (Puntos/6.tex
+[5]) (Puntos/5.tex) (Puntos/6.tex
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 5.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 5.
 )
 
-[5] (main.aux
+[6] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1299,13 +1305,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21182 strings out of 473522
- 416051 string characters out of 5731444
- 931025 words of memory out of 5000000
- 43917 multiletter control sequences out of 15000+600000
+ 21188 strings out of 473522
+ 416174 string characters out of 5731444
+ 934068 words of memory out of 5000000
+ 43923 multiletter control sequences out of 15000+600000
  605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,14n,93p,552b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,14n,93p,552b,1032s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/pu
@@ -1318,9 +1324,9 @@ sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
 c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
 ts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (5 pages, 224285 bytes).
+Output written on main.pdf (6 pages, 230066 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
