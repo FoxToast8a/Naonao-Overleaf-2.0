@@ -1,16 +1,17 @@
 %!TEX root = ../main.tex
+
 Demuestre que si $T \in \mathcal{L}(E, F)$, entonces:
 
 \begin{enumerate}
     \item[(i)] $\|T x\|_F \leq \|T\| \, \|x\|_E$, para todo $x \in E$.
     
     \item[(ii)] $
-    \|T\| = \sup_{\substack{x \in E \\ x \neq 0}} \frac{\|T x\|_F}{\|x\|_E}.$
+    \|T\| = \displaystyle\sup_{\substack{x \in E \\ x \neq 0}} \frac{\|T x\|_F}{\|x\|_E}.$
     
     
     \item[(iii)] 
     $
-    \|T\| = \sup_{\|x\|_E = 1} \|T x\|_F.
+    \|T\| = \displaystyle\sup_{\|x\|_E = 1} \|T x\|_F.
     $
     
     \item[(iv)] 
@@ -18,3 +19,84 @@ Demuestre que si $T \in \mathcal{L}(E, F)$, entonces:
     \|T\| = \inf \left\{ M > 0 : \|T x\|_F \leq M \|x\|_E, \, \forall x \in E \right\}.
     $
 \end{enumerate}
+\begin{proof}
+\hfill
+\begin{enumerate}
+    \item[(i)]Sea \(\mathcal{L}(E, F)\) un espacio vectorial con la norma
+\[
+\|T\| = \sup_{\substack{x \in E \\ \| x\| \leq 1}} \frac{\|Tx\|_F}{\|x\|_E}.
+\]
+Por definición de supremo, se tiene que \(\|Tx\| \leq \|T\|\) para todo \(x \in E\) con \(\|x\| \leq 1\).
+
+Si \(x = 0\), la desigualdad se cumple trivialmente. Tomemos ahora \(x \in E\) con \(x \neq 0\), y definamos
+\[
+y = \frac{x}{\|x\|}.
+\]
+Entonces, usando la linealidad de \(T\), se tiene:
+\[
+\|Ty\| = \left\|T\left(\frac{x}{\|x\|}\right)\right\| = \frac{1}{\|x\|} \|Tx\|.
+\]
+Por la definición del supremo, como \(\|y\| = 1\), se cumple que \(\|Ty\| \leq \|T\|\), y por lo tanto:
+\[
+\frac{1}{\|x\|} \|Tx\| \leq \|T\|.
+\]
+Multiplicando ambos lados por \(\|x\|\), obtenemos:
+\[
+\|Tx\| \leq \|T\|\|x\|.
+\]
+
+Así, se concluye que para todo \(x \in E\), se cumple \(\|Tx\| \leq \|T\|\|x\|\), como queríamos.
+
+\item[(ii-iv)] Definamos:
+\begin{align*}
+    \alpha &= \sup_{\|x\|_E = 1} \|T x\|_F,\\
+    \beta &= \sup_{\substack{x \in E \\ x \neq 0}} \frac{\|T x\|_F}{\|x\|_E},\\
+    \gamma &= \inf \left\{ M > 0 : \|T x\|_F \leq M \|x\|_E, \, \forall x \in E \right\}.
+\end{align*}
+
+Veamos que \(\|Tx\| \leq \alpha\) para todo \(x \in E\) con \(\|x\| = 1\).  
+Tomemos \(y \in E\) con \(y \neq 0\) tal que \(x = \frac{y}{\|y\|}\), entonces:
+\begin{align*}
+    \|Tx\| = \left\|T\left(\frac{y}{\|y\|}\right)\right\| = \frac{\|Ty\|}{\|y\|} \leq \alpha.
+\end{align*}
+Como esto vale para todo \(y \in E\) con \(y \neq 0\), se concluye que \(\beta \leq \alpha\).
+
+Por otro lado, para todo \(x \in E\) con \(x \neq 0\), se cumple:
+\[
+\frac{\|Tx\|}{\|x\|} \leq \beta.
+\]
+Entonces, usando la linealidad de \(T\),
+\[
+\left\|T\left(\frac{x}{\|x\|}\right)\right\| \leq \beta.
+\]
+Si definimos \(y = \frac{x}{\|x\|}\), entonces \(\|y\| = 1\), y se obtiene que \(\|Ty\| \leq \beta\) para todo \(y \in E\) con \(\|y\| = 1\). Por lo tanto, \(\alpha \leq \beta\).
+
+En consecuencia, \(\alpha = \beta\).
+
+Ahora, si \(M > 0\) es cualquier número en el conjunto que define a \(\gamma\), entonces se cumple que \(\|Tx\| \leq M \|x\|\) para todo \(x \in E\). Esto implica que
+\[
+\frac{\|Tx\|}{\|x\|} \leq M,
+\]
+y por lo tanto, \(\beta \leq M\) para todo \(M\) en dicho conjunto. En consecuencia, \(\beta \leq \gamma\).
+
+Por otro lado, ya sabemos que \(\frac{\|Tx\|}{\|x\|} \leq \beta\) para todo \(x \in E\), \(x \neq 0\), lo cual equivale a \(\|Tx\| \leq \beta \|x\|\). Es decir, \(\beta\) también cumple la propiedad que del conjunto que define \(\gamma\), así que \(\gamma \leq \beta\). Concluimos entonces que:
+\[
+\alpha = \beta = \gamma.
+\]
+
+Finalmente, notemos que \(\|T\| \geq \alpha\), ya que:
+\[
+\{x \in E : \|x\| = 1\} \subseteq \{x \in E : \|x\| \leq 1\}.
+\]
+Por otro lado, si \(M\) pertenece al conjunto que define a \(\gamma\), entonces para todo \(x \in E\) con \(\|x\| \leq 1\), se tiene \(\|Tx\| \leq M\), y como \(M\) es una cota superior de \(\|Tx\|\) sobre la bola unitaria, se concluye que \(\|T\| \leq M\). Por ser esto válido para todo \(M\) del conjunto que define a \(\gamma\), se tiene que \(\|T\| \leq \gamma\).
+
+Por lo tanto,
+\[
+\|T\| = \alpha = \beta = \gamma.
+\]
+
+
+\end{enumerate}
+    
+    
+\end{proof}

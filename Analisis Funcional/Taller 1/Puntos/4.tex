@@ -1,2 +1,80 @@
 %!TEX root = ../main.tex
+.\\
+Sean $(E, \| \cdot \|_E)$ y $(F, \| \cdot \|_F)$ espacios vectoriales normados. Suponga que $F$ es un espacio de Banach. Muestre que $\mathcal{L}(E, F)$ es un espacio de Banach con la norma usual de $\mathcal{L}(E, F)$. En particular, concluya que $E^* = \mathcal{L}(E, \mathbb{R})$ y $E^{**} = \mathcal{L}(E^*, \mathbb{R})$ son espacios de Banach.
+\hfill
 
+\begin{proof}
+\hfill
+
+Sea \( (E, \|\cdot\|_E) \) un espacio normado y sea \( (F, \|\cdot\|_F) \) un espacio de Banach. Consideremos el conjunto \( \mathcal{L}(E, F) \) de todas las aplicaciones lineales y continuas de \( E \) en \( F \), provisto de la norma definida por
+\[
+\|T\| := \sup_{\|x\|_E \leq 1} \|T(x)\|_F.
+\]
+Queremos demostrar que \( \mathcal{L}(E, F) \), con esta norma, es un espacio de Banach.
+
+Sea \( (T_n)_{n \in \mathbb{N}} \subseteq \mathcal{L}(E, F) \) una sucesión de Cauchy. Por definición, para todo \( \varepsilon > 0 \), existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
+\[
+\|T_n - T_m\| < \varepsilon.
+\]
+Es decir, para todo \( x \in E \) con \( \|x\|_E \leq 1 \), se tiene
+\[
+\|T_n(x) - T_m(x)\|_F < \varepsilon.
+\]
+
+Ahora, sea \( x \in E \) arbitrario (no necesariamente de norma menor o igual que uno). Para todo \( n, m \geq N \), se cumple
+\[
+\|T_n(x) - T_m(x)\|_F = \|(T_n - T_m)(x)\|_F \leq \|T_n - T_m\| \cdot \|x\|_E.
+\]
+Dado \( \varepsilon > 0 \), si \( x \neq 0 \), se puede tomar \( \delta := \varepsilon / \|x\|_E \), y por ser \( (T_n) \) de Cauchy, existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
+\[
+\|T_n - T_m\| < \delta = \frac{\varepsilon}{\|x\|_E},
+\]
+lo que implica
+\[
+\|T_n(x) - T_m(x)\|_F < \varepsilon.
+\]
+En el caso \( x = 0 \), se tiene trivialmente que \( T_n(0) = 0 \) para todo \( n \), por lo que la sucesión es constante y, en particular, de Cauchy. Así, se concluye que para todo \( x \in E \), la sucesión \( (T_n(x))_{n \in \mathbb{N}} \subseteq F \) es de Cauchy.
+
+Como \( F \) es un espacio de Banach, existe un elemento \( T(x) \in F \) tal que
+\[
+T_n(x) \to T(x) \in F.
+\]
+Esto define una aplicación \( T: E \to F \) mediante
+\[
+T(x) := \lim_{n \to \infty} T_n(x).
+\]
+
+Veamos que \( T \) es lineal. Sean \( x, y \in E \) y \( \lambda \in \mathbb{K} \) (donde \( \mathbb{K} = \mathbb{R} \) o \( \mathbb{C} \)). Como cada \( T_n \) es lineal, se tiene
+\[
+T_n(\lambda x + y) = \lambda T_n(x) + T_n(y),
+\]
+y como los límites existen en \( F \), se concluye que
+\[
+T(\lambda x + y) = \lim_{n \to \infty} T_n(\lambda x + y) = \lim_{n \to \infty} (\lambda T_n(x) + T_n(y)) = \lambda T(x) + T(y),
+\]
+es decir, \( T \) es lineal.
+
+Mostremos ahora que \( T \) es acotada. Como \( (T_n) \) es Cauchy en \( \mathcal{L}(E, F) \), existe una constante \( M > 0 \) tal que \( \|T_n\| \leq M \) para todo \( n \in \mathbb{N} \). Entonces, para todo \( x \in E \),
+\[
+\|T_n(x)\|_F \leq \|T_n\| \cdot \|x\|_E \leq M \|x\|_E,
+\]
+y pasando al límite cuando \( n \to \infty \),
+\[
+\|T(x)\|_F \leq M \|x\|_E.
+\]
+Esto demuestra que \( T \in \mathcal{L}(E, F) \), es decir, \( T \) es lineal y continua.
+
+Finalmente, veamos que \( T_n \to T \) en \( \mathcal{L}(E, F) \). Dado \( \varepsilon > 0 \), existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
+\[
+\|T_n - T_m\| < \varepsilon.
+\]
+Fijado \( n \geq N \), y tomando el límite cuando \( m \to \infty \), se obtiene
+\[
+\|T_n - T\| = \sup_{\|x\|_E \leq 1} \|T_n(x) - T(x)\|_F \leq \varepsilon.
+\]
+Por tanto, \( \|T_n - T\| \to 0 \), lo que implica que \( T_n \to T \) en \( \mathcal{L}(E, F) \).
+
+\medskip
+
+Concluimos que \( \mathcal{L}(E, F) \), con la norma \( \|\cdot\| \), es un espacio de Banach.
+\end{proof}
