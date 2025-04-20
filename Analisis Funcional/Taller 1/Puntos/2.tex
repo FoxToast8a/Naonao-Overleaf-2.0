@@ -10,6 +10,63 @@ $T : E \to F$ una transformación lineal. Muestre que las siguientes afirmacione
     \]
     \item[(iv)] Si $\overline{B(0,1)} = \{x \in E : \|x\|_E \leq 1\}$, entonces la imagen directa $T(B(0,1))$ es un conjunto acotado de $F$.
 \end{enumerate}
+
+
+
 \begin{proof}
+\hfil
+Para establecer la equivalencia entre estas afirmaciones, probaremos la cadena de implicaciones $(i) \rightarrow (ii) \rightarrow (iii) \rightarrow (iv) \rightarrow (i)$.
+\begin{itemize}
+    \item $(i) \rightarrow (ii)$:  
+    Si $T$ es continua en todo punto de $E$, en particular es continua en el origen.
+
+    \item $(ii) \rightarrow (iii)$:  
+    Supongamos que $T$ es continua en el origen. Entonces, por definición de continuidad, dado $\varepsilon = \frac{1}{9}$, existe $\delta > 0$ tal que si $\|x\|_E < \delta$, entonces $\|T x\|_F < \frac{1}{9}$.
+
+    Sea $x \in E$ con $x \neq 0$, y definamos $y = \dfrac{\delta x}{3 \|x\|_E}$. Entonces, $\|y\|_E = \dfrac{\delta}{3} < \delta$, por lo que se cumple que $\|T y\|_F < \frac{1}{9}$.
+
+    Utilizando la linealidad de $T$, tenemos
+    \begin{align*}
+        \left\| T\left( \frac{\delta x}{3\|x\|_E} \right) \right\|_F &< \frac{1}{9}, \\
+        \frac{\delta}{3\|x\|_E} \|T x\|_F &< \frac{1}{9}, \\
+        \|T x\|_F &< \frac{3}{\delta} \|x\|_E.
+    \end{align*}
+
+    Por lo tanto, si tomamos $M = \dfrac{3}{\delta}$, se tiene que para todo $x \in E$, 
+    \[
+    \|T x\|_F \leq M \|x\|_E,
+    \]
+    lo cual demuestra que $T$ es acotada.
+
+   \item $(iii) \Rightarrow (iv)$:  
+    Supongamos que $T$ es acotada. Entonces existe $M > 0$ tal que para todo $x \in E$, se cumple que $\|T x\|_F \leq M \|x\|_E$. En particular, si $x \in \overline{\mathcal{B}(0,1)}$, es decir, $\|x\|_E \leq 1$, entonces
+    \begin{align*}
+       \|T x\|_F \leq M \end{align*}
     
+     como lo anterior se tiene para todo punto en $\overline{\mathcal{B}(0,1)}$, se tiene que  $T(\overline{\mathcal{B}(0,1)})$ está contenido en la bola cerrada de radio $M$ en $F$, lo que implica que$ T(\overline{\mathcal{B}(0,1)})$ es un conjunto acotado.
+
+    \item $(iv) \Rightarrow (i)$:  
+    Supongamos que $T(\overline{B(0,1)})$ es acotado. Entonces existe una constante $M> 0$ tal que para todo $x \in \overline{B(0,1)}$, se cumple que
+    \begin{align*}
+         \|T x\|_F \leq M
+    .\end{align*}
+   
+    Sea $x \in E$ con $x \neq 0$. Tomemos $y = \|x\|_E \cdot \dfrac{x}{\|x\|_E}$, donde $ \dfrac{x}{\|x\|_E}\in \overline{B(0,1)}$. Usando la linealidad de la tranformación $T$ y la desigualdad anterior, obtenemos,
+    \begin{align*}
+      \|T x\|_F = \left\| T\left( \|x\|_E \cdot \frac{x}{\|x\|_E} \right) \right\|_F = \|x\|_E \cdot \left\| T\left( \frac{x}{\|x\|_E} \right) \right\|_F \leq \|x\|_E \cdot M 
+    .\end{align*}
+    Por lo tanto, $T$ es acotada. Luego, para todo $\varepsilon>0$ con $x^{\prime}, y^{\prime}\in E$ tenemos que 
+    \begin{align*}
+        \|Tx^{\prime}-Ty^{\prime}\|=\|T(x^{\prime}-y^{\prime})\|=M\|x^{\prime}-y^{\prime} \|<\varepsilon
+    .\end{align*}
+    si se toma a $\delta= \dfrac{M}{\varepsilon}$.
+
+
+    Con lo cual se concluye la demostración.
+
+\end{itemize}
+
+   
+
+
 \end{proof}
