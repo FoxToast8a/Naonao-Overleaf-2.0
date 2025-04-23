@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  22 APR 2025 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  22 APR 2025 23:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1356,7 +1356,9 @@ Package mdframed Info: mdframed inside a box
  mdframed uses option nobreak mdframed on input line 116.
 
 
-[10]) (Puntos/6.tex
+[10]
+
+[11]) (Puntos/6.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 19.
@@ -1364,9 +1366,12 @@ File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 54.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 54.
 
 
-[11]
+[12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 57.
@@ -1379,9 +1384,9 @@ Package mdframed Info: Box was splittet wrong
 (mdframed)              on input line 71.
 
 
-[12])
+[13])
 
-[13] (main.aux
+[14] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1410,9 +1415,9 @@ sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
 c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
 ts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (13 pages, 360736 bytes).
+Output written on main.pdf (14 pages, 361659 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
+ 153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
