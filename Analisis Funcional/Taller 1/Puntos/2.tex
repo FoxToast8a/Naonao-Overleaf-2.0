@@ -55,11 +55,11 @@ Para establecer la equivalencia entre estas afirmaciones, probaremos la cadena d
     \begin{align*}
       \|T x\|_F = \left\| T\left( \|x\|_E \cdot \frac{x}{\|x\|_E} \right) \right\|_F = \|x\|_E \cdot \left\| T\left( \frac{x}{\|x\|_E} \right) \right\|_F \leq \|x\|_E \cdot M 
     .\end{align*}
-    Por lo tanto, $T$ es acotada. Luego, para todo $\varepsilon>0$ con $x^{\prime}, y^{\prime}\in E$ tenemos que 
+    Por lo tanto, $T$ es acotada. Luego, para todo $\varepsilon>0$ con $x^{\prime}, y^{\prime}\in E$ tenemos que si $\|x'-y'\|<\delta$
     \begin{align*}
-        \|Tx^{\prime}-Ty^{\prime}\|=\|T(x^{\prime}-y^{\prime})\|=M\|x^{\prime}-y^{\prime} \|<\varepsilon
+        \|Tx^{\prime}-Ty^{\prime}\|=\|T(x^{\prime}-y^{\prime})\|=M\|x^{\prime}-y^{\prime} \|<M\delta=M\dfrac{\varepsilon}{M}
     .\end{align*}
-    si se toma a $\delta= \dfrac{M}{\varepsilon}$.
+    luego, $\delta= \dfrac{\varepsilon}{M}$.
 
 
     Con lo cual se concluye la demostración.

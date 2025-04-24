@@ -17,7 +17,7 @@ Demuestre que $E$ es de Banach si y solamente si $K$ es completo.
 
   $(\Leftarrow)$ Sea $(x_n)_{n\in\mathbb{N}}$ una sucesión de Cauchy en $E$. Por lo cual, la sucesión  $(\|x_n\|)_{n\in\mathbb{N}}$ es de Cauchy en $\mathbb{R}$ y como este espacio es completo, se sigue que $\|x_n\|\to a.$ Consideremos dos casos, si $a=0$, por la definición de convergencia, dado $\varepsilon>0$, existe $N\in\mathbb{Z^+}$ tal que si $n\geq N$ tenemos que $\|\|x_n\|-0\|<\varepsilon,$ esto es igual a $\|x_n\|<\varepsilon,$ así,  concluimos que $x_n\to 0$ por lo cual hemos acabado en este caso.\\
 
-  Si $a\neq 0$, sin pérdida de generalidad podemos asumir que $x_n\neq 0$ para todo $n\in \mathbb{N}$, ya que en caso contrario la cantidad de ceros sería finita, lo cual no afectarían a la convergencia porque al suponer que la cantidad de ceros es infinita, al ser $x_n$ una sucesión de Cauchy eso implicaría que $x_n$ converge a $0$ ya que existiría una subsucesión convergente a $0$, y ese caso fue el anterior. Así, definimos $y_n=\dfrac{x_n}{\|x_n\|},$ luego como las sucesiones de Cauchy en $\mathbb{R}$ son acotadas, existen constantes tales que $0<M_1\leq\|x_n\|\leq M_2$ a partir de un $n\geq N$ tenemos que   
+  Si $a\neq 0$, sin pérdida de generalidad podemos asumir que $x_n\neq 0$ para todo $n\in \mathbb{N}$, ya que en caso contrario la cantidad de ceros sería finita, lo cual no afectarían a la convergencia porque al suponer que la cantidad de ceros es infinita, al ser $x_n$ una sucesión de Cauchy eso implicaría que $x_n$ converge a $0$ ya que existiría una subsucesión convergente a $0$, y ese caso fue el anterior. Así, definimos $y_n=\dfrac{x_n}{\|x_n\|},$ luego como las sucesiones de Cauchy en $\mathbb{R}$ son acotadas, existen constantes tales que $0<M_1\leq\|x_n\|\leq M_2$, a partir de un $n\geq N$ tenemos que   
   \begin{align*}
       \|y_n-y_m\|&=\left\|\frac{x_n}{\|x_n\|}-\frac{x_m}{\|x_m\|}\right\|\\
       &=\left\|\frac{x_n\|x_m\|-x_m\|x_n\|}{\|x_n\|\|x_m\|}\right\|\\
@@ -25,7 +25,7 @@ Demuestre que $E$ es de Banach si y solamente si $K$ es completo.
       &=\frac{1}{M_1^2}\|x_n\|x_m\|-x_m\|x_m\|+x_m\|x_m\|-x_m\|x_n\|\|\\
       &=\frac{1}{M_1^2}\|(x_n-x_m)\|x_m\|+x_m(\|x_m\|-\|x_n\|)\|\\
       &\leq\frac{1}{M_1^2}(\|(x_n-x_m)\|x_m\|\|+\|x_m(\|x_m\|-\|x_n\|)\|)\\
-      &\leq\frac{M_2}{M_1^2}(\|x_n-x_m\|+\|\|x_m\|-\|x_n\|\|)\\
+      &\leq\frac{M_2}{M_1^2}(\|x_n-x_m\|+\|\|x_m\|-\|x_n\|\|)
   .\end{align*}
   Luego, como $(x_n)$ y $(\|x_n\|)$ son de Cauchy para $n$ y $m$ suficientemente grandes $\|x_n-x_m\|<\varepsilon$ y $\|\|x_m\|-\|x_n\|\|<\varepsilon.$ Así hemos concluido que $(y_n)$ es de Cauchy, pero claramente $y_n\in K$, como este es completo por hipótesis tenemos que $y_n\to y$. Podemos notar que $x_n=\|x_n\|y_n$, así tenemos que
   \begin{align*}

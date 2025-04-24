@@ -35,7 +35,7 @@ f(u) = \sum_{n=1}^{\infty} \frac{1}{2^n} u_n.
     $$|f(u)|\leq \|u\|_{\ell^\infty}.$$
     Mostrando así que $f$ es acotada.\\
     Faltaría simplemente calcular $\|f\|_{E^*}.$ Por la cota hallada previamente si tomamos el supremo a ambos lados tenemos que
-    $$\|f(u)\|_{E^*}\sup_{\|u\|_{\ell^\infty}\leq 1}|f(u)|\leq\sup_{\|u\|_{\ell^\infty}\leq 1}\|u\|_{\ell^\infty}\leq 1.$$
+    $$\|f(u)\|_{E^*}=\sup_{\|u\|_{\ell^\infty}\leq 1}|f(u)|\leq\sup_{\|u\|_{\ell^\infty}\leq 1}\|u\|_{\ell^\infty}= 1.$$
     Ahora considere la sucesión $u^N$, donde $N\in \mathbb{Z}^+$ y está definida de la siguiente manera
     $$u_n=\begin{cases}
         1 & \text{Si }n\leq N,\\
@@ -60,9 +60,9 @@ f(u) = \sum_{n=1}^{\infty} \frac{1}{2^n} u_n.
         \begin{align*}
         \left|\sum_{n=1}^m\frac{1}{2^n}(u_n-1)\right|&\leq \sum_{n=1}^m\frac{1}{2^n}|u_n-1|\\
         &=\sum_{n=1}^m\frac{1}{2^n}(1-u_n)\\
-        &=\sum_{n=1}^m\frac{1}{2^n}-\sum_{n=1}^m\frac{1}{2^n}u_n,
+        &=\sum_{n=1}^m\frac{1}{2^n}-\sum_{n=1}^m\frac{1}{2^n}u_n.
         \end{align*}
-        Luego si $n\to \infty$ tenemos que 
+        Luego si $m\to \infty$ tenemos que 
         $$\left|\sum_{n=1}^\infty\frac{1}{2^n}(u_n-1)\right|\leq 1-f(u)=0,$$
         por lo tanto  
         $$\sum_{n=1}^\infty\frac{1}{2^n}(u_n-1)=0.$$
