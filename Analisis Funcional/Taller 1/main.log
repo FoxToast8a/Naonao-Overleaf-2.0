@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  24 APR 2025 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  24 APR 2025 18:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1295,15 +1295,12 @@ Package mdframed Info: Box was splittet wrong
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 22.
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 102.
 
 
 [4]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 102.
+(mdframed)              on input line 107.
 
 
 [5]) (Puntos/4.tex
@@ -1410,10 +1407,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21235 strings out of 473522
- 417187 string characters out of 5731444
+ 21236 strings out of 473522
+ 417202 string characters out of 5731444
  963669 words of memory out of 5000000
- 43970 multiletter control sequences out of 15000+600000
+ 43971 multiletter control sequences out of 15000+600000
  605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,93p,697b,1292s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1429,7 +1426,7 @@ sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
 c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
 ts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (14 pages, 363406 bytes).
+Output written on main.pdf (14 pages, 363601 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

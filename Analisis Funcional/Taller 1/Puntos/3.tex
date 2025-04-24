@@ -21,17 +21,22 @@ Demuestre que si $T \in \mathcal{L}(E, F)$, entonces:
 \begin{proof}
 \hfill
 \begin{enumerate}
-    \item[(i)]Sea \(\mathcal{L}(E, F)\) un espacio vectorial con la norma
+    \item[(i)]
+    \textcolor{blue}{prueba más sencilla} Por hipótesis tenemos que $T\in \mathcal{L}(E,F)$, entonces como $T$ es una aplicación lineal continua en particular, $\|Tx\|_F\leq \|T\| \|x\|_E$ para todo $x\in E$.
+
+
+
+ \item[(i)]Sea \(\mathcal{L}(E, F)\) un espacio vectorial con la norma
 \[
-\|T\| = \sup_{\substack{x \in E \\ \| x\| \leq 1}} \frac{\|Tx\|_F}{\|x\|_E}.
+\|T\| = \sup_{\substack{x \in E \\ \| x\| \leq 1}}\|Tx\|_F.
 \]
 Por definición de supremo, se tiene que \(\|Tx\| \leq \|T\|\) para todo \(x \in E\) con \(\|x\| \leq 1\), si \(x = 0\), la desigualdad se cumple trivialmente. 
 
-Ahora, tomemos \(x \in E\) con \(x \neq 0\), y definamos
+Ahora, tomemos \(x \in E\) con \(x \neq 0\) y $\|x\|>1$, definamos
 \[
 y = \frac{x}{\|x\|},
 \]
-entonces, usando la linealidad de \(T\), se tiene que
+ usando la linealidad de \(T\), se tiene que
 \[
 \|Ty\| = \left\|T\left(\frac{x}{\|x\|}\right)\right\| = \frac{1}{\|x\|} \|Tx\|.
 \]
