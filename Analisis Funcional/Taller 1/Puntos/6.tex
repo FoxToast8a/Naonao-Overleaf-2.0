@@ -16,27 +16,27 @@ f(u) = \sum_{n=1}^{\infty} \frac{1}{2^n} u_n.
 \begin{enumerate}
     \item[(i)] Muestre que $f \in E^*$ y calcule $\|f\|_{E^*}$.
     \begin{sols}
-    Observemos primero que evidentemente esta bien definido el funcional ya que como las sucesiones convergentes son acotadas, el supremo existe y como
+    Primero, observemos que el funcional está bien definido, esto ya que  las sucesiones convergentes son acotadas, el supremo existe y como
     $$\left|\frac{1}{2^n}u_n\right|\leq\|u\|_{\ell^\infty}\frac{1}{2^n},$$ 
-    Por el criterio de comparacion converge absolutamente, ya que el lado derecho es una geometrica. Luego dadas $u,v\in E$ y $\lambda\in\mathbb{R},$ tenemos claramente que $u+\lambda v\in E$, donde $u+\lambda v=\{u_n+\lambda v_n\}_{n\geq 1}.$ Asi por la convergencia absoluta tenemos que $f$ es lineal, ya que
+    por el criterio de comparación converge absolutamente, ya que el lado derecho de la desigualdad es una serie geométrica. Luego, dadas $u,v\in E$ y $\lambda\in\mathbb{R},$ tenemos que $u+\lambda v\in E$, donde $u+\lambda v=\{u_n+\lambda v_n\}_{n\geq 1}.$ Así, por la convergencia absoluta tenemos que $f$ es lineal, ya que
     \begin{align*}
        f(u+\lambda v)&=\sum_{n=1}^\infty\frac{1}{2^n}(u_n+\lambda v_n)\\
-       &=\sum_{n=1}^\infty\left(\frac{1}{2^n}u_n+\frac{1}{2^n}\lambda v_n\right)\\
+       &=\sum_{n=1}^\infty\left(\frac{1}{2^n}u_n+\frac{1}{2^n}\lambda v_n\right),\\
        &=\sum_{n=1}^\infty\frac{1}{2^n}u_n+\lambda\sum_{n=1}^\infty\frac{1}{2^n} v_n\\
        &=f(u)+\lambda f(v)
     .\end{align*}
-        Mostremos ahora que esta acotada. Observe que para una suma parcial se tiene que
+        Ahora, mostremos que $f$ es acotado. Observe que para una suma parcial se tiene que
         \begin{align*}
             \left|\sum_{n=1}^m\frac{1}{2^n}u_n\right|&\leq\sum_{n=1}^m\frac{1}{2^n}|u_n|\\
             &\leq \sup_{n\in\mathbb{Z}^+}|u_n|\sum_{n=1}^m\frac{1}{2^n}\\
             &=\|u\|_{\ell^\infty}\sum_{n=1}^m\frac{1}{2^n}
         .\end{align*}
-    Note que si hacemos $m\to\infty$ al lado derecho tenemos una serie geometrica que converge a $1$, asi tenemos que
+    Note que, si hacemos $m\to\infty$ al lado derecho tenemos una serie geométrica que converge a $1$, por lo cual, tenemos que
     $$|f(u)|\leq \|u\|_{\ell^\infty}.$$
-    Mostrando asi que $f$ es acotada.\\
-    Faltaria simplemente calcular $\|f\|_{E^*}.$ Por la cota hallada previamente si tomamos el supremo a ambos lados tenemos que
-    $$\|f(u)\|_{E^*}\sup_{\|u\|_{\ell^\infty}\leq 1}|f(u)|\leq\sup_{\|u\|_{\ell^\infty}\leq 1}\|u\|_{\ell^\infty}\leq 1.$$
-    Ahora considere la sucesion $u^N$, donde $N\in \mathbb{Z}^+$ y esta definida de la siguiente manera
+    Mostrando así que $f$ es acotada.\\
+    Faltaría simplemente calcular $\|f\|_{E^*}.$ Por la cota hallada previamente si tomamos el supremo a ambos lados tenemos que
+    $$\|f(u)\|_{E^*}=\sup_{\|u\|_{\ell^\infty}\leq 1}|f(u)|\leq\sup_{\|u\|_{\ell^\infty}\leq 1}\|u\|_{\ell^\infty}= 1.$$
+    Ahora considere la sucesión $u^N$, donde $N\in \mathbb{Z}^+$ y está definida de la siguiente manera
     $$u_n=\begin{cases}
         1 & \text{Si }n\leq N,\\
         0 & \text{Si }n>N.
@@ -45,28 +45,28 @@ f(u) = \sum_{n=1}^{\infty} \frac{1}{2^n} u_n.
     \begin{align*}
         \sum_{i=1}^N\frac{1}{2^n}&=|f(u^N)|\\
         &\leq\|f\|_{E^*}\|u^N\|_{\ell^\infty}\\
-        =\leq\|f\|_{E^*}
+        &=\leq\|f\|_{E^*}
     .\end{align*}
-    Asi como el lado derecho no depende de $N$, si tomamos $N\to \infty$ tenemos que 
+    Así como el lado derecho de la desigualdad no depende de $N$, si tomamos $N\to \infty$ tenemos que 
     $$1\leq\|f\|_{E^*}.$$
-    Asi concluimos que $\|f\|_{E^*}=1.$
+    Por lo que concluimos que $\|f\|_{E^*}=1.$
     
     \end{sols}
     \item[(ii)] ¿Es posible encontrar $u \in E$ tal que $\|u\| = 1$ y $f(u) = \|f\|_{E^*}$?
     \begin{sols}
-        Como vimos en el numeral anterior que $\|f\|_{E^*}=1$, queremos ver si existe una sucesion $u\in E$ de norma $1$ tal que $f(u)=1.$ Supongamos que existe tal sucesion y veamos como esto nos lleva a una contradiccion. Por hipotesis
+        En el numeral anterior vimos que $\|f\|_{E^*}=1$, ahora queremos ver si existe una sucesión $u\in E$ de norma $1$ tal que $f(u)=1.$ Supongamos que existe tal sucesión y veamos como esto nos lleva a una contradicción. Por hipótesis
         $$u_n\leq |u_n|\leq \|u\|_{\ell^\infty}=1,$$
-        luego $u_n-1\leq 0$ para todo $n\in \mathbb{Z}^+.$ Asi podemos notar que
+        luego $u_n-1\leq 0$ para todo $n\in \mathbb{Z}^+.$ Así podemos notar que
         \begin{align*}
         \left|\sum_{n=1}^m\frac{1}{2^n}(u_n-1)\right|&\leq \sum_{n=1}^m\frac{1}{2^n}|u_n-1|\\
         &=\sum_{n=1}^m\frac{1}{2^n}(1-u_n)\\
-        &=\sum_{n=1}^m\frac{1}{2^n}-\sum_{n=1}^m\frac{1}{2^n}u_n,
+        &=\sum_{n=1}^m\frac{1}{2^n}-\sum_{n=1}^m\frac{1}{2^n}u_n.
         \end{align*}
         Luego si $m\to \infty$ tenemos que 
-        $$\left|\sum_{n=1}^\infty\frac{1}{2^n}(u_n-1)\right|\leq 1-f(u)=0.$$
-        Por lo tanto  
+        $$\left|\sum_{n=1}^\infty\frac{1}{2^n}(u_n-1)\right|\leq 1-f(u)=0,$$
+        por lo tanto  
         $$\sum_{n=1}^\infty\frac{1}{2^n}(u_n-1)=0.$$
-        Ahora note que si existe algun $u_n<1$ la suma de arriba seria negativa, no igual a 0. Por lo que $u_n=1$ para todo $n\in \mathbb{Z}^+,$ pero esto implicaria que $u\notin E$, ya que esa sucesion no converge a 0. Luego no puede existir una sucesion $u$ que cumpla lo mencionado.
+        Ahora, note que si existe algún $u_n<1$ la suma de arriba sería negativa, no igual a 0. Por lo que $u_n=1$ para todo $n\in \mathbb{Z}^+,$ pero esto implicaria que $u\notin E$, ya que esa sucesión no converge a 0. Luego no puede existir una sucesión $u$ que cumpla lo mencionado.
 
     \end{sols}
 \end{enumerate}

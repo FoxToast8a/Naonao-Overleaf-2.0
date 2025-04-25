@@ -4,13 +4,13 @@ Sean $E$ y $F$ espacios vectoriales normados. Suponga que $E$ es de dimensión f
 \begin{enumerate}
     \item[(i)] Muestre que todas las normas asignadas a $E$ son equivalentes.
     \begin{proof}
-    Sea $E$ un espacio vectorial normado de dimensión finita $N$. Para esta demostación basta probar que $E$ es isomorfo al espacio $\ell_1^N$. Por consiguiente, dadas dos normas en $E$, estas serán isomorfas a $\ell_1^N$ para cada una de estas normas, y de esto deduciremos la equivalencia de las normas.\\
+  Sea $E$ un espacio vectorial normado de dimensión finita $N$. Para esta demostación basta probar que $E$ es isomorfo al espacio $\ell_1^N$. Por consiguiente, dadas dos normas en $E$, estas serán isomorfas a $\ell_1^N$ para cada una de estas normas, y de esto deduciremos la equivalencia de las normas.\\
 
 Sea $\mathcal{B} = \{e_1, e_2, \ldots, e_n\}$ la base canónica de $\ell_1^N$. Tomemos una base $\mathcal{B}' = \{v_1, v_2, \ldots, v_n\}$ para $E$. Definamos una aplicación  $T: \ell_1^N \to E$ tal que $T(e_i) = v_i$ para todo $1 \leq i \leq N$. Por su definición, tenemos que $T$ es transformación lineal.\\
 
 Veamos ahora que $T$ es continua, para ello veremos que es acotada.
 
-Sea $x = (x_1, x_2, \ldots, x_n) \in \mathbb{R}^n$, luego $x = \displaystyle\sum_{i=1}^N x_i e_i$. Por lo cual,
+Sea $x = (x_1, x_2, \ldots, x_N) \in \mathbb{R}^N$, luego $x = \displaystyle\sum_{i=1}^N x_i e_i$. Por lo cual,
 \begin{align*}
 T(x) &= \sum_{i=1}^N x_i T(e_i) = \sum_{i=1}^N x_i v_i.
 \end{align*}
@@ -24,7 +24,7 @@ Así,
 &\leq \sum_{i=1}^N |x_i| \cdot \max_{1 \leq i \leq N} \|v_i\|_E
 \end{align*}
 
-si $K = \max_{1 \leq i \leq N} \|v_i\|_E$, entonces $T$ está acotada y por ende es continua. Adicionalmente, $T$ es biyectiva por su definición.
+si $K =$$ \max_{\substack{1 \leq i \leq N}} \|v_i\|_E$, entonces $T$ está acotada y por lo tanto es continua. Adicionalmente, $T$ es biyectiva por su definición.
 
 Ahora, razonando por reducción al absurdo suponga que $T^{-1}$ no es una transformación lineal continua, lo cual por las equivalencias mostradas en el ejercicio 2 la no continuidad debe fallar en 0. Esto nos indica que podemos encontrar una sucesión $\{y_n\}$ en $V$ y un número real $\varepsilon > 0$ tal que $\|T^{-1}(y_n)\|_1 > \varepsilon$ mientras que $y_n \to 0$. Definamos 
 $$
@@ -58,42 +58,173 @@ z_{n_k} \to T(x),
 lo cual implica que $T(x) = 0$. Pero $T$ es una aplicación 1-1 y $\|x\|_1 = 1$, por consiguiente $x \neq 0$, lo cual prueba que $T(x) \neq 0$.Esto nos lleva a una contradicción. Por ende, $T^{-1}$ debe ser continua.
 
 Por lo cual, para cualquier norma en $E$, la aplicación $T$ es siempre un isomorfismo entre $\ell_1^N$ y $E$, lo cual implica que la aplicación de $(E, \|\cdot\|_{E_1})$ y $(E, \|\cdot\|_{E_2})$ también lo será, concluyendo así que las dos normas son equivalentes.
+
+
+Ahora veamos cuáles son las constantes positivas con las que podemos establecer que las normas son equivalentes, de acuerdo con la definición dada en el taller.
+
+Puesto que $(E,\| \cdot \|_1)$ es isomorfo a $(E, \|\cdot\|_2)$ existe una aplicación lineal, la cual tomaremos de la siguiente manera
+
+\[
+I : (E, \| \cdot \|_1) \longrightarrow (E, \| \cdot \|_2), \quad x \mapsto I(x) = x.
+\]
+
+luego, tenemos que $I$ es acotada, es decir, existe $C_2>0$ tal que 
+
+\begin{align*}
+    \|x\|_2 \leq C_2 \|x\|_1
+.\end{align*}
+
+Ahora consideremos la aplicación lineal inversa a $I$
+\[
+I^{-1} : (E, \| \cdot \|_1) \longrightarrow (E, \| \cdot \|_2),
+\]
+de igual forma, tenemos que la aplicación inversa es acotada, por lo cual, existe $C_1^{-1}>0$, tal que 
+\begin{align*}
+    \|x\|_1 \leq C_1^{-1} \|x\|_2
+,\end{align*}
+así, tenemos que 
+\[
+C_1 \|x\|_1 \leq \|x\|_2 \leq C_2 \|x\|_1 \quad \text{para todo } x \in E,
+\]
+lo cual demuestra que las normas \( \| \cdot \|_1 \) y \( \| \cdot \|_2 \) son equivalentes.
+%Para mostrar que todas las normas definidas en $E$ son equivalentes, primero vamos a mostrar que se tiene la transitividad entre normas equivalentes, además es importante resaltar que en este caso estamos tomando como norma base, la norma $1$ definida como,
+%\begin{align*}
+ %   \|x\|_1 = \sum_{i=0}^{n} |\alpha_i|,
+%\end{align*}
+%donde $x = \sum_{i=0}^{n} \alpha_i e_i \in E$.
+
+%Ahora, supongamos que $\|\cdot\|_a$ y $\|\cdot\|_b$ son dos normas definidas sobre $E$ que son equivalentes a la norma $\|\cdot\|_1$. Esto quiere decir que existen constantes positivas $C_1, C_2, C_1', C_2'$ tales que, para todo $x \in E$, se cumple
+%\begin{align*}
+ %   C_1 \|x\|_1 \leq \|x\|_a \leq C_2 \|x\|_1, \\
+  %  C_1' \|x\|_1 \leq \|x\|_b \leq C_2' \|x\|_1.
+%\end{align*}
+
+%A partir de estas desigualdades, queremos establecer la equivalencia directa entre $\|\cdot\|_a$ y $\|\cdot\|_b$. Combinando las desigualdades anteriores podemos decir que, 
+%\[
+%\left\{
+%\begin{aligned}
+%& C_1 \|x\|_1 \leq \|x\|_a \leq C_2 \|x\|_1 && \Rightarrow && \frac{C_1}{C_2} \|x\|_1 \leq \frac{1}{C_2} \|x\|_a \leq \|x\|_1 && \Rightarrow && \frac{1}{C_2} \|x\|_a \leq \frac{1}{C_1'} \|x\|_b \\
+%& C_1' \|x\|_1 \leq \|x\|_b \leq C_2' \|x\|_1 && \Rightarrow && \|x\|_1 \leq \frac{1}{C_1'} \|x\|_b \leq \frac{C_2'}{C_1'} \|x\|_1 && \Rightarrow && \|x\|_a \leq \frac{C_2}{C_1'} \|x\|_b \\
+%& \|x\|_1 \leq \frac{1}{C_1} \|x\|_a \leq \frac{C_2}{C_1} \|x\|_1 && \Rightarrow && \|x\|_1 \leq \frac{1}{C_1} \|x\|_a && \Rightarrow && \frac{1}{C_2'} \|x\|_b \leq \frac{1}{C_1} \|x\|_a \\
+%& \frac{C_1'}{C_2'} \leq \frac{1}{C_2'} \|x\|_b \leq \|x\|_1 && \Rightarrow && \frac{1}{C_2'} \|x\|_b \leq \|x\|_1 && \Rightarrow && \frac{C_1'}{C_2'} \|x\|_b \leq \|x\|_a
+%\end{aligned}
+%\right.
+%\]
+
+%Luego,
+%\[
+%\frac{C_1}{C_2'} \|x\|_b \leq \|x\|_a \leq \frac{C_2}{C_1'} \|x\|_b
+%\]
+
+%como \( C_1, C_2, C_1', C_2' \) son constantes positivas, \( \dfrac{C_1'}{C_2'} \) y \( \dfrac{C_2}{C_1'} \) también lo son. Lo que nos indica que \( \|\cdot\|_a \) y \( \|\cdot\|_b \) son equivalentes.\\
+
+%Ahora, queremos probar que 
+%\[
+%C_1 \|x\|_1 \leq \|x\|_a \leq C_2 \|x\|_1
+%\]
+%se cumple para todo $x \in E$, donde $C_1, C_2$ son constantes positivas. 
+
+%Para el caso $x = 0$, la proposición se cumple trivialmente. Entonces, tomemos $x \neq 0$ y veamos que, dividiendo entre $\|x\|_1$
+%\[
+%C_1 \leq \frac{\|x\|_a}{\|x\|_1} \leq C_2 
+%\text{ por lo que, }
+%C_1 \leq \left\|\frac{x}{\|x\|_1}\right\|_a \leq C_2 
+%\text{ , así  } 
+%C_1 \leq \|u\|_a \leq C_2 \quad \text{(1)}
+%\]
+%si tomamos $u = \dfrac{x}{\|x\|_1}$, donde $\|u\|_1 = 1$. Esto nos indica que basta con probar $(1)$ para $u \in E$, con $\|u\|_1 = 1$.\\
+
+%Ahora, veamos que cualquier norma $\|\cdot\|_a$ en el espacio $E$, es continua en $\|\cdot\|_1$
+
+%Sea $\|\cdot\|_a : (E, \|\cdot\|_1) \to (\mathbb{R}, |\cdot|)$ definida por $x \mapsto \|x\|_a$.
+
+%Queremos mostrar que esta función es continua, es decir, que para todo $\varepsilon > 0$, existe $\delta > 0$ tal que si $\|x - x'\|_1 < \delta$, entonces 
+%\[
+%|\|x\|_a - \|x'\|_a| < \varepsilon.
+%\]
+
+%Por la desigualdad triangular para la norma $\|\cdot\|_a$ se tiene
+
+%\begin{align*}
+%\left| \|x\|_a - \|x'\|_a \right| 
+%&\leq \|x - x'\|_a,
+%\end{align*}
+
+%ahora, escribamos $x = \sum_{i=1}^n \alpha_i e_i$ y $x' = \sum_{i=1}^n \alpha_i' e_i$, con $\{e_i\}_{i=1}^n$ una base finita de $E$, luego,
+%\begin{align*}
+%\|x - x'\|_a &= \left\| \sum_{i=1}^n (\alpha_i - \alpha_i') e_i \right\|_a \\
+%&\leq \sum_{i=1}^n |\alpha_i - \alpha_i'| \cdot \|e_i\|_a \\
+%&\leq \left( \max_{1 \leq i \leq n} \|e_i\|_a \right) \sum_{i=1}^n |\alpha_i - \alpha_i'| \\
+%&= \left( \max_{1 \leq i \leq n} \|e_i\|_a \right) \|x - x'\|_1.
+%\end{align*}
+
+%Por lo tanto, si tomamos 
+%\[
+%\delta = \frac{\varepsilon}{\max_{1 \leq i \leq n} \|e_i\|_a},
+%\]
+%entonces, si $\|x - x'\|_1 < \delta$, se sigue que,
+
+%\[
+%|\|x\|_a - \|x'\|_a| \leq \|x - x'\|_a < \varepsilon.
+%\]
+
+%Esto prueba que $\|\cdot\|_a$ es continua en $(E, \|\cdot\|_1)$.
+
+
+%Ahora veamos cuales serían las constantes para decir que las normas son equivalentes para eso vamos a probar que si $B(0,1)$ es compacto y acotado entonces en ese conjunto se alcanza máximo y mínimo.
+
+%Por lo demostrado anteriormente sabemos que $\|\cdot\|_a$ es una función continua y como $E$ es un espacio vectorial de dimensión finita, luego, el conjunto
+%\[
+%B = \left\{ x \in E : \|x\|_1 = 1 \right\}
+%\]
+%es compacto por ser cerrado y acotado, por lo que existe un isomorfismo lineal $T : \mathbb{R}^n \to E$, por el teorema del valor extremo, la función continua definida sobre $B$ alcanza su máximo y su mínimo. Definamos
+%\[
+%C_1 = \min_{\|x\|_1 = 1} \|x\|_a, \quad C_2 = \max_{\|x\|_1 = 1} \|x\|_a.
+%\]
+
+%Como $x \neq 0$ y $\|x\|_1 = 1$, entonces $C_1$ y $C_2$ son constantes positivas, con $C_2 \geq C_1$, y se cumple que
+%\[
+%C_1 \leq \|x\|_a \leq C_2.
+%\]
+
+%Luego, por la definición de equivalencia de normas, $\|\cdot\|_a$ y $\|\cdot\|_1$ son equivalentes.
+
+
         
-    \end{proof}
-    
-    \item[(ii)] Muestre que toda transformación lineal $T : E \to F$ es continua.
+   \end{proof}
+  
+   \item[(ii)] Muestre que toda transformación lineal $T : E \to F$ es continua.
     \begin{proof}
     Sea $T: E\rightarrow F$ una transformación lineal, veamos que $T$ es continua, para esto de acuerdo con el ejercicio $2$ de este taller, sabemos que basta con mostrar que es acotada.\\
 
-    Como $E$ es un espacio vectorial de dimensión finita, tomemos la base de $E$ como $\mathcal{B}=\{v_1,v_2,\dots, v_n\}$, luego si $x\in E$ tenemos que $x=\displaystyle\sum_{i=1}^{n}x_iv_i$, entonces la transformación lineal T es de la forma,
+    Como por hipótesis $E$ es un espacio vectorial de dimensión finita, tomemos la base de $E$ como $\mathcal{B}=\{v_1,v_2,\dots, v_n\}$, luego si $x\in E$ tenemos que $x=\displaystyle\sum_{i=1}^{n}x_iv_i$, entonces la transformación lineal T es de la forma,
       \begin{align*}
            Tx&=T\left( \displaystyle\sum_{i=1}^{n} x_i v_i\right) \\
-           &=\displaystyle\sum_{i=1}^{n} x_i T(v_i),\\
-           &=\displaystyle\sum_{i=1}^{n} x_i v_i \max_{\substack{1\leq i\leq n}} T(v_i),
+           &=\displaystyle\sum_{i=1}^{n} x_i T(v_i),
         \end{align*} 
-    luego, tenemos que
+    así, tenemos que
     \begin{align*}
 \|T\|_E 
 &= \left\|\sum_{i=1}^{n} x_i T(v_i)\right\|_E\\
 &\leq \sum_{i=1}^{n} \left\|x_i T(v_i)\right\|_E\\
-&= \sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E,
+    & =\sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E,
 \end{align*}
  por el punto anterior, como $E$ es un espacio de dimensión finita existen constantes positivas $C_1$ y $C_2$, tal que $C_1\|x\|_E\leq\|x\|_1\leq C_2\|x\|_E$ y si tomamos a $M_1=\max_{\substack{1\leq i\leq n}} \|T(v_i)\|_E$, entonces,
  \begin{align*}
-     \sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E&= \|x\|_1 \max_{\substack{1\leq i \leq n}} \|T(v_i)\|_E,\\
+     \sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E &\leq\|x\|_1\max_{\substack{1\leq i \leq n}} \|T(v_i)\|_E,\\
      &\leq M_1 C_2\|x\|_E\\
      &=M \|x\|_E,
  \end{align*}
  por lo cual, T es acotado y continuo.
     \end{proof}
     \item[(iii)] Dé un ejemplo donde se verifique que (ii) puede ser falsa si $E$ es de dimensión infinita.
-    \begin{sol}
+\begin{sol}
     Sea $
 T: (C^1([0,1]), \|\cdot\|_{\infty}) \longrightarrow (\mathbb{R}, |\cdot|)
 $
-donde por $f \mapsto f'(0)$. Note que $T$ es una tranformación lineal.
+donde por $f \mapsto f'(0)$. Note que $T$ es una transformación lineal.
 
-Como queremos mostrar que la tranformación no es continua, demostremos que $T$ no es acotada.
+Queremos mostrar por la linealidad de la derivada que la transformación no es continua,  por lo tanto, demostremos que $T$ no es acotada.
 \begin{proof}
 
 Supongamos que $T \in \mathcal{L}(E, \mathbb{R})$ con $\|\cdot\|_{\mathcal{L}^\infty}$, por lo cual,  existe $M > 0$ tal que 
@@ -101,9 +232,11 @@ $$
 |T(x)| = |f'(0)| \leq M \|f\|_{\mathcal{L}^\infty }\quad \text{para todo } f \in C^1([0,1]).
 $$
 
-Sea $n \geq 2$ y $f(x) = (1 - x)^n$, entonces,
+Sea $n \geq 2$ y $f(x) = (1 - x)^n$,  entonces, por la forma en la que está definida $f$ tenemos que su máximo es $1$ y se alcanza cuando $f$ se evalúa en $0$, luego $
+\|f\|_{\mathcal{L}^\infty} = 1,$ tomando la derivada de $f$ tenemos que
+
 $$
-\|f\|_{\mathcal{L}^\infty} = 1, \quad f'(x) = -n(1 - x)^{n - 1}, \quad f'(0) = -n.
+f'(x) = -n(1 - x)^{n - 1}, \quad f'(0) = -n.
 $$
 
 Reemplazando
@@ -115,7 +248,7 @@ Por tanto, cuando $n \to \infty$, se tendría $n \leq M$ para todo $n \geq 2$, l
 
 \end{proof}
         
-    \end{sol}
+\end{sol}
 \end{enumerate}
-
+\newpage
 

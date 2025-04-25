@@ -1,6 +1,5 @@
 %!TEX root = ../main.tex
-.\\
-Sean $(E, \| \cdot \|_E)$ y $(F, \| \cdot \|_F)$ espacios vectoriales normados. Suponga que $F$ es un espacio de Banach. Muestre que $\mathcal{L}(E, F)$ es un espacio de Banach con la norma usual de $\mathcal{L}(E, F)$. En particular, concluya que $E^* = \mathcal{L}(E, \mathbb{R})$ y $E^{**} = \mathcal{L}(E^*, \mathbb{R})$ son espacios de Banach.
+ Sean $(E, \| \cdot \|_E)$ y $(F, \| \cdot \|_F)$ espacios vectoriales normados. Suponga que $F$ es un espacio de Banach. Muestre que $\mathcal{L}(E, F)$ es un espacio de Banach con la norma usual de $\mathcal{L}(E, F)$. En particular, concluya que $E^* = \mathcal{L}(E, \mathbb{R})$ y $E^{**} = \mathcal{L}(E^*, \mathbb{R})$ son espacios de Banach.
 \hfill
 
 \begin{proof}
@@ -14,18 +13,18 @@ Queremos demostrar que \( \mathcal{L}(E, F) \), con esta norma, es un espacio de
 
 Sea \( (T_n)_{n \in \mathbb{N}} \subseteq \mathcal{L}(E, F) \) una sucesión de Cauchy. Por definición, para todo \( \varepsilon > 0 \), existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
 \[
-\|T_n - T_m\| < \varepsilon.
+\|T_n - T_m\| < \varepsilon,
 \]
-Es decir, para todo \( x \in E \) con \( \|x\|_E \leq 1 \), se tiene
+es decir, para todo \( x \in E \) con \( \|x\|_E \leq 1 \), se tiene que,
 \[
 \|T_n(x) - T_m(x)\|_F < \varepsilon.
 \]
 
-Ahora, sea \( x \in E \) arbitrario (no necesariamente de norma menor o igual que uno). Para todo \( n, m \geq N \), se cumple
+Ahora, sea \( x \in E \) arbitrario (no necesariamente de norma menor o igual que uno), tenemos que para todo \( n, m \geq N \), se cumple que,
 \[
 \|T_n(x) - T_m(x)\|_F = \|(T_n - T_m)(x)\|_F \leq \|T_n - T_m\| \cdot \|x\|_E.
 \]
-Dado \( \varepsilon > 0 \), si \( x \neq 0 \), se puede tomar \( \delta := \varepsilon / \|x\|_E \), y por ser \( (T_n) \) de Cauchy, existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
+Dado \( \varepsilon > 0 \), si \( x \neq 0 \), se puede tomar \( \delta := \dfrac{\varepsilon}{ \|x\|_E} \), y por ser \( (T_n) \) de Cauchy, existe \( N \in \mathbb{N} \) tal que para todo \( n, m \geq N \),
 \[
 \|T_n - T_m\| < \delta = \frac{\varepsilon}{\|x\|_E},
 \]
@@ -37,9 +36,9 @@ En el caso \( x = 0 \), se tiene trivialmente que \( T_n(0) = 0 \) para todo \( 
 
 Como \( F \) es un espacio de Banach, existe un elemento \( T(x) \in F \) tal que
 \[
-T_n(x) \to T(x) \in F.
+T_n(x) \to T(x) \in F,
 \]
-Esto define una aplicación \( T: E \to F \) mediante
+esto define una aplicación \( T: E \to F \) mediante
 \[
 T(x) := \lim_{n \to \infty} T_n(x).
 \]
@@ -76,5 +75,6 @@ Por tanto, \( \|T_n - T\| \to 0 \), lo que implica que \( T_n \to T \) en \( \ma
 
 \medskip
 
-Concluimos que \( \mathcal{L}(E, F) \), con la norma \( \|\cdot\| \), es un espacio de Banach.
+Concluimos que \( \mathcal{L}(E, F) \), con la norma \( \|\cdot\| \), es un espacio de Banach. Además, al ser $\mathbb{R}$ un espacio normado y de Banach con la norma usual, entonces \( \mathcal{L}(E, \mathbb{R}) \) y \( \mathcal{L}(E^{*}, \mathbb{R}) \) son espacios de Banach.
 \end{proof}
+\newpage
