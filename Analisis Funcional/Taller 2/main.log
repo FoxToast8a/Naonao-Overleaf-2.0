@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  30 APR 2025 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  30 APR 2025 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1294,7 +1294,48 @@ LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
 (Font)              scaled to size 10.29301pt on input line 61.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 67.
-(Puntos/1.tex) (Puntos/2.tex) (Puntos/3.tex) (Puntos/4.tex)
+(Puntos/1.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
+(Font)              scaled to size 8.0pt on input line 2.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/up' will be
+(Font)              scaled to size 6.0pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+eur on input line 2.
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+euf on input line 2.
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+LaTeX Font Info:    Trying to load font information for U+eus on input line 2.
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+LaTeX Font Info:    Trying to load font information for U+euex on input line 2.
+
+
+(C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuex.fd
+File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
+))
+(Puntos/2.tex) (Puntos/3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
+
+) (Puntos/4.tex)
 
 [1
 
@@ -1313,20 +1354,30 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 20892 strings out of 473523
- 422938 string characters out of 5714630
- 905689 words of memory out of 5000000
- 43669 multiletter control sequences out of 15000+600000
- 590487 words of font info for 48 fonts, out of 8000000 for 9000
+ 21013 strings out of 473523
+ 425180 string characters out of 5714630
+ 913689 words of memory out of 5000000
+ 43752 multiletter control sequences out of 15000+600000
+ 602667 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,93p,647b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhv
-r.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/zt
-mb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/z
-tmr.pfb>
-Output written on main.pdf (1 page, 100486 bytes).
+<C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy8.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/euler/euex10.pfb><C:/Users/santi/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/euler/euex7.pfb><C:/Users/santi/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/santi/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/U
+sers/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eusm
+10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/newtx/ztmr.pfb>
+Output written on main.pdf (1 page, 165400 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 83 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
