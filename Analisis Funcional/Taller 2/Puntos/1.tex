@@ -1,3 +1,60 @@
 %!TEX root = ../main.tex
 Sea $(E,\|\cdot\|)$ un espacio vectorial normado. Dado $r>0,$ considere $C=B(0,r)=\{y\in E:\|y\|<r\}.$ Determine el funcional de Minkowski de $C.$
 
+
+\textbf{Solución:}
+
+Dado que $(E, \| \cdot \|)$ es un espacio vectorial normado, se deduce que el conjunto $C = B(0,1)$ es abierto, convexo y  $0 \in C$.
+
+Por consiguiente, el funcional de Minkowski asociado a $C$ se define como:
+\[
+\rho(x) = \text{ínf} \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}, \qquad x \in E.
+\]
+
+Ahora, sea $x \in B(0,r)$. Entonces, para todo $\alpha > 0$ tal que $\alpha^{-1}x \in C$, se tiene:
+\[
+\| \alpha^{-1}x \| < 1.
+\]
+
+Esto implica que:
+\[
+\alpha^{-1} \| x \| < 1,
+\]
+
+y despejando $\alpha$, se obtiene:
+\[
+\frac{\| x \|}{1} < \alpha.
+\]
+
+En general, si $x \in B(0,r)$, tenemos:
+\[
+\| \alpha^{-1}x \| < r \quad \Rightarrow \quad \alpha^{-1} \| x \| < r \quad \Rightarrow \quad \frac{\| x \|}{r} < \alpha.
+\]
+
+Supongamos por contradicción que $\rho(x) \neq \frac{\| x \|}{r}$. Entonces debe ocurrir que:
+\[
+\frac{\| x \|}{r} < \rho(x).
+\]
+
+Tomemos el promedio entre $\frac{\| x \|}{r}$ y $\rho(x)$:
+\[
+\beta = \frac{\frac{\| x \|}{r} + \rho(x)}{2}.
+\]
+
+Este valor cumple que:
+\[
+\frac{\| x \|}{r} < \beta < \rho(x).
+\]
+
+Pero entonces:
+\[
+\| \beta^{-1}x \| = \beta^{-1} \| x \| < \frac{r}{\| x \|} \cdot \| x \| = r,
+\]
+lo cual implica que $\beta^{-1}x \in B(0,r)$, es decir, $\beta^{-1}x \in C$. Por tanto, $\beta \in \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}$.
+
+Esto contradice el hecho de que $\rho(x)$ es la ínfima de ese conjunto, ya que $\beta < \rho(x)$.
+
+Por lo tanto, concluimos que:
+\[
+\rho(x) = \frac{\| x \|}{r}.
+\]
