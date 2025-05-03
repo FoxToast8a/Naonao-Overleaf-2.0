@@ -4,7 +4,7 @@ Sea $(E,\|\cdot\|)$ un espacio vectorial normado. Dado $r>0,$ considere $C=B(0,r
 
 \textbf{Solución:}
 
-Dado que $(E, \| \cdot \|)$ es un espacio vectorial normado, se deduce que el conjunto $C = B(0,1)$ es abierto, convexo y  $0 \in C$.
+Dado que $(E, \| \cdot \|)$ es un espacio vectorial normado, se deduce que el conjunto $C = B(0,r)$ es abierto, convexo y  $0 \in C$.
 
 Por consiguiente, el funcional de Minkowski asociado a $C$ se define como:
 \[
@@ -13,17 +13,17 @@ Por consiguiente, el funcional de Minkowski asociado a $C$ se define como:
 
 Ahora, sea $x \in B(0,r)$. Entonces, para todo $\alpha > 0$ tal que $\alpha^{-1}x \in C$, se tiene:
 \[
-\| \alpha^{-1}x \| < 1.
+\| \alpha^{-1}x \| < r.
 \]
 
 Esto implica que:
 \[
-\alpha^{-1} \| x \| < 1,
+\alpha^{-1} \| x \| < r,
 \]
 
 y despejando $\alpha$, se obtiene:
 \[
-\frac{\| x \|}{1} < \alpha.
+\frac{\| x \|}{r} < \alpha.
 \]
 
 En general, si $x \in B(0,r)$, tenemos:
@@ -52,7 +52,7 @@ Pero entonces:
 \]
 lo cual implica que $\beta^{-1}x \in B(0,r)$, es decir, $\beta^{-1}x \in C$. Por tanto, $\beta \in \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}$.
 
-Esto contradice el hecho de que $\rho(x)$ es la ínfima de ese conjunto, ya que $\beta < \rho(x)$.
+Esto contradice el hecho de que $\rho(x)$ es la ínfimo de ese conjunto, ya que $\beta < \rho(x)$.
 
 Por lo tanto, concluimos que:
 \[

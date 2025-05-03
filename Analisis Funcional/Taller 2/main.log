@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.3)  3 MAY 2025 10:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.3)  3 MAY 2025 11:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1357,10 +1357,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21006 strings out of 469958
- 424644 string characters out of 5469814
+ 21005 strings out of 469958
+ 424629 string characters out of 5469814
  902150 words of memory out of 5000000
- 47311 multiletter control sequences out of 15000+600000
+ 47310 multiletter control sequences out of 15000+600000
  670655 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,6n,91p,552b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1378,7 +1378,7 @@ s/symbols/msbm10.pfb><C:/Users/natal/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/tex-gyre/qhvr.pfb><C:/Users/natal/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/public/newtx/ztmb.pfb><C:/Users/natal/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/newtx/ztmr.pfb>
-Output written on main.pdf (2 pages, 173174 bytes).
+Output written on main.pdf (2 pages, 173157 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
