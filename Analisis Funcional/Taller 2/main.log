@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  30 APR 2025 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  5 MAY 2025 22:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1331,11 +1331,49 @@ LaTeX Font Info:    Trying to load font information for U+euex on input line 2.
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 ))
 (Puntos/2.tex) (Puntos/3.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-) (Puntos/4.tex)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 8.
+LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
+(Font)              scaled to size 11.28003pt on input line 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+<sancoya.png, id=5, 562.1pt x 289.08pt>
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 14.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--36
+
+ []
+
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 41.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: Not enough space on this page on input line 41.
+
 
 [1
 
@@ -1344,7 +1382,26 @@ i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
 santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
 /Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
 :/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
-c} <./logo-eps-converted-to.pdf>] (main.aux
+c} <./logo-eps-converted-to.pdf> <./sancoya.png>]
+Package mdframed Info: Not enough space on this page on input line 41.
+
+
+[2]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 47.
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 91.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 91.
+
+
+[3]) (Puntos/4.tex)
+
+[4] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1354,13 +1411,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21013 strings out of 473523
- 425180 string characters out of 5714630
- 913689 words of memory out of 5000000
- 43752 multiletter control sequences out of 15000+600000
- 602667 words of font info for 77 fonts, out of 8000000 for 9000
+ 21161 strings out of 473523
+ 429209 string characters out of 5714630
+ 940875 words of memory out of 5000000
+ 43899 multiletter control sequences out of 15000+600000
+ 605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,6n,93p,647b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,741b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1369,15 +1426,17 @@ type1/public/amsfonts/euler/euex10.pfb><C:/Users/santi/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/euler/euex7.pfb><C:/Users/santi/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/santi/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/U
-sers/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eusm
-10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/newtx/ztmr.pfb>
-Output written on main.pdf (1 page, 165400 bytes).
+sers/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm
+7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/euler/eusm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/symbols/msbm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/tex-gyre/qhvb.pfb><C:/Users/santi/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (4 pages, 309462 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
