@@ -36,7 +36,29 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
 
             Ahora supongamos que $x+K=0+W$, luego $x\in W$, así tenemos que 
             $$0\leq \|x+K\|=\inf_{k\in K}\|x-k\|\leq \|x-x\|=0,$$
-            Mostrando que el neutro tiene norma $0.$ Ahora si suponemos que $\|x+K\|=0,$ como la norma es un ínfimo tenemos que existe una sucesión de puntos $k_n\in K$ tal que $\|x-k_n\|\to 0$, esto quiere decir que la sucesión $k_n$ converge a $x$, pero $K$ es cerrado por hipótesis, así $x\in K$, esto quiere decir que $x+K=0+K$. Ahora si $\lambda=0$, es claro que $\|\lambda(x+K)\|=\|0+K\|=0=0\cdot\|x+K\|=|\lambda|\|x+K\|$
+            Mostrando que el neutro tiene norma $0.$ Ahora si suponemos que $\|x+K\|=0,$ como la norma es un ínfimo tenemos que existe una sucesión de puntos $k_n\in K$ tal que $\|x-k_n\|\to 0$, esto quiere decir que la sucesión $k_n$ converge a $x$, pero $K$ es cerrado por hipótesis, así $x\in K$, esto quiere decir que $x+K=0+K$. Ahora si $\lambda=0$, es claro que 
+            $$\|\lambda(x+K)\|=\|0+K\|=0=0\cdot\|x+K\|=|\lambda|\|x+K\|.$$
+            Ahora si $\lambda\neq 0.$, tenemos que
+            \begin{align*}
+                \|\lambda(x+K)\|&=\|\lambda x+K\|\\
+                &=\inf_{k\in K}\|\lambda x-k\|\\
+                &=\inf_{k\in K}\|\lambda(x-\lambda^{-1}k)\|\\
+                &=|\lambda|\inf_{k\in K}\|x-\lambda^{-1}k\|\\
+                &=|\lambda|\inf_{k_1\in K}\|x-k_1\|\quad (k_1=\lambda^{-1}k\in K)\\
+                &=|\lambda|\|x+K\|
+            \end{align*}
+            Note que podemos hacer esto ya que $K$ es un subespacio. Por ultimo veamos la desigualdad triangular,
+            \begin{align*}
+                \|(x+K)+(y+K)\|&=\|(x+y)+K\|\\
+                &=\inf_{k\in K}\|x+y-k\|\\
+                &=\inf_{k_1,k_2\in K}\|x+y-(k_1+k_2)\|\\
+                &\leq \inf_{k_1,k_2\in K}\{\|x-k_1\|+\|y-k_2\|\}\\
+                &=\inf_{k_1\in K}\|x-k_1\|+\inf_{k_2\in K}\|y-k_2\|\\
+                &=\|x+K\|+\|y+K\|.
+            \end{align*}
+            Note que nuevamente usamos el hecho de que $K$ es subespacio, para escribir a $k=k_1+k_2.$ Así concluimos que $E/K$ es normado. Faltaría ver que el espacio es Banach.\\
+
+            Consideremos $\{x_n+K\}\subset E/K,$ una sucesión de Cauchy
 
         \end{sproof}
     \end{itemize}

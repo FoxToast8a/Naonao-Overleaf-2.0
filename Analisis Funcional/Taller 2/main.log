@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  5 MAY 2025 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  6 MAY 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1329,8 +1329,22 @@ LaTeX Font Info:    Trying to load font information for U+euex on input line 2.
 
 (C:\Users\santi\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
-))
-(Puntos/2.tex) (Puntos/3.tex
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 11.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.0pt on input line 11.
+)
+(Puntos/2.tex
+
+[1
+
+{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
+i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
+santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
+/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
+:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
+c} <./logo-eps-converted-to.pdf>]) (Puntos/3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
@@ -1350,7 +1364,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-<sancoya.png, id=5, 562.1pt x 289.08pt>
+<sancoya.png, id=23, 562.1pt x 289.08pt>
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
 Package pdftex.def Info: sancoya.png  used on input line 14.
@@ -1368,40 +1382,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--36
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--60
+
+ []
+
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 41.
-(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-Package mdframed Info: Not enough space on this page on input line 41.
-
-
-[1
-
-{C:/Users/santi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/sant
-i/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/
-santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{C:
-/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec.enc}{C
-:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/newtx/ntx-ec-tlf.en
-c} <./logo-eps-converted-to.pdf> <./sancoya.png>]
-Package mdframed Info: Not enough space on this page on input line 41.
-
-
-[2]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 47.
-File: sancoya.png Graphic file (type png)
-<use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 91.
+Package pdftex.def Info: sancoya.png  used on input line 63.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 91.
+(mdframed)              on input line 63.
 
 
-[3]) (Puntos/4.tex)
+[2 <./sancoya.png>]
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 63.
 
-[4] (main.aux
+
+[3]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 69.
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 113.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+
+
+[4]
+
+[5]) (Puntos/4.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
+
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 59.
+
+
+[6])
+
+[7] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1411,13 +1440,13 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21161 strings out of 473523
- 429209 string characters out of 5714630
- 940875 words of memory out of 5000000
- 43899 multiletter control sequences out of 15000+600000
+ 21187 strings out of 473523
+ 429783 string characters out of 5714630
+ 941104 words of memory out of 5000000
+ 43925 multiletter control sequences out of 15000+600000
  605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,93p,741b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,12n,93p,741b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmsy10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmsy6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pu
@@ -1434,9 +1463,9 @@ onts/type1/public/tex-gyre/qhvb.pfb><C:/Users/santi/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/
 MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (4 pages, 309462 bytes).
+Output written on main.pdf (7 pages, 323595 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
