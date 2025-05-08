@@ -200,8 +200,7 @@ lo cual demuestra que las normas \( \| \cdot \|_1 \) y \( \| \cdot \|_2 \) son e
     Como por hipótesis $E$ es un espacio vectorial de dimensión finita, tomemos la base de $E$ como $\mathcal{B}=\{v_1,v_2,\dots, v_n\}$, luego si $x\in E$ tenemos que $x=\displaystyle\sum_{i=1}^{n}x_iv_i$, entonces la transformación lineal T es de la forma,
       \begin{align*}
            Tx&=T\left( \displaystyle\sum_{i=1}^{n} x_i v_i\right) \\
-           &=\displaystyle\sum_{i=1}^{n} x_i T(v_i),\\
-           &\leq\displaystyle\sum_{i=1}^{n} x_i v_i \max_{\substack{1\leq i\leq n}} T(v_i),
+           &=\displaystyle\sum_{i=1}^{n} x_i T(v_i),
         \end{align*} 
     así, tenemos que
     \begin{align*}
@@ -212,7 +211,7 @@ lo cual demuestra que las normas \( \| \cdot \|_1 \) y \( \| \cdot \|_2 \) son e
 \end{align*}
  por el punto anterior, como $E$ es un espacio de dimensión finita existen constantes positivas $C_1$ y $C_2$, tal que $C_1\|x\|_E\leq\|x\|_1\leq C_2\|x\|_E$ y si tomamos a $M_1=\max_{\substack{1\leq i\leq n}} \|T(v_i)\|_E$, entonces,
  \begin{align*}
-     \sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E\|x\|_1 &\leq\max_{\substack{1\leq i \leq n}} \|T(v_i)\|_E,\\
+     \sum_{i=1}^{n} |x_i| \cdot \|T(v_i)\|_E &\leq\|x\|_1\max_{\substack{1\leq i \leq n}} \|T(v_i)\|_E,\\
      &\leq M_1 C_2\|x\|_E\\
      &=M \|x\|_E,
  \end{align*}
@@ -251,5 +250,5 @@ Por tanto, cuando $n \to \infty$, se tendría $n \leq M$ para todo $n \geq 2$, l
         
 \end{sol}
 \end{enumerate}
-\newpage
+
 

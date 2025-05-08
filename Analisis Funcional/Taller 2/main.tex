@@ -1,0 +1,86 @@
+\documentclass[12pt, a4paper]{article}%Tipo de documento y tamaño de letra%
+
+\usepackage[spanish]{babel}
+\usepackage{color,graphicx}%Para poder insertar graficas%
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}%Insertar unos símbolos matemáticos especiales%
+
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, arrows.meta}
+\tikzset{
+->,
+>=stealth,
+initial text = $ $
+}
+
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape `T1/ntxtlf/m/up' undefined}
+\WarningFilter{latexfont}{Some}
+\usepackage{lipsum}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,euler}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{amsthm}
+\usepackage{tikz}
+\usepackage{enumerate}
+\usepackage{picinpar}
+\input{boxes}
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,245mm},
+ left=25mm,
+ top=30mm,
+ }
+\tikzstyle{hollow}=[circle,draw,inner sep=1.5]
+            \tikzstyle{solid}=[circle,draw,inner sep=1.5,fill=black]
+            \tikzset{
+                red node/.style={circle,draw=red,fill=red,inner sep=1.2},
+                green node/.style={circle,draw=green,fill=green,inner sep=1.2},
+                box node/.style={rectangle,draw=black,inner sep=3}
+                }
+\begin{document}
+
+\setlength{\parindent}{0cm}
+\hoffset-0.46cm
+\voffset-1.46cm
+
+\begin{window}[0,l,{\includegraphics[scale=0.31]{logo.eps}},]
+\large\scshape  \hspace{0.4cm}\textsf{Universidad Nacional de Colombia} \\
+\textcolor{white}{\tiny.}  \large \hspace{1.5cm} \textsf{Facultad de Ciencias} \\
+\textcolor{white}{\tiny.}   \normalsize\hspace{2.3cm}\textsf{Análisis Funcional}\\
+ 
+
+\end{window}
+
+\vspace{0.2cm}
+\small
+\textsf{Sandra Natalia Florez Garcia\\Edgar Santiago Ochoa Quiroga\\
+María Alejandra  Rodríguez  Ríos} 
+\normalsize
+\dotfill
+\vspace{0.7cm}
+
+%Ella a mí siempre me trasnocha, yo la pienso a toda hora, pasa por su casa bien sola, deseo que ella sea mi esposa, y anoche yo me presenté en su casa, le dije to' lo que ella a mí me gustaba, ella me dijo "ay papi, qué bonito, échate pa' acá un poquito". Se me fue acercando poco a poquito, con la primera cita ella me dio un besito, me dijo que fuéramos noviecitos y le quité el shorcito. Y la encendí a mondá en la sala de su casa y terminamos en la terraza, yo le pegué su mondaquera en la cama, esa muchacha como gritaba.%
+ \textbf{Ejercicio 9}
+  \input{Puntos/1}
+
+  \textbf{Ejercicio 12}
+ \input{Puntos/2}
+ 
+ 
+
+ \textbf{Ejercicio 13}
+ \input{Puntos/3}
+ 
+  \textbf{Ejercicio 15}
+ \input{Puntos/4}
+
+
+
+
+
+
+ \end{document}
