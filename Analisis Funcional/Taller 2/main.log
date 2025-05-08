@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  6 MAY 2025 18:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  8 MAY 2025 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1389,32 +1389,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--60
 
 File: sancoya.png Graphic file (type png)
 <use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 63.
+Package pdftex.def Info: sancoya.png  used on input line 97.
 (pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 63.
+(mdframed)              on input line 97.
 
 
 [2 <./sancoya.png>]
 Package mdframed Info: Box was splittet wrong
  starting loop to iterate the splitting point
-(mdframed)              on input line 63.
+(mdframed)              on input line 97.
 
 
 [3]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 69.
-File: sancoya.png Graphic file (type png)
-<use sancoya.png>
-Package pdftex.def Info: sancoya.png  used on input line 113.
-(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
-
 
 [4]
 
-[5]) (Puntos/4.tex
+[5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 103.
+File: sancoya.png Graphic file (type png)
+<use sancoya.png>
+Package pdftex.def Info: sancoya.png  used on input line 147.
+(pdftex.def)             Requested size: 20.99635pt x 10.79999pt.
+
+
+[6]) (Puntos/4.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 5.
@@ -1423,14 +1425,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
-Package mdframed Info: Box was splittet wrong
- starting loop to iterate the splitting point
-(mdframed)              on input line 59.
 
 
-[6])
+[7])
 
-[7] (main.aux
+[8] (main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -1440,10 +1439,10 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 21187 strings out of 473523
- 429783 string characters out of 5714630
- 941104 words of memory out of 5000000
- 43925 multiletter control sequences out of 15000+600000
+ 21195 strings out of 473523
+ 429917 string characters out of 5714630
+ 967104 words of memory out of 5000000
+ 43933 multiletter control sequences out of 15000+600000
  605592 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,93p,741b,1133s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1453,19 +1452,21 @@ fonts/cm/cmsy6.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/euler/euex10.pfb><C:/Users/santi/AppData/Local/Programs/M
 iKTeX/fonts/type1/public/amsfonts/euler/euex7.pfb><C:/Users/santi/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Users/santi/A
-ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/U
-sers/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurm
-7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
-/euler/eusm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/tex-gyre/qhvb.pfb><C:/Users/santi/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/santi/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
-Output written on main.pdf (7 pages, 323595 bytes).
+/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/euex8.pfb><C:/Users/santi/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Us
+ers/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eufm7
+.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+euler/eurm10.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/euler/eurm7.pfb><C:/Users/santi/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/euler/eusm10.pfb><C:/Users/santi/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/santi/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/santi/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/santi/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Users/santi/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (8 pages, 337229 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

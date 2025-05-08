@@ -32,7 +32,7 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
              \end{align*}
              Luego como $\|x-k\|\geq 0$, para todo $k\in K$, es claro que 
             $$\|x+K\|=\inf_{k\in K}\|x-k\|\geq 0,$$
-            ya que estamos tomando el ínfimo de un conjunto que esta acotado interiormente por $0$ y $x\in E$ fue tomado arbitrariamente.\\
+            ya que estamos tomando el ínfimo de un conjunto que esta acotado inferiormente por $0$ y $x\in E$ fue tomado arbitrariamente.\\
 
             Ahora supongamos que $x+K=0+W$, luego $x\in W$, así tenemos que 
             $$0\leq \|x+K\|=\inf_{k\in K}\|x-k\|\leq \|x-x\|=0,$$
@@ -58,7 +58,41 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
             \end{align*}
             Note que nuevamente usamos el hecho de que $K$ es subespacio, para escribir a $k=k_1+k_2.$ Así concluimos que $E/K$ es normado. Faltaría ver que el espacio es Banach.\\
 
-            Consideremos $\{x_n+K\}\subset E/K,$ una sucesión de Cauchy
+            Consideremos $\{x_n+K\}\subset E/K,$ una sucesión de Cauchy, luego observe que nos podemos construir una subsucesión tal que 
+            $$\|(x_{n_k}-x_{n_{k+1}})+K\|.$$
+            Esto lo podemos hacer ya que si $\varepsilon=\dfrac{1}{2},$ como la sucesión es Cauchy
+            $$\|(x_n-x_m)+K\|<\dfrac{1}{2},$$
+            para $n,m\geq n_1\in \mathbb{Z}^+$. De manera similar para $\varepsilon=\dfrac{1}{4},$ existe $n_2\in \mathbb{Z}^+$ tal que si $n,m\geq n_2$,
+            $$\|(x_n-x_m)+K\|<\dfrac{1}{4},$$
+            Note que esta cantidad es menos a $\dfrac{1}{2}$, entonces podemos asumir $n_2>n_1$, note que por un argumento inductivo,  conseguimos unos $n_1<n_2<\dots<n_k$ tal que si $n,m\geq n_k$, tenemos que
+            $$\|(x_n-x_m)+K\|<\dfrac{1}{2^k}.$$
+            En particular note que para $n_k,n_{k+1}$ tenemos que
+            $$\|(x_{n_k}-x_{n_{k+1}})+K\|<\dfrac{1}{2^k}.$$
+            Ahora a partir de esta subsucesión $\{x_{n_k}+K\}$ Podemos construir una sucesión $\{y_k\}$ tal que cada $y_k\in x_{n_k}+K$, de la siguiente manera. Por caracterización del ínfimo para $k=1$, tenemos que si tomamos $\delta=\dfrac{1}{2}-\|(x_{n_1}-x_{n_2})+K\|>0$, tenemos que existe $w_2\in K$ tal que
+            $$\|x_{n_1}-x_{n_2}-w_2\|<\|(x_{n_1}-x_{n_2})+K\|+\delta=\dfrac{1}{2}.$$
+            Así si tomamos $y_1=x_{n_1}$ y $y_2=x_{n_2}+w_2$, de momento cumplimos que $y_1\in x_{n_1}+K$ y $y_2\in x_{n_2}+K$. Luego para el caso de $k=2$ observe que podemos hacer que
+            \begin{align*}
+               \dfrac{1}{2^2}&>\|(x_{n_2}-x_{n_3})+K\|\\
+               &=\inf_{w\in K}\|x_{n_2}-x_{n_3}-w\|\\
+               &=\inf_{w\in K}\|x_{n_2}+w_2-w_2-x_{n_3}-w\|\\
+               &=\inf_{\overline{w}\in K}\|x_{n_2}+w_2-x_{n_3}-\overline{w}\|\\
+               &=\inf_{\overline{w}\in K}\|y_2-x_{n_3}-\overline{w}\|.
+            \end{align*}
+            Note que esto lo podemos hacer ya que $w_2\in K$ y este es un subespacio. Así de manera análoga podemos concluir la existencia de un $w_3\in K$ tal que 
+            $$\|y_2-x_{n_3}-w_3\|<\dfrac{1}{2^2}.$$
+             Así tomando $y_3=x_{n_3}+w_3\in x_{n_3}+K$, nos damos cuenta que de manera inductiva podemos tomar la sucesión $\{y_k\}$ deseada.\\ Como
+
+             Ahora como la serie geométrica converge absolutamente sabemos que dado un $\varepsilon>0,$ existe un $N$ para el cual
+             $$\sum_{i=N}^\infty\dfrac{1}{2^i}<\varepsilon.$$ 
+             Tomando $n,m\leq N$, si asumimos sin perdida de generalidad que $n>m$ note que
+             \begin{align*}
+                 \|y_n-y_m\|&\leq \sum_{i=m}^{n-1}\|y_{i+1}-y_i\|\\
+                &<\sum_{i=m}^{n-1}\dfrac{1}{2^i}\\
+                &<\sum_{i=N}^\infty\dfrac{1}{2^i}<\varepsilon.
+             \end{align*}
+             Así concluimos que $\{y_k\}$ es de cauchy, y como esta es una sucesión de términos en $E$ que es de Banach, sabemos que $y_k\to y$, luego debido a que la norma es un infimo
+             $$\|x_{n-k}+K-(y+K)\|=\|(x_{n_k}-y)+K\|\leq \|y_k-y\|\to 0.$$
+             Así concluimos que la subsucesión es convergente y por tanto como la secuencia original era de cauchy podemos concluir que $x_n+K\to y+K.$ Mostrando así que $E/K$ es de Banach.
 
         \end{sproof}
     \end{itemize}
