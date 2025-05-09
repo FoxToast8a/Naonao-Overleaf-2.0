@@ -3,13 +3,13 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
 \begin{itemize}
     \item[(i)] Sea $K\subset E$ un subespacio cerrado de $E.$ Definimos la relación sobre $E$ dada por $x\thicksim_Ky$ si y solo si $x-y\in K.$
     \begin{itemize}
-        \item[(a)] Muestre que $\thicksim_K$ es una relacion de equivalencia sobre $E.$\\
+        \item[(a)] Muestre que $\thicksim_K$ es una relación de equivalencia sobre $E.$\\
         \begin{sproof}
             Dado $x\in E,$ como $K$ es subespacio, $x-x=0\in K$, esto implica que $x\thicksim_K x$, mostrando así la reflexividad.\\
 
-            Dados $x,y\in E$, suponga que tenemos que $x\thicksim_K y,$ luego $x-y\in K$, nuevamente como $K$ es subespacio, es cerrado por multiplicacion escalar, así $-(x-y)\in K$, pero $-(x-y)=y-x$, así por definición de la relación tenemos que $y\thicksim_K x,$ mostrando así la simetría.\\
+            Dados $x,y\in E$, suponga que tenemos que $x\thicksim_K y,$ luego $x-y\in K$, nuevamente como $K$ es subespacio, es cerrado bajo la multiplicación por escalar, así $-(x-y)\in K$, pero $-(x-y)=y-x$, por definición de la relación tenemos que $y\thicksim_K x,$ mostrando que se cumple la simetría.\\
 
-            Por ultimo sean $x,y,z\in E$, con $x\thicksim_K y$ y $y\thicksim_K z,$ por definición $x-y\in K$ y $y-z\in K$, y como $K$ es subespacio es cerrado para la suma, así tenemos que $(x-y)+(y-z)\in K$, pero $(x-y)+(y-z)=x-z$, así tenemos que $x\thicksim_K z,$ así la relación es transitiva. Con esto podemos concluir que la relación es de equivalencia. 
+            Por último sean $x,y,z\in E$, con $x\thicksim_K y$ y $y\thicksim_K z,$ por definición $x-y\in K$ y $y-z\in K$, como $K$ es subespacio, es cerrado para la suma, así tenemos que $(x-y)+(y-z)\in K$, pero $(x-y)+(y-z)=x-z$, así tenemos que $x\thicksim_K z,$ luego, la relación es transitiva. Con esto podemos concluir que la relación es de equivalencia. 
 
         \end{sproof}
         \item[(b)] Muestre que el espacio cociente $E/K$ es un espacio de Banach con la norma
@@ -21,33 +21,35 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
                 (x+K)+(y+K)&=(x+y)+K,\\
                 \lambda(x+K)&=\lambda x+K.
             \end{align*}
-            Las propiedades de espacio vectorial para $E/K$, se heredan del hecho de que $E$ ya es espacio vectorial, solo bastaría verificar que si están bien definidas estas operaciones. Si $x_1+K=x_2+K$ y $y_1+K=y_2+K$, tenemos que $x_1-x_2\in K$ y $y_1-y_2\in K$, pero como es subespacio la suma esta, así $(x_1+y_1)-(x_2+y_2)\in K$, así $(x_1+y_1)+K=(x_2+y_2)+ K$, luego la suma esta bien definida. De manera similar, si $x_1-x_2\in K$, tenemos que al multiplicar por un escalar también esta en $K$, esto es $\lambda x_1-\lambda x_2\in K$, así $\lambda x_1+K=\lambda x_2+K.$\\
+            Puesto que $E$ es un espacio vectorial, las propiedades de $E$ se heredan a $E/K$, solo bastaría verificar que estas operaciones están bien definidas. Si $x_1+K=x_2+K$ y $y_1+K=y_2+K$, tenemos que $x_1-x_2\in K$ y $y_1-y_2\in K$, pero como $K$ es subespacio  $(x_1+y_1)-(x_2+y_2)\in K$, así $(x_1+y_1)+K=(x_2+y_2)+ K$, luego la suma está bien definida. De manera similar, si $x_1-x_2\in K$, tenemos que al multiplicar por un escalar también está en $K$, esto es $\lambda x_1-\lambda x_2\in K$, así $\lambda x_1+K=\lambda x_2+K.$\\
 
-            Ahora veamos que la norma definida en el enunciado, efectivamente es norma del espacio $E/K.$ Primero esta norma esta bien definida ya que si $x+K=y+K$, eso quiere decir que $x-y\in K$, luego
+            Ahora veamos que la norma definida en el enunciado, efectivamente es norma del espacio $E/K.$ Primero esta norma está bien definida ya que si $x+K=y+K$, eso quiere decir que $x-y\in K$, luego
             \begin{align*}
                  \|x+K\|&=\inf_{k\in K}\|x-k\|\\
                  &=\inf_{k_1\in K}\|x-(k_1+x-y)\|\\
                  &=\inf_{k_1\in K}\|y-k_1\|\\
                  &=\|y+K\|.
              \end{align*}
-             Luego como $\|x-k\|\geq 0$, para todo $k\in K$, es claro que 
+             Como $\|x-k\|\geq 0$, para todo $k\in K$, es claro que 
             $$\|x+K\|=\inf_{k\in K}\|x-k\|\geq 0,$$
-            ya que estamos tomando el ínfimo de un conjunto que esta acotado inferiormente por $0$ y $x\in E$ fue tomado arbitrariamente.\\
+            ya que estamos tomando el ínfimo de un conjunto que está acotado inferiormente por $0$ y $x\in E$ fue tomado arbitrariamente.\\
 
             Ahora supongamos que $x+K=0+W$, luego $x\in W$, así tenemos que 
             $$0\leq \|x+K\|=\inf_{k\in K}\|x-k\|\leq \|x-x\|=0,$$
-            Mostrando que el neutro tiene norma $0.$ Ahora si suponemos que $\|x+K\|=0,$ como la norma es un ínfimo tenemos que existe una sucesión de puntos $k_n\in K$ tal que $\|x-k_n\|\to 0$, esto quiere decir que la sucesión $k_n$ converge a $x$, pero $K$ es cerrado por hipótesis, así $x\in K$, esto quiere decir que $x+K=0+K$. Ahora si $\lambda=0$, es claro que 
+            Mostrando que el neutro tiene norma $0.$ Ahora si suponemos que $\|x+K\|=0,$ como la norma es un ínfimo tenemos que existe una sucesión de puntos $k_n\in K$ tal que $\|x-k_n\|\to 0$, es decir que la sucesión $k_n$ converge a $x$, pero $K$ es cerrado por hipótesis, así $x\in K$, por lo cual $x+K=0+K$. 
+
+            Si $\lambda=0$, es claro que 
             $$\|\lambda(x+K)\|=\|0+K\|=0=0\cdot\|x+K\|=|\lambda|\|x+K\|.$$
-            Ahora si $\lambda\neq 0.$, tenemos que
+            Ahora, si $\lambda\neq 0$,
             \begin{align*}
                 \|\lambda(x+K)\|&=\|\lambda x+K\|\\
                 &=\inf_{k\in K}\|\lambda x-k\|\\
                 &=\inf_{k\in K}\|\lambda(x-\lambda^{-1}k)\|\\
                 &=|\lambda|\inf_{k\in K}\|x-\lambda^{-1}k\|\\
                 &=|\lambda|\inf_{k_1\in K}\|x-k_1\|\quad (k_1=\lambda^{-1}k\in K)\\
-                &=|\lambda|\|x+K\|
+                &=|\lambda|\|x+K\|.
             \end{align*}
-            Note que podemos hacer esto ya que $K$ es un subespacio. Por ultimo veamos la desigualdad triangular,
+             Esto lo podemos hacer ya que $K$ es un subespacio. Por último veamos la desigualdad triangular,
             \begin{align*}
                 \|(x+K)+(y+K)\|&=\|(x+y)+K\|\\
                 &=\inf_{k\in K}\|x+y-k\|\\
@@ -58,19 +60,21 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
             \end{align*}
             Note que nuevamente usamos el hecho de que $K$ es subespacio, para escribir a $k=k_1+k_2.$ Así concluimos que $E/K$ es normado. Faltaría ver que el espacio es Banach.\\
 
-            Consideremos $\{x_n+K\}\subset E/K,$ una sucesión de Cauchy, luego observe que nos podemos construir una subsucesión tal que 
+            Consideremos $\{x_n+K\}\subset E/K,$ una sucesión de Cauchy, observe que podemos construir una subsucesión tal que 
             $$\|(x_{n_k}-x_{n_{k+1}})+K\|.$$
             Esto lo podemos hacer ya que si $\varepsilon=\dfrac{1}{2},$ como la sucesión es Cauchy
             $$\|(x_n-x_m)+K\|<\dfrac{1}{2},$$
             para $n,m\geq n_1\in \mathbb{Z}^+$. De manera similar para $\varepsilon=\dfrac{1}{4},$ existe $n_2\in \mathbb{Z}^+$ tal que si $n,m\geq n_2$,
             $$\|(x_n-x_m)+K\|<\dfrac{1}{4},$$
-            Note que esta cantidad es menos a $\dfrac{1}{2}$, entonces podemos asumir $n_2>n_1$, note que por un argumento inductivo,  conseguimos unos $n_1<n_2<\dots<n_k$ tal que si $n,m\geq n_k$, tenemos que
+            Note que esta cantidad es menor a $\dfrac{1}{2}$, entonces podemos asumir $n_2>n_1$, por un argumento inductivo, escogemos $n_1<n_2<\dots<n_k$ tal que si $n,m\geq n_k$, tenemos que
             $$\|(x_n-x_m)+K\|<\dfrac{1}{2^k}.$$
-            En particular note que para $n_k,n_{k+1}$ tenemos que
+            En particular para $n_k,n_{k+1}$ 
             $$\|(x_{n_k}-x_{n_{k+1}})+K\|<\dfrac{1}{2^k}.$$
-            Ahora a partir de esta subsucesión $\{x_{n_k}+K\}$ Podemos construir una sucesión $\{y_k\}$ tal que cada $y_k\in x_{n_k}+K$, de la siguiente manera. Por caracterización del ínfimo para $k=1$, tenemos que si tomamos $\delta=\dfrac{1}{2}-\|(x_{n_1}-x_{n_2})+K\|>0$, tenemos que existe $w_2\in K$ tal que
+            Ahora, a partir de esta subsucesión $\{x_{n_k}+K\}$ podemos construir una sucesión $\{y_k\}$ tal que cada $y_k\in x_{n_k}+K$. Por caracterización del ínfimo para $k=1$, si tomamos $\delta=\dfrac{1}{2}-\|(x_{n_1}-x_{n_2})+K\|>0$, tenemos que existe $w_2\in K$ tal que
             $$\|x_{n_1}-x_{n_2}-w_2\|<\|(x_{n_1}-x_{n_2})+K\|+\delta=\dfrac{1}{2}.$$
-            Así si tomamos $y_1=x_{n_1}$ y $y_2=x_{n_2}+w_2$, de momento cumplimos que $y_1\in x_{n_1}+K$ y $y_2\in x_{n_2}+K$. Luego para el caso de $k=2$ observe que podemos hacer que
+
+
+            Así, tomando $y_1=x_{n_1}$ y $y_2=x_{n_2}+w_2$, se cumple que $y_1\in x_{n_1}+K$ y $y_2\in x_{n_2}+K$. Luego, para el caso de $k=2$
             \begin{align*}
                \dfrac{1}{2^2}&>\|(x_{n_2}-x_{n_3})+K\|\\
                &=\inf_{w\in K}\|x_{n_2}-x_{n_3}-w\|\\
@@ -78,69 +82,75 @@ Sean $(E,\|\cdot\|)$ y $(F,\|\cdot\|)$ espacios de Banach.
                &=\inf_{\overline{w}\in K}\|x_{n_2}+w_2-x_{n_3}-\overline{w}\|\\
                &=\inf_{\overline{w}\in K}\|y_2-x_{n_3}-\overline{w}\|.
             \end{align*}
-            Note que esto lo podemos hacer ya que $w_2\in K$ y este es un subespacio. Así de manera análoga podemos concluir la existencia de un $w_3\in K$ tal que 
+            Note que esto lo podemos hacer ya que $w_2\in K$ y este es un subespacio. De manera análoga podemos concluir la existencia de un $w_3\in K$ tal que 
             $$\|y_2-x_{n_3}-w_3\|<\dfrac{1}{2^2}.$$
-             Así tomando $y_3=x_{n_3}+w_3\in x_{n_3}+K$, nos damos cuenta que de manera inductiva podemos tomar la sucesión $\{y_k\}$ deseada.\\ Como
+             Tomando $y_3=x_{n_3}+w_3\in x_{n_3}+K$, nos damos cuenta que podemos tomar la sucesión $\{y_k\}$ deseada.\\
 
-             Ahora como la serie geométrica converge absolutamente sabemos que dado un $\varepsilon>0,$ existe un $N$ para el cual
+             Como la serie geométrica converge absolutamente, sabemos que dado un $\varepsilon>0,$ existe un $N$ para el cual
              $$\sum_{i=N}^\infty\dfrac{1}{2^i}<\varepsilon.$$ 
-             Tomando $n,m\leq N$, si asumimos sin perdida de generalidad que $n>m$ note que
+             Tomando $n,m\geq N$, asumimos sin pérdida de generalidad que $n>m$, note que
              \begin{align*}
                  \|y_n-y_m\|&\leq \sum_{i=m}^{n-1}\|y_{i+1}-y_i\|\\
                 &<\sum_{i=m}^{n-1}\dfrac{1}{2^i}\\
                 &<\sum_{i=N}^\infty\dfrac{1}{2^i}<\varepsilon.
              \end{align*}
-             Así concluimos que $\{y_k\}$ es de cauchy, y como esta es una sucesión de términos en $E$ que es de Banach, sabemos que $y_k\to y$, luego debido a que la norma es un infimo
+             Por lo tanto $\{y_k\}$ es de Cauchy y como esta es una sucesión de términos en $E$ que es de Banach, sabemos que $y_k\to y$, luego, debido a que la norma es un ínfimo
              $$\|x_{n-k}+K-(y+K)\|=\|(x_{n_k}-y)+K\|\leq \|y_k-y\|\to 0.$$
-             Así concluimos que la subsucesión es convergente y por tanto como la secuencia original era de cauchy podemos concluir que $x_n+K\to y+K.$ Mostrando así que $E/K$ es de Banach.
+             Así, concluimos que la subsucesión es convergente y como la secuencia original era de Cauchy podemos decir que $x_n+K\to y+K.$ Mostrando así que $E/K$ es de Banach.
 
         \end{sproof}
     \end{itemize}
     \item[(ii)] Sea $T\in L(E,F)$ tal que existe $c>0$ para el cual
     $$\|Tx\|_F\geq c\|x\|_E,$$
     para todo $x\in E$. Si $K$ denota el espacio nulo de $T$ y $R(T)$ el rango de $T$, muestre que $\overline{T}:E/K\to R(T)$ dada por $\overline{T}(x+K)=T(x),$ $x\in E,$ esta bien definida y es un isomorfismo. Esto es $\overline{T}\in L(E/K,R(T))$ y $\overline{T}^{-1}\in L(R(T),E/K).$
+
     \begin{sproof}
-        Como el dominio de $\overline{T}$ son clases de equivalencia tenemos que mostrar que la aplicación esta bien definida. Consideremos $x+K=y+K$, es decir $x,y\in E$ son dos representantes distintos de la misma clase. Por definición $\overline{T}(x+K)=T(x)$ y $\overline{T}(y+K)=T(y)$, luego como $T$ es lineal
+        Como el dominio de $\overline{T}$ son clases de equivalencia tenemos que mostrar que la aplicación está bien definida. Consideremos $x+K=y+K$, es decir $x,y\in E$ son dos representantes distintos de la misma clase. Por definición $\overline{T}(x+K)=T(x)$ y $\overline{T}(y+K)=T(y)$, luego como $T$ es lineal
         \begin{align*}
             \overline{T}(x+K)-\overline{T}(y+K)&=T(x)-T(y)\\
             &=T(x-y).
         \end{align*}
-        Como supusimos que clases son iguales, eso quiere decir que $x-y\in K$, pero $K$ es el espacio nulo de $T$, así $T(x-y)=0$, mostrando así que
+        Como las clases a las que pertenecen x y y son iguales,  $x-y\in K$, pero $K$ es el espacio nulo de $T$, así $T(x-y)=0$ y
         $$\overline{T}(x+K)=\overline{T}(y+K),$$
-        por lo tanto esta bien definida. Ahora la aplicación claramente es sobreyectiva ya que dado $y\in R(T)$, existe $x\in E$ tal que $y=T(x)=\overline{T}(x+K)$, así cada $y$ tiene preimagen. Para la inyectividad se sigue un argumento muy parecido a mostrar que esta bien definida. Dados $x+K,y+K$, si $\overline{T}(x+K)=\overline{T}(y+K)$, esto quiere decir que $T(x)=T(y),$ por linealidad $T(x-y)=0$, así $x-y\in K$, concluyendo que $x+K=y+K.$ Para ver que es isomorfismo faltaría mostrar que la aplicación y su inversa son lineales y acotadas. Primero $\overline{T}$ es lineal ya que
+        entonces $\overline{T}$ está bien definida. 
+
+
+        La aplicación claramente es sobreyectiva ya que dado $y\in R(T)$, existe $x\in E$ tal que $y=T(x)=\overline{T}(x+K)$, así cada $y$ tiene una preimagen. Para la inyectividad se sigue un argumento análogo a mostrar que está bien definida. Dados $x+K,y+K$, si $\overline{T}(x+K)=\overline{T}(y+K)$, esto quiere decir que $T(x)=T(y),$ por linealidad $T(x-y)=0$, así $x-y\in K$, concluyendo que $x+K=y+K.$ Para ver que es isomorfismo faltaría mostrar que la aplicación y su inversa son lineales y acotadas. Primero veamos que $\overline{T}$ es lineal
         \begin{align*}
               \overline{T}((x+K)+\lambda(y+K))&=\overline{T}((x+\lambda y)+K)\\
               &=T(x+\lambda y)\\
               &=T(x)+\lambda T(y)\\
               &=\overline{T}(x+K)+\lambda \overline{T}(y+K).
           \end{align*}  
-          Note que se tiene por la linealidad de $T.$ Ademas es acotada ya que
+          Esto se tiene por la linealidad de $T.$ Además es acotada ya que
           \begin{align*}
               \|\overline{T}(x+K)\|&=\|T(x)\|\\
               &\leq M\|x\|\\
               &=M\|x-k+k\|\\
-              \leq M\|x-k\|+M\|k\|.
+              &\leq M\|x-k\|+M\|k\|.
           \end{align*}
-          Donde $M>0$, es una constante que depende de $x$. Esto se tiene ya que $T$ es acotada, ahora por la monoticidad del ínfimo, podemos tomarlo sobre los $k\in K,$ como el lado izquierdo no depende de $k$ tenemos que
+          Donde $M>0$, es una constante que depende de $x$ puesto que $T$ es acotada, ahora por la monoticidad del ínfimo, podemos tomarlo sobre los $k\in K,$ como el lado izquierdo no depende de $k$ tenemos que
           \begin{align*}
               \|\overline{T}(x+K)\|&\leq\inf_{k\in K}\{M\|x-k\|+M\|k\|\}\\
               &= M\inf_{k\in K}\|x-k\|+M\inf_{k\in K}\|k\|\\
               &=M\inf_{k\in K}\|x-k\|\\
               &=M\|x+K\|.
           \end{align*}
-          Así hemos mostrado que es acotado. Ahora probemos las mismas dos propiedades para la aplicación $\overline{T}^{-1}.$ Para la linealidad tenemos que dados $y_1,y_2\in R(T)$, existen $x_1,x_2\in E$, tales que $y_i=T(x_i)=\overline{T}(x_i+K)$, para $i=1,2.$ Luego por la linealidad ya probada tenemos que $$y_1+\lambda y_2=\overline{T}((x_1+K)+\lambda(x_2+K)),$$ 
-          como es biyectiva, aplicando $\overline{T}^{-1}$ a ambos lados obtenemos $$\overline{T}^{-1}(y_1+\lambda y_2)=(x_1+K)+\lambda(x_2+K).$$
-          Pero por la manera en que tomamos $y_1,y_2$, y por la biyectividad sabemos que $\overline{T}^{-1}(y_i)=x_i+K,$ para $i=1,2.$ Así concluimos que 
+          Así, hemos mostrado que es acotado. Ahora probemos las mismas dos propiedades para la aplicación $\overline{T}^{-1}.$ Para la linealidad tenemos que dados $y_1,y_2\in R(T)$, existen $x_1,x_2\in E$, tales que $y_i=T(x_i)=\overline{T}(x_i+K)$, para $i=1,2.$ Luego por la linealidad ya probada tenemos que $$y_1+\lambda y_2=\overline{T}((x_1+K)+\lambda(x_2+K)),$$ 
+          como es biyectiva, aplicando $\overline{T}^{-1}$ a ambos lados
+           $$\overline{T}^{-1}(y_1+\lambda y_2)=(x_1+K)+\lambda(x_2+K).$$
+
+          Pero, por la manera en que tomamos $y_1,y_2$, y por la biyectividad sabemos que $\overline{T}^{-1}(y_i)=x_i+K,$ para $i=1,2.$ Así,
           $$\overline{T}^{-1}(y_1+\lambda y_2)=\overline{T}^{-1}(y_1)+\lambda\overline{T}^{-1}(y_2).$$
-          Para mostrar que es acotada usaremos una idea similar, si $y\in R(T)$, existe un $x\in E$ tal que $y=T(x)=\overline{T}(x+K)$, luego $\overline{T}^{-1}(y)=x+K,$ asi tomando la norma de $E/K$ obtenemos
+          Para mostrar que es acotada usaremos una idea similar, si $y\in R(T)$, existe un $x\in E$ tal que $y=T(x)=\overline{T}(x+K)$, luego $\overline{T}^{-1}(y)=x+K,$ tomando la norma de $E/K$ obtenemos que,
           \begin{align*}
               \|\overline{T}^{-1}(y)\|&=\|x+K\|\\
               &=\inf_{k\in K}\|x-k\|\\
               &\leq \|x\|.
           \end{align*}
-          Por hipotesis existe un $c>0$, tal que $c\|x\|\leq\|T(x)\|$, es decir $\|x\|\leq \dfrac{1}{c}\|T(x)\|$ así tenemos que
+          Por hipótesis existe un $c>0$, tal que $c\|x\|\leq\|T(x)\|$, es decir $\|x\|\leq \dfrac{1}{c}\|T(x)\|$ lo que nos indica que
           $$\|\overline{T}^{-1}(y)\|\leq \dfrac{1}{c}\|T(x)\|.$$
-          Pero $y=T(x),$ luego 
+          Pero, $y=T(x),$ luego,
           $$\|\overline{T}^{-1}(y)\|\leq \dfrac{1}{c}\|y\|,$$
           así hemos mostrado que el operador es acotado y por tanto hemos concluido que $\overline{T}$ es un isomorfismo.
 

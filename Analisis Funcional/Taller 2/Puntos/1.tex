@@ -6,55 +6,51 @@ Sea $(E,\|\cdot\|)$ un espacio vectorial normado. Dado $r>0,$ considere $C=B(0,r
 
 Dado que $(E, \| \cdot \|)$ es un espacio vectorial normado, se deduce que el conjunto $C = B(0,r)$ es abierto, convexo y  $0 \in C$.
 
-Por consiguiente, el funcional de Minkowski asociado a $C$ se define como:
+Por consiguiente, el funcional de Minkowski asociado a $C$ se define como,
 \[
 \rho(x) = \text{ínf} \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}, \qquad x \in E.
 \]
 
-Ahora, sea $x \in B(0,r)$. Entonces, para todo $\alpha > 0$ tal que $\alpha^{-1}x \in C$, se tiene:
+Ahora, sea $x \in B(0,r)$. Entonces, para todo $\alpha > 0$ tal que $\alpha^{-1}x \in C$, 
 \[
-\| \alpha^{-1}x \| < r.
+\| \alpha^{-1}x \| < r,
 \]
 
-Esto implica que:
+lo que implica que,
 \[
 \alpha^{-1} \| x \| < r,
 \]
 
-y despejando $\alpha$, se obtiene:
+luego, despejando $\alpha$, 
 \[
 \frac{\| x \|}{r} < \alpha.
 \]
 
-En general, si $x \in B(0,r)$, tenemos:
-\[
-\| \alpha^{-1}x \| < r \quad \Rightarrow \quad \alpha^{-1} \| x \| < r \quad \Rightarrow \quad \frac{\| x \|}{r} < \alpha.
-\]
 
-Supongamos por contradicción que $\rho(x) \neq \frac{\| x \|}{r}$. Entonces debe ocurrir que:
+Supongamos por contradicción que $\rho(x) \neq \dfrac{\| x \|}{r}$, por lo que se tiene que,
 \[
 \frac{\| x \|}{r} < \rho(x).
 \]
 
-Tomemos el promedio entre $\frac{\| x \|}{r}$ y $\rho(x)$:
+Tomemos el promedio entre $\dfrac{\| x \|}{r}$ y $\rho(x)$
 \[
-\beta = \frac{\frac{\| x \|}{r} + \rho(x)}{2}.
+\beta = \dfrac{\dfrac{\| x \|}{r} + \rho(x)}{2},
 \]
 
-Este valor cumple que:
+este valor cumple que
 \[
 \frac{\| x \|}{r} < \beta < \rho(x).
 \]
 
-Pero entonces:
+Pero entonces,
 \[
 \| \beta^{-1}x \| = \beta^{-1} \| x \| < \frac{r}{\| x \|} \cdot \| x \| = r,
 \]
-lo cual implica que $\beta^{-1}x \in B(0,r)$, es decir, $\beta^{-1}x \in C$. Por tanto, $\beta \in \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}$.
+lo cual implica que $\beta^{-1}x \in B(0,r)=C$. Por tanto, $\beta \in \left\{ \alpha > 0 : \alpha^{-1}x \in C \right\}$.
 
 Esto contradice el hecho de que $\rho(x)$ es la ínfimo de ese conjunto, ya que $\beta < \rho(x)$.
 
-Por lo tanto, concluimos que:
+Por lo tanto, concluimos que,
 \[
 \rho(x) = \frac{\| x \|}{r}.
 \]
