@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.13)  24 APR 2025 20:09
+=======
 This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.4.25)  25 APR 2025 11:58
+>>>>>>> fc6fabea4da37f17c4f0bcc8f9225a0725c0cbb9
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1482,6 +1486,22 @@ Here is how much of TeX's memory you used:
  43832 multiletter control sequences out of 15000+600000
  609237 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
+<<<<<<< HEAD
+ 84i,14n,93p,697b,1292s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
+b><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/pu
+blic/amsfonts/euler/euex10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eue
+x7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/euex8.pfb><C:/MiKTeX/fonts/
+type1/public/amsfonts/euler/eufm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/e
+uler/eufm7.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/euler/eurm10.pfb><C:/MiKT
+eX/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/MiKTeX/fonts/type1/public/am
+sfonts/euler/eusm10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
+fb><C:/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/MiKTeX/fonts/type1/publi
+c/tex-gyre/qhvr.pfb><C:/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/MiKTeX/fon
+ts/type1/public/newtx/ztmr.pfb>
+Output written on main.pdf (14 pages, 363056 bytes).
+=======
  84i,14n,93p,785b,1292s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/natal/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmex10.pfb><C:/Users/natal/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
@@ -1503,6 +1523,7 @@ tal/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/User
 s/natal/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmb.pfb><C:/Use
 rs/natal/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/ztmr.pfb>
 Output written on main.pdf (13 pages, 364654 bytes).
+>>>>>>> fc6fabea4da37f17c4f0bcc8f9225a0725c0cbb9
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

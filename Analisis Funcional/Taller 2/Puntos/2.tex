@@ -1,6 +1,89 @@
 %!TEX root = ../main.tex
 Sea $E$ un espacio vectorial normado.
 \begin{itemize}
-    \item[(i)] Sea $W\subset E$ un subespacio propio de $E$ y $x_0\in E\setminus W,$ tal que $d:=dist(x_0,W)>0.$ Demuestre que existe $f\in E^*$ tal que $f=0$ restricto a $W,$ $f(x_0)=d$ y $\|f\|_{E^*}=1.$ 
+    \item[(i)] Sea $W\subset E$ un subespacio propio de $E$ y $x_0\in E\setminus W,$ tal que $d:=dist(x_0,W)>0.$ Demuestre que existe $f\in E^*$ tal que $f=0$ restricto a $W,$ $f(x_0)=d$ y $\|f\|_{E^*}=1.$
+\end{itemize} 
+
+Definamos el espacio \(W' = W + \text{Gen}\{x_0\}\) y tomemos la aplicación
+
+$$
+T : W' \longrightarrow \mathbb{R}
+\qquad\text{donde}\qquad
+w + t x_0 \mapsto T(w + t x_0) = t d
+$$
+Veamos que \(T \in \mathcal{L}(W', \mathbb{R})\)
+
+Para eso debemos ver que T es lineal, por lo cual tomamos \(v_1, v_2 \in W'\), entonces \(v_1 = w_1 + t_1 x_0\) y \(v_2 = w_2 + t_2 x_0\), con \(w_1, w_2 \in W\) y \(t_1, t_2 \in \mathbb{R}\). Tenemos que, 
+
+\begin{align*}
+T(v_1 + v_2) = T\left((w_1 + t_1 x_0) + (w_2 + t_2 x_0)\right)
+&= T((w_1 + W_2) + (t_1 + t_2)x_0)
+= (t_1 + t_2)d \\
+T(v_1) + T(v_2) = T(w_1 + t_1 x_0) + T(w_2 + t_2 x_0) &= t_1 d + t_2 d = (t_1 + t_2)d
+\end{align*}
+
+por lo cual, tenemos que $T$ es lineal. Ahora veamos que $T$ es acotada,  \(w \in W\) y \(t \in \mathbb{R}\)
+
+$$
+\| w + t x_0 \|_E = \| t(t^{-1} w + x_0) \| = |t| \| t^{-1} w + x_0 \| = |t| \| x_0 - (-t^{-1} w) \|
+$$
+
+como \(W\) es espacio vectorial, \(-t^{-1}w \in W\), así, $
+\| x_0 - (t^{-1} w) \| \geq \text{dist}(x_0, W) = d
+\text{ y } T(x_0) = d$ por lo que
+
+
+
+$$
+\| w + t x_0 \|_E \geq |t| d = |t d| = |T(w + t x_0)|.
+$$
+
+Por el corolario de Hahn-Banach, se tiene que al ser \(W' \subseteq E\) un subespacio y \(T\) es un funcional continuo, entonces existe \(f \in E^*\) que extiende a \(T\) y
+
+$$
+\|f\|_{E^*} = \sup_{x \in E, \|x\| \leq 1} | \langle f, x \rangle | = \|T\|_{W'^*}.
+$$
+
+Además por la definición de $f$, tenemos que para todo $x\in W$ se cumple que $f|_W = 0$ y que $ f(x_0) =d$.
+ 
+Para calcular \(\|T\|_{E^*}\), basta con tomar la sucesión $\left( \tfrac{1}{d} + \tfrac{1}{n} \right)_{n \in \mathbb{N}}$ donde tenemos que la sucesión está en $\mathbb{R}$, con \(\lim_{n \to \infty} \left( \tfrac{1}{d} + \tfrac{1}{n} \right) = \tfrac{1}{d}\). Así,
+$$
+\|T\|_{W'^*} = \sup_{\substack{x \in W^{*}\\ x \neq 0}} |T(x)| \geq T\left( \left( \tfrac{1}{d} + \tfrac{1}{n} \right) x_0 \right),
+$$
+
+si tomamos \(n \to \infty\), tenemos que,
+
+$$
+\|T\|_{W'^*} \geq \lim_{n \to \infty} T\left( \left( \tfrac{1}{d} + \tfrac{1}{n} \right)x_0 \right) = \tfrac{1}{d} T(x_0) = 1.
+$$
+
+Ahora como \(\|w + t x_0\| \geq |T(w+ t x_0)|\), se tiene que,
+
+$$
+1 \geq \left| \frac{T(w + t x_0)}{\|w + t x_0\|} \right| \quad \text{ para todo } w \in W',\, \text{ donde } t \in \mathbb{R}
+$$
+
+por lo que, 
+
+$$
+\|T\|_{W'^*} \leq 1 \quad \Rightarrow \quad \|T\|_{W'^*} = 1
+$$
+
+
+
+
+\begin{itemize}
     \item[(ii)] Sea $W\subset E$ un subespacio propio cerrado de $E$ y $x_0\in E\setminus W.$ Demuestre que existe $f\in E^*$ tal que $f=0$ restricto a $W$ y $f(x_0)\neq 0$. 
 \end{itemize}
+
+
+Como $W \subset E$ es un subespacio propio cerrado, se tiene que $W = \overline{W}$. Por lo tanto, para todo $x \in W^c$ se cumple que la distancia de $x$ a $W$ es estrictamente mayor que cero, es decir,
+\[
+\mathrm{dist}(x, W) > 0.
+\]
+De lo contrario, si $\mathrm{dist}(x, W) = 0$, entonces $x$ sería un punto de acumulación de $W$, y como $W$ es cerrado, implicaría que $x \in W$, lo cual contradice que $x \in W^c$.
+
+En particular, como $x_0 \in E \setminus W$, se tiene que $\mathrm{dist}(x_0, W) > 0$. Por el numeral (i), existe entonces un funcional lineal continuo $f \in E^*$ tal que
+\[
+f|_W = 0 \quad \text{y} \quad f(x_0) \neq 0.
+\]
