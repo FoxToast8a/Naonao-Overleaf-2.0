@@ -1,0 +1,10 @@
+%!TEX root = ../main.tex
+  Sea $E$ un espacio de Banach reflexivo. Sea a: $E \times E \rightarrow \mathbb{R}$ una forma bilineal que es continua, es decir, existe $M>0$ tal que $|a(x, y)| \leq M\|x\|\|y\|$, para todo $x, y \in E$. Asuma que a es coerciva, esto es, existe $\alpha>0$ tal que para todo $x \in E$
+$$
+a(x, x) \geq \alpha\|x\|^2
+$$
+\begin{itemize}
+    \item[(a)]Dado $x \in E$, defina $A_x(y)=a(x, y)$, para todo $y \in E$. Muestre que $A_x \in E^{\star}$, para cada $x \in E$. Además, concluya que la función $x \mapsto A(x)=A_x$ satisface $A \in \mathcal{L}\left(E, E^{\star}\right)$. 
+    \item[(b)] Muestre que A como en (a) es una función sobreyectiva.
+    \item[(c)] Deduzca que para cada $f \in E^{\star}$, existe un único $x \in E$ tal que $a(x, y)=\langle f, y\rangle$, $\forall y \in E$. Esto es, la forma bilineal coerciva a representa todo funcional lineal continuo.
+\end{itemize}
