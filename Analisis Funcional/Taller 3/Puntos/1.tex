@@ -5,3 +5,18 @@ $$
 $$
 
 Muestre que existen constante $\lambda_1, \ldots, \lambda_n \in \mathbb{R}$ tales que $g=\sum_{i=1}^k \lambda_i f_i$. Es decir, $g$ es combinación lineal de los $f_i$.
+\begin{sproof}
+    Consideremos la función
+    \begin{align*}
+        H:&E\to \mathbb{R}^{k+1}\\
+        &x\mapsto(g(x),f_1(x),\ldots,f_k(x)).
+    \end{align*}
+    Si $R(H)$ es el rango de la función $H$, sabemos que es un subespacio de $\mathbb{R}^{k+1}$, ademas como este es de dimensión finita y normado, $R(H)$ es cerrado, es decir $\overline{R(H)}=R(H).$ Luego observe que $x_0=(1,0,\ldots,0)\in \mathbb{R}^{k+1}\setminus R(H),$ ya que en caso contrario $(1,0,\ldots,0)=(g(x),f_1(x),\ldots,f_k(x))$ para algún $x\in E$, pero esto implica que $f_i(x)=0$ para cada $i=1,\ldots,k$ y $g(x)=1$, pero por la hipótesis $g(x)=0,$ una contradicción. Así si consideramos los conjuntos $R(H)$ y $\{x_0\}$, como ambos son no vacíos, convexos, disjuntos, el primero es cerrado y el segundo compacto, por la segunda forma geométrica de Hahn-Banach existe $f\in (\mathbb{R}^{k+1})^*$ tal que $f(x_0)\neq 0$ y $f(y)=0$ para todo $y\in R(H).$\\
+
+    Como los funcionales de $\mathbb{R}^{k+1}$ se identifican con el producto interno usual por un vector, sabemos que existe $\beta=(\beta_0,\beta_1,\ldots,\beta_k)\in \mathbb{R}^{k+1}$ tal que $f(y)=\langle \beta,y\rangle.$ donde $y\in \mathbb{R}^{k+1}.$ Note que si $y=x_0$ tenemos que $\langle \beta,x_0\rangle\neq 0$, por ser el producto interno usual esto implica que $\beta_0\neq 0.$ Ahora si $y\in R(H)$, es de la forma $y=(g(x),f_1(x),\ldots,f_k(x)),$ para algún $x\in E.$ Luego $\langle \beta,y\rangle=0$, pero por definición de producto interno esto es 
+    $$\beta_0g(x)+\sum_{i=1}^k\beta_if_i(x)=0,$$
+    como $\beta_0\neq 0$ podemos despejar $g(x)$, tal que
+    $$g(x)=\sum_{i=1}^k\frac{\beta_i}{\beta_0}f_i(x).$$
+    Así como para cada $x\in E$, hay un $y$ como el anterior, si tomamos $\lambda_i=\dfrac{\beta_i}{\beta_0}\in \mathbb{R}.$, obtenemos que
+    $$g=\sum_{i=1}^k \lambda_i f_i.$$
+\end{sproof}
