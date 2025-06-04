@@ -1,2 +1,55 @@
 %!TEX root = ../main.tex
  Sea $K$ un espacio métrico compacto que no es finito. Demuestre que $C(K)$ (con la norma del supremo $\|\cdot\|_{L^{\infty}}$ ) no es reflexivo.
+ \begin{proof}
+Supongamos que \( C(K) \) es reflexivo. Dado que $K$ es compacto e infinito, necesariamente contiene un punto de acumulación. Sea $a \in K$ uno de ellos, y sea $(a_n)$ una sucesión de puntos distintos en $K$ tal que $a_n \to a$ y $a_n \neq a$ para todo $n$.
+
+Para cada $n \in \mathbb{N}$, construiremos una función $g_n \in C(K)$ tal que $g_n(a_m) = 1$ si $1 \leq m \leq n$, $g_n(a_m) = 0$ si $m > n$, y $g_n(a) = 0$. Esto se puede lograr utilizando el el teorema de Tietze–Urysohn–Brouwer, ya que $K$ es métrico (y por tanto normal), y los conjuntos finitos $\{a_1, \dots, a_n\}$ y $\{a_{n+1}, a_{n+2}, \dots\} \cup \{a\}$ son disyuntos y cerrados. Así, existe una función continua $g_n : K \to [0,1]$ tal que,
+
+\begin{align*}
+  g_n(a_m) &= 1 \quad \text{si } 1 \leq m \leq n, \\
+  g_n(a_m) &= 0 \quad \text{si } m > n, \\
+  g_n(a)   &= 0.
+\end{align*}
+
+Además, $\|g_n\|_\infty = 1$ para todo $n$. \\
+Como \( C(K) \) es un espacio de Banach y la sucesión $(g_n)$ esta acotada, tiene una subsucesión débilmente convergente $(g_{n_k})$, es decir, existe $g \in C(K)$ tal que $g_{n_k} \rightharpoonup g$ débilmente. Entonces, para todo funcional lineal continuo $\phi \in C(K)^*$ se cumple que
+
+\[
+\phi(g_{n_k}) \to \phi(g).
+\]
+
+En particular, esto se aplica a los funcionales de evaluación $\pi_x(f) := f(x)$ para cada $x \in K$, los cuales pertenecen a $C(K)^*$. Por tanto, para cada $x \in K$,
+
+\[
+g_{n_k}(x) \to g(x).
+\]
+
+Para cada $m \in \mathbb{N}$ fijo, existe $k_0$ tal que $n_k \geq m$ para todo $k \geq k_0$. Entonces, por la definición de $g_{n_k}$,
+
+\[
+g_{n_k}(a_m) = 1 \quad \text{para todo } k \geq k_0,
+\]
+
+lo que implica que
+
+\[
+g(a_m) = \lim_{k \to \infty} g_{n_k}(a_m) = 1.
+\]
+
+Como $a_n \to a$ y $g$ es continua, se sigue que
+
+\[
+g(a) = \lim_{m \to \infty} g(a_m) = 1.
+\]
+
+Sin embargo, por construcción $g_{n_k}(a) = 0$ para todo $k$, y por tanto,
+
+\[
+g(a) = \lim_{k \to \infty} g_{n_k}(a) = 0,
+\]
+
+lo cual es una contradicción. Esto prueba que la sucesión $(g_n)$ no tiene ninguna subsucesión débilmente convergente.
+
+En consecuencia, como encontramos una sucesión acotada en \( C(K) \) que no posee ninguna subsucesión débilmente convergente, \( C(K) \) no es reflexivo.
+
+\end{proof}

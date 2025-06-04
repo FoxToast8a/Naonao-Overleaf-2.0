@@ -1,2 +1,23 @@
 %!TEX root = ../main.tex
  Sea $E$ un espacio de Banach de dimensión infinita. Muestre que cada vecindad débil $\star$ del origen de $E^{\star}$ no es acotada.
+
+ \begin{proof}
+Sea $V$ una vecindad débil$\star$ de $0$ en $E^{\star}$. Por
+ definición de la topología $\sigma(E^{\star}, E)$, podemos expresar $V$ como
+\[
+V = \{ f \in E^{\star} : |\langle f, x_j \rangle| < \varepsilon_j \text{ para } j = 1, \dots, n \},
+\]
+donde $x_1, \dots, x_n \in E$ y $\varepsilon_1, \dots, \varepsilon_n > 0$.Tomemos a $F = \operatorname{span}\{x_1, \dots, x_n\}$ el cual es un subespacio de $E$. Como $F$ es de dimensión finita, es cerrado en $E$, es decir, $F = \overline{F}$. Dado que $E$ es de dimensión infinita y $F$ es de dimensión finita, existe $x_0 \in E \setminus F$. Aplicando el Teorema de Hahn-Banach en su forma geométrica, existe un funcional lineal no nulo $f \in E^{\star}$ tal que
+\[
+f(x_j) = 0 \quad \text{para todo } j = 1, \dots, n,
+\]
+pero $f(x_0) \neq 0$. Para cualquier $\lambda \in \mathbb{R}$, el funcional $\lambda f$ satisface que,
+\[
+(\lambda f)(x_j) = \lambda f(x_j) = 0 \quad \text{para todo } j = 1, \dots, n.
+\]
+Como $|\langle \lambda f, x_j \rangle| = 0 < \varepsilon_j$ para todo $j$, se cumple que $\lambda f \in V$ para todo $\lambda \in \mathbb{R}$, por lo que $\{\lambda f : \lambda \in \mathbb{R}\} \subset V$. La norma de $\lambda f$ cumple que,
+\[
+\|\lambda f\| = |\lambda| \cdot \|f\|.
+\]
+Como $f$ es no nula, entonces $\|f\| > 0$ y cuando $|\lambda| \to \infty$, se tiene $\|\lambda f\| \to \infty$. Por lo tanto, $V$ contiene elementos de norma arbitrariamente grandes y, por lo cual, no es acotada. 
+\end{proof}
