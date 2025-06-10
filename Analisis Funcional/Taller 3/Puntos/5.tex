@@ -2,6 +2,94 @@
  Sea $E$ un espacio de Banach
  \begin{itemize}
      \item[(a)] Demuestre que existe un espacio topológico compacto $K$ y una isometría de $E$ en $\left(C(K),\|\cdot\|_{\infty}\right)$.
-     \item[(b)] Asuma que $E$ es separable. Entonces muestre que existe una isometría de $E$ en $l^{\infty}$ (vea el Ejercicio 1/4 para la definición del espacio).
+     \begin{proof}
+         Considere el conjunto $K=\mathcal{B}_{E^{\star}}=\{f \in E^{\star}:\|f\|_{E^{\star}}\leq 1\}$. Luego $K$ es un espacio topológico compacto en la topología débil$^{\star}$. Definamos la función $$T \colon (E, \|\cdot\|_E) \to(C(K), \|\cdot\|_\infty)$$ donde $x \mapsto Tx \colon \mathcal{B}_{E^{\star}} \to \mathbb{R}$
+y $f \mapsto (Tx)(f) =f(x)=J_x$, por definición de las funciones $J_x$ sabemos que $Tx$ es continua en la topología débil $\star$, ahora veamos que $T$ es lineal, sean $x, y \in E$ y $\alpha, \beta \in \mathbb{R}$, entonces,
+\[
+T(\alpha x + \beta y)(f) = \langle f, \alpha x + \beta y \rangle = \alpha \langle f, x \rangle + \beta \langle f, y \rangle = \alpha (T(x)(f)) + \beta (T(y)(f)).
+\]
+
+Por último, veamos que $T$ es una isometría.
+
+\[
+\|T(x)\|_\infty = \sup_{f \in K} |T(x)(f)| = \sup_{\substack{f \in E^{\star} \\ \|f\|_{E^{\star}} \leq 1}} |\langle f, x \rangle|\leq \|x\|,
+\]
+
+como $T$ es lineal, acotada tenemos que $T$ es continua. Además, por un corolario de la forma analítica de Hahn-Banach, tenemos que para cada $x \in E$ existe $f \in E^{\star}$ tal que
+\[
+\langle f, x \rangle = \|x\|, \quad \text{con } \|f\| = 1,
+\]
+por lo que tenemos $\|T(x)\|_\infty = \|x\|$, así $T$ es isometría.
+
+     \end{proof}
+
+
+
+
+     \item[(b)] Asuma que $E$ es separable. Entonces muestre que existe una isometría de $E$ en $l^{\infty}$ (vea el Ejercicio 14 para la definición del espacio).
+     \begin{proof}
+         
+     \end{proof}
+
+
+     
+
+
+
+
+
+
+
+
+
+\begin{itemize}
+    \item[(b)] Como $K$ es metrizable y compacto en la topología débil$^{\star}$, existe un subconjunto denso contable $\{f_n\} \subseteq K$.
+\end{itemize}
+
+\textit{\color{red} ¿Por qué $K$ tiene denso contable?} \textit{\color{green} Es contable.}
+
+Definamos
+\[
+T : E \to \ell^\infty, \quad x \mapsto T(x) := \{ f_n(x) \}_{n=1}^\infty.
+\]
+
+Veamos que $T$ está bien definido. Como $\|f_n\| \leq 1$ para todo $n \in \mathbb{N}$, tomando un $x$ fijo, tenemos que
+\[
+\sup_{n \in \mathbb{N}} |f_n(x)| \leq \|x\| \sup_{n \in \mathbb{N}} \|f_n\| \leq M \|x\| \quad \text{donde } M \in \mathbb{R}, M \geq 1.
+\]
+
+Ahora veamos que $T$ es lineal. Sean $x, y \in E$, y $\alpha, \beta \in \mathbb{R}$:
+\[
+T(\alpha x + \beta y) = \{ f_n(\alpha x + \beta y) \} = \alpha \{ f_n(x) \} + \beta \{ f_n(y) \},
+\]
+luego $T$ es lineal.
+
+$T$ es continua porque es lineal y acotada.
+
+\bigskip
+
+\textbf{Nos falta ver que $T$ es una isometría.}
+
+Por el corolario de Hahn-Banach en forma analítica, existe $f \in K \subseteq E^{\star}$ tal que $|f(x)| = \|x\|$.
+
+Como $f_n$ es denso en $K = B_{E^{\star}}^0$, existe una subsucesión $\{f_{n_k}\}$ tal que $f_{n_k} \to f$ en $\sigma(E^{\star}, E)$, y en particular $f_{n_k}(x) \to f(x)$, y por tanto:
+\[
+|f(x)| = \limsup_{k \to \infty} |f_{n_k}(x)| \leq \sup_{n \in \mathbb{N}} |f_n(x)| = \|T(x)\|_\infty \leq \|x\|.
+\]
+
+Por lo cual:
+\[
+\|T(x)\|_\infty = \|x\|,
+\]
+y $T(x)$ es una isometría.
+
+\bigskip
+
+\[
+\exists f \in E^{\star} \quad \text{tal que } \langle f, x \rangle = \|x\|, \quad \|f\| = 1
+\]
+\[
+\{ f_n \} \text{ son densos en } K = B_{E^{\star}}^0, \quad f_{n_k} \to f
+\]
  \end{itemize}
  

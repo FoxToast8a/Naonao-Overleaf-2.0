@@ -1,9 +1,19 @@
 %!TEX root = ../main.tex
  Sea $K$ un espacio métrico compacto que no es finito. Demuestre que $C(K)$ (con la norma del supremo $\|\cdot\|_{L^{\infty}}$ ) no es reflexivo.
  \begin{proof}
-Supongamos que \( C(K) \) es reflexivo. Dado que $K$ es compacto e infinito, necesariamente contiene un punto de acumulación. Sea $a \in K$ uno de ellos, y sea $(a_n)$ una sucesión de puntos distintos en $K$ tal que $a_n \to a$ y $a_n \neq a$ para todo $n$.
+Supongamos que \( C(K) \) es reflexivo. Dado que $K$ es compacto e infinito, necesariamente contiene un punto de acumulación. Sea $a \in K$ uno de ellos, y sea $(a_n)$ una sucesión de puntos distintos en $K$ tal que
+\begin{align*}
+  a_n &\to a, \\
+  a_n &\neq a \quad \text{para todo } n.
+\end{align*}
+Tal sucesión puede construirse eligiendo, para cada $n$, un punto $a_n \in K$ distinto de $a$ tal que
+\[
+d(a_n, a) < \frac{1}{n},
+\]
+lo cual es posible ya que todo entorno de $a$ contiene infinitos puntos de $K$ distintos de $a$.
 
-Para cada $n \in \mathbb{N}$, construiremos una función $g_n \in C(K)$ tal que $g_n(a_m) = 1$ si $1 \leq m \leq n$, $g_n(a_m) = 0$ si $m > n$, y $g_n(a) = 0$. Esto se puede lograr utilizando el el teorema de Tietze–Urysohn–Brouwer, ya que $K$ es métrico (y por tanto normal), y los conjuntos finitos $\{a_1, \dots, a_n\}$ y $\{a_{n+1}, a_{n+2}, \dots\} \cup \{a\}$ son disyuntos y cerrados. Así, existe una función continua $g_n : K \to [0,1]$ tal que,
+
+A partir de esta sucesión, para cada $n \in \mathbb{N}$, construiremos una función $g_n \in C(K)$ tal que $g_n(a_m) = 1$ si $1 \leq m \leq n$, $g_n(a_m) = 0$ si $m > n$, y $g_n(a) = 0$. Esto se puede lograr utilizando el el teorema de Tietze–Urysohn–Brouwer, ya que $K$ es métrico (y por tanto normal), y los conjuntos finitos $\{a_1, \dots, a_n\}$ y $\{a_{n+1}, a_{n+2}, \dots\} \cup \{a\}$ son disyuntos y cerrados. Así, existe una función continua $g_n : K \to [0,1]$ tal que,
 
 \begin{align*}
   g_n(a_m) &= 1 \quad \text{si } 1 \leq m \leq n, \\
