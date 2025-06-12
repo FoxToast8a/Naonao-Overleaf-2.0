@@ -1,0 +1,30 @@
+%!TEX root = ../main.tex
+ \begin{itemize}
+  
+\item[(I)] Sea $\mathbb{R}$ con la $\sigma$-álgebra de Borel $\mathcal{B}(\mathbb{R})$.
+\begin{itemize}
+\item[(a)] Dado $x_0 \in \mathbb{R}$, considere $\delta_{x_0}$ la medida de Dirac centrada en $x_0$ dada por: $\delta_{x_0}(A)=1$ si $x_0 \in A$, y $\delta_{x_0}(A)=0$ si $x_0 \notin A$, para cada $A \in \mathcal{B}(\mathbb{R})$. Muestre que $\delta_{x_0}$ es una medida.
+\begin{sproof}
+    Es claro que $\delta_{x_0}:\mathcal{B}(\mathbb{R})\to [0,\infty]$ ya que las unicas imagenes de la funcion son 0 y 1. Ahora comprobemos las dos condiciones.\\
+
+    Si $A=\varnothing$, claramente $x_0\notin A$, luego por la definicion $\delta_{x_0}(A)=0,$ como queriamos.\\
+
+    Ahora sea $\{A_i\}_i=1^\infty\subseteq \mathcal{B}(\mathbb{R})$ una familia de disjuntos dos a dos.  
+\end{sproof}
+\item[(b)] Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ una función medible. Muestre que
+$$
+\int_{\mathbb{R}} f(x) d \delta_{x_0}=f\left(x_0\right)
+$$
+\item[(c)] De un ejemplo de una función que sea integrable con la medida $\delta_{x_0}$ para algún $x_0$, pero que no sea integrable con la medida de Lebesgue.
+\end{itemize}
+\item[(II)] Sea $\mathbb{N}=\{1,2,3, \ldots\}$ con la $\sigma$-álgebra $\mathcal{P}(\mathbb{N})$.
+\begin{itemize}
+  
+
+\item[(a)] Considere la medida contadora $\mu$ dada por: $\mu(A)=\operatorname{cardinal}(A)$ si $A$ es finito y $\mu(A)=\infty$ caso contrario, para cada $A \in \mathcal{P}(\mathbb{N})$. Muestre que $\mu$ es una medida.
+\item[(b)] Dada $f: \mathbb{N} \rightarrow \mathbb{R}$ una función medible, es decir, $f$ es una secuencia, $f=\left\{a_j\right\}_{j \in \mathbb{N}}$, para algunos $a_j \in \mathbb{R}, j \in \mathbb{N}$. Muestre que si $f$ es integrable (es decir, $\int_{\mathbb{N}}|f| d \mu<\infty$ ), entonces
+$$
+\int_{\mathbb{N}} f d x=\sum_{j=1}^{\infty} a_j
+$$
+\end{itemize}
+\end{itemize}
