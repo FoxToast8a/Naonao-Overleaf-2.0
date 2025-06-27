@@ -18,27 +18,27 @@ $$
         &\leq M\|x\|\|y\|\\
         &=M_1\|y\|.
       \end{align*}
-      Como para cada $x\in E$ se define el $A_x$, en cada operador $\|x\|$ es un numero, por lo que es correcto tomar $M_1=M\|x\|>0$ para cada $A_x.$ Asi tenemos que $A_x\in E^*.$\\
+      Como para cada $x\in E$ se define el $A_x$, en cada operador $\|x\|$ es un número, por lo que es correcto tomar $M_1=M\|x\|>0$ para cada $A_x,$ así tenemos que $A_x\in E^*.$\\
 
       Ahora queremos ver que la función
       \begin{align*}
         A:&E\to E^*\\
         &x\mapsto A(x)=A_x
       \end{align*}
-      Pertenece a $\mathcal{L}\left(E, E^{\star}\right).$ Claramente esta función esta bien definida ya que $A_x\in E^*$ Luego nuevamente tenemos que ver que es lineal y acotada. Para la linealidad, sean $x_1,x_2\in E$ y $\lambda\in \mathbb{R},$ luego para $y\in E$
+      pertenece a $\mathcal{L}\left(E, E^{\star}\right).$ Claramente esta función está bien definida ya que $A_x\in E^*$. Luego nuevamente tenemos que ver que es lineal y acotada, para la linealidad, sean $x_1,x_2\in E$ y $\lambda\in \mathbb{R},$ luego para $y\in E$
       \begin{align*}
         A_{x_1+\lambda x_2}(y)&=a(x_1+\lambda x_2,y)\\
         &=a(x_1,y)+\lambda a(x_2,y)\\
         &=A_{x_1}(y)+\lambda A_{x_2}(y).
       \end{align*}
-      Nuevamente esto se tiene del hecho de que $a$ es bilineal. Observe que para cualquier $y\in E$, $A_{x_1+\lambda x_2}(y)=a(x_1+\lambda x_2,y)=A_{x_1}(y)+\lambda A_{x_2}(y)$, eso quiere decir que $A_{x_1+\lambda x_2}=A_{x_1}+\lambda A_{x_2}$ pero esto es $A(x_1+\lambda x_2)=A(x_1)+\lambda A(x_2)$, por lo que $A$ es lineal. Ahora para ver si esta acotada observe que
+      Nuevamente esto se tiene del hecho de que $a$ es bilineal. Por lo que $A_{x_1+\lambda x_2}=A_{x_1}+\lambda A_{x_2}$ pero esto es $A(x_1+\lambda x_2)=A(x_1)+\lambda A(x_2)$, obteniendo así que  $A$ es lineal. Ahora veamos que $A$ está acotada
       \begin{align*}
         \|A(x)\|&=\|A_x\|\\
         &=\sup_{\substack{y\in E\\\|y\|\leq 1}}|A_x(y)|\\
         &=\sup_{\substack{y\in E\\\|y\|\leq 1}}|a(x,y)|\\
         &\leq \sup_{\substack{y\in E\\\|y\|\leq 1}}M\|x\|\|y\|\\
         &=M\|x\|\sup_{\substack{y\in E\\\|y\|\leq 1}}\|y\|\\
-        &=M\|x\|.
+        &\leq M\|x\|.
       \end{align*}
       Esto es gracias a la continuidad de $a.$ Así concluimos que $A\in\mathcal{L}\left(E, E^{\star}\right).$ 
 
@@ -58,14 +58,14 @@ $$
          \|A_{x_n}-A_{x_m}\|&=\|A_{x_n-x_m}\|\\
          &\geq \alpha\|x_n-x_m\|.
        \end{align*}
-       Así tenemos que $\|x_n-x_m\|\leq\dfrac{1}{\alpha}\|A_{x_n}-A_{x_m}\|$, como $\{A_{x_n}\}$ es convergente y estamos en un espacio normado, esta secuencia es Cauchy, asi para $\epsilon>0$ existe $N\in \mathbb{N}$ tal que si $n,m\geq M$, $\|A_{x_n}-A_{x_m}\|<\varepsilon$, esto implica que $\|x_n-x_m\|<\dfrac{\varepsilon}{\alpha}$. Así la sucesión $\{x_n\}$ es Cauchy en $E$, pero este espacio es Banach, por lo que $x_n\to x\in E $. Luego podemos considerar la función $A(x)=A_x.$ Note que
+       Así, $\|x_n-x_m\|\leq\dfrac{1}{\alpha}\|A_{x_n}-A_{x_m}\|$, como $\{A_{x_n}\}$ es convergente y estamos en un espacio normado, esta secuencia es Cauchy. Dado $\varepsilon>0$ existe $N\in \mathbb{N}$ tal que si $n,m\geq M$, $\|A_{x_n}-A_{x_m}\|<\varepsilon$, esto implica que $\|x_n-x_m\|<\dfrac{\varepsilon}{\alpha}$. Así la sucesión $\{x_n\}$ es Cauchy en $E$, pero este espacio es Banach, por lo que $x_n\to x\in E $. Luego podemos considerar la función $A(x)=A_x.$ Note que
        \begin{align*}
          \|A_x-f\|&=\|A_x-A_{x_n}+A_{x_n}-f\|\\
          &\leq \|A_x-A_{x_n}\|+\|A_{x_n}-f\|\\
          &=\|A_{x-x_n}\|+\|A_{x_n}-f\|\\
          &\leq\|A\|\|x-x_n\|+\|A_{x_n}-f\|,
        \end{align*}
-       por lo que cuando $n\to\infty$ tenemos por la convergencia que $\|x-x_n\|\to 0$ y $\|A_{x_n}-f\|\to 0$. Concluyendo así que $A_x=f$, por lo que $f\in R(A)$, mostrando así que el rango de la aplicación $A$ es cerrado.
+       por lo que cuando $n\to\infty$ tenemos por la convergencia que $\|x-x_n\|\to 0$ y $\|A_{x_n}-f\|\to 0$. Concluyendo así que $A_x=f$, por lo que $f\in R(A)$, mostrando que el rango de la aplicación $A$ es cerrado.
 
        Ahora veamos por contradicción que la función es sobreyectiva. Como $R(A)=\overline{R(A)}$, si no es sobreyectiva, $\overline{R(A)}\neq E^*$, luego por Hahn-Banach existe $f\in E^{**}$ tal que $f\not\equiv 0$ y $f|_{R(A)}=0.$ Esto quiere decir que para cualquier $A_x\in R(A)$, con $x\in E$, tenemos que 
        $$\langle f,A_x\rangle=0.$$
@@ -76,12 +76,12 @@ $$
          &=\langle A_x,x_0\rangle\\
          &=a(x,x_0).
        \end{align*}
-       Por lo que si tomamos $A_{x_0}$, como es coerciva tenemos que $0=a(x_0,x_0)\geq \alpha\|x_0\|^2.$ de eso concluimos que $x_0=0,$ pero esto implicaría que $f=J_{x_0}=J_0=0,$ una contradicción ya que $f$ era no nulo. Así concluimos que $R(A)=\overline{R(A)}=E^*$ mostrando que $A$ es sobreyectiva.
+       Por lo que si tomamos $x=x_0$, como $a$ es coerciva tenemos que $0=a(x_0,x_0)\geq \alpha\|x_0\|^2.$ de eso concluimos que $x_0=0,$ pero esto implicaría que $f=J_{x_0}=J_0=0,$ una contradicción ya que $f$ era no nulo. Así concluimos que $R(A)=\overline{R(A)}=E^*$ mostrando que $A$ es sobreyectiva.
 
     \end{sproof}
     \item[(c)] Deduzca que para cada $f \in E^{\star}$, existe un único $x \in E$ tal que $a(x, y)=\langle f, y\rangle$, $\forall y \in E$. Esto es, la forma bilineal coerciva a representa todo funcional lineal continuo.
     \begin{sproof}
-      Tomemos $f\in E^*$, por $(b)$, como $A$ es sobreyectiva, existe $x_1\in E$ tal que $A(x_1)=A_{x_1}=f$, es decir que para todo $y\in E$, $a(x_1,y)=A_{x_1}(y)=f(y).$ Si no existe otro ademas de $x_1$ hemos acabado. En caso contrario, suponga que existe un $x_2\in E$ tal que $a(x_2,y)=f(y)$ para todo $y$, luego como $a$ es bilineal
+      Tomemos $f\in E^*$, por $(b)$, como $A$ es sobreyectiva, existe $x_1\in E$ tal que $A(x_1)=A_{x_1}=f$, es decir que para todo $y\in E$, $a(x_1,y)=A_{x_1}(y)=f(y).$ Si no existe otro además de $x_1$ hemos acabado. En caso contrario, suponga que existe un $x_2\in E$ tal que $a(x_2,y)=f(y)$ para todo $y$, luego como $a$ es bilineal
       \begin{align*}
         0&=f(y)-f(y)\\
         &=a(x_1,y)-a(x_2,y)\\

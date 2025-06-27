@@ -4,7 +4,7 @@
      \item[(a)] Demuestre que existe un espacio topológico compacto $K$ y una isometría de $E$ en $\left(C(K),\|\cdot\|_{\infty}\right)$.
      \begin{proof}
          Considere el conjunto $K=\mathcal{B}_{E^{\star}}=\{f \in E^{\star}:\|f\|_{E^{\star}}\leq 1\}$. Luego $K$ es un espacio topológico compacto en la topología débil$^{\star}$. Definamos la función $$T \colon (E, \|\cdot\|_E) \to(C(K), \|\cdot\|_\infty)$$ donde $x \mapsto Tx \colon \mathcal{B}_{E^{\star}} \to \mathbb{R}$
-y $f \mapsto (Tx)(f) =f(x)=J_x$, por definición de las funciones $J_x$ sabemos que $Tx$ es continua en la topología débil $\star$, ahora veamos que $T$ es lineal, sean $x, y \in E$ y $\alpha, \beta \in \mathbb{R}$, entonces,
+y $f \mapsto (Tx)(f) =f(x)=J_x(f)$, por definición de las funciones $J_x$ sabemos que $Tx$ es continua en la topología débil $\star$, ahora veamos que $T$ es lineal, sean $x, y \in E$ y $\alpha, \beta \in \mathbb{R}$, entonces,
 \[
 T(\alpha x + \beta y)(f) = \langle f, \alpha x + \beta y \rangle = \alpha \langle f, x \rangle + \beta \langle f, y \rangle = \alpha (T(x)(f)) + \beta (T(y)(f)).
 \]
@@ -30,7 +30,7 @@ por lo que tenemos $\|T(x)\|_\infty = \|x\|$, así $T$ es isometría.
      \begin{proof}
          
     
-Como \( E \) es separable, la bola unidad cerrada \( K = B_{E^{\star}} \) del dual \( E^{\star} \) es compacta y metrizable en la topología débil-\(\star\) por el Teorema de Banach-Alaoglu y la separabilidad de \( E \). Además, sabemos que todo espacio métrico compacto es segundo-contable y, por tanto, separable. Así, existe un subconjunto denso numerable \( \{f_n\}_{n=1}^\infty \subseteq K \).
+Como \( E \) es separable, la bola unitaria es cerrada \( K = B_{E^{\star}} \) del dual \( E^{\star} \) es compacta y metrizable en la topología débil \(\star\) por el Teorema de Banach-Alaoglu y la separabilidad de \( E \). Además, sabemos que todo espacio métrico compacto es segundo-contable y, por tanto, separable. Así, existe un subconjunto denso numerable \( \{f_n\}_{n=1}^\infty \subseteq K \).
 
 Definamos
 \[
@@ -46,16 +46,16 @@ Ahora veamos que $T$ es lineal. Sean $x, y \in E$, y $\alpha, \beta \in \mathbb{
 \[
 T(\alpha x + \beta y) = \{ f_n(\alpha x + \beta y) \} = \alpha \{ f_n(x) \} + \beta \{ f_n(y) \},
 \]
-luego $T$ es lineal. Por lo que $T$ es continua ya que es lineal y acotada. Por lo que sólo nos falta ver que $T$ es una isometría. Por el corolario de Hahn-Banach en forma analítica, existe $f \in K \subseteq E^{\star}$ tal que $|f(x)| = \|x\|$, al ser $f_n$ denso en $K $, existe una subsucesión $\{f_{n_k}\}$ tal que $f_{n_k} \to f$ en $\sigma(E^{\star}, E)$, y en particular $f_{n_k}(x) \to f(x)$, y por lo tanto
+luego $T$ es lineal. Por lo que $T$ es continua ya que es lineal y acotada. Ahora, sólo nos falta ver que $T$ es una isometría, por el corolario de Hahn-Banach en forma analítica, existe $f \in K \subseteq E^{\star}$ tal que $|f(x)| = \|x\|$, al ser $f_n$ denso en $K $, existe una subsucesión $\{f_{n_k}\}$ tal que $f_{n_k} \to f$ en $\sigma(E^{\star}, E)$, y en particular $f_{n_k}(x) \to f(x)$, así,
 \[
 |f(x)| = \limsup_{k \to \infty} |f_{n_k}(x)| \leq \sup_{n \in \mathbb{N}} |f_n(x)| = \|T(x)\|_\infty \leq \|x\|.
 \]
 
-Por lo cual
+Con lo que 
 \[
 \|T(x)\|_\infty = \|x\|,
 \]
-y $T(x)$ es una isometría.
+concluyendo así que $T(x)$ es una isometría.
 
  \end{proof}
  \end{itemize}
