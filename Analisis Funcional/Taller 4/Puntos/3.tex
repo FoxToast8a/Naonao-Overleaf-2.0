@@ -1,0 +1,116 @@
+%!TEX root = ../main.tex
+  Considere el espacio $L^p\left(\mathbb{R}^n\right), 1 \leq p \leq \infty$. Sean
+$$
+f_0(x)=\left\{\begin{array}{ll}
+|x|^{-\alpha}, & \text { si }|x| \leq 1, \\
+0, & \text { si }|x|>1 .
+\end{array} \quad f_1(x)= \begin{cases}0, & \text { si }|x| \leq 1, \\
+|x|^\alpha, & \text { si }|x|>1 .\end{cases}\right.
+$$
+\begin{itemize}
+  \item[(I)] ¿Para qué valores de $\alpha \in \mathbb{R}, f_0 \in L^p\left(\mathbb{R}^n\right)$ ?\\
+  \begin{sol}
+Sea,
+  \[
+\| f_c \|_{L^p} = \left( \int_{\mathbb{R}^n} |f_c|^p \, d\overline{x} \right)^{1/p} = \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^q \, d\overline{x} \right)^{1/p}
+\]
+Usando coordenadas polares \( x = r\theta \), \( \theta \in S^{n-1} \) donde \( r = |x| \in [0, \infty) \)
+
+\begin{align*}
+  \| f_c \|_{L^p} &= \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^q \, dx \right)^{1/p}\\
+  & = \left( \int_0^1 \int_{S^{n-1}} r^{-p\alpha} \, dr \, dv(\theta) \, dt \right)^{1/p}\\ 
+  &= \left( \int_{S^{n-1}} dv(\theta) \int_0^1 r^{n-1-p\alpha} \, dr \right)^{1/p}
+.\end{align*}
+
+
+
+Sabemos que
+\[
+\int_\varepsilon^1 r^a \, dr = \lim_{\varepsilon \to 0} \frac{r^{a+1}}{a+1} \bigg|_\varepsilon^1 = \lim_{\varepsilon \to 0} \left( \frac{1}{a+1} - \frac{\varepsilon^{a+1}}{a+1} \right)
+\]
+si \( a + 1 > 0 \) converge, por lo que cuando \( a + 1 < 0 \) diverge. Luego, para que 
+\[
+\int_0^1 r^{n-1-p\alpha} \, dr\]
+converja se tiene que cumplir que $ n-1-p\alpha > -1 $ es decir, $n - p\alpha > 0$ por lo que, para \( \alpha < \frac{n}{p} \) la integral es finita, es decir, \( f_c \in L^p(\mathbb{R}^n) \).
+\end{sol}
+\item[(II)] ¿Para qué valores de $\alpha \in \mathbb{R}, f_1 \in L^p\left(\mathbb{R}^n\right)$ ?\\
+\begin{sol}
+Sea,
+
+\[
+\| f \|_{L^p} = \left( \int_{\mathbb{R}^n} |f|^p \, dx \right)^{1/p} = \left( \int_{|x|>1} |x|^{\alpha p} \, dx \right)^{1/p}
+\]
+
+haciendo el cambio a coordenadas polares \( x = r\theta \) con \( r = |x| \in [1, \infty) \) y \( \theta \in S^{n-1} \)
+
+\[\| f \|_{L^p} =\left( \int_1^\infty \int_{S^{n-1}} r^{\alpha p} r^{n-1} \, dv(\theta) \, dr \right)^{1/p} = \left( \int_{S^{n-1}} dv(\theta) \int_1^\infty r^{\alpha p + n - 1} \, dr \right)^{1/p}
+\]
+
+La integral \( \int_1^\infty r^{\alpha p + n - 1} \, dr \) converge si y sólo si,
+
+\[
+\alpha p + n - 1 < -1 \quad \text{ por lo que } \quad \alpha p + n < 0 \quad \text{ así }\quad \alpha < -\frac{n}{p}
+\]
+
+Por lo tanto, para \( \alpha < -\dfrac{n}{p} \) la integral es finita, es decir, \( f \in L^p(\mathbb{R}^n) \).
+\end{sol}
+
+\item[(III)] ¿Para qué valores de $\alpha \in \mathbb{R}, \frac{1}{1+|x|^\alpha} \in L^p\left(\mathbb{R}^n\right)$ ?
+\begin{sol}
+Tenemos que 
+\begin{align*}
+  \| f \|_{L^p}^{p} &= \int_{\mathbb{R}^n} \left|\frac{1}{1 + |x|^\alpha}\right|^{p}\, dx \\
+   &= \int_{\mathbb{R}^n} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx \\
+   &= \int_{\|x\|\leq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx + \int_{\|x\|\geq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx
+\end{align*}
+
+Sabemos que cuando $\|x\|\leq 1$ la integral converge entonces debemos preocuparnos por la condición cuando $\|x\| \geq 1$.
+
+Tenemos que 
+\begin{align*}
+  \int_{\|x\|\geq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx \leq  \int_{\|x\|\geq 1} \dfrac{1}{(|x|^\alpha)^p} \, dx
+\end{align*}
+
+luego, tenemos que cambiando a coordenadas polares la última integral,
+\[ 
+ \int_{0}^{\infty} \left( \frac{1}{r^{\alpha}} \right)^{p} r^{n-1} \, dr = \int_{0}^{\infty} \frac{r^{n-1}}{(r^{\alpha})^{p}} \, dr 
+\]
+
+por lo que se tiene la convergencia con las siguientes condiciones
+\[ 
+n - 1 < \alpha p 
+\]
+\[ 
+n \leq \alpha p 
+\]
+\[ 
+\frac{n}{p} \leq \alpha. 
+\]
+
+Por lo que tenemos una aproximación de la cota que deseamos para $\alpha$, ahora acotemos inferiormente la integral
+
+\begin{align*}
+    \int_{\|x\|\geq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx,
+  \end{align*} 
+  luego como $\|x\|\geq 1$  entonces 
+  \begin{align*}
+    \int_{\|x\|\geq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx
+    &\geq \int_{\|x\|\geq 1} \dfrac{1}{(2 |x|^\alpha)^p} \, dx
+  \end{align*} 
+  cambiando a coordenadas polares,
+\[ 
+ \int_{0}^{\infty} \left( \frac{1}{2r^{\alpha}} \right)^{p} r^{n-1} \, dr = \int_{0}^{\infty} \frac{r^{n-1}}{(2r^{\alpha})^{p}} \, dr 
+\]
+como $p$ es fijo entonces solo debemos poner condiciones sobre $\alpha p$, así, 
+\[ 
+n - 1 < \alpha p 
+\]
+\[ 
+n \leq \alpha p 
+\]
+\[ 
+\frac{n}{p} \leq \alpha. 
+\]
+por lo tanto, para \( \alpha \geq \dfrac{n}{p} \) la integral es finita, es decir, \( f \in L^p(\mathbb{R}^n) \). 
+\end{sol}
+\end{itemize}
