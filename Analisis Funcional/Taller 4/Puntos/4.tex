@@ -2,7 +2,65 @@
 \begin{itemize}
   \item[(I)] Sea $1<p<\infty$. Considere las secuencias $x_n=\left\{x_n^j\right\}_{j=1}^{\infty}$, para cada $n \in \mathbb{N}$ y $x=\left\{x^j\right\}_{j=1}^{\infty}$. Asuma que $x_n, x \in l^p$, para todo $n \in \mathbb{N}$.
   Muestre que $x_n \rightharpoonup x$ en $l^p$ si $y$ solo si $\left\{x_n\right\}$ es acotada (en $l^p$ ) y $ x_n^j \rightarrow x^j$ para cada entero positivo $j$.
+  \begin{sproof}
+    $(\Rightarrow)$ Observe que como $x_n\rightharpoonup x$, sabemos de inmediato que $\{\|x_n\|\}$ es acotada por la convergencia debil, solo faltaria ver que $x_n^j\to x^j$ para cada $j.$ Por el hecho de que $(l^p)^*=l^{p^\prime}$, ya que $1<p<\infty$, por el teorema de representacion sabemos que dado un funcional en el dual $\varphi$, tenemos que
+    \begin{align*}
+       \langle\varphi,x_n\rangle&=\sum_{i=1}^\infty a_ix_n^i,\\
+       \langle\varphi,x\rangle&=\sum_{i=1}^\infty a_ix^i.
+     \end{align*} 
+     Donde $\{a_i\}\in l^{p^\prime}$ con $p^\prime$ el conjugado de $p$. Por la convergencia debil y la representacion sabemos que $\sum_{i=1}^\infty a_ix_n^i\to\sum_{i=1}^\infty a_ix^i$ para cualquier secuencia, en particular si tomamos $e_j$ la secuencia donde todas las entradas son 0, salvo la $j-$esima que es 1. tenemos que 
+     $$\sum_{i=1}^\infty e_j^ix_n^i=x_n^j\to\sum_{i=1}^\infty e_j^ix^i=x^j.$$
+     Asi concluimos lo deseado para cada $j.$\\
+     $(\Leftarrow)$ Ahora queremos ver que para todo $\varphi\in (l^p)^*$ tenemos que $\langle\varphi,x_n\rangle\to\langle\varphi,x\rangle.$ Como $1<p<\infty$ sabemos que $(l^p)^*=l^{p^\prime}$, donde $p^\prime$ es el conjugado de $p,$ y por el teorema de representacion tenemos que respectivamente 
+     \begin{align*}
+       \langle\varphi,x_n\rangle&=\sum_{i=1}^\infty a_ix_n^i,\\
+       \langle\varphi,x\rangle&=\sum_{i=1}^\infty a_ix^i.
+     \end{align*} 
+     Donde $\{a_i\}\in l^{p^\prime}$, luego observe que como estas sumas convergen absolutamente por Holder, podemos operar estas de la siguiente manera
+     \begin{align*}
+       \left|\sum_{i=1}^\infty a_ix_n^i-\sum_{i=1}^\infty a_ix^i\right|&=\left|\sum_{i=1}^\infty a_i(x_n^i-x^i)\right|\\
+       &\leq \sum_{i=1}^\infty |a_i||x_n^i-x^i|
+     \end{align*}
+     Ahora como $\{a_i\}\in l^{p^\prime}$, existe $N$ tal que $\sum_{i=N+1}|a_i|^{p^\prime}\to 0$, asi con este $N$ podemos separar la anterior expresion tal que
+     $$\sum_{i=1}^\infty |a_i||x_n^i-x^i|=\sum_{i=1}^N |a_i||x_n^i-x^i|+\sum_{i=N+1}^\infty |a_i||x_n^i-x^i|$$
+     y luego usando la desigualdad de holder y la hipotesis de que $\{x_n\}$ es acotada tenemos que
+     \begin{align*}
+       \sum_{i=1}^N |a_i||x_n^i-x^i|+\sum_{i=N+1}^\infty |a_i||x_n^i-x^i|&\leq\sum_{i=1}^N |a_i||x_n^i-x^i|+\left(\sum_{i=N+1}^\infty |a_i|^{p^\prime}\right)^{\dfrac{1}{p^\prime}}\left( \sum_{i=N+1}^\infty|x_n^i-x^i|^p \right)^{\dfrac{1}{p}}\\
+       &\leq\sum_{i=1}^N |a_i||x_n^i-x^i|+\left(\sum_{i=N+1}^\infty |a_i|^{p^\prime}\right)^{\dfrac{1}{p^\prime}}\|x_n-x\|_{l^p}\\
+       &\leq\sum_{i=1}^N |a_i||x_n^i-x^i|+\left(\sum_{i=N+1}^\infty |a_i|^{p^\prime}\right)^{\dfrac{1}{p^\prime}}(\|x_n\|_{l^P}+\|x\|_{l^p}).
+     \end{align*}
+     Asi el segundo sumando es una constante por una cantidad que tiende a 0, faltaria ver que el otro sumando tiende a 0 cuando $n\to\infty.$ Pero note que como son finitos terminos por la convergencia puntual de $\{x_n^j\}$, tenemos que $|x_n^i-x^i|\to 0$ para cada $i=1,ldots N.$ De esta manera la cota superior tiende a 0, por lo que $\left|\sum_{i=1}^\infty a_ix_n^i-\sum_{i=1}^\infty a_ix^i\right|\to 0$, pero esto es lo mismo que $\langle\varphi,x_n\rangle\to\langle\varphi,x\rangle.$ Como el funcional es arbitrario llegamos a la conclusion $x_n \rightharpoonup x$.
+
+
+  \end{sproof}
   \item[(II)]  Considere la secuencia $x_n=\left(1, \frac{1}{2}, \frac{1}{3}, \ldots, \frac{1}{n}, 0,0,0, \ldots\right)$. En cuales espacios $l^p, 1 \leq p \leq \infty$, esta secuencia converge débilmente?
+  \begin{sproof}
+    Primero note que para $1<p<\infty$ podemos usar el hecho probado en la primera parte ya que para todo $n$
+    $$\|x_n\|_{l^p}^p=\sum_{i=1}^n\left(\frac{1}{i}\right)^p\leq\sum_{i=1}^\infty\frac{1}{i^p}<\infty.$$
+    Esto ultimo ya que $p>1.$ Luego pertenece a $l^p$ y ademas $\left\{x_n\right\}$ es acotada. Note que puntualmente 
+    $$x_n^j=\begin{cases}
+      0 &j>n,\\
+      \frac{1}{j} &j\leq n.
+    \end{cases}$$
+    Asi tenemos que dado $\varepsilon>0$, dado $j$ fijo, si tomamos $N=j$, tenemos que para $n\leq N$
+    $$\left|x_n^j-\frac{1}{j}\right|=\left|\frac{1}{j}-\frac{1}{j}\right|=0<\varepsilon.$$
+    Asi $x_n^j\to\frac{1}{j}$, por lo que nuestro cantidato a convergencia seria $x=(1,\frac{1}{2},\frac{1}{3},\ldots).$ Como $x\in l^p$ por lo mencionado al inicio, podemos conluir por la parte $I$ que $x_n \rightharpoonup x.$ \\
+
+    Ahora para $p=1$ note que no tiene sentido hablar de convergencia ya que $\|x\|_{l^1}=\sum_{i=1}^\infty\frac{1}{i},$ pero esta serie es la armonica, por lo que diverge, asi nuestro candidato a convergencia $x\notin l^1.$\\
+
+    Para el caso $p=\infty.$ Observe que 
+    $$\|x_n-x\|_{l^\infty}=\sup_{j\in\mathbb{Z}^+}|x_n^j-x^j|.$$
+    Luego por la forma en la que estan definidas las suceciones tenemos que
+    $$|x_n^j-x^j|=\begin{cases}
+      0& j\leq n,\\
+      \frac{1}{j} & j>n.
+    \end{cases}$$
+    Luego en ambos casos tenemos que $|x_n^j-x^j|\leq \dfrac{1}{n}.$ Por lo que $|x_n^j-x^j|\leq \dfrac{1}{n}$, Asi
+    $$\|x_n-x\|_{l^\infty}\leq \frac{1}{n}.$$
+    Asi cuando $n\to \infty$, tenemos que $\|x_n-x\|_{l^\infty}\to 0$, luego $x_n\to x$ en $l^\infty$ y como la convergencia fuerte implica la debil, concluimos que $x_n \rightharpoonup x.$
+
+    
+  \end{sproof}
 \end{itemize}
 
 
