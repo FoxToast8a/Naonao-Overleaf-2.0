@@ -26,7 +26,7 @@ Sea entonces \( E := \bigcup_{k=1}^\infty E_k \), un conjunto de medida nula. Co
 \[
 |f_n(x) - f_m(x)| \leq \frac{1}{k} \quad \text{ para todo } m, n \geq N_k.
 \]
-Esto muestra que \( (f_n(x)) \) es de Cauchy en \( \mathbb{R} \), espacio completo, por lo que converge a un límite que denotamos por \( f(x) \). Pasando al límite cuando \( m \to \infty \), se obtiene
+Esto muestra que \( (f_n(x)) \) es de Cauchy en \( \mathbb{R} \), por lo que converge a un límite que denotamos por \( f(x) \). Pasando al límite cuando \( m \to \infty \), se obtiene
 \[
 |f(x) - f_n(x)| \leq \frac{1}{k} \quad \text{ para todo } x \in \Omega \setminus E, \text{ para todo } n \geq N_k.
 \]
@@ -43,42 +43,36 @@ Para ver que \( f \in L^\infty \), notamos que para todo \( x \in \Omega \setmin
 \[
 |f(x)| \leq |f(x) - f_n(x)| + |f_n(x)| \leq \frac{1}{k} + \|f_n\|_{L^\infty},
 \]
-de modo que \( f \) es esencialmente acotada, es decir, \( f \in L^\infty \).
-
-En consecuencia, \( f_n \to f \) en \( L^\infty \).
+de modo que \( f \) es esencialmente acotada, es decir, \( f \in L^\infty \). En consecuencia, \( f_n \to f \) en \( L^\infty \).
 
 \subsubsection*{Caso 2: \( 1 \leq p < \infty \)}
 
-Sea \( (f_n) \) una sucesión de Cauchy en \( L^p \). Como \( L^p \) es un espacio métrico, basta demostrar que existe una subsucesión que converge en \( L^p \).
-
-Extraemos una subsucesión \( (f_{n_k}) \) tal que
+Sea \( (f_n) \) una sucesión de Cauchy en \( L^p \). Como \( L^p \) es un espacio métrico, basta demostrar que existe una subsucesión que converge en \( L^p \). Tomemos una subsucesión \( (f_{n_k}) \) tal que
 \[
 \|f_{n_{k+1}} - f_{n_k}\|_p \leq \frac{1}{2^k} \quad \text{ para todo } k \geq 1.
 \]
-Esto se construye eligiendo inductivamente \( n_1, n_2, \dots \) con \( n_{k+1} \geq n_k \) tales que \( \|f_m - f_n\|_p \leq \frac{1}{2^{k+1}} \) para todo \( m, n \geq n_{k+1} \), lo cual es posible por ser \( (f_n) \) Cauchy.
-
-Definimos \( f_k := f_{n_k} \), y consideramos:
+Esto se construye eligiendo inductivamente \( n_1, n_2, \dots \)  con \( n_{k+1} \geq n_k \) tales que \( \|f_m - f_n\|_p \leq \dfrac{1}{2^{k+1}} \) para todo \( m, n \geq n_{k+1} \), lo cual es posible por ser \( (f_n) \) Cauchy. Definimos \( f_k := f_{n_k} \), y consideramos
 \[
-g_n(x) := \sum_{k=1}^n |f_{k+1}(x) - f_k(x)|.
+g_n(x) := \sum_{k=1}^n |f_{k+1}(x) - f_k(x)|,
 \]
-Cada \( g_n \) es medible, no decreciente y cumple
+cada \( g_n \) es medible, no decreciente y cumple
 \[
 \|g_n\|_p \leq \sum_{k=1}^n \|f_{k+1} - f_k\|_p \leq \sum_{k=1}^\infty \frac{1}{2^k} = 1.
 \]
-Por el Teorema de Convergencia Monótona, existe una función medible \( g \in L^p \), finita casi en todas partes, tal que
+Por el Teorema de Convergencia Monótona, existe una función medible \( g \in L^p \), finita casi en toda parte, tal que
 \[
-g_n(x) \to g(x) \quad \text{casi en todas partes}.
+g_n(x) \to g(x) \quad \text{casi en toda parte}.
 \]
 
-Por otro lado, para \( m \geq n \geq 2 \), se tiene:
+Por otro lado, para \( m \geq n \geq 2 \), se tiene
 \[
 |f_m(x) - f_n(x)| \leq \sum_{k=n}^{m-1} |f_{k+1}(x) - f_k(x)| = g_m(x) - g_{n-1}(x) \leq g(x) - g_{n-1}(x).
 \]
-Entonces, \( (f_n(x)) \) es de Cauchy en \( \mathbb{R} \) casi en todas partes, y por ser \( \mathbb{R} \) completo, converge a una función \( f(x) \), finita casi en todas partes.
+Entonces, \( (f_n(x)) \) es de Cauchy en \( \mathbb{R} \) casi en toda parte, y por ser \( \mathbb{R} \) completo converge a una función \( f(x) \), finita casi en toda parte.
 
 Además, para \( n \geq 2 \),
 \[
-|f(x) - f_n(x)| \leq g(x) - g_{n-1}(x)\leq g(x) \quad \text{casi en todas partes}.
+|f(x) - f_n(x)| \leq g(x) - g_{n-1}(x)\leq g(x) \quad \text{casi en toda parte}.
 \]
 Elevando a la potencia \( p \),
 \[
@@ -92,12 +86,7 @@ Es decir,
 \[
 \|f_n - f\|_p \to 0,
 \]
-Como consecuencia, la función \( f \) pertenece a \( L^p \) por ser el límite en norma de funciones de \( L^p \), es decir,
-\[
-f \in L^p.
-\]
-
-Esto demuestra que \( f_n \to f \) en \( L^p \), y que \( L^p \) es completo.
+como consecuencia, la función \( f \) pertenece a \( L^p \) por ser el límite en norma de funciones de \( L^p \). Esto demuestra que \( f_n \to f \) en \( L^p \), y que \( L^p \) es completo.
 
 
 

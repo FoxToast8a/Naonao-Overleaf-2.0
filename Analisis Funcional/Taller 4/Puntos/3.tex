@@ -12,12 +12,11 @@ $$
   \begin{sol}
 Sea,
   \[
-\| f_c \|_{L^p} = \left( \int_{\mathbb{R}^n} |f_c|^p \, d\overline{x} \right)^{1/p} = \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^q \, d\overline{x} \right)^{1/p}
+\| f_0 \|_{L^p} = \left( \int_{\mathbb{R}^n} |f_0|^p \, d\overline{x} \right)^{1/p} = \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^q \, d\overline{x} \right)^{1/p}
 \]
 Usando coordenadas polares \( x = r\theta \), \( \theta \in S^{n-1} \) donde \( r = |x| \in [0, \infty) \)
-
 \begin{align*}
-  \| f_c \|_{L^p} &= \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^q \, dx \right)^{1/p}\\
+  \| f_0 \|_{L^p} &= \left( \int_{\frac{1}{2} \times 1+1} |x_1^{-p}|^\alpha \, dx \right)^{1/p}\\
   & = \left( \int_0^1 \int_{S^{n-1}} r^{-p\alpha} \, dr \, dv(\theta) \, dt \right)^{1/p}\\ 
   &= \left( \int_{S^{n-1}} dv(\theta) \int_0^1 r^{n-1-p\alpha} \, dr \right)^{1/p}
 .\end{align*}
@@ -28,22 +27,22 @@ Sabemos que
 \[
 \int_\varepsilon^1 r^a \, dr = \lim_{\varepsilon \to 0} \frac{r^{a+1}}{a+1} \bigg|_\varepsilon^1 = \lim_{\varepsilon \to 0} \left( \frac{1}{a+1} - \frac{\varepsilon^{a+1}}{a+1} \right)
 \]
-si \( a + 1 > 0 \) converge, por lo que cuando \( a + 1 < 0 \) diverge. Luego, para que 
+cuando \( a + 1 > 0 \) converge y cuando \( a + 1 < 0 \) diverge. Luego, para que 
 \[
 \int_0^1 r^{n-1-p\alpha} \, dr\]
-converja se tiene que cumplir que $ n-1-p\alpha > -1 $ es decir, $n - p\alpha > 0$ por lo que, para \( \alpha < \frac{n}{p} \) la integral es finita, es decir, \( f_c \in L^p(\mathbb{R}^n) \).
+converja se tiene que cumplir que $ n-1-p\alpha > -1 $ es decir, $n - p\alpha > 0$ por lo que, para \( \alpha < \dfrac{n}{p} \) la integral es finita, es decir, \( f_0 \in L^p(\mathbb{R}^n) \).
 \end{sol}
 \item[(II)] ¿Para qué valores de $\alpha \in \mathbb{R}, f_1 \in L^p\left(\mathbb{R}^n\right)$ ?\\
 \begin{sol}
 Sea,
 
 \[
-\| f \|_{L^p} = \left( \int_{\mathbb{R}^n} |f|^p \, dx \right)^{1/p} = \left( \int_{|x|>1} |x|^{\alpha p} \, dx \right)^{1/p}
+\| f_1 \|_{L^p} = \left( \int_{\mathbb{R}^n} |f|^p \, dx \right)^{1/p} = \left( \int_{|x|>1} |x|^{\alpha p} \, dx \right)^{1/p}
 \]
 
 haciendo el cambio a coordenadas polares \( x = r\theta \) con \( r = |x| \in [1, \infty) \) y \( \theta \in S^{n-1} \)
 
-\[\| f \|_{L^p} =\left( \int_1^\infty \int_{S^{n-1}} r^{\alpha p} r^{n-1} \, dv(\theta) \, dr \right)^{1/p} = \left( \int_{S^{n-1}} dv(\theta) \int_1^\infty r^{\alpha p + n - 1} \, dr \right)^{1/p}
+\[\| f_1 \|_{L^p} =\left( \int_1^\infty \int_{S^{n-1}} r^{\alpha p} r^{n-1} \, dv(\theta) \, dr \right)^{1/p} = \left( \int_{S^{n-1}} dv(\theta) \int_1^\infty r^{\alpha p + n - 1} \, dr \right)^{1/p}
 \]
 
 La integral \( \int_1^\infty r^{\alpha p + n - 1} \, dr \) converge si y sólo si,
@@ -52,7 +51,7 @@ La integral \( \int_1^\infty r^{\alpha p + n - 1} \, dr \) converge si y sólo s
 \alpha p + n - 1 < -1 \quad \text{ por lo que } \quad \alpha p + n < 0 \quad \text{ así }\quad \alpha < -\frac{n}{p}
 \]
 
-Por lo tanto, para \( \alpha < -\dfrac{n}{p} \) la integral es finita, es decir, \( f \in L^p(\mathbb{R}^n) \).
+Por lo tanto, para \( \alpha < -\dfrac{n}{p} \) la integral es finita, es decir, \( f_1 \in L^p(\mathbb{R}^n) \).
 \end{sol}
 
 \item[(III)] ¿Para qué valores de $\alpha \in \mathbb{R}, \frac{1}{1+|x|^\alpha} \in L^p\left(\mathbb{R}^n\right)$ ?
@@ -87,7 +86,7 @@ n \leq \alpha p
 \frac{n}{p} \leq \alpha. 
 \]
 
-Por lo que tenemos una aproximación de la cota que deseamos para $\alpha$, ahora acotemos inferiormente la integral
+Con lo cual tenemos una aproximación de la cota que deseamos para $\alpha$, ahora acotemos inferiormente la integral
 
 \begin{align*}
     \int_{\|x\|\geq 1} \dfrac{1}{(1 + |x|^\alpha)^p} \, dx,
@@ -111,6 +110,6 @@ n \leq \alpha p
 \[ 
 \frac{n}{p} \leq \alpha. 
 \]
-por lo tanto, para \( \alpha \geq \dfrac{n}{p} \) la integral es finita, es decir, \( f \in L^p(\mathbb{R}^n) \). 
+por lo tanto, como las cotas para $\alpha$ son iguales tenemos que cuando \( \alpha \geq \dfrac{n}{p} \) la integral es finita, es decir, \( f \in L^p(\mathbb{R}^n) \). 
 \end{sol}
 \end{itemize}

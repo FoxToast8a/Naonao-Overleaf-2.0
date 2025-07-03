@@ -5,9 +5,12 @@
 \begin{itemize}
 \item[(a)] Dado $x_0 \in \mathbb{R}$, considere $\delta_{x_0}$ la medida de Dirac centrada en $x_0$ dada por: $\delta_{x_0}(A)=1$ si $x_0 \in A$, y $\delta_{x_0}(A)=0$ si $x_0 \notin A$, para cada $A \in \mathcal{B}(\mathbb{R})$. Muestre que $\delta_{x_0}$ es una medida.
 \begin{sproof}
-    Es claro que $\delta_{x_0}:\mathcal{B}(\mathbb{R})\to [0,\infty]$ ya que las únicas imágenes de la función son 0 y 1. Ahora comprobemos las dos condiciones.\\
+    Es claro que $\delta_{x_0}:\mathcal{B}(\mathbb{R})\to [0,\infty]$ ya que las únicas imágenes de la función son 0 y 1. Ahora comprobemos las dos condiciones.
 
-    Si $A=\varnothing$, claramente $x_0\notin A$, luego por la definición $\delta_{x_0}(A)=0,$ como queríamos.
+    Si $A=\varnothing$, claramente $x_0\notin A$, luego por la definición $\delta_{x_0}(A)=0,$ como queríamos. Si  $x_0 \notin \bigcup_{j=1}^{\infty} A_j $, entonces $x_0 \notin A_j$ para todo $j \in \mathbb{Z^+}$, por lo cual, 
+    \[
+\sum_{j=1}^{\infty} \delta_{\chi_0}(A_j) = 0 = \delta_{\chi_0}\left(\bigcup_{j=1}^{\infty} A_j\right).
+\]
 Ahora, si \(x_0 \in \bigcup_{i=1}^{\infty} A_i\), entonces \(x_0 \in A_j\) para algún \(j\) único, puesto que los conjuntos son disjuntos. Luego, 
 \[
 \delta_{\chi_0}(A_i) = 
@@ -20,14 +23,14 @@ así,
 \[
 \sum_{i=1}^{\infty} \delta_{\chi_0}(A_i) = 1 = \delta_{\chi_0}\left(\bigcup_{i=1}^{\infty} A_i\right).
 \]
-por lo que $\delta$ es una medida.
+por lo que $\delta_{x_0}$ es una medida.
 \end{sproof}
 \item[(b)] Sea $f: \mathbb{R} \rightarrow \mathbb{R}$ una función medible. Muestre que
 $$
 \int_{\mathbb{R}} f(x) d \delta_{x_0}=f\left(x_0\right)
 $$
 \begin{proof}
-Para probar esto primero veamos que esto se tiene para funciones simples positivas, sea \( f(x) = \sum_{i=1}^n a_i \chi_{A_i}(x) \), donde 
+Para probar esto primero veamos que se tiene para funciones simples positivas, sea \( f(x) =\displaystyle \sum_{i=1}^n a_i \chi_{A_i}(x) \), donde 
 \[
 \chi_{A_i}(x) = \begin{cases} 
 1, & \text{si } x \in A_i, \text{ con } a_i \geq 0, A_i \in \mathcal{B}(\mathbb{R}) \\
@@ -36,11 +39,11 @@ Para probar esto primero veamos que esto se tiene para funciones simples positiv
 \]
 para todo \( i = 1,\dots,n \) y \( A_i \cap A_j = \emptyset \) si \( i \neq j \).
 
-Por definición,
+Por definición de funciones simples,
 \[
-\int_{\mathbb{R}} f(x) \, d\delta_x = \int_{\mathbb{R}} \left( \sum_{i=1}^n a_i \chi_{A_i}(x) \right) d\delta_x = \sum_{i=1}^n a_i \delta_x(A_i).
+\int_{\mathbb{R}} f(x) \, d\delta_x = \int_{\mathbb{R}} \left( \sum_{i=1}^n a_i \chi_{A_i}(x) \right) d\delta_x = \sum_{i=1}^n a_i \delta_x(A_i)
 \]
-Como \( A_i \cap A_j = \emptyset \) para \( j \neq i \), entonces para algún \( j \), \( \delta_x(A_j) = 1 \) y en el resto es \( 0 \), por lo  tanto,
+como \( A_i \cap A_j = \emptyset \) para \( j \neq i \), entonces para algún \( j \), \( \delta_x(A_j) = 1 \) y en el resto es \( 0 \), por lo  tanto,
 \[
 \int_{\mathbb{R}} f(x) \, d\delta_x = \sum_{i=1}^n a_i \chi_{A_i}(x)= a_j  = f(x).
 \]
@@ -55,13 +58,13 @@ para cada \( x \in \mathbb{R} \). Luego, por el teorema de la convergencia monó
 \[
 \int_{\mathbb{R}} f(x) \, d\delta_x = \lim_{n \to \infty} \int_{\mathbb{R}} f_n(x) \, d\delta_x = \lim_{n \to \infty} f_n(x_0) = f(x_0),
 \]
-por lo que se tiene para funciones medibles no negativas.
+por lo que esto se cumple para funciones medibles no negativas.
 
 Por último, veamos el caso general. Para \( f: \mathbb{R} \to \mathbb{R} \) una función medible, recordamos que \( f = f^+ - f^- \), donde \( f^+ \), \( f^- \) son funciones medibles no negativas. Luego,
 \[
 \int_{\mathbb{R}} f(x) \, d\delta_x = \int_{\mathbb{R}} f^+(x) \, d\delta_x - \int_{\mathbb{R}} f^-(x) \, d\delta_x.
 \]
-Por lo anteriormente probado, como la parte negativa y la parte positiva son funciones medibles no negativas,
+Por lo probado anteriormente, como la parte negativa y la parte positiva son funciones medibles no negativas,
 \[
 \int_{\mathbb{R}} f(x) \, d\delta_x = f^+(x_0) - f^-(x_0) = f(x_0).
 \]
@@ -93,11 +96,8 @@ por lo cual, $f$ es integrable respecto a la medida de Dirac centrada en 0, pero
 Para ver que es medida, primero veamos que la medida del vacío es nula, claramente $\mu(\emptyset) = \text{card}(\emptyset) = 0.$ Sean \( A_i \subseteq \mathcal{P}(\mathbb{N}) \) con \( A_i \cap A_j = \emptyset \) para \( i \neq j \), si algún \( A_i \) es infinito, entonces \( \bigcup_{i=1}^{\infty} A_i \) es infinito y así,
 \[ \mu\left(\bigcup_{i=1}^{\infty} A_i\right) = \infty = \sum_{i=1}^{\infty} \mu(A_i), \]
 ya que \( \mu(A_i) = \infty \) para algún \( i \). Si  todos los \( A_i \) son finitos, entonces \( \mu(A_i) = \text{card}(A_i) \), y como son disjuntos
-\[ \mu\left(\bigcup_{i=1}^{\infty} A_i\right) = \text{card}\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \text{card}(A_i). \]
-
-Para algún \( N \in \mathbb{Z}^+ \), si \( n \geq N \) entonces \( A_n = \emptyset \), por lo que
-\[ \mu\left(\bigcup_{i=1}^{\infty} A_i\right)= \sum_{i=1}^{\infty} \mu(A_i). \]
-              
+\[ \mu\left(\bigcup_{i=1}^{\infty} A_i\right) = \text{card}\left(\bigcup_{i=1}^{\infty} A_i\right) = \sum_{i=1}^{\infty} \text{card}(A_i). \]  
+por lo que $\mu$ es una medida        
 \end{proof}
                 
 
@@ -107,7 +107,7 @@ $$
 $$
 \begin{proof}
 
-Teniendo en cuenta que \( N = \bigcup^{\infty}_{i=1} \{n\} \), donde para cada \( n \in \mathbb{N} \), \( \{n\} \) es un conjunto medible. Por lo que, podemos definir las funciones simples \( \chi_{\{i\}} \) para todo \( j \in \mathbb{N} \), como toda función medible se puede escribir como \( f = \{a_j\}_{j \in \mathbb{N}} \), si tomamos \( f \) no negativa entonces
+Teniendo en cuenta que \( N = \bigcup^{\infty}_{i=1} \{n\} \), donde para cada \( n \in \mathbb{N} \), \( \{n\} \) es un conjunto medible, podemos definir las funciones simples \( \chi_{\{i\}} \) para todo \( i \in \mathbb{N} \). Como toda función medible se puede escribir como \( f = \{a_j\}_{j \in \mathbb{N}} \), si tomamos \( f \) no negativa entonces
 \[
 f(x) = \sum_{j=1}^{\infty} a_j \chi_{i_j}(x), \quad \text{con } a_j \geq 0, \text{ para todo } j \in \mathbb{N},
 \]
