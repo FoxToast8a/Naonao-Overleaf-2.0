@@ -1,0 +1,81 @@
+%!TEX root = ../main.tex
+ Sea $H$ un espacio de Hilbert y $ A \in L(H)=L(H, H)$ (el conjunto de funciones lineales continuas de $H$ en $H$ ).
+ \begin{itemize}
+\item[(I)] Para $y \in H$ fijo, muestre que el funcional $\Phi_y: H \rightarrow \mathbb{R}$ dado por $x \mapsto$ $(A x, y)$ es lineal y continuo. Deduzca que existe un único elemento en $H$, que denotaremos por $A^{\star} y$, tal que
+$$
+(A x, y)=\left(x, A^{\star} y\right), \quad \forall x \in H
+$$
+\begin{sproof}
+    Probemos primero la linealidad del funcional. Sean $x_1,x_2\in H$ y $\lambda\in \mathbb{R}$, como $A$ es una funcion lineal y el producto interno es bilineal, tenemos
+    \begin{align*}
+        \Phi_y(x_1+\lambda x_2)&=(A(x_1+\lambda x_2),y)\\
+        &=(A(x_1)+\lambda A(x_2),y)\\
+        &=(Ax_1,y)+\lambda(Ax_2,y)\\
+        &=\Phi_y(x_1)+\lambda\Phi_y(x_2).
+    \end{align*}
+    Mostrando asi la linealidad. Para ver que es continuo basta con ver que es acotado, pero por la desigualdad de Cauchy-Schwartz  tenemos que
+    \begin{align*}
+        |\Phi_y(x)|&=|(Ax,y)|\\
+        &\leq (Ax,Ax)^{\frac{1}{2}}(y,y)^\frac{1}{2}\\
+        &=\|Ax\|\|y\|.
+    \end{align*}
+    Note que esto ultimo es debido a que $H$ es un espacio de Hilbert, por lo que $\|\cdot\|$ es la norma en $H$ inducida por el producto interno. Como por hipotesis $A\in L(H,H)$, asi sabemos que $\|Ax\|\leq \|A\|\|x\|$, es decir $\|Ax\|\|y\|\leq \|A\|\|y\|\|x\|,$ pero como $y$ es fijo, si tomamos $M=\|A\|\|y\|$ concluimos que
+    $$|\Phi_y(x)|\leq M\|x\|,$$
+    es decir $\Phi_y$ es actodado y por tanto continuo para cada $y$, por lo que $\Phi_y\in H^*.$ Ahora por el teorema de representacion de Riesz-Frechet existe un unico elemento $z_y\in H$ tal que
+    $$\Phi_y(x)=(z,x).$$
+    Para todo $x\in H.$ Note que este $z_y$ es unico para cada $y$, por lo que denotaremos $z_y:=A^*y$. Por la definicion de $\Phi_y$ y como el producto interno es simetrico conluimos la existencia de un unico elemento en $H$ tal que
+    $$(Ax,y)=(x,A^*y).$$ 
+\end{sproof}
+\item[(II)] Muestre que $A^{\star} \in L(H,H) . A^{\star}$ se llama el adjunto de $A$.
+\begin{sproof}
+    Primero note que el operador $A^*$ esta bien definido, ya que como dijimos en el anterior punto para cada $y$, existe un unico $z_y$, que definimos como $A^*y=z_y,$ por lo que si es una funcion. Ahora veamos que es lineal, sean $y_1,y_2\in H$ y $\lambda\in \mathbb R$ note que por la propiedad respecto al producto interno del operador tenemos que para todo $x\in H$
+    \begin{align*}
+        (x,A^*(y_1+\lambda y_2))&=(Ax,y_1+\lambda y_2)\\
+        &=(Ax,y_1)+\lambda(Ax,y_2)\\
+        &=(x,A^*y_1)+\lambda(x,A^*y_2)\\
+        &=(x,A^*y_1+\lambda A^*y_2),
+    \end{align*}
+    note que usamos la bilinialidad del producto interno. Si ahora restamos y usamos la bilinealidad nuevamente obtenemos que
+    $$(x,A^*(y_1+\lambda y_2)-(A^*y_1+\lambda A^*y_2))=0,$$
+    para todo $x\in H$, si en particular tomamos $x=A^*(y_1+\lambda y_2)-(A^*y_1+\lambda A^*y_2)$, como el producto interno es no nulo para todo elemento diferente del 0, tenemos que 
+    $$A^*(y_1+\lambda y_2)-(A^*y_1+\lambda A^*y_2)=0,$$
+    es decir
+    $$A^*(y_1+\lambda y_2)=A^*y_1+\lambda A^*y_2.$$
+    Concluyendo asi la linealidad. Por ser lineal basta con ver que el operador es acotado, note que como la norma de $H$ viene dada por el producto interno y por la desigualdad de Cauchy-Schwartz tenemos que
+    \begin{align*}
+        \|A^*y\|^2&=(A^*y,A^*y)\\
+        &=|(A(A^*y),y)|\\
+        &\leq\|A(A^*y)\|\|y\|,
+    \end{align*}
+    Como $A\in L(H,H)$, tenemos que   $\|A(A^*y)\|\leq \|A\|\|A^*y\|$, Asi si llamamos $M=\|A\|$
+    $$\|A(A^*y)\|\|y\|\leq M\|A^*y\|\|y\|,$$
+    y por tanto
+    $$\|A^*y\|^2\leq M\|A^*y\|\|y\| ,$$
+
+    note que si $\|A^* y\|=0$, se tiene trivialmente la acotacion, en cambio si $\|A^* y\|>0$, podemos dividir a ambos lados por esta cantidad obteniendo asi
+    $$\|A^*y\|\leq M\|y\|.$$
+    Concluyendo que es acotado y por tanto continuo, asi $A^*\in L(H,H).$
+
+\end{sproof}
+\item[(III)] Verifique que $\left(A^{\star}\right)^{\star}=A$ y que $\left\|A^{\star}\right\|=\|A\|$.
+\begin{sproof}
+    Para la primera parte, sean $x,y\in H$, note que por la propiedad del adjunto tenemos que
+    \begin{align*}
+         (x,(A^*)^*y)&=(A^*x,y)\\
+         &=(y,A^*x)\\
+         &=(Ay,x)\\
+         &(x,Ay).
+     \end{align*}
+     Observe que en dos ocasiones usamos la simetria del producto interno. Luego por la bilinealidad
+     $$(x,(A^*)^*y-Ay)=0,$$
+     si tomamos $x=(A^*)^*y-Ay$, de manera similar a la prueba de la linealidad del adjunto, concluimos que $(A^*)^*y-Ay=0$, luego $(A^*)^*y=Ay,$ pero note que en este proceso $y$ era arbitrario, por lo que como son iguales para todo $y$, podemos concluir que
+     $$(A^*)^*=A.$$
+     Para la segunda parte en el anterior numeral habiamos conluido que
+     $$\|A^*y\|\leq \|A\|\|y\|.$$
+     Por lo que
+     $$\|A^*\|=\sup_{\substack{\|y\|=1\\y\in H}}\|A^*y\|\leq \sup_{\substack{\|y\|=1\\y\in H}}\|A\|\|y\|=\|A\|.$$
+     Por lo que faltaria ver la otra desigualdad. Pero esto se ve facilmente ya que como $\|A^*\|\leq \|A\|$, si reemplazamos $A$ con $A^*$, tenemos que $\|(A^*)^*\|\leq \|A^*\|,$ luego por la anterior parte, como $(A^*)^*=A$, asi concluimos que
+     $$\|A\|\leq \|A^*\|.$$ 
+     De esta manera concluimos la igualdad de las normas.
+\end{sproof}
+\end{itemize}
