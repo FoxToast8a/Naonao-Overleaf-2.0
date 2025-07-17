@@ -5,7 +5,95 @@ T u(x)=\int_0^x u(t) d t
 $$
 \begin{itemize}
     \item[(a)] Demuestre que $T \in \mathcal{K}\left(L^p((0,1))\right)$.
+    \begin{sproof}
+        Probemos primero que efectivamente es un operador lineal y acotado. La linealidad del  operador es clara ya que se hereda de la linealidad de la integral. Ahora  por la desigualdad de Holder
+        $$\|u\|_{L^1}=\int_0^1|u(t)|\,dt\leq \|1\|_{L^{p^\prime}}\|u\|_{L^p}=\|u\|_{L^p}.$$
+        donde $p^\prime$ es el conjugado de $p.$ Asi tenemos que
+        \begin{align*}
+            \|Tu\|_{L^p}&=\left(\int_0^1|Tu(x)|^p\,dx\right)^{1/p}\\
+            &=\left(\int_0^1\left|\int_0^xu(t)dt\right|^p\,dx\right)^{1/p}\\
+            &\leq\left(\int_0^1\left(\int_0^1|u(t)|dt\right)^p\,dx\right)^{1/p}\\
+            &=\int_0^1|u(t)|\,dt\\
+            &=\|u\|_{L^1}\\
+            &=\|u\|_{L^p},
+        \end{align*}
+        Concluyendo así que $T$ es acotado y ademas particularmente tenemos que $\|T\|\leq 1.$ Faltaría ver que efectivamente es compacto el operador. Para esto usaremos el teorema de Kolmogorov. Riesz-Frechet enunciado en el Brezis. Para que no haya problemas como de igual manera $|h|\to 0$, tomaremos $|h|<1$, asi si tomamos $f\in T(B)$, sabemos que existe $u\in B$ tal que $Tu=f$, luego si $h\leq 0$
+        \begin{align*}
+            \|\tau_hf-f\|_{L^p}&=\left(\int_0^1|\tau_hf(x)-f(x)|^p\,dx\right)^{1/p}\\
+            &=\left(\int_0^1|\tau_hTu(x)-Tu(x)|^p\,dx\right)^{1/p}\\
+            &=\left(\int_0^1|Tu(x+h)-Tu(x)|^p\,dx\right)^{1/p}\\
+            &=\left(\int_0^1\left|\int_0^{x+h}u(t)\,dt-\int_0^xu(t)\,dt\right|^p\,dx\right)^{1/p}\\
+            &=\left(\int_0^1\left|\int_{x+h}^{x}u(t)\,dt\right|^p\,dx\right)^{1/p}\\
+            &\leq \left(\int_0^1\left(\int_{x+h}^{x}|u(t)|\,dt\right)^p\,dx\right)^{1/p}\\
+        \end{align*}
+        Como $u\in B$ por Holder como hicimos al inicio tenemos que
+        $$\int_{x+h}^x|u(t)|\,dt\leq \| \chi_{(x+h,x)} \|_{L^{p^\prime}}\|u\|_{L^p}\leq |h|^{1/p^\prime}$$
+        Así concluimos que cuando $|h|\to 0$, $\|\tau_hf-f\|_{L^p}\to 0$ para toda $f\in T(B)$, para el caso $h\geq 0$ la cuenta es análoga y solo cambia el orden de escritura en los intervalos de integración, por lo que el teorema citado nos dice que como $(0,1)$ tiene medida finita y $T(B)$ es acotado, luego la clausura de este conjunto de compacta en $L^p(0,1)$, asi concluimos que el operador es compacto.
+        
+    \end{sproof}
 \item[(b)] Determine $E V(T)$ y $\sigma(T)$.
+    \begin{sproof}
+        Dado que $T$ es compacto, sabemos que $0\in \sigma(T)$ y que $\sigma(T)\setminus \{0\}=EV(T)\setminus\{0\},$ entonces consideremos $\lambda\neq 0,$ como $l^p(0,1)\subset L^1(0,1)$, por diferenciación  de Lebesgue dada $u\in L^p(0,1)$ tenemos que
+        $$\lim_{h\to 0^+}\int_x^{x+h}u(y)\,dy=u(x)$$
+        Para casi todo $x\in(0,1)$, se puede simplificar la elección de $h>0$ ya que en caso contrario solo cambian los limites de integración. Así tenemos que la función
+        $$Tu(x)=\int_0^xu(t)\,dt$$
+        es derivable en casi toda parte en $(0,1)$, luego si escogemos $u\neq 0$ tal que $Tu=\lambda u$, tenemos por la derivavilidad que
+        $$u(x)=\lambda u^\prime(x)$$
+        tomando $x\to 0^+$ nos damos cuenta de la formula de $Tu$ que $u(0)=0$ es la manera continua de extender a $u$ al intervalo $[0,1)$, asi estamos resolviendo el problema de valor inicial
+        $$\begin{cases}
+            u^\prime=\frac{1}{\lambda}u\\
+            u(0)=0
+        \end{cases}$$
+        La solución general de esta EDO es $u(x)=Ce^{x/\lambda}$, pero por la condición inicial $C=0$, concluyendo que la $u=0$, esto es una contradicción, así concluimos que  $\sigma(T)=\{0\}$ y $EV(T)=\varnothing$, ya que lo anterior nos dice que $\mathbb{R}\setminus\{0\}\subset\rho(T).$
+
+    \end{sproof}
 \item[(c)] Dé una fórmula explícita para $(T-\lambda I)^{-1}$ cuando $\lambda \in \rho(T)$.
+    \begin{sproof}
+        Sea $u\in L^p(0,1)$ y $\lambda\neq 0$, por definición $f:=(T-\lambda I)u=Tu-\lambda u$, si llamamos
+        $$h(x)=Tu(x)$$
+        Por lo visto en el item anterior  sabemos que $h$ es derivable para casi todo $x\in(0,1)$ y que ademas $h^\prime=u$ con $x\in(0,1),$ asi tenemos el siguiente problema de valor inicial
+        $$\begin{cases}
+            h-\lambda h^\prime=f\\
+            h(0)=0
+        \end{cases}$$
+        Luego la unica solucion de este PVI es
+        $$h(x)=-\frac{1}{\lambda}e^{x/\lambda}\int_0^xe^{-t/\lambda}f(t)\,dt$$
+        Por un argumento analogo a la parte $b$ la parte integral de la solución es derivable en casi toda parte y en particular tenemos que por la regla del producto
+        $$h^\prime(x)=-\frac{1}{\lambda^2}e^{x/\lambda}\int_0^xe^{-t/\lambda}f(t)\,dt-\frac{1}{\lambda}e^{-x/\lambda}f(x)e^{x/\lambda}$$
+        Asi como $h^\prime=u$ tenemos que
+        $$u(x)=-\frac{1}{\lambda^2}e^{x/\lambda}\int_0^xe^{-t/\lambda}f(t)\,dt-\frac{1}{\lambda}f(x)$$
+        Así como $u=(T-\lambda I)^{-1}f$, deducimos que el operador inverso es la formula dada, es decir
+        $$(T-\lambda I)^{-1}f=-\frac{1}{\lambda^2}e^{x/\lambda}\int_0^xe^{-t/\lambda}f(t)\,dt-\frac{1}{\lambda}f(x)$$
+    \end{sproof}
 \item[(d)] Determine $T^{\star}$. 
+    Por definición
+    \begin{sproof} 
+    \begin{align*}
+        T^*:(L^p(0,1))^*&\to(L^p(0,1))^*\\
+        \mu&\to T^*\mu 
+    \end{align*}
+    Donde 
+    \begin{align*}
+        T^*\mu:L^p(0,1)&\to \mathbb{R}\\
+        f&\to\langle T^*\mu,f\rangle:=\langle\mu,Tf\rangle.
+    \end{align*}
+    Esto ultimo por la definición de adjunto. Ahora por el teorema de representación de Riesz, existe una única $g_\mu\in L^{p^\prime}(0,1)$ tal que
+    $$\langle \mu,Tf\rangle=\int_0^1g_\mu(x)Tf(x)\,dx.$$
+    De manera similar como $p<\infty,$ y el dual de $L^p$ se identifica con $L^{p^\prime}$, tenemos que existe única $h_\mu\in L^{p^\prime}(0,1)$ tal que
+    $$\langle T^*,f\rangle=\int_0^1h_\mu(x) f(x)\,dx$$
+    y por la igualdad dada previamente tenemos que
+    $$\int_0^1h_\mu(x) f(x)\,dx=\int_0^1g_\mu(x)Tf(x)\,dx.$$
+    Como $f$ es arbitraria, manipulando el lado derecho de la igualdad tenemos que
+    \begin{align*}
+        \int_0^1g_\mu(x)Tf(x)\,dx&=\int_0^1g_\mu(x)\int_0^xf(t)dt\,dx\\
+        &=\int_0^1\int_0^xg_\mu(x)f(t)\,dtdx\\
+        &=\int_0^1\int_t^1g_\mu(x)f(t)\,dxdt\\
+        &=\int_0^1f(t)\int_t^1g_\mu(x)\,dxdt\\
+    \end{align*}
+    Por la unicidad obtenemos que
+    $$h_\mu(t)=\int_t^1g_\mu(x)\,dx=\int_0^1g_\mu(x)\chi_{(t,1)}(x)\,dx=\langle\mu,\chi_{(t,1)}\rangle.$$
+    Con esto el adjunto esta dado por
+    $$\langle T^*\mu,f\rangle=\int_0^1\langle\mu,\chi_{(t,1)}\rangle f(x)\,dx.$$
+
+    \end{sproof}
 \end{itemize}
