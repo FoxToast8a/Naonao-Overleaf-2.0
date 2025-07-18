@@ -5,5 +5,67 @@ M_g(f)(x)=g(x) f(x)
 $$
 \begin{itemize}
     \item[(a)] Muestre que $\sigma\left(M_g\right)=\overline{\{g(x): x \in \mathbb{R}\}}$.
+
+\begin{proof}
+    
+
+
+Como \( g \in L^\infty(\mathbb{R}) \), se tiene que \( \|g\|_\infty < \infty \), y por lo tanto \( M_g \) es un operador lineal y acotado sobre \( L^2(\mathbb{R}) \), donde
+\[
+\|M_g(f)\|_{L^2}^2 = \int_{\mathbb{R}} |g(x)f(x)|^2 \, dx \leq \|g\|_\infty^2 \|f\|_{L^2}^2,
+\]
+lo que implica que \( M_g \in L(L^2(\mathbb{R})) \).
+
+Como \( M_g \) es un operador de multiplicación, y por lo tanto, es autoadjunto puesto que,
+\[
+\begin{aligned}
+\langle M_g(f), h \rangle &= \int_{-\infty}^{\infty} M_g(f)(x) \, h(x) \, dx \\
+&= \int_{-\infty}^{\infty} g(x)f(x)h(x) \, dx \\
+&= \int_{-\infty}^{\infty} f(x)g(x)h(x) \, dx \\
+&= \int_{-\infty}^{\infty} f(x) \, M_g(h)(x) \, dx \\
+&= \langle f, M_g(h) \rangle.
+\end{aligned}
+\]
+
+
+Ahora veamos que  $\sigma\left(M_g\right)=\overline{\{g(x): x \in \mathbb{R}\}}$, sea $\lambda \in \{g(x) : x \in \mathbb{R}\}$, entonces, existe $x_0 \in \mathbb{R}$ tal que $g(x_0) = \lambda$. Como $g$ es continua, tenemos que para todo $\varepsilon > 0$, existe $\delta > 0$ tal que si $|x - x_0| < \delta$, entonces $|g(x) - \lambda| < \varepsilon$.
+
+Sea $f \in L^2(\mathbb{R})$ con soporte contenido en $(x_0 - \delta, x_0 + \delta)$ y $f \neq 0$. entonces,
+
+\[
+\|(M_g - \lambda I)f\|_2^2 = \int_{\mathbb{R}} |g(x) - \lambda|^2 |f(x)|^2 \, dx < \varepsilon^2 \|f\|_2^2.
+\]
+
+Si $M_g - \lambda I$ fuera invertible, existiría una constante $C > 0$ tal que,
+
+\[
+\|(M_g - \lambda I)f\|_2 \geq C \|f\|_2 \quad \text{para toda } f \in L^2(\mathbb{R}),
+\]
+
+lo cual contradice la desigualdad anterior cuando $\varepsilon \to 0$. Por tanto, $\lambda \in \sigma(M_g)$. Como el espectro $\sigma(M_g)$ es cerrado, se concluye que,
+
+\[
+\overline{\{g(x) : x \in \mathbb{R}\}} \subseteq \sigma(M_g).
+\]
+
+
+
+\end{proof}
 \item[(b)] ¿Es el operador $M_g$ compacto? 
+\begin{sol}
+No, en general el operador \( M_g \) no es compacto, si el operador fuera compacto en \( L^2(\mathbb{R}) \) tenemos que cualquier sucesión acotada en una sucesión que tiene una subsucesión convergente en norma.
+
+Tomemos a $g(x)$ como la función constante uno la cual claramente es continua y acotada, es decir, \( g \in L^\infty(\mathbb{R}) \cap C(\mathbb{R}) \). Entonces \( M_g \) es el operador identidad en \( L^2(\mathbb{R}) \). Tomemos a  \( \{f_n\}_{n \in \mathbb{N}} \subset L^2(\mathbb{R}) \) como una sucesión definida por
+
+\[
+f_n(x) = \chi_{[n, n+1]}(x),
+\]
+
+donde \( \chi_{[n,n+1]} \) es la función característica del intervalo \( [n, n+1] \), esta sucesión es ortonormal en \( L^2(\mathbb{R}) \), y por tanto, acotada.
+
+Aplicando \( M_g \) a cada \( f_n \), tenemos que \( M_g(f_n) = f_n \). Por tanto, la imagen de esta sucesión no tiene ninguna subsucesión convergente en norma, ya que las \( f_n \) son ortogonales entre sí y su distancia es constante.
+
+Por lo tanto, \( M_g \) no es compacto.
+\end{sol}
+
 \end{itemize}

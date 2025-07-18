@@ -1,9 +1,121 @@
 %!TEX root = ../main.tex
- Sea $H$ un espacio de Hilbert $y M \subseteq H$ un subespacio cerrado. Considera la proyección ortogonal $P_M$. Muestre que
+ Sea $H$ un espacio de Hilbert y $  M \subseteq H$ un subespacio cerrado. Considera la proyección ortogonal $P_M$. Muestre que
  \begin{itemize}
      \item[(I)] $P_M$ es lineal.
+
+     \begin{proof}
+
+
+Sean \(f_1, f_2 \in H \), por hipótesis tenemos que \( M \) es un subespacio cerrado de \( H \), así, el teorema de proyección ortogonal, existen únicos \( y_1, y_2 \in M \) tales que
+
+\[
+\langle f_1 - y_1, v \rangle = 0 \quad \text{y} \quad \langle f_2 - y_2, v \rangle = 0 \quad \forall v \in M,
+\]
+
+donde \( y_1 = P_M f_1 \) y \( y_2 = P_M f_2 \) son las proyecciones ortogonales de \( f_1x \) y \( f_2 \) respectivamente. Es decir, para cualquier \( f \in H \), existe un único vector \( y \in M \) con \( y = P_M f \) que minimiza la distancia de \( f \) a \( M \)
+
+\[
+\|f - y\| = \inf_{v \in M} \|f - v\| = \text{dist}(f, M).
+\]
+
+
+Sea $\lambda \in \mathbb{R}$, utilizando linealidad del producto interno, tenemos que
+
+\[
+0 = (f_1 - y_1, v) + \lambda(f_2 - y_2, v) = (f_1 + \lambda f_2 - (y_1 + \lambda y_2), v) \quad \text{ para todo } v \in M.
+\]
+por unicidad de la proyección, \( P_M(f_1 + \lambda f_2) = y_1 + \lambda y_2 = P_M(f_1) + \lambda P_M(f_2) \), es decir, el operador es lineal.
+
+\end{proof}
+
 \item[(II)] $P_M^2=P_M$ (esto es, aplicar dos veces el operador proyección da el mismo resultado).
+
+\begin{proof}
+Para \( f \in H \) al $M$ ser subespacio cerrado existe por el teorema de proyección ortogonal un $y$ tal que, \( P_M(f) = y \in M \). Como \( y \in M \), \( P_M(y) = y \), luego,
+
+\[
+P_M^2(f) = P_M(P_M(f)) = P_M(y) = y = P_M(f).
+\]
+Por lo que tenemos que el operador es idempotente.
+\end{proof}
 \item[(III)] $P_M^{\star}=P_M$, donde $P_M^{\star}$ denota el adjunto de $P_M$ (vea el Ejercicio 14).
+\begin{proof}
+Veamos que el operador es autoadjunto, por el teorema de representación de Riesz al ser $H$ un espacio de Hilbert y la proyección un operador lineal y continuo, entonces, para \( x, y \in H \), tenemos que 
+\[
+\langle P_M(x), y \rangle = \langle x, P_M^*(y) \rangle \quad \text{ para todo } x, y \in H
+\]
+Luego como $M$ es un subespacio cerrado, $M^{\perp}$ también es cerrado,  entonces podemos escribir a los elementos del espacio como
+
+\[
+x = P_M(x) + (x - P_M(x)), \quad y = P_M(y) + (y - P_M(y)),
+\]
+donde \( x - P_M(x) \in M^\perp \) y \( y - P_M(y) \in M^\perp \). Entonces
+\begin{align*}
+\langle P_M(x), y \rangle 
+&= \langle P_M(x), P_M(y) + (y - P_M(y)) \rangle \\
+&= \langle P_M(x), P_M(y) \rangle + \langle P_M(x), y - P_M(y) \rangle
+\end{align*}
+como  \( y - P_M(y) \in M^\perp \) entonces $\langle P_M(x), y - P_M(y) \rangle=0$, luego 
+
+\begin{align*}
+\langle P_M(x), P_M(y) \rangle
+&= \langle P_M(x)+x-P_M(x), P_M(y)  \rangle \\
+&= \langle x, P_M(y) \rangle + \
+\end{align*}
+
+
+Por tanto, \( P_M^* = P_M \), es decir, el operador es autoadjunto.
+\end{proof}
+
 \item[(IV)] $\operatorname{Rango}\left(P_M\right)=M$ y $\operatorname{Kernel}\left(P_M\right)=M^{\perp}$.
+
+
+\begin{proof}
+$\Rightarrow$ Para \( x \in M \), \( P_M(x) = x \), luego \( M \subseteq \text{Rango}(P_M) \).
+
+$\Leftarrow$ Como $M$ es un subespacio cerrado, tenemos que para todo $y\in H$ arbitrario pero fijo $P_M(y) \in M$, luego $ \text{Rango}(P_M) \subseteq M$.\\
+
+
+En el caso del Kernel, tenemos que\( y \in \text{Kernel}(P_M) \) si y sólo si \( (y, v) = 0 \) para todo \( v \in M \), es decir, \( y \in M^\perp \), así $\operatorname{Kernel}\left(P_M\right)=M^{\perp}$.
+
+\end{proof}
+
+
 \item[(V)] Suponga que $P \in L(H)$. Entonces $P$ es una proyección ortogonal sobre un subespacio cerrado de $H$ si, y solo si, $P=P^2=P^{\star}$. 
+\begin{proof}
+
+\(\Rightarrow\)La demostración es trivial por lo realizado en los subpuntos (I)-(III) ya que $L(H)$ es un espacio de Hilbert.
+
+\(\Leftarrow\)Suponga \( P = P^2 = P^* \), entonces tenemos que $P$ es una proyección además como $P$ es autoadjunto y estamos en un espacio de Hilbert  queremos probar que el Kernel$(P^{\star})=(\text{Rango A})^{\perp}$ y siendo a $M$ como \( M = \text{Rango}(P) \) veamos que $M$ es un subespacio cerrado de $H$. \\
+
+Ahora, supongamos que $x_1, x_2 \in M$. Como $M = \operatorname{Rango}(P)$, existen $u, v \in H$ tales que
+\[
+P(u) = x_1 \quad \text{y} \quad P(v) = x_2,
+\]
+como $P$ es idempotente y lineal, dado \( \lambda \in \mathbb{R} \), se tiene que 
+\[
+P(P(x + \lambda x_2))=P(x + \lambda x_2) = P(x) + \lambda P(x_2) = x + \lambda x_2.
+\]
+Por lo que, \( x + \lambda y \in M \), lo cual muestra que \( M \) es un subespacio vectorial de \( H \).
+
+Como \( P \in L(H) \), entonces \( P \) es un operador acotado en un espacio de Hilbert, entonces, toda sucesión de Cauchy \( \{x_n\} \subset H \) converge a algún \( x \in H \). Queremos ver que \( M \) es cerrado por, tomemos \( \{x_n\} \subset M \) una sucesión de Cauchy, por lo cual existen \( \{y_n\} \subset H \) tales que \( x_n = P(y_n) \). Sabemos que \( P \) es continuo puesto que es lineal y por definición es acotado, también es continuo, por lo que \( \{x_n\} = \{P(y_n)\} \) es Cauchy en \( M \) si y solo si \( \{u_n\} \) es Cauchy en \( H \).
+
+
+Sea \( \varepsilon > 0 \) arbitrario pero fijo, existe \( N \in \mathbb{N} \) tal que si \( n, m > N \), entonces $|x_n - x_m|<\varepsilon$, entonces
+\begin{align*}
+ \|P(x_n) - P(x_m)\| &= \|P(x_n - x_m)\|\\
+ & \leq \|P\| \|x_n - x_m\|\\& < \varepsilon.   
+\end{align*}
+
+como \( P \) es un operador continuo, entonces \( P(x_n) \to P(x) \) con \( x \in H \), y como \( x_n = P(y_n) \), entonces \( x_n \to P(x) \in M \). Por lo tanto, \( M \) es cerrado. Como $M$ es un subespacio cerrado en un espacio de Hilbert y $P$ es autoadjunto e idempotente entonces $x-P(x)\in$ Kernel$(P)$, por lo cual $P$ es la proyección ortogonal sobre $M$
+
+\end{proof}
+
  \end{itemize}
+
+
+
+
+
+
+

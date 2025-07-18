@@ -9,15 +9,289 @@ $$
 S_l x=\left(x_2, x_3, x_4, \ldots, x_{n+1}, \ldots\right) .
 $$
 $S_r$ se conoce como desplazamiento a derecha y $S_l$ como desplazamiento a izquierda.
+\begin{enumerate}
+    \item[(a)] Determinar las normas \( \|S_{r}\| \) y \( \|S_{l}\| \).
+    \begin{proof}
+        Sea \( x = (x_1, x_2, \ldots) \in \ell^2 \). Por definición de la norma de operador, se tiene
+\[
+\|S_r\|_{\mathcal{L}(\ell^2)} = \sup_{\|x\|_{\ell^2} \leq 1} \|S_r x\|_{\ell^2}.
+\]
+Dado que \( S_r x = (0, x_1, x_2, \ldots) \), si denotamos \( y = S_r x = (y_1, y_2, \ldots) \), entonces
+\[
+\|S_r x\|_{\ell^2} = \left( \sum_{k=1}^{\infty} |y_k|^2 \right)^{1/2} = \left( \sum_{k=2}^{\infty} |x_{k-1}|^2 \right)^{1/2} = \left( \sum_{k=1}^{\infty} |x_k|^2 \right)^{1/2} = \|x\|_{\ell^2}.
+\]
+Por lo tanto,
+\[
+\|S_r\|_{\mathcal{L}(\ell^2)} = \sup_{\|x\|_{\ell^2} \leq 1} \|S_r x\|_{\ell^2} \leq \sup_{\|x\|_{\ell^2} \leq 1} \|x\|_{\ell^2} = 1.
+\]
+Como esta cota se alcanza, por ejemplo al tomar \( x = e_1 = (1, 0, 0, \ldots) \), para el cual \( \|x\|_{\ell^2} = 1 \) y
+\[
+S_r e_1 = (0, 1, 0, 0, \ldots), \quad \|S_r e_1\|_{\ell^2} = 1,
+\]
+concluimos que
+\[
+\|S_r\|_{\mathcal{L}(\ell^2)} = 1.
+\]
+
+De forma análoga, el operador \( S_l \) está definido por \( S_l x = (x_2, x_3, \ldots) \). Si denotamos \( y = S_l x \), entonces
+\[
+\|S_l x\|_{\ell^2} = \left( \sum_{k=1}^{\infty} |y_k|^2 \right)^{1/2} = \left( \sum_{k=2}^{\infty} |x_k|^2 \right)^{1/2} \leq \|x\|_{\ell^2},
+\]
+por lo que
+\[
+\|S_l\|_{\mathcal{L}(\ell^2)} \leq 1.
+\]
+Esta cota también se alcanza, por ejemplo, con \( x = e_2 = (0, 1, 0, \ldots) \), ya que
+\[
+S_l e_2 = (1, 0, 0, \ldots), \quad \|S_l e_2\|_{\ell^2} = 1,
+\]
+lo que implica que
+\[
+\|S_l\|_{\mathcal{L}(\ell^2)} = 1.
+\]
+
+    \end{proof}
+    
+    \item[(b)] Muestre que \( EV(S_{r}) = \emptyset \).
+    \begin{proof}
+        Sea \( x = (x_1, x_2, \ldots) \in \ell^2 \) y sea \( \lambda \in \mathbb{R} \). Supongamos que \( S_r x = \lambda x \). Entonces, por la definición del operador \( S_r \), se tiene:
+\[
+S_r x = (0, x_1, x_2, \ldots) = (\lambda x_1, \lambda x_2, \ldots).
+\]
+Comparando componente a componente, se obtiene:
 \begin{itemize}
-    \item[(a)] Determinar las normas de $\left\|S_r\right\| y\left\|S_l\right\|$.
-\item[(b)] Muestre que $E V\left(S_r\right)=\emptyset$,
-\item[(c)] Muestre que $\sigma\left(S_r\right)=[-1,1]$.
-\item[(d)] Muestre que $E V\left(S_l\right)=(-1,1)$. Encuentre el espacio propio correspondiente.
-\item[(e)] Muestre que $\sigma\left(S_l\right)=[-1,1]$.
-\item[(f)] Determine los adjuntos $S_r^{\star}$ y $S_l^{\star}$. 
+    \item  En la primera coordenada: \( 0 = \lambda x_1 \), por lo que si \( \lambda \neq 0 \), se deduce que \( x_1 = 0 \).
+\item  En la segunda coordenada: \( x_1 = \lambda x_2 \), lo cual implica \( x_2 = 0 \) ya que \( x_1 = 0 \).
+\item  En general, para \( i \geq 2 \), se cumple que \( x_{i-1} = \lambda x_i \), lo que por recurrencia implica que \( x_i = 0 \) para todo \( i \geq 1 \).
 \end{itemize}
 
+
+
+Por tanto, \( x = (0, 0, 0, \ldots) \).
+
+Ahora, si \( \lambda = 0 \), se tiene que
+\[
+S_r x = (0, x_1, x_2, \ldots) = (0, 0, 0, \ldots),
+\]
+lo cual implica que \( x_i = 0 \) para todo \( i \geq 1 \), es decir, nuevamente \( x = (0, 0, 0, \ldots) \).
+
+En ambos casos, el único vector que satisface \( S_r x = \lambda x \) es el vector nulo. Por lo tanto, el núcleo de \( S_r - \lambda I \) es trivial:
+\[
+N(S_r - \lambda I) = \{0\},
+\]
+y concluimos que \( \lambda \) no es valor propio de \( S_r \) para ningún \( \lambda \in \mathbb{R} \). Así,
+\[
+\sigma_p(S_r) = \emptyset.
+\]
+
+    \end{proof}
+    
+    
+     \item[(e)] Muestre que \( \sigma(S_{l}) = [-1, 1] \).
+    \begin{proof}
+        Por el ítem $a)$ sabemos que $\|S_l\|_{\ell^2} = 1$. Entonces, por un teorema visto en clase, se tiene que
+\[
+\sigma(S_l) \subseteq \{ \lambda \in \mathbb{C} : |\lambda| \leq \|S_l\| = 1 \}.
+\]
+
+Supongamos que $\lambda \neq 0$ y que existe $x \in \ell^2$ tal que \( S_l x = \lambda x \). Esto implica que
+\[
+(x_2, x_3, x_4, \dots) = (\lambda x_1, \lambda x_2, \lambda x_3, \dots).
+\]
+Por lo tanto, para todo \( i \geq 1 \), se cumple que
+\[
+x_{i+1} = \lambda x_i.
+\]
+Este tipo de recurrencia implica que
+\[
+x_i = \lambda^{i-1} x_1 \quad \text{para todo } i \geq 1.
+\]
+Es decir, el vector \( x \) tiene la forma
+\[
+x = (x_1, \lambda x_1, \lambda^2 x_1, \lambda^3 x_1, \dots) = x_1 (1, \lambda, \lambda^2, \lambda^3, \dots).
+\]
+
+Ahora bien, para que \( x \in \ell^2 \), debe cumplirse que
+\begin{align*}
+\sum_{n=1}^{\infty} |x_n|^2 
+&= \sum_{n=1}^{\infty} |x_1 \lambda^{n-1}|^2 
+= |x_1|^2 \sum_{n=0}^{\infty} |\lambda|^{2n}.
+\end{align*}
+
+La serie geométrica \( \sum_{n=0}^{\infty} |\lambda|^{2n} \) converge si y solo si \( |\lambda| < 1 \). Por lo tanto, para que \( x \in \ell^2 \), se debe tener \( |\lambda| < 1 \).
+
+Esto muestra que si \( |\lambda| < 1 \), entonces \( \lambda \) es valor propio de \( S_l \), y así
+\[
+A := \{ \lambda \in \mathbb{R} : |\lambda| < 1 \} \subseteq \sigma(S_l).
+\]
+
+Como \( \sigma(S_l) \) es un conjunto cerrado en \( \mathbb{R} \) , se sigue que
+\[
+\overline{A} \subseteq \sigma(S_l) \subseteq \{ \lambda \in \mathbb{R} : |\lambda| \leq 1 \}.
+\]
+
+Pero \( \overline{A} = \{ \lambda \in \mathbb{R} : |\lambda| \leq 1 \} \), así que se concluye
+\[
+\sigma(S_l) = \{ \lambda \in \mathbb{R} : |\lambda| \leq 1 \}.
+\]
+
+    \end{proof}
+    \item[(d)] Muestre que \( EV(S_{l}) = (-1, 1) \). Encuentre el espacio propio correspondiente.
+   
+\begin{proof}
+Ya se ha visto que si \( |\lambda| < 1 \), entonces existe un vector no nulo \( x \in \ell^2 \) tal que
+\[
+x = x_1(1, \lambda, \lambda^2, \lambda^3, \dots),
+\]
+y este pertenece a \( \ell^2 \) si y solo si \( \sum_{n=0}^\infty |\lambda|^{2n} < \infty \), lo cual ocurre si y solo si \( |\lambda| < 1 \). Por lo tanto, todos los \( \lambda \in (-1,1) \) son valores propios de \( S_l \), y el espacio propio correspondiente está dado por
+\[
+\text{span}\{(1, \lambda, \lambda^2, \lambda^3, \ldots)\}.
+\]
+
+Veamos ahora que \( \lambda = 1 \) y \( \lambda = -1 \) no son valores propios de \( S_l \). Supongamos que \( S_l x = \lambda x \) con \( \lambda = \pm 1 \), y \( x \in \ell^2 \setminus \{0\} \). Entonces, como antes,
+\[
+x = x_1 (1, \lambda, \lambda^2, \lambda^3, \ldots).
+\]
+
+Para \( \lambda = 1 \), tendríamos \( x = x_1 (1,1,1,1,\dots) \), y la norma cuadrada sería
+\[
+\|x\|^2 = |x_1|^2 \sum_{n=0}^{\infty} 1 = \infty,
+\]
+lo cual contradice que \( x \in \ell^2 \).
+
+Análogamente, para \( \lambda = -1 \), tendríamos \( x = x_1(1, -1, 1, -1, \dots) \), y nuevamente:
+\[
+\|x\|^2 = |x_1|^2 \sum_{n=0}^{\infty} 1 = \infty,
+\]
+por lo que \( x \notin \ell^2 \) tampoco en este caso.
+
+Así, ni \( \lambda = 1 \) ni \( \lambda = -1 \) son valores propios de \( S_l \).
+
+En conclusión,
+\[
+EV(S_l) = (-1,1).
+\]
+\end{proof}
+
+   
+    \item[(f)] Determine los adjuntos \( S_{r}^* \) y \( S_{l}^* \).
+    
+    \textbf{Solución:}
+    Recordemos que, en un espacio de Hilbert real como \( \ell^2(\mathbb{R}) \), el adjunto \( T^* \) de un operador \( T \in \mathcal{L}(\ell^2) \) es el único operador tal que
+\[
+(Tx, y) = (x, T^*y) \quad \text{para todo } x, y \in \ell^2.
+\]
+
+Sea \( x = (x_1, x_2, x_3, \ldots) \in \ell^2 \) y \( y = (y_1, y_2, y_3, \ldots) \in \ell^2 \). 
+
+\textbf{Para \( S_r \):} recordemos que
+\[
+S_r x = (0, x_1, x_2, x_3, \ldots).
+\]
+Entonces
+\begin{align*}
+(S_r x, y) &= \sum_{n=1}^\infty (S_r x)_n y_n = \sum_{n=1}^\infty x_{n-1} y_n \quad \text{(tomando \( x_0 = 0 \))} \\
+&= \sum_{n=2}^\infty x_{n-1} y_n = \sum_{m=1}^\infty x_m y_{m+1} = (x, z),
+\end{align*}
+donde \( z = (y_2, y_3, y_4, \ldots) \). Por tanto,
+\[
+S_r^* y = (y_2, y_3, y_4, \ldots),
+\]
+es decir,
+\[
+S_r^* y = S_l y.
+\]
+
+\textbf{Para \( S_l \):} recordemos que
+\[
+S_l x = (x_2, x_3, x_4, \ldots).
+\]
+Entonces
+\begin{align*}
+(S_l x, y) &= \sum_{n=1}^\infty (S_l x)_n y_n = \sum_{n=1}^\infty x_{n+1} y_n \\
+&= \sum_{m=2}^\infty x_m y_{m-1} = (x, z),
+\end{align*}
+donde \( z = (0, y_1, y_2, y_3, \ldots) \). Por tanto,
+\[
+S_l^* y = (0, y_1, y_2, \ldots),
+\]
+es decir,
+\[
+S_l^* y = S_r y.
+\]
+
+Por lo tanto, se cumple que
+\[
+S_r^* = S_l, \quad \text{y} \quad S_l^* = S_r.
+\]
+\item[(c)] Muestre que \( \sigma(S_{r}) = [-1, 1] \).
+    \begin{proof}
+        Primero, notamos que $S_r$ es un operador lineal y acotado sobre el espacio de Hilbert real $\ell^2$, lo cual ya fue demostrado previamente. Además, en una prueba anterior también se encontró su adjunto, y se verificó que
+\[
+S_r^* = S_\ell.
+\]
+
+Ahora, por la \textbf{Proposición 8.3.1}, la cual establece que si $T \in \mathcal{L}(H)$ para un espacio de Hilbert $H$, entonces se tiene que
+\[
+\sigma(T) = \sigma(T^*),
+\]
+concluimos que
+\[
+\sigma(S_r) = \sigma(S_r^*) = \sigma(S_\ell)=[-1,1].
+\]
+
+Esto demuestra que el espectro de $S_r=[-1,1]$.
+    \end{proof}
+    \begin{proof}
+        Queremos mostrar que si \( \lambda \in \rho(S_r) \), entonces \( |\lambda| > 1 \).
+
+Recordemos que \( S_r \in \mathcal{L}(\ell^2) \) y que si \( \lambda \in \rho(S_r) \), entonces \( R_\lambda = (\lambda I - S_r)^{-1} \in \mathcal{L}(\ell^2) \), es decir, \( R_\lambda \) es un operador acotado.
+
+Sea \( x = (x_1, x_2, \dots) \in \ell^2 \), y supongamos que \( y = R_\lambda x \). Entonces
+\[
+(\lambda I - S_r)y = x \quad \text{es decir,} \quad \lambda y_n - y_{n-1} = x_n, \quad \text{con } y_0 = 0.
+\]
+Despejando recursivamente obtenemos:
+\[
+y_1 = \frac{x_1}{\lambda}, \quad y_2 = \frac{x_2 + y_1}{\lambda} = \frac{x_2}{\lambda} + \frac{x_1}{\lambda^2}, \quad \dots, \quad y_n = \sum_{k=1}^n \frac{x_k}{\lambda^{n - k + 1}}.
+\]
+Entonces, 
+\[
+y_n = \sum_{k=1}^n \lambda^{-(n - k + 1)} x_k.
+\]
+
+Supongamos ahora que \( |\lambda| \leq 1 \).Consideremos 
+\[
+x^{(N)} = (\underbrace{1, 1, \dots, 1}_N, 0, 0, \dots),
+\]
+que claramente están en \( \ell^2 \). Evaluamos \( y^{(N)} = R_\lambda x^{(N)} \), y calculamos su norma:
+
+\[
+y_n^{(N)} = \begin{cases}
+\sum_{k=1}^n \lambda^{-(n - k + 1)} = \lambda^{-n} \sum_{j=1}^{n} \lambda^j = \lambda^{-n} \cdot \frac{\lambda(1 - \lambda^n)}{1 - \lambda}, & \text{si } n \leq N, \\
+\sum_{k=1}^N \lambda^{-(n - k + 1)} = \lambda^{-n} \sum_{j=n - N + 1}^{n} \lambda^j, & \text{si } n > N.
+\end{cases}
+\]
+
+En particular, para \( n = N \), se tiene:
+\[
+y_N^{(N)} = \sum_{k=1}^{N} \lambda^{-(N - k + 1)} = \sum_{j=1}^{N} \lambda^{-j}.
+\]
+
+Si \( |\lambda| \leq 1 \), entonces \( |\lambda^{-1}| \geq 1 \), y por tanto \( \sum_{j=1}^{N} |\lambda^{-j}| \geq N \). Esto implica que \( \| y^{(N)} \| \to \infty \) cuando \( N \to \infty \), mientras que \( \| x^{(N)} \| = \sqrt{N} \), así que
+
+\[
+\frac{\| y^{(N)} \|}{\| x^{(N)} \|} \to \infty.
+\]
+
+Esto contradice que \( R_\lambda \) sea un operador acotado. Por tanto, si \( \lambda \in \rho(S_r) \), entonces necesariamente \( |\lambda| > 1 \). Como el espectro debe estar contenido en \( \{ \lambda \in \mathbb{C} : |\lambda| \leq \|S_r\|=1 \} \), y como ya probamos en un paso anterior que todo \( |\lambda| < 1 \) está en el resolvente, concluimos que:
+
+\[
+\sigma(S_r) = \{ \lambda \in \mathbb{C} : |\lambda| \leq 1 \}.
+\]
+
+    \end{proof}
+\end{enumerate}
 
 
 

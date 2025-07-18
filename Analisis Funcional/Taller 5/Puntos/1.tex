@@ -1,11 +1,525 @@
 %!TEX root = ../main.tex
  (I) Muestre que los siguientes conjuntos $M$ son subespacios cerrados no vacíos de $L^2((-1,1))$ y determine explícitamente la proyección $P_M$ en cada caso.
  \begin{itemize}
+
      
 
 \item[(a)] $M=\left\{f \in L^2((-1,1))\right.$ : $f(x)=f(-x)$ para casi todo $\left.x \in(-1,1)\right\}$.
+\begin{proof}
+\hfill
+\begin{enumerate}
+    \item[I)] \textbf{M es no vacio:} 
+    Veamos que $f(x)=0\in M$, pues 
+    \begin{align*}
+        \|f(x)\|_{L_2}=\left( \int_{-1}^{1}|0|^2 dx\right)^{\frac{1}{2}}=0<\infty\quad \text{ y }\quad f(-x)=0=f(x).
+    \end{align*}
+    \item[II)]\textbf{M es cerrado:} Sea \( (f_n)_{n=1}^{\infty} \subseteq M \) tal que \( f_n \to f \) en \( L^2(-1,1) \). Entonces, para todo \( \varepsilon > 0 \) existe \( N \in \mathbb{Z}^+ \) tal que si \( n \geq N \), se cumple
+
+\begin{align}
+    \|f_n - f\|_{L^2(-1,1)} < \frac{\varepsilon}{2}. \label{eq:convergencia}
+\end{align}
+
+A continuación, definamos \( g(x) := f(-x) \) para \( x \in (-1,1) \), y veamos que
+
+\begin{align}
+    \|g - f\|_{L^2(-1,1)} &= \|g - f_n + f_n - f\|_{L^2(-1,1)} \nonumber \\
+    &\leq \underbrace{\|g - f_n\|_{L^2(-1,1)}}_{\text{A}} + \|f_n - f\|_{L^2(-1,1)}. \label{eq:desigualdad}
+\end{align}
+
+Para estimar el término \( A \), notamos que como \( f_n(x) = f_n(-x) \) para casi todo \( x \in (-1,1) \), se tiene
+
+\begin{align*}
+    A^2 = \int_{-1}^1 |g(x) - f_n(x)|^2\,dx &= \int_{-1}^1 |f(-x) - f_n(x)|^2\,dx \\
+    &= \int_{-1}^1 |f(-x) - f_n(-x)|^2\,dx.
+\end{align*}
+
+Haciendo el cambio de variable \( u = -x \), obtenemos
+
+\begin{align}
+    A^2 = -\int_{1}^{-1} |f(u) - f_n(u)|^2\,du &= \int_{-1}^{1} |f(u) - f_n(u)|^2\,du \nonumber \\
+    &= \|f - f_n\|_{L^2(-1,1)}^2. \label{eq:romano}
+\end{align}
+
+Entonces, para \( n \geq N \), usando las ecuaciones \eqref{eq:convergencia}, \eqref{eq:romano} y \eqref{eq:desigualdad}, obtenemos:
+
+\begin{align*}
+    \|g - f\|_{L^2(-1,1)} &\leq \|g - f_n\|_{L^2(-1,1)} + \|f_n - f\|_{L^2(-1,1)} \\
+    &= \|f - f_n\|_{L^2(-1,1)} + \|f_n - f\|_{L^2(-1,1)} \\
+    &< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\end{align*}
+
+Como \( \varepsilon > 0 \) es arbitrario, concluimos que \( \|g - f\|_{L^2(-1,1)} = 0 \), es decir, \( f(x) = f(-x) \) para casi todo \( x \in (-1,1) \), lo cual implica que \( f \in M \). Por tanto, \( M \) es cerrado.
+
+    \item[III)] \textbf{ M es un subespacio:} Sea \( f, g \in M \), veamos que \(  f + g \in M \).
+
+Por la definición del conjunto \( M \), se cumple que \( f(x) = f(-x) \) y \( g(x) = g(-x) \) para casi todo \( x \in (-1,1) \). Esto significa que existen conjuntos de medida nula \( F \) y \( G \) tales que
+
+\[
+f(x) = f(-x) \quad \forall x \in (-1,1) \setminus F,
+\]
+\[
+g(x) = g(-x) \quad \forall x \in (-1,1) \setminus G.
+\]
+
+Además, por la subaditividad de la medida de Lebesgue, se tiene
+
+\[
+0 \leq \mu(F \cup G) \leq \mu(F) + \mu(G) = 0,
+\]
+
+por lo tanto, \( F \cup G \) también es un conjunto de medida nula. Como
+
+\[
+(-1,1) \setminus (F \cup G) \subseteq (-1,1) \setminus F, \quad (-1,1) \setminus G,
+\]
+
+se concluye que para casi todo \( x \in (-1,1) \setminus (F \cup G) \) se cumple
+
+\[
+(f + g)(x) = f(x) + g(x) = f(-x) + g(-x) = (f + g)(-x).
+\]
+
+Así, \( f + g \in M \).
+
+Ahora, para \( f \), sabemos que \( f(x) = f(-x) \) para casi todo \( x \in (-1,1) \setminus F \). Sea \( \lambda \in \mathbb{R} \), entonces
+\[
+(\lambda f)(x) = \lambda f(x) = \lambda f(-x) = (\lambda f)(-x) \quad,
+\]
+para casi todo \( x \in (-1,1) \setminus F \), lo cual implica que \( \lambda f \in M \). Por lo tanto, \( M \) es un subespacio de \( H \).
+\item[IV)] \textbf{Proyección $P_M$:} Como \( M \) es un subespacio cerrado de \( L^2((-1,1)) \), para todo \( f \in L^2((-1,1)) \) la proyección ortogonal \( P_M f \) está bien definida como la única \( g \in M \) tal que
+\[
+(f - g, h) = 0 \quad \text{para toda } h \in M.
+\]
+
+Definimos \( g(x) := \dfrac{f(x) + f(-x)}{2} \). Notamos que \( g \in L^2((-1,1)) \), ya que \( L^2((-1,1)) \) es un espacio vectorial, y si \( f \in L^2 \), entonces también lo están \( f(-x) \) y su suma.
+
+Además,
+
+\[
+g(-x) = \frac{f(-x) + f(-(-x))}{2} = \frac{f(-x) + f(x)}{2} = g(x),
+\]
+
+por lo tanto, \( g \in M \).
+
+Ahora calculemos \( (f - g, h) \) para \( h \in M \):
+
+\begin{align*}
+(f - g, h) &= \int_{-1}^{1} \left[ f(x) - \frac{f(x) + f(-x)}{2} \right] h(x)\,dx \\
+&= \int_{-1}^{1} \left[ \frac{f(x)}{2} - \frac{f(-x)}{2} \right] h(x)\,dx \\
+&= \frac{1}{2} \int_{-1}^{1} f(x) h(x)\,dx - \frac{1}{2} \int_{-1}^{1} f(-x) h(x)\,dx \\
+&= B - A,
+\end{align*}
+
+donde:
+\begin{itemize}
+    \item \( B = \dfrac{1}{2} \int_{-1}^{1} f(x) h(x)\,dx \),
+    \item \( A = \dfrac{1}{2} \int_{-1}^{1} f(-x) h(x)\,dx \).
+    
+\end{itemize}
+
+
+Como \( h \in M \), entonces \( h(x) = h(-x) \) para casi todo \( x \in (-1,1) \). Usando el cambio de variable \( u = -x \), tenemos:
+
+\begin{align*}
+A &= \frac{1}{2} \int_{-1}^{1} f(-x) h(x)\,dx 
+= \frac{1}{2} \int_{-1}^{1} f(-x) h(-x)\,dx \\
+&= -\frac{1}{2} \int_{1}^{-1} f(u) h(u)\,du 
+= \frac{1}{2} \int_{-1}^{1} f(u) h(u)\,du = B.
+\end{align*}
+
+Luego, como \( A = B \), se concluye que:
+
+\[
+(f - g, h) = B - A = 0.
+\]
+
+Por lo tanto, \( g = P_M f \) es la proyección ortogonal de \( f \) sobre \( M \), y está dada por:
+
+\[
+(P_M f)(x) = \frac{f(x) + f(-x)}{2}.
+\]
+
+\end{enumerate}
+
+\end{proof}
 \item[(b)] $M=\left\{f \in L^2((-1,1)): \int_{-1}^1 f(x) d x=0\right\}$.
+
+ \begin{proof}
+    \hfill
+        \begin{enumerate}
+            \item[I)]\textbf{M es no vacío:} Consideremos la función \( f(x) = x \). Notamos que \( f \in L^2((-1,1)) \) porque
+
+\[
+\int_{-1}^1 |x|^2\, dx = \int_{-1}^1 x^2\, dx = \frac{2}{3} < \infty.
+\]
+
+Además,
+
+\[
+\int_{-1}^1 f(x)\, dx = \int_{-1}^1 x\, dx = 0.
+\]
+
+Por lo tanto, \( f(x) = x \in M \), y así concluimos que \( M \neq \emptyset \).
+\item[II)] \textbf{\( M \) es cerrado:} En primera instancia, notamos que podemos expresar \( M \) usando el producto interno de \( L^2((-1,1)) \):
+
+\[
+M = \left\{ f \in L^2((-1,1)) : \int_{-1}^1 f(x)\, dx = 0 \right\} = \left\{ f \in L^2((-1,1)) : (f, 1) = 0 \right\},
+\]
+
+donde \( 1 \) es la función constante \( g(x) = 1 \).
+
+Es importante mencionar que, para \( f \in L^2((-1,1)) \), tiene sentido calcular la integral
+
+\[
+\int_{-1}^1 f(x)\, dx,
+\]
+
+porque \( \mu((-1,1)) = 2 < \infty \). Además, usando la desigualdad de Cauchy–Schwarz, se tiene:
+
+\[
+\left| \int_{-1}^1 f(x)\, dx \right| \leq \left( \int_{-1}^1 1^2\, dx \right)^{1/2} \left( \int_{-1}^1 |f(x)|^2\, dx \right)^{1/2} = \sqrt{2} \, \|f\|_{L^2((-1,1))},
+\]
+
+por lo que la integral es finita.
+
+Notemos ahora que \( L^2((-1,1)) \setminus M \neq \varnothing \), pues, por ejemplo, la función constante \( g(x) = 1 \) pertenece a \( L^2((-1,1)) \), pero no a \( M \), ya que
+
+\[
+(g, 1) = \int_{-1}^1 1 \cdot 1\, dx = 2 \neq 0.
+\]
+
+Así, \( g \notin M \). Sea ahora \( f \in L^2((-1,1)) \setminus M \), entonces \( (f,1) \neq 0 \). Definimos:
+
+\[
+\alpha := \left| \left( f, \frac{1}{\sqrt{2}} \right) \right| = \frac{1}{\sqrt{2}} |(f,1)| > 0.
+\]
+
+Sea \( B := B(f, \frac{\alpha}{2}) \) la bola abierta en \( L^2((-1,1)) \) centrada en \( f \) y de radio \( \frac{\alpha}{2} \). Si \( g \in B \), entonces
+
+\[
+\|g - f\|_{L^2} < \frac{\alpha}{2}.
+\]
+
+Aplicando nuevamente la desigualdad de Cauchy–Schwarz, se obtiene:
+
+\[
+\left| \left( g - f, \frac{1}{\sqrt{2}} \right) \right| \leq \|g - f\|_{L^2} \cdot \left\| \frac{1}{\sqrt{2}} \right\|_{L^2} = \|g - f\|_{L^2} < \frac{\alpha}{2}.
+\]
+
+
+Entonces,
+
+\begin{align*}
+\left| \left( g, \frac{1}{\sqrt{2}} \right) \right| &= \left| \left( f, \frac{1}{\sqrt{2}} \right) + \left( g - f, \frac{1}{\sqrt{2}} \right) \right| \\
+&\geq \left| \left( f, \frac{1}{\sqrt{2}} \right) \right| - \left| \left( g - f, \frac{1}{\sqrt{2}} \right) \right| \\
+&> \alpha - \frac{\alpha}{2} = \frac{\alpha}{2} > 0.
+\end{align*}
+
+Por lo tanto,
+
+\[
+|(g,1)| = \sqrt{2} \cdot \left| \left( g, \frac{1}{\sqrt{2}} \right) \right| > \sqrt{2} \cdot \frac{\alpha}{2} > 0,
+\]
+
+lo cual implica que \( (g,1) \neq 0 \), es decir, \( g \notin M \). Así, \( B \subseteq L^2((-1,1)) \setminus M \), y por lo tanto, \( L^2((-1,1)) \setminus M \) es abierto.
+
+Concluimos que \( M \) es cerrado en \( L^2((-1,1)) \).
+\item[III)] \textbf{M es subespacio:} Recordemos que
+\[
+M = \left\{ f \in L^2((-1,1)) : \int_{-1}^{1} f(x)\,dx = 0 \right\}.
+\]
+
+Sea \( f, g \in M \) y \( \lambda \in \mathbb{R} \). Entonces:
+
+\[
+\int_{-1}^{1} (\lambda f(x) + g(x))\, dx = \lambda \int_{-1}^{1} f(x)\, dx + \int_{-1}^{1} g(x)\, dx = \lambda \cdot 0 + 0 = 0.
+\]
+
+Por tanto, \( \lambda f + g \in M \), y así \( M \) es un subespacio vectorial de \( L^2((-1,1)) \).
+
+\item[IV)] \textbf{Proyección ortogonal sobre \( M \):}  Sea \( f \in L^2((-1,1)) \), queremos encontrar \( g \in M \) tal que
+\[
+(f - g, h) = 0 \quad \text{para toda } h \in M,
+\]
+es decir,
+\[
+\int_{-1}^{1} (f(x) - g(x)) h(x)\, dx = 0.
+\]
+
+Proponemos
+\[
+g(x) := f(x) - \frac{1}{2} \int_{-1}^{1} f(t)\,dt,
+\]
+y veremos que \( g = P_M f \).
+
+\vspace{0.5em}
+Primero, verifiquemos que \( g \in M \):
+
+\begin{align*}
+\int_{-1}^{1} g(x)\, dx &= \int_{-1}^{1} \left( f(x) - \frac{1}{2} \int_{-1}^{1} f(t)\, dt \right)\, dx \\
+&= \int_{-1}^{1} f(x)\, dx - \frac{1}{2} \int_{-1}^{1} f(t)\, dt \cdot \int_{-1}^{1} dx \\
+&= \int_{-1}^{1} f(x)\, dx - \frac{1}{2} \int_{-1}^{1} f(t)\, dt \cdot 2 \\
+&= \int_{-1}^{1} f(x)\, dx - \int_{-1}^{1} f(x)\, dx = 0.
+\end{align*}
+
+Así, \( g \in M \).
+
+\vspace{0.5em}
+Ahora, tomemos \( h \in M \) y calculemos \( (f - g, h) \):
+
+\begin{align*}
+(f - g, h) &= \int_{-1}^{1} \left[ f(x) - \left( f(x) - \frac{1}{2} \int_{-1}^{1} f(t)\, dt \right) \right] h(x)\, dx \\
+&= \int_{-1}^{1} \left( \frac{1}{2} \int_{-1}^{1} f(t)\, dt \right) h(x)\, dx \\
+&= \left( \frac{1}{2} \int_{-1}^{1} f(t)\, dt \right) \left( \int_{-1}^{1} h(x)\, dx \right).
+\end{align*}
+
+Como \( h \in M \), se tiene que \( \int_{-1}^{1} h(x)\, dx = 0 \), y por lo tanto:
+\[
+(f - g, h) = 0.
+\]
+
+Así, \( g = f(x) - \frac{1}{2} \int_{-1}^{1} f(t)\, dt \) es la proyección ortogonal de \( f \) sobre \( M \), es decir,
+
+\[
+(P_M f)(x) = f(x) - \frac{1}{2} \int_{-1}^{1} f(t)\,dt.
+\]
+
+        \end{enumerate}
+    \end{proof}
+    \item \( M = \{ f \in L^2((-1,1)) : f(x) = 0 \text{ para casi todo } x \in (-1,0) \} \).
+    \begin{proof}
+        \hfill
+        \begin{enumerate}
+            \item[I)] \textbf{M es no vacío:} Consideremos la función característica
+
+\[
+f(x) := \chi_{[0,1)}(x).
+\]
+
+Entonces \( f(x) = 0 \) para todo \( x \in (-1,0) \), por lo tanto también se anula para casi todo \( x \in (-1,0) \), y claramente es medible. Verificamos que \( f \in L^2((-1,1)) \):
+
+\[
+\|f\|_{L^2((-1,1))}^2 = \int_{-1}^{1} |f(x)|^2\, dx = \int_{-1}^{1} \chi_{[0,1)}(x)\, dx = \int_{0}^{1} 1\, dx = 1.
+\]
+
+Luego \( f \in L^2((-1,1)) \) y \( f \in M \), de modo que
+$M \neq \varnothing$.
+\item[II)] \textbf{M es cerrado:} Notemos que
+\[
+f \in M \iff \int_{-1}^{0} |f(x)|^2\, dx = 0 \iff \| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0,
+\]
+donde \( \chi_{(-1,0)} \) denota la función característica del intervalo \( (-1,0) \).
+
+Sea \( (f_n)_{n=1}^\infty \subseteq M \) tal que \( f_n \to f \) en \( L^2((-1,1)) \). Queremos probar que \( f \in M \), es decir, que
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0.
+\]
+
+Para ello, primero observamos que
+\[
+\| \chi_{(-1,0)} f_n - \chi_{(-1,0)} f \|_{L^2((-1,1))} = \| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))}.
+\]
+
+Usando la definición de la norma \( L^2 \):
+\begin{align*}
+\| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))}^2 &= \int_{-1}^{1} \left| \chi_{(-1,0)}(x) (f_n(x) - f(x)) \right|^2 dx \\
+&= \int_{-1}^{0} |f_n(x) - f(x)|^2 dx.
+\end{align*}
+
+Como \( f_n \to f \) en \( L^2((-1,1)) \), se tiene que
+\[
+\int_{-1}^{0} |f_n(x) - f(x)|^2 dx \leq \int_{-1}^{1} |f_n(x) - f(x)|^2 dx \to 0,
+\]
+por lo que
+\[
+\| \chi_{(-1,0)} f_n - \chi_{(-1,0)} f \|_{L^2((-1,1))} \to 0,
+\]
+es decir,
+\[
+\chi_{(-1,0)} f_n \to \chi_{(-1,0)} f \quad \text{en } L^2((-1,1)).
+\]
+
+Sea ahora \( \varepsilon > 0 \). Como \( \chi_{(-1,0)} f_n \to \chi_{(-1,0)} f \), existe \( N \in \mathbb{N} \) tal que si \( n \geq N \), entonces
+\[
+\| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))} < \varepsilon.
+\]
+
+Para \( n \geq N \), se cumple:
+\begin{align*}
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} 
+&= \| \chi_{(-1,0)} f - \chi_{(-1,0)} f_n + \chi_{(-1,0)} f_n \|_{L^2((-1,1))} \\
+&\leq \| \chi_{(-1,0)} (f - f_n) \|_{L^2((-1,1))} + \| \chi_{(-1,0)} f_n \|_{L^2((-1,1))}.
+\end{align*}
+
+Como \( f_n \in M \), se tiene \( \chi_{(-1,0)} f_n(x) = 0 \) para casi todo $x\in (-1,0)$, por lo que:
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} < \varepsilon.
+\]
+
+Como \( \varepsilon > 0 \) es arbitrario, se deduce que:
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0,
+\]
+es decir, \( f(x) = 0 \) para casi todo \( x \in (-1,0) \), por lo tanto \( f \in M \).
+\item[III)] \textbf{M es subespacio:} Sean \( f, g \in M \) y \( \lambda \in \mathbb{R} \). Por definición de \( M \), existen conjuntos de medida nula \( F \) y \( G \) tales que
+\[
+f(x) = 0 \quad \text{para todo } x \in (-1,0) \setminus F,
+\]
+\[
+g(x) = 0 \quad \text{para todo } x \in (-1,0) \setminus G.
+\]
+
+Como \( 0 \leq \mu(F \cup G) \leq \mu(F) + \mu(G) = 0 \), se sigue que \( F \cup G \) es también de medida nula.
+
+Además, como
+\[
+(-1,0) \setminus (F \cup G) \subseteq (-1,0) \setminus F \quad \text{y} \quad (-1,0) \setminus (F \cup G) \subseteq (-1,0) \setminus G,
+\]
+entonces para todo \( x \in (-1,0) \setminus (F \cup G) \),
+\[
+(f + g)(x) = f(x) + g(x) = 0 + 0 = 0,
+\]
+es decir, \( f + g \in M \).
+
+Por otro lado, si \( x \in (-1,0) \setminus F \), entonces \( f(x) = 0 \), por lo tanto \( \lambda f(x) = \lambda \cdot 0 = 0 \), así que \( \lambda f \in M \).Concluimos que \( M \) es un subespacio vectorial de \( L^2((-1,1)) \).
+\item[IV)] \textbf{Proyección ortogonal sobre \( M \):} Sea \( f \in L^2((-1,1)) \), queremos encontrar \( g \in M \) tal que 
+\[
+(f - g, h) = 0 \quad \text{para toda } h \in M.
+\]
+Tomemos \( g = \chi_{[0,1)} f \) y veamos que \( g = P_M f \). Claramente, \( g(x) = 0 \) para todo \( x \in (-1,0) \), por lo cual \( g \in M \).
+
+Sea \( h \in M \), entonces:
+\begin{align*}
+(f - g, h) &= \int_{-1}^1 \left(f(x) - \chi_{[0,1)}(x) f(x)\right) h(x) \, dx \\
+&= \int_{-1}^1 \chi_{(-1,0)}(x) f(x) h(x) \, dx \\
+&= \int_{-1}^0 f(x) h(x) \, dx = 0,
+\end{align*}
+dado que \( h(x) = 0 \) para casi todo \( x \in (-1,0) \), pues \( h \in M \).
+
+Así concluimos que \( g = \chi_{[0,1)} f = P_M f \).
+
+
+
+        \end{enumerate}
+    \end{proof}
+
+
 \item[(c)] $M=\left\{f \in L^2((-1,1)): f(x)=0\right.$ para casi todo $\left.x \in(-1,0)\right\}$.
+\begin{proof}
+        \hfill
+        \begin{enumerate}
+            \item[I)] \textbf{M es no vacío:} Consideremos la función característica
+
+\[
+f(x) := \chi_{[0,1)}(x).
+\]
+
+Entonces \( f(x) = 0 \) para todo \( x \in (-1,0) \), por lo tanto también se anula para casi todo \( x \in (-1,0) \), y claramente es medible. Verificamos que \( f \in L^2((-1,1)) \):
+
+\[
+\|f\|_{L^2((-1,1))}^2 = \int_{-1}^{1} |f(x)|^2\, dx = \int_{-1}^{1} \chi_{[0,1)}(x)\, dx = \int_{0}^{1} 1\, dx = 1.
+\]
+
+Luego \( f \in L^2((-1,1)) \) y \( f \in M \), de modo que
+$M \neq \varnothing$.
+\item[II)] \textbf{M es cerrado:} Notemos que
+\[
+f \in M \iff \int_{-1}^{0} |f(x)|^2\, dx = 0 \iff \| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0,
+\]
+donde \( \chi_{(-1,0)} \) denota la función característica del intervalo \( (-1,0) \).
+
+Sea \( (f_n)_{n=1}^\infty \subseteq M \) tal que \( f_n \to f \) en \( L^2((-1,1)) \). Queremos probar que \( f \in M \), es decir, que
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0.
+\]
+
+Para ello, primero observamos que
+\[
+\| \chi_{(-1,0)} f_n - \chi_{(-1,0)} f \|_{L^2((-1,1))} = \| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))}.
+\]
+
+Usando la definición de la norma \( L^2 \):
+\begin{align*}
+\| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))}^2 &= \int_{-1}^{1} \left| \chi_{(-1,0)}(x) (f_n(x) - f(x)) \right|^2 dx \\
+&= \int_{-1}^{0} |f_n(x) - f(x)|^2 dx.
+\end{align*}
+
+Como \( f_n \to f \) en \( L^2((-1,1)) \), se tiene que
+\[
+\int_{-1}^{0} |f_n(x) - f(x)|^2 dx \leq \int_{-1}^{1} |f_n(x) - f(x)|^2 dx \to 0,
+\]
+por lo que
+\[
+\| \chi_{(-1,0)} f_n - \chi_{(-1,0)} f \|_{L^2((-1,1))} \to 0,
+\]
+es decir,
+\[
+\chi_{(-1,0)} f_n \to \chi_{(-1,0)} f \quad \text{en } L^2((-1,1)).
+\]
+
+Sea ahora \( \varepsilon > 0 \). Como \( \chi_{(-1,0)} f_n \to \chi_{(-1,0)} f \), existe \( N \in \mathbb{N} \) tal que si \( n \geq N \), entonces
+\[
+\| \chi_{(-1,0)} (f_n - f) \|_{L^2((-1,1))} < \varepsilon.
+\]
+
+Para \( n \geq N \), se cumple:
+\begin{align*}
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} 
+&= \| \chi_{(-1,0)} f - \chi_{(-1,0)} f_n + \chi_{(-1,0)} f_n \|_{L^2((-1,1))} \\
+&\leq \| \chi_{(-1,0)} (f - f_n) \|_{L^2((-1,1))} + \| \chi_{(-1,0)} f_n \|_{L^2((-1,1))}.
+\end{align*}
+
+Como \( f_n \in M \), se tiene \( \chi_{(-1,0)} f_n(x) = 0 \) para casi todo $x\in (-1,0)$, por lo que:
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} < \varepsilon.
+\]
+
+Como \( \varepsilon > 0 \) es arbitrario, se deduce que:
+\[
+\| \chi_{(-1,0)} f \|_{L^2((-1,1))} = 0,
+\]
+es decir, \( f(x) = 0 \) para casi todo \( x \in (-1,0) \), por lo tanto \( f \in M \).
+\item[III)] \textbf{M es subespacio:} Sean \( f, g \in M \) y \( \lambda \in \mathbb{R} \). Por definición de \( M \), existen conjuntos de medida nula \( F \) y \( G \) tales que
+\[
+f(x) = 0 \quad \text{para todo } x \in (-1,0) \setminus F,
+\]
+\[
+g(x) = 0 \quad \text{para todo } x \in (-1,0) \setminus G.
+\]
+
+Como \( 0 \leq \mu(F \cup G) \leq \mu(F) + \mu(G) = 0 \), se sigue que \( F \cup G \) es también de medida nula.
+
+Además, como
+\[
+(-1,0) \setminus (F \cup G) \subseteq (-1,0) \setminus F \quad \text{y} \quad (-1,0) \setminus (F \cup G) \subseteq (-1,0) \setminus G,
+\]
+entonces para todo \( x \in (-1,0) \setminus (F \cup G) \),
+\[
+(f + g)(x) = f(x) + g(x) = 0 + 0 = 0,
+\]
+es decir, \( f + g \in M \).
+
+Por otro lado, si \( x \in (-1,0) \setminus F \), entonces \( f(x) = 0 \), por lo tanto \( \lambda f(x) = \lambda \cdot 0 = 0 \), así que \( \lambda f \in M \).Concluimos que \( M \) es un subespacio vectorial de \( L^2((-1,1)) \).
+\item[IV)] \textbf{Proyección ortogonal sobre \( M \):} Sea \( f \in L^2((-1,1)) \), queremos encontrar \( g \in M \) tal que 
+\[
+(f - g, h) = 0 \quad \text{para toda } h \in M.
+\]
+Tomemos \( g = \chi_{[0,1)} f \) y veamos que \( g = P_M f \). Claramente, \( g(x) = 0 \) para todo \( x \in (-1,0) \), por lo cual \( g \in M \).
+
+Sea \( h \in M \), entonces:
+\begin{align*}
+(f - g, h) &= \int_{-1}^1 \left(f(x) - \chi_{[0,1)}(x) f(x)\right) h(x) \, dx \\
+&= \int_{-1}^1 \chi_{(-1,0)}(x) f(x) h(x) \, dx \\
+&= \int_{-1}^0 f(x) h(x) \, dx = 0,
+\end{align*}
+dado que \( h(x) = 0 \) para casi todo \( x \in (-1,0) \), pues \( h \in M \).
+
+Así concluimos que \( g = \chi_{[0,1)} f = P_M f \).
+
+
+
+        \end{enumerate}
+    \end{proof}
  \end{itemize}
 (II) Sea $\Omega \subset \mathbb{R}^n$ un abierto acotado. Considere
 $$
@@ -13,7 +527,85 @@ K=\left\{f \in L^2(\Omega): \int_{\Omega} f(x) d x \geq 1\right\}
 $$
 \begin{itemize}
 \item[(a)] Muestre que $K$ es un conjunto cerrado convexo de $L^2(\Omega)$.
+  \begin{proof}
+        Notemos que
+\[
+K = \left\{ f \in L^2(\Omega) : (f,1) \geq 1 \right\},
+\]
+donde \( \Omega \subseteq \mathbb{R}^n \) es un abierto acotado. Entonces \( 0 < \mu(\Omega) < \infty \), y además:
+\[
+\|1\|_{L^2(\Omega)} = \left( \int_{\Omega} 1^2 \, dx \right)^{1/2} = (\mu(\Omega))^{1/2}.
+\]
+
+Sea \( g \in L^2(\Omega) \setminus K \), es decir, \( a := (g,1) < 1 \). Tomemos \( \varepsilon > 0 \) tal que \( a + \varepsilon < 1 \), y definimos
+\[
+\delta = \frac{\varepsilon}{\|1\|_{L^2(\Omega)}} = \frac{\varepsilon}{(\mu(\Omega))^{1/2}}>0.
+\]
+Sea \( B = B(g, \delta) \) la bola abierta centrada en \( g \) de radio \( \delta \) en \( L^2(\Omega) \). Sea \( f \in B \), entonces \( \|f - g\|_{L^2(\Omega)} < \delta \). Usando la desigualdad de Cauchy-Schwarz, se tiene:
+\begin{align*}
+(f,1) &= (f - g, 1) + (g,1) \\
+&\leq \|f - g\|_{L^2(\Omega)} \cdot \|1\|_{L^2(\Omega)} + a \\
+&< \delta \cdot (\mu(\Omega))^{1/2} + a = \varepsilon + a < 1.
+\end{align*}
+Por tanto, \( f \notin K \), lo que implica que \( B \subseteq L^2(\Omega) \setminus K \). Es decir, el complemento de \( K \) es abierto, y por lo tanto \( K \) es cerrado en \( L^2(\Omega) \).
+
+Ahora veamos que \( K \) es convexo. Sean \( f, g \in K \) y \( t \in [0,1] \). Entonces:
+\[
+(tf + (1 - t)g, 1) = t(f,1) + (1 - t)(g,1) \geq t \cdot 1 + (1 - t) \cdot 1 = 1.
+\]
+Por tanto, \( tf + (1 - t)g \in K \), lo cual prueba que \( K \) es convexo.
+
+    \end{proof}
 \item[(b)] Determine la proyección sobre $K$, es decir, el operador $P_K$.
+    \begin{proof}
+        Procedamos a calcular \( P_K f \). Sea \( f \in L^2(\Omega) \), queremos encontrar \( g \in K \) tal que  
+\[
+(f - g, h - g) \leq 0 \quad \text{para toda } h \in K.
+\]
+
+Proponemos:
+\[
+g(x) = f(x) + \chi_{(-\infty,1)}(C_f) \cdot \frac{1 - C_f}{\mu(\Omega)},
+\]
+donde \( C_f = \int_{\Omega} f(y) \, dy \).
+
+Veamos que esta \( g \) cumple las condiciones requeridas. Consideramos dos casos:
+
+\medskip
+\noindent
+\textbf{Caso 1:} Si \( f \in K \), entonces \( C_f \geq 1 \), por lo que \( \chi_{(-\infty,1)}(C_f) = 0 \). Así,
+\[
+g = f \in K, \quad \text{y } (f - g, h - g) = (0, h - f) = 0 \leq 0 \quad \forall h \in K.
+\]
+Entonces, \( P_K f = f \).
+
+\medskip
+\noindent
+\textbf{Caso 2:} Si \( f \notin K \), entonces \( C_f < 1 \), así que \( \chi_{(-\infty,1)}(C_f) = 1 \) y:
+\begin{align*}
+\int_{\Omega} g(x) \, dx &= \int_{\Omega} \left( f(x) + \frac{1 - C_f}{\mu(\Omega)} \right) dx \\
+&= \int_{\Omega} f(x) \, dx + \frac{1 - C_f}{\mu(\Omega)} \cdot \mu(\Omega) \\
+&= C_f + (1 - C_f) = 1.
+\end{align*}
+Por tanto, \( g \in K \).
+
+Sea \( h \in K \), definimos \( C_h = \int_{\Omega} h(x) \, dx \). Entonces \( C_h \geq 1 \). Calculamos:
+\begin{align*}
+(f - g, h - g) &= \left( -\frac{1 - C_f}{\mu(\Omega)}, h - f - \frac{1 - C_f}{\mu(\Omega)} \right) \\
+&= -\frac{1 - C_f}{\mu(\Omega)} \cdot \int_{\Omega} \left( h(x) - f(x) - \frac{1 - C_f}{\mu(\Omega)} \right) dx \\
+&= -\frac{1 - C_f}{\mu(\Omega)} \left( C_h - C_f - \frac{1 - C_f}{\mu(\Omega)} \cdot \mu(\Omega) \right) \\
+&= -\frac{1 - C_f}{\mu(\Omega)} (C_h - C_f - (1 - C_f)) \\
+&= -\frac{1 - C_f}{\mu(\Omega)} (C_h - 1).
+\end{align*}
+
+Como \( 1 - C_f > 0 \) y \( C_h - 1 \geq 0 \), se concluye que
+\[
+(f - g, h - g) \leq 0.
+\]
+
+De esta forma, \( g = P_K f \).
+
+    \end{proof}
 \end{itemize}
 
 
