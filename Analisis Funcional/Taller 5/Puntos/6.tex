@@ -48,8 +48,28 @@ lo cual contradice la desigualdad anterior cuando $\varepsilon \to 0$. Por tanto
 \overline{\{g(x) : x \in \mathbb{R}\}} \subseteq \sigma(M_g).
 \]
 
+Por otro lado, sea \( \lambda \in \mathbb{C} \setminus \overline{g(\mathbb{R})} \). Entonces existe \( \varepsilon > 0 \) tal que \( |g(x) - \lambda| \geq \varepsilon \) para todo \( x \in \mathbb{R} \), definamos el operador
+\[
+R_\lambda(f)(x) = \frac{f(x)}{g(x) - \lambda},
+\]
+que es acotado porque,
 
+\[
+\left\| R_\lambda(f) \right\|_{L^2}^2 = \int_{\mathbb{R}} \left| \frac{f(x)}{g(x) - \lambda} \right|^2 dx \leq \frac{1}{\varepsilon^2} \|f\|_{L^2}^2.
+\]
 
+y satisface que
+\[
+(M_g - \lambda I) R_\lambda(f)(x) = (g(x) - \lambda)\cdot \frac{f(x)}{g(x) - \lambda} = f(x).
+\]
+lo cual implica que \( (M_g - \lambda I)^{-1} \) existe y es acotado, por lo tanto \( \lambda \notin \sigma(M_g) \), por lo que 
+\[
+\sigma(M_g) \subseteq \overline{g(\mathbb{R})}
+\]
+Así,
+\[
+\sigma(M_g) = \overline{g(\mathbb{R})}
+\]
 \end{proof}
 \item[(b)] ¿Es el operador $M_g$ compacto? 
 \begin{sol}
